@@ -14,7 +14,7 @@
 
 ## Kategorie kreatora
 > [!IMPORTANT]
-> W tym konkretnym procesie instalacyjnym zostanie wykorzystana wersja obrazu instalatora `Small Installation Image`. 
+> W tym konkretnym procesie instalacyjnym zostanie wykorzystana wersja obrazu instalatora `Small Installation Image`, poniewaz bedziemy instalowali system z dostepem do internetu i taka wersja bedzie szybsza do pobrania przez hosta.
 
 | Opcja |  Name and Operating System |
 | --- | --- |
