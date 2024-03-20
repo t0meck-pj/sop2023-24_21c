@@ -12,7 +12,7 @@
 > Do kolejnych etapow potrzebne bedzie posiadanie na komputerze pliku obrazu instalatora systemu Debian 12. Plik ten mozna pobrac bezposrednio z [oficjalnej strony](https://www.debian.org/distrib/). <br>
 > <br> *Jezeli posiadamy dostep do internetu na wirutalnej maszynie to wybieramy `Small Installation Image` w przeciwnym wypadku powinnismy pobrac `Complete Installation Image` (zawiera on wszystkie potrzebne pakiety instalacyjne, bez potrzeby dodatkowego klonowania z innego serwera podczas instalacji) <br><br> Nalezy takze wybrac odpowiedni rodzaj pliku instalacyjnego, w przypadku wirtualnej maszyny, bedziemy instalowali system na 64-bitowej architekturze `amd64`.*
 
-## Kategorie
+## Kategorie kreatora
 > [!IMPORTANT]
 > W tym konkretnym procesie instalacyjnym zostanie wykorzystana wersja obrazu instalatora `Small Installation Image`. 
 
