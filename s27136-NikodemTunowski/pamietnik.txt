@@ -1,0 +1,12 @@
+2024-03-10
+Opis zajec
+	Zajęcia organizacyjne + wprowadzenie do Oracle
+Czego sie nauczylas/es
+	Wykonywać tekstową instalacje Debiana
+Co jest dla Ciebie jeszcze nie jasne i musisz poglebic temat
+	Wszystkie parametry instalacyjne
+Co bylo zaskakujacego
+	Trudność i wymagania w teoretycznie prostej czynności jaką jest instalowanie systemu operacyjnego
+Twoje przemyslenia o calych zajeciach i zadaniach
+	Będzie trzeba dac z siebie wszystko:)
+
