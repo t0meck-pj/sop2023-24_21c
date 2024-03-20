@@ -1,101 +1,160 @@
 OPIS ZADANIA:
-Prosze zrobic commit do swojego repozytorum do galezi instalacja-debiana w katal
-ogu o nazwie sXXXXX-ImieNazwisko.
-W nim proszę stworzyć katalog zajecia1 a w nim plik instalacja_debian_linux.txt 
+Prosze zrobic commit do swojego repozytorum do galezi instalacja-debiana w 
+katalogu o nazwie sXXXXX-ImieNazwisko.
+W nim proszę stworzyć katalog zajecia1 a w nim plik 
+instalacja_debian_linux.txt 
 z opisem procesu instalacji systemu.
-Czyli sXXXXX-ImieNazwisko/zajecia1/instalacja_debian_linux.txt Prosze jeszcze ra
-z przeczytac powyzsze punkty od slowa Primo!. Reguly te, maja byc tu takze (jak 
+Czyli sXXXXX-ImieNazwisko/zajecia1/instalacja_debian_linux.txt Prosze jeszcze 
+raz przeczytac powyzsze punkty od slowa Primo!. Reguly te, maja byc tu takze 
+(jak 
 i w kazdym zadaniu przez reszte semestru) przestrzegane.
 KROKI ZADANIA:
 Zaczynamy od nazwania maszyny wirtualnej, nazwa to będzie "Debian12".
-Folder maszyny wirtualnej będzie w specjalnym folderze na dysku HDD aby nie korz
-ystać z przestrzeni dysku SSD hosta.
-obraz ISO programu to plik "debian-12.5.0-amd64-netinst.iso" pobrany z oficjalne
-j strony debian.org.
+Folder maszyny wirtualnej będzie w specjalnym folderze na dysku HDD aby nie 
+korzystać z przestrzeni dysku SSD hosta.
+obraz ISO programu to plik "debian-12.5.0-amd64-netinst.iso" pobrany z 
+oficjalnej strony debian.org.
 Typ maszyny to Linus a Wersja to Debian (64bit).
 Zaznaczam "Skip Unattended Instalation" ponieważ nie mam pliku ani
-przygotowanego połączenia sieciowego do przeprowadzenia tego typu instalacji (we
-dług Google jes to instalacja bez ingerencji użytkownika,
-czyli kroki instalacyjne i wybory podczas instalacji są brane z pliku lub przez 
+przygotowanego połączenia sieciowego do przeprowadzenia tego typu instalacji 
+(według Google jes to instalacja bez ingerencji użytkownika,
+czyli kroki instalacyjne i wybory podczas instalacji są brane z pliku lub 
+przez 
 połączenie sieciowe).
-w Zakładce Hardware wybieram 2048 MB RAMu (System minimalnie wymaga 256 MB RAMu 
-i 512 MB rekomendowanie lecz wybrałem tyle aby instalacja poszła sprawniej i
-nie trzeba było korzystać z "Low Memory Mode" podczas instalacji. Po zainstalowa
-niu systemu zmniejsze dostępny RAM do rekomendowanych wymogów Debiana.
-Wybieram 2 rdzenie CPU z tego samego powodu co wyżej - Szybsza instalacja. Po za
-instalowaniu systemu zmniejsze dostępne rdzenie CPU do 1.
-Nie włączam opcji "Enable EFI" z powodu braku takiej potrzeby, BIOS EFI zapewnia
- więcej opcji zarządzania oraz szybszy czas bootowania.
-Rozmiar dysku maszyny wirtualnej ustawiam na 20GB mimo minimalnego 4GB ze względ
-u na to że po instalacji systemu mogą byc dogrywane dodatkowe pakiety.
-Typ dysku wybieram na VDI ponieważ jest to format natywny dla tego środowiska wi
-rtualizacji. Nie alokuje pełnego rozmiaru ponieważ dodatkowa przestrzeń dyskowa 
-będzie automatycznie dodawana w razie potrzeby.
-Może to powodować stuttery podczas pracy maszyny jednak zaoszczedzi to miejsca n
-a hoscie.
-Po utworzeniu maszyny wchodzę w ustawienia w celu sprawdzenia/ztweekowania opcji
+w Zakładce Hardware wybieram 2048 MB RAMu (System minimalnie wymaga 256 MB 
+RAMu 
+i 512 MB rekomendowanie lecz wybrałem tyle aby instalacja poszła sprawniej 
+i
+nie trzeba było korzystać z "Low Memory Mode" podczas instalacji. Po 
+zainstalowaniu systemu zmniejsze dostępny RAM do rekomendowanych wymogów 
+Debiana.
+Wybieram 2 rdzenie CPU z tego samego powodu co wyżej - Szybsza instalacja. Po 
+zainstalowaniu systemu zmniejsze dostępne rdzenie CPU do 1.
+Nie włączam opcji "Enable EFI" z powodu braku takiej potrzeby, BIOS EFI 
+zapewnia
+ więcej opcji zarządzania oraz szybszy czas bootowania i szybsze działanie 
+ systemu dzięki bezpośredniej komunikacji systemu z hardwarem maszyny.
+Rozmiar dysku maszyny wirtualnej ustawiam na 20GB mimo minimalnego 4GB ze 
+względu na to że po instalacji systemu mogą byc dogrywane dodatkowe 
+pakiety.
+Typ dysku wybieram na VDI ponieważ jest to format natywny dla tego środowiska 
+wirtualizacji. Inne typy można użyć jeśli zgrywamy wirtualke z inne środowiska 
+wirtualizacji (np VMWare) Nie alokuje pełnego rozmiaru ponieważ dodatkowa 
+przestrzeń dyskowa 
+będzie automatycznie dodawana w razie potrzeby, a wybranie tej opcji sprawi że 
+wirtualka odrazu będzie miała dostępne pełne 20GB w tym przypadku.
+Może to powodować stuttery podczas pracy maszyny jednak zaoszczedzi to miejsca 
+na hoscie.
+Po utworzeniu maszyny wchodzę w ustawienia w celu sprawdzenia/ztweekowania 
+opcji
  już utworzonej maszyny których nie było podczas jej tworzenia
-W Zakładce Zaawansowane nic nie zmieniam, schowek nie jest wspierany na systemie
- tekstowym, to samo z przeciągnij i upuść.
-Nie włączam szyfrowania dysku ponieważ nie bede trzymał wrażliwych danych na mas
-zynie a szyfrowanie spowalnia prace maszyny i szybkosc przegladania plików.
-W Kategorii system wyłączam z bootowania dyskietkie gdyż nie będe uzywał tego ty
-pu nośników (nikt już chyba nie używa).
-Przerzucam Napęd optyczny na 1sze miejsce, na drugie Dysk twardy, po instalacji 
+W Zakładce Zaawansowane nic nie zmieniam, schowek nie jest wspierany na 
+systemie
+ tekstowym, to samo z przeciągnij i upuść, ponieważ to system tekstowy.
+Nie włączam szyfrowania dysku ponieważ nie bede trzymał wrażliwych danych na 
+maszynie a szyfrowanie spowalnia prace maszyny i szybkosc przegladania 
+plików.
+W Kategorii system wyłączam z bootowania dyskietkie gdyż nie będe uzywał tego 
+typu nośników (nikt już chyba nie używa).
+Przerzucam Napęd optyczny na 1sze miejsce, na drugie Dysk twardy, po 
+instalacji 
 wyłącze napęd optyczny i dam dysk twardy na 1sze miejsce.
-Chipset zostawiam na PIIX3 ze względu na brak potrzeby jego zmiany, zaspokaja on
- wszystkie potrzeby tej maszyny wirtualnej.
-Nie włączam TPM ponieważ maszyna będzie działać dobrze bez niego a jak wspomnial
-em wczesniej na maszynie nie bedzie danych wrażliwych.
-Urz. wskazujące ustawiam na Mysz PS/2 ze względu na brak myszy w systemie Debian
- tekstowym więc nie ma potrzeby zuzywania miejsca/mocy przerobowej na emulowanie
+Chipset zostawiam na PIIX3 ze względu na brak potrzeby jego zmiany, zaspokaja 
+on
+ wszystkie potrzeby tej maszyny wirtualnej. Chipset ICH9 musi być wybrany z 
+ systemem MacOS lub w przypadku podpinania do wirtualki wiecej kart 
+ sieciowych. Dodaje on także obsługę PCI Express, trzech busów PCI, mostów 
+ PCI-PCI oraz przerwania sygnalizowane wiadomością (Message Signaled 
+ Interrupts (MSI))
+Nie włączam TPM ponieważ maszyna będzie działać dobrze bez niego a jak 
+wspomnialem wczesniej na maszynie nie bedzie danych wrażliwych. Moduł TPM 
+zwiększa bezpieczeństwo w danym systemie, odciąża CPU od zadań związanych z 
+bezpieczeństwem i szyfrowaniem, jednak przed włączeniem tego modułu trzeba 
+sprawdzic jego zgodnosc z danym systemem operacyjnym maszyny wirtualnej.
+Urz. wskazujące ustawiam na Mysz PS/2 ze względu na brak myszy w systemie 
+Debian
+ tekstowym więc nie ma potrzeby zuzywania miejsca/mocy przerobowej na 
+ emulowanie
  lepszych wskaźników.
-I/O APIC zostawiam włączone ponieważ jest to zalecane w przypadku posiadania wię
-cej niz 1 rdzenia CPU w wirtualce, potem można to wyłączyć. Zaoszczedzi to potem
- mocy przerobowej tego 1 rdzenia CPU.
-Hardware clock in UTC Time zostawiam ponieważ systemy preferują czas UTC, nie ch
-ce wywoływac błędów.
-EFI dalej zostawiam wyłączone a Secure Boot jest niedostępny (wymagane jest EFI)
-Zakładka procesor, ilość i wykorzystanie zostawiam na 2 i 100%.
-Nie włączam PAE/NX ponieważ instaluje 64 bitowa wersje Debiana, ta opcja jest de
-dykowana dla 32 bitowej wersji aby mogły uzywac 64 GB RAMu a nie 4GB.
-Zagnieżdzone VT-x/AMD-V jest niedostępne ponieważ mam procesor od Intela a ta op
-cja jest dla procesorów AMD,
-pozwala ona na zagnieżdzanie wirtualek w wirtualkach, nie byłaby ona potrzebna t
-utaj i tak.
-Od tego momentu zmienilem jezyk Oracle na angielski aby ułatwić sobie research c
-o dana opcja daje.
-Paravirtualization Inferface - KVM, najlepszy dla systemów Linux i jest wspieran
-y przez kernel Debiana 12.
-Nested paging, włączone, daje performance boost z powodu lepszego zarządzania pa
-miecia podzespołów.
-w Zakladce display w screen nic nie zmieniam, pamiec video 16mb wystarczy, monit
-or mam tylko 1 i nie ma potrzeby wybierania wiecej
-Scale factor zostawiam na 100% aby nie powodowac niepotrzebych problemow z korzy
-staniem z systemu
-Kontroler wybralem VMSVGA ponieważ jest natywny dla systemow Linux
+I/O APIC zostawiam włączone ponieważ jest to wymagane w przypadku posiadania 
+więcej niz 1 rdzenia CPU w wirtualce, potem można to wyłączyć. Zaoszczedzi to 
+potem
+ mocy przerobowej tego 1 rdzenia CPU ponieważ zwiększa to czas CPU zuzyty na 
+ wirtualizacje.
+Hardware clock in UTC Time zostawiam ponieważ systemy Unix preferują czas UTC, 
+Local Time na systemie który oczekuje UTC (Systemy Unix) może wywołać szereg 
+błędów, np problemy z połączeniem sieciowym, błędna data i czas, problemy z 
+aplikacjami operującymi na czasie, a tego nie chce.
+EFI dalej zostawiam wyłączone a Secure Boot jest niedostępny (wymagane jest 
+EFI). Secure Boot zwiększa bezpieczeństwo systemu, jednak trzeba sprawdzić czy 
+system jest kompatybilny oraz czy hardware spełnia wymagania.
+Zakładka procesor, ilość i wykorzystanie zostawiam na 2 i 100%. Można tu 
+ograniczyć wykorzystanie rdzeni przez maszyne wirtualna
+Nie włączam PAE/NX ponieważ instaluje 64 bitowa wersje Debiana, ta opcja jest 
+dedykowana dla 32 bitowej wersji aby mogły uzywac 64 GB RAMu a nie 4GB.
+Zagnieżdzone VT-x/AMD-V jest niedostępne ponieważ mam procesor od Intela a ta 
+opcja jest dla procesorów AMD,
+pozwala ona na zagnieżdzanie wirtualek w wirtualkach, nie byłaby ona potrzebna 
+tutaj i tak ze względu na obecne zastosowanie.
+Od tego momentu zmienilem jezyk Oracle na angielski aby ułatwić sobie research 
+co dana opcja daje.
+Paravirtualization Inferface - KVM, najlepszy dla systemów Linux i jest 
+wspierany przez kernel Debiana 12.
+Paravirtualization Inferface poprawia dokładność śledzenia czasu oraz 
+wydajność systemów operacyjnych na wirtualkach.
+Nested paging, włączone, daje performance boost z powodu lepszego zarządzania 
+pamiecia podzespołów co może znacznie przyspieszyć wirtualizację sprzętu, 
+ponieważ zadania te nie muszą już być wykonywane przez oprogramowanie do 
+wirtualizacji.
+w Zakladce display w screen nic nie zmieniam, pamiec video 16mb wystarczy, 
+monitor mam tylko 1 i nie ma potrzeby wybierania wiecej
+Scale factor zostawiam na 100% aby nie powodowac niepotrzebych problemow z 
+korzystaniem z systemu. Działa to jak powiększenia obrazu lub "lupa"
+Kontroler wybralem VMSVGA ponieważ jest natywny dla systemow Linux, emuluje on 
+urządzenie graficzne.
 nie włączam akceleracji 3D ponieważ to system tekstowy.
-Remote Display i Recording zostaja wyłączone ze wzgledu na brak zapotrzebowania
-W zakladce storage nie zmieniam nic ponieważ nie ma żadnej korzyści w zmienianiu
- domyślnych ustawien w tym przypadku, mozna zmienic typ kontrolera i jego ilosc 
+Remote Display i Recording zostaja wyłączone ze wzgledu na brak 
+zapotrzebowania.
+Remote Display pozwala na połączenie się z konsolą wirtualki przy pomocy 
+serwera VRDP.
+Recording pozwala na nagrywanie wideo i dźwieku w wirtualce. 
+W zakladce storage nie zmieniam nic ponieważ nie ma żadnej korzyści w 
+zmienianiu
+ domyślnych ustawien w tym przypadku, mozna zmienic typ kontrolera i jego 
+ ilosc 
 portów, tutaj nie jest to potrzebne
-Cachowanie danych u hosta jest zabiegiem zwiekszajacym ryzyko utraty danych, moz
-e powodowac scinki systemu podczas duzych operacji,
-dlatego zostawie to tylko na instalacje w kontrolerze IDE, potem juz to nie bedz
-ie mialo znaczenia gdyz nie bede korzystal z napedu optycznego
+Typ kontrolera nalezy zmienic jesli dane urzadzenia jest np połączone przez 
+USB, lub jak jest dysk NVMe.
+Cachowanie danych u hosta jest zabiegiem zwiekszajacym ryzyko utraty danych, 
+moze powodowac scinki systemu podczas duzych operacji z wirtualkami na 
+linuxie, powoduje też spowolnienia na hoscie, dlatego nalezy byc ostroznym co 
+do wyboru tej opcji.
+dlatego zostawie to tylko na instalacje w kontrolerze IDE, potem juz to nie 
+bedzie mialo znaczenia gdyz nie bede korzystal z napedu optycznego
 W zakładce Audio wyłączam subsytem audio gdyz nie bedzie on potrzebny
-W network zostawiam ustawienia domyslne, aby host pozostawal ponad wirtualka, al
-e wirtualka dalej miala dostep do internetu
-typ adaptera zostawiam domyslny, inne typy oferuja miedzy innymi inny limit pred
-kosci
-W Serial portach zostawiam wszystko domyslne
-w USB ustawiam USB 1.1 gdyz nie potrzebuje lepszego kontrolera
+W network zostawiam ustawienia domyslne, aby host pozostawal ponad wirtualka, 
+ale wirtualka dalej miala dostep do internetu
+typ adaptera zostawiam domyslny, inne typy oferuja miedzy innymi inny limit 
+predkosci, lepszą kompatybilność z innymi systemami, jest tez opcja 
+Paravirtualized Network, która sprawia że wirtualka nie zuzywa zasobow na 
+wirtualizacje sieci, tylko zostawia to systemowi, zwiekszajac wydajnosc sieci
+W Serial portach zostawiam wszystko wyłączone, porty seryjne przydaja sie 
+dzisiaj tylko do debugowania kernela, wiec w przypadku takiej potrzeby nalezy 
+je włączyć i odpowiednio ustawić
+w USB ustawiam USB 1.1 gdyz nie potrzebuje lepszego kontrolera, gdyż pracuje 
+na systemie tekstowym. Nowsze kontrolery zwiększaja wydajność urządzeń USB 
+(myszki, klawiatury, urządzenia pamięci masowej np pendrive, dyski 
+zewnetrzne), jednak zwiększaja zuzycie procesora maszyny.
 Okej no to przechodzimy do instalacji :) W koncu :D
 Odpalamy wirtualke
-włączam opcje ciemnego kontrastu aby nie bolało tak w oczy :) i wybieram instala
-cje tekstową
-Wybieram język Angielski, lokalizacje Polska, lokal na United States (UTF-8)
-jezyk klawiatury na american english
+włączam opcje ciemnego kontrastu aby nie bolało tak w oczy :) i wybieram 
+instalacje tekstową
+Wybieram język Angielski, dla prostoty researchowania problemów które napotkam 
+podczas instalacji jak i korzystania z systemu. Lokalizacje Polska, dla strefy 
+czasowej, lokal na United States (UTF-8) (aby nie było nieprawidłowych znaków 
+przez język polski)
+jezyk klawiatury na american english (aby nie było nieprawidłowych znaków 
+przez język polski)
 Hostname - debian
 domena - amogus
 hasło roota - 1111
@@ -103,30 +162,128 @@ nazwa uzytkownika - user1
 pelna nazwa - user1
 haslo - 5555
 Partycje:
-4GB - Swap - Logiczna
-10 GB - / - Ext4 (najbardziej wydajny) - żadnych mount option ponieważ nie ma po
-trzeby takiej - Primary - Bootable
+4GB - Swap - Logical (zapasowa pamięć dla systemu gdyby RAM się przepełniał)
+10 GB - / - Ext4 (najbardziej wydajny) - żadnych mount option ponieważ nie ma 
+potrzeby takiej - Primary - Bootable (Partycja na wszystko poza lokalizacja 
+/home, parametr bootable ponieważ tam jest sekcja bootowania)
 7,5 GB - /home - Ext4 (najbardziej wydajny) - żadnych mount option ponieważ nie 
-ma potrzeby takiej - Primary
-Package manager - pomijam, ponieważ nie mam dodatkowych mediow instalacyjnych
-Wybieram ftp.task.gda.pl
-blank HTTP proxy information
-odmawiam w ankiecie najpopularniejszych pakietow ze wzgledu na to ze to instalac
-ja testowa
-w software selection zostawiam tylko Standard system utilities, poniewaz sa to p
-odstawowe pakiety ktore pomagaja w korzystaniu z systemu, nie sa wymagane teoret
-ycznie ale w przypadku potrzeby nie musze doinstalowywac ich recznie
-instaluje grub-pc ze wzgledu ze debian to jedyny system na tej wirtualce
-instalacja zakończona, reboot wykonany pomyslnie, zalogowalem sie i dziala wszys
-tko, wyłączam maszyne i ustawiam RAM, procesor, kolejność bootowania, caching, I
+ma takiej potrzeby - Primary
+Wybór partycji Primary lub Logical nie robi większej różnicy w wydajności, 
+partycje logical wybiera się jeśli ma się przekroczyć ilość 4 patrycji 
+primary.
+wyjaśnienie systemow plikow:
+ext4 journaling file system - Ext2 ale z journalingiem danych, lepiej 
+zoptymalizowany niz ext3 przez co jest szybszy. Journaling to tak jakby 
+historia plików, pozwala ona na odzyskanie plików w przypadku ich utraty, 
+uszkodzenia lub przypadkowego nadpisania.
+ext3 journaling file system - ext2 z journalingiem danych, jest wolniejszy niz 
+ext2 ze wzgledu na dodatek w postaci journalingu.
+ext2 - podstawowy system plików, nie zawiera journalingu.
+btrfs journaling file system - plik przed zapisem znajduje sie w innym 
+miejscu, dopiero po ostatnim zapisie oryginalny plik jest podmieniony.
+JFS journaling file system - Używany głównie na serwerach. Max wielkość pliku 
+- 4 PiB
+XFS jounraling file system - Następca JFS, o wiele większa wielkość pliku - 8 
+exbibajtów minus 1 bajt
+FAT16 file system - 16 bitowy system plików do małych partycji, limit partycji 
+i plików to tylko 2GB.
+FAT32 File System - Nowsza i lepsza wersja FAT16, limit partycji to 16GB a 
+pliku - 4GB
+swap area - System plikow uzywany do partycji swap.
+physical volume for encryption - partycja uzywana do szyfrowania plikow.
+physical volume for RAID - partycje do konfiguracji RAID.
+physical volume for LVM - takie partycje nie zmieniaja etykiety po restartach 
+w danym clusterze.
+do not use this partition - partycja nieuzywana, przydatne jesli chce sie 
+zrobic z partycja cos niestandardowego lub wgrac inny system plikow
+wyjaśnienie mount options:
+discard - wydaje polecenia TRIM dla danych które nie są uzywane, opcja dobra 
+dla dysków SSD, ponieważ zwalnia regularnie miejsce na dysku które co 
+przyśpiesza zapisy i wydłuża żywotność dysku, jednak może ona spowodować 
+utrate danych gdy nie jest uzywana prawidlowo.
+noatime - wyłącza aktualizacje atrybutu atime w plikach, który przechowuje 
+czas ostatniego dostępu do pliku, włączenie tej opcji ogranicza liczbe 
+operacji zapisu na dysku, co zwiększa szybkość systemu.
+nodiratime - to samo to noatime tylko że dla katalogów
+relatime - sprawia że system uzywa czasu wzglednego do aktualizacji atrybutu 
+atime dla plikow i folderow, czyli ten atrybut aktualizuje sie tylko wtedy gdy 
+czas dostepu do pliku/folderu jest pozniejszy niz czas jego ostatniej 
+modyfikacji, pozwala to zwiększyc zywotnosc dysku ze wzgledu na mniejsza ilosc 
+operacji.
+nodev - włączenie tego sprawia że system plików nie uznaje plików 
+odpowiedzialnych za urządzenia fizyczne, np dyski, czy porty szeregowe, 
+zwiększa to bezpieczeństwo jednak niektóre aplikacje mogą wymagać dostępu do 
+tych plików co spowoduje problemy.
+noseuid - wyłączenie interpretowania bitów SUID i SGID, odpowiadaja one za 
+działanie z uprawnieniami użytkownika lub grupy, do której należą, a nie z 
+uprawnieniami użytkownika, który je uruchamia, bez nich komendy su, sudo i 
+passwd nie będą działały, jednak brak tej interpretacji może miedzy innymi 
+chronić poufne dane przed dostępem przez nieautoryzowanych użytkowników
+noexec - zabrania wykonywania jakichkolwiek plików wykonywalnych/bibliotek na 
+danej partycji, zwieksza to bezpiecznestwo danych, ale sprawia ze zadne 
+programy/skrypty na danej partycji nie beda dzialaly.
+ro - partycja tylko do odczytu, blokuje zapis/nadpis danych.
+sync - wymuszenie synchronizacji danych z pamieci podrecznej systemu plikow do 
+dysku przed zamontowaniem systemu plikow. gwarantuje integralnosc danych i 
+bezpieczenstwo.
+usrquota - limit zajmowanego miejsca partycji przez danego uzytkownika, 
+zapewnia sprawiedliwy podzial dysku i zapobiega temu ze jakis uzytkownik 
+zajmie miejsce innym.
+grpquota - to samo co usrquota tylko ze limity są stosowane dla grup kont.
+user_xattr - Rzoszerzone atrybuty użytkownika, czyli dodatkowe metadane które 
+są dołączane do plików i folderów, poszerza funkcjonalność systemu plików, 
+pozwala na kompresje plików.
+Reserved blocks - Miejsce na dysku niedostępne dla zwyklego uzytkownika, 
+zapobiega przypadkowemu nadpisaniu lub usunięciu ważnych danych znajdujących 
+się na początku partycji.
+Typical usage - pozwala wybrać sposób uzywania partycji, w zaleznosci co 
+wybiore zmienia sie sposob indeksowania plikow. do wiekszych plikow lepiej 
+zastosowac rzadsze inody.
+Bootable flag - z tej partycji system będzie sie bootowal, nalezy wybrac 
+partycje gdzie znajduje sie folder /boot, inaczejk system sie nie uruchomi.
+Package manager - pomijam, ponieważ nie mam dodatkowych mediow instalacyjnych. 
+mozna tego uzyc jesli ma sie dodatkowe pakiety na innym nosniku.
+Wybieram ftp.task.gda.pl ze względu na najbliższą lokalizacje tego serwera.
+blank HTTP proxy information, ponieważ nie potrzebuje proxy do połączenia z 
+internetem.
+odmawiam w ankiecie najpopularniejszych pakietow ze wzgledu na to ze to 
+instalacja testowa
+w software selection zostawiam tylko Standard system utilities, poniewaz sa to 
+podstawowe pakiety ktore pomagaja w korzystaniu z systemu, nie sa wymagane 
+teoretycznie ale w przypadku potrzeby nie musze doinstalowywac ich recznie.
+Opis Software:
+Debian desktop enviroment - metapakiet zawierajacy wszystkie niezbedne pakiety 
+potrzebne do instalacji srodowisk graficznych.
+GNOME - Nowoczesne i łatwe w użyciu środowisko graficzne z bogatą integracją 
+aplikacji.
+Xfce - Lekki i stabilny pulpit z dużym wyborem aplikacji.
+GNOME Flashback - Dobry wybór dla kogoś, kto preferuje bardziej tradycyjny 
+pulpit i chce lżejszego środowiska graficznego niż zwykly GNOME.
+KDE Plasma - Wysoce konfigurowalny i bogaty w funkcje pulpit.
+Cinnamon - Łączy cechy GNOME 2 i Windows, łatwy w użyciu i konfigurowalny.
+MATE - Bazowany na GNOME 2, mniej zasobożerny system, tradycyjny pulpit.
+LXDE - Bardzo lekki pulpit idealny dla starszych komputerów.
+LXQt - Nowoczesny fork LXDE.
+Web server - instaluje serwer WWW, który pozwoli udostepnic strony internetowe 
+z danej maszyny.
+SSH Server - instaluje serwer SSH, który daje bezpieczny zdalny dostęp do 
+wirtualki. Przydaje się to do administracji systemem, transferu plików i wielu 
+innych.
+Standard system utilities - podstawowe pakiety które mają priorytet "standard"
+instaluje grub-pc ze wzgledu ze debian to jedyny system na tej wirtualce, bez 
+jego instalacji w tym przypadku system by sie nie uruchamial, kiedy jest 
+zainstalowany inny bootloader to nie ma potrzeby instalacji gruba.
+instalacja zakończona, reboot wykonany pomyslnie, zalogowalem sie i dziala 
+wszystko, wyłączam maszyne i ustawiam RAM, procesor, kolejność bootowania, 
+caching, I
 /O APIC do wartosci opisanych przy danych krokach
 włączam maszyne ponownie, zalogowalem sie i działa wszystko :)
 PRZEMYŚLENIA:
 Wynik na szczęscie po takiej ilości czasu był oczekiwany:)
 Wnioski są takie że, duża ilość opcji ma ogromne znaczenie w zależności od tego 
 jak chcemy używac maszyne wirtualna
-Zaskakujące były niektóre braki w ogólnej dokumentacji oracle i trzeba było niek
-tórych rzeczy szukać "na około" Głównie chodzi o ustawienia sieciowe
+Zaskakujące były niektóre braki w ogólnej dokumentacji oracle i trzeba było 
+niektórych rzeczy szukać "na około" Głównie chodzi o ustawienia sieciowe
 Zwiększylo to moje umiejetności researchowania informacji
-Nabytą wiedze wykorzystam na pewno do przyszłych zadań z tego przedmiotu jak i i
-nnych jeśli zajdzie potrzeba.
+Nabytą wiedze wykorzystam na pewno do przyszłych zadań z tego przedmiotu jak i 
+innych jeśli zajdzie potrzeba.
