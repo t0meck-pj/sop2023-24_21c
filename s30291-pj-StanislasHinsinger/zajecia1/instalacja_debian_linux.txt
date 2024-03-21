@@ -1,1 +1,1 @@
-instalacja
+Caly proces instalacji zostal przedstawiony w pliku instalacja_debian_linux.md ze wzgledow na bardziej przejrzysty sposob przedstawienia tresci uzywajac formatu MarkDown.
