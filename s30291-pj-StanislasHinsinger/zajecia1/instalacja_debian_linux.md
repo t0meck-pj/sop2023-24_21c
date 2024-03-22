@@ -119,6 +119,53 @@
 | Enable Secure Boot | Opcja ta pozwala na wlaczenie mechanizmu bezpieczenstwa Secure Boot podczas uruchamiania systemu. Ma on na celu zapobieganie ladowania nieautoryzowanego oprogramowania podczas uruchamiania systemu. Potrzebe wlaczenia tej opcji znajdziemy podczas korzystania z systemow Windows 8, 10, 11 czy Windows Server do zwiekszenia bezpieczenstwa uzytkowania. <br>***W tym procesie instalacji: `opcja ta ma byc odznaczona`*** (system Debian od wersji 10 wspiera Secure Boot, ale dla tego srodowiska serwerowego nie ma takiej potrzeby) |
 | Reset Keys to Default | Opcja ta pozwala na zresetowanie kluczy wykorzystywanych przez Secure Boot do tych podstawowych (cofnie to wszystkie zmiany kluczy dokonanych przez uzytkownika). <br>***W tym procesie instalacji: `nie nalezy dokonywac zmian`*** |
 
+### System - Procesor
+| Opcja | Opis |
+| --- | --- |
+| Processors | Tutaj mozna zmienic ilosc przydzielonych watkow procesora. (jezeli chcemy uzyskac wieksza wydajnosc mozna zwiekszyc ilosc wykorzysytwanych CPU) <br>***W tym procesie instalacji: `nalezey ustawic na 2 CPU`.*** |
+| Wykorzystanie Procesora | Tutaj mozna ustawic w ilu procentach maksymalnie moze byc obciazony jeden CPU, zmniejszenie tej wartosci moze byc przydatne, gdy maszynie wirtualnej zostana przydzielone wszystkie dostepne CPU hosta i podczas pelnego obciazenia maszyny nie bedzie to calkowicie spowalnialo pracy hosta. <br>***W tym procesie instalacji: `nalezy ustawic na 100% lub na 70% jezeli przydzielone zostaly wszystkie dostepne CPU hosta`.*** |
+| Rozszerzone wlasciwosci | Opcja ta pozwala na wlaczenie PAE/NX. PAE - Physical Address Extension pozwala na korzsytanie z wiecej niz 4 GB RAM, jego aktywacja jest wymagana w przypadku przydzielenia wiekszej ilosc pamiecie RAM do wirtualnej maszyny niz 4 GB. NE - No Execute zabezpiecza system przed wykonaniem sie nieautoryzowanego kodu umieszonego w obszarach pamieci (chroni przed `code injection`) <br>***W tym procesie instalacji: `opcja ta ma byc zaznaczona`.*** (zwiekszy to bezpieczenstwo systemu i pozwoli na ewentualne zwiekszenie pamieci RAM maszyny wirtualnej w przyszlosci) |
+| Wlacz zagniezdzone VT-x/AMD-V | Opcja ta pozwala na zagniezdzone wirtualizacje, gdy tworzymy wirtualne srodowisko w wirtualnym srodowisku. <br>***W tym procesie instalacji: `opcja ta ma byc odznaczona jezeli system hosta nie jest systemem wirtualnym`.***  |
+
+### System - Akceleracja
+| Opcja | Opis |
+| --- | --- |
+| Interfejs Parawirtualizacji | Opcja ta pozwala na wybor interfejsu wirtualizacyjnego wykorzystywanego do stworzenia wirtualnego srodowiska dla maszyny wirtualnej. <br>***W tym procesie instalacji: `nalezy zostawic domysla opcje`.*** |
+| Wlacz zagniezdzone stronnicowanie | Opcja ta pozwala na bezposrednie wykorzsytywanie zasob pamieci fizycznej, bez potrzeby przelaczania sie miedzy kontekstami wirutalnego srodowiska a fizycznego. Jego aktywacja zwieksza wydajnosc szczegolnie, gdy maszyna wirtualna jest uruchamiana w innej maszynie wirtualnej. <br>***W tym procesie instalacji: `opcja ta ma byc odznaczona jezeli system hsota nie jest systemem wirtualnym`.*** |
+
+### Ekran - Ekran
+| Opcja | Opis |
+| --- | --- |
+| Pamiec Wideo | Opcja ta pozwala na ustawienie ile pamieci wideo ma byc przeznaczone dla wirtualnej maszyny. ( przykladowo do wyswietlenia jednej klatki na ekranie (YxZ)px bedziemy potrzebowali Y*Z bajtow) Jezeli korzystamy z bardziej rozbudowanego srodowiska graficznego, np. Windows 10, zalecane byloby zwiekszenie ilosci tej pamieci do 128MB<br>***W tym procesie instalacji: `nalezy ustawic 16MB`.*** (serwerowe wykorzystanie praktycznie wogole nie bedzie wykorzystywalo tej pamieci) |
+| Ilosc Monitorow | Mozna ustawic ile monitorow bedzie podpietych do wirtualnego srodowiska. <br>***W tym procesie instalacji: `nalezy ustawic na 1`.*** |
+| Scale Factor | Pozwala na ustawienie skali danego monitora.  <br>***W tym procesie instalacji: `nie nalezy dokonywac zmian`.*** |
+| Kontroler Grafiki | Opcja ta pozwala na wyboru emulowanego kontrolera grafiki.  <br>***W tym procesie instalacji: `nalezy wybrac VMSVGA`*** |
+| Wlacz akceleracje 3D | Opcja ta pozwala na aktywowanie akceleracji sprzetowej 3D hosta do poprawy wydajnosci renderowania grafiki. <br>***W tym procesie instalacji: `opcja ta ma byc odznaczona`.*** (nie ma potrzeby aktywacji akceleracji 3D w srodowisku serwerowym) |
+
+> [!NOTE]
+> **Typy kontrolerow grafiki i ich opis:** <br>* **VBoxVGA** - jest to starszy kontroler grafiki VirtualBox, jest on kompatybilny z wieloma systemami operacyjnymi ale moze nie zapewniac najlepsze wydajnosci. <br>* **VMSVGA** - jest to ulepszony kontroler grafiki VirtualBox, posiada czesciowa akceleracje sprzetowa 3D i jest zalecany dla nowszych systemow operacyjnych. <br>* **VBoxSVGA** - jest to najnowszy kontroler grafiki VirtualBox, posiada wieksze wsparcie akceleracji sprzetowej niz VMSVGA, co sprawia, ze jest zalecany do wymagajacych zastosowan maszyny wirtualnej zwiazanych z renderowanie grafiki. <br>* **Brak** - do maszyny wirtualnie nie zostaje podpiety jakiekolwiek adapter grafiki, co sprawi, ze maszyna wirutalana nie bedzie renderowac obrazu, a dostep do niej bedzie moglo odbyc sie tylko poprzez ssh.
+
+### Ekran - Zdalny Pulpit
+| Opcja | Opis |
+| --- | --- |
+| Wlacz serwer | Opcja ta pozwala na uruchamianie sie serwera zdalnego pulpitu podczas wlaczania systemu, co daje dostep do podlaczenia sie do niego bezposrednio poprzez wykorzystanie aplikacji zadlanego laczenie sie na innym komputerze. <br>***W tym procesie instalacji: `opcja ta ma byc odznaczona`.*** (zdalny dostep do maszyny wirtualnej bedzie odbywal sie przez ssh) |
+| Port Serwera | Port na ktorym ma zostac podpiety serwer zdalnego laczenia sie. [podstawowy to 3389] |
+| Metoda uwierzytelniania | Pozwala na wybor w jakii sposob bedzie uzytkownik otrzymywal dostep do pulpitu maszyny wirtualnej. |
+| Limit czasu uwierzytelniania | Limit czasu na przeprowadzenie procesu autoryzacji uzytkownika (podany w milisekudnach). | 
+| Pozwol na wielokrotne polaczenia | Opcja ta pozwala na lacznenie sie wielu uzytkownikow w tym samym czasie z wirutualna maszyna. |
+
+> [!WARNING]
+> Dzialanie zdalnego pulpitu bedzie dostepne dopiero po zainstalowaniu `VirtualBox Extension Pack`, z podstawy VirtualBox nie ma wsparcia.
+
+### Ekran - Nagrywanie
+| Opcja | Opis |
+| --- | --- |
+| Wlacz Nagrywanie | Opcja ta pozwala na nagrywanie aktywnosci maszyny wirtualnej odrazy po jej uruchomieniu i przerwaniu po jej wylaczeniu. <br>***W tym procesie instalacji: `opcja ta ma byc odznaczona`.*** (nie ma potrzeby nagrywania srodowiska serwerowego) |
+| ... | Reszta opcji sluzy do konfiguracji jakosci i rozdzielczosci nagrywanego obrazu, w przypadku instalowania systemu dokladne wyjasnienie tych opcji jest niepotrzebne |
+
+
+
+
 
 
 
