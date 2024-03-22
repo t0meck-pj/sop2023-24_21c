@@ -113,11 +113,13 @@
 | Chipset | Tutaj mozna dokonac wyboru chipsetu wirtualnej plyty glownej jaki bedzie wykorzystywany. PIIX3 jest podstawowym rodzajem chipsetu, ktory bedzie mial wsparcie dla wiekszosci instalowanych systemow jednak posiada mniejsze mozliwosci niz chipset ICH9, ktory jest eksperymentalnym chipsetem oferujacym lepsze wsparcie dla takich systemow jak Mac OS X, ale nie bedzie on wszedzie wspierany i nie jest zalecany jezeli jezeli jego posiadania nie jest wymogiem sposobu wykorzystania maszyny. <br>***W tym procesie instalacji: `wybierzemy PIIX3`.*** |
 | TPM | Opcja pozwalana na wybor wersji symulowanego modulu Trusted Platform Module, ktory moze byc wykorzysytwany do uruchamiania systemu z Secure Boot, przechowywania kluczy szyfrowania, czy tez weryfikowania podpisow cyfrowych. Symulowanie takiego modulu bedzie wymagane w przypadku korzystania z takiego systemu jak Windows 11. <br>***W tym procesie instalacji: `nalezy wybrac brak`.*** (system Debian nie posiada takiego wymogu i nie bedzie wykorzystania zadnych elementow TPM w zastosowaniu serwerowym wirtualnej maszyny) |
 | Urzadzenie Wskazujace | Tutaj mozna wybrac rodzaj symulacji urzadzenia wskazujacego, gdy bedziemy jezdzic po ekranie wirtualnej maszyny kursorem hosta. <br>***W tym procesie instalacji: `wybierzemy Mysz PS/2`.*** (poniewaz nie bedziemy korzystac z kursora w srodowisku serwerowym) |
-| Wlacz I/O APIC | ... |
-| Enable Hardware Clock in UTC Time | ... |
-| Wlacz EFI | ... |
-| Enable Secure Boot | ... |
-| Reset Keys to Default | ... |
+| Wlacz I/O APIC | Opcja ta pozwala na emulowanie bardziej zaawansowanego kontrolera przerwan (Input/Output Advanced Programmable Interrupt Controller), ktory bedzie w bardziej wydaje sposob zarzadzal przekazywanie przerwan miedzy roznymi wirtualnymi sprzetami danego srodowiska (karty sieciowe, kontrolery dyskow, itd.). <br>***W tym procesie instalacji: `opcja ta ma byc zaznaczona`*** (I/O APIC jest nowszym i bardziej rozbudowany kontrolerem przerwan, co dla srodowiska serwerowego moze byc przydatne) |
+| Enable Hardware Clock in UTC Time | Opcja ta pozwala na ustawienie zegaru sprzetowego tak, aby dzialal on dla strefy UTC niezaleznie od strefy czasowej hosta. Jego wylaczenie bedzie wykorzystywalo czas systemowy hosta. <br>***W tym procesie instalacji: `opcja ta ma byc odznaczona`*** (ze wzgledow na wykorzystanie serwerowe instalowanego systemu, bardzo przydatne bedzie posiadanie tego samego czasu zegara systemowego co host, ze wzgledow na zapis i odczyt ewentualnych "logow") |
+| Wlacz EFI | Opcja ta pozwala na wlaczenie EFI (Extensible Firmware Interface), dokladnie zostalo wyjasnione czym to jest w sekcji kreatora. <br>***W tym procesie instalacji: `opcja ta ma byc odznaczona`*** |
+| Enable Secure Boot | Opcja ta pozwala na wlaczenie mechanizmu bezpieczenstwa Secure Boot podczas uruchamiania systemu. Ma on na celu zapobieganie ladowania nieautoryzowanego oprogramowania podczas uruchamiania systemu. Potrzebe wlaczenia tej opcji znajdziemy podczas korzystania z systemow Windows 8, 10, 11 czy Windows Server do zwiekszenia bezpieczenstwa uzytkowania. <br>***W tym procesie instalacji: `opcja ta ma byc odznaczona`*** (system Debian od wersji 10 wspiera Secure Boot, ale dla tego srodowiska serwerowego nie ma takiej potrzeby) |
+| Reset Keys to Default | Opcja ta pozwala na zresetowanie kluczy wykorzystywanych przez Secure Boot do tych podstawowych (cofnie to wszystkie zmiany kluczy dokonanych przez uzytkownika). <br>***W tym procesie instalacji: `nie nalezy dokonywac zmian`*** |
+
+
 
 
 
