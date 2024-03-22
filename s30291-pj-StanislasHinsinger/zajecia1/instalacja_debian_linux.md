@@ -124,13 +124,13 @@
 | --- | --- |
 | Processors | Tutaj mozna zmienic ilosc przydzielonych watkow procesora. (jezeli chcemy uzyskac wieksza wydajnosc mozna zwiekszyc ilosc wykorzysytwanych CPU) <br>***W tym procesie instalacji: `nalezey ustawic na 2 CPU`.*** |
 | Wykorzystanie Procesora | Tutaj mozna ustawic w ilu procentach maksymalnie moze byc obciazony jeden CPU, zmniejszenie tej wartosci moze byc przydatne, gdy maszynie wirtualnej zostana przydzielone wszystkie dostepne CPU hosta i podczas pelnego obciazenia maszyny nie bedzie to calkowicie spowalnialo pracy hosta. <br>***W tym procesie instalacji: `nalezy ustawic na 100% lub na 70% jezeli przydzielone zostaly wszystkie dostepne CPU hosta`.*** |
-| Rozszerzone wlasciwosci | Opcja ta pozwala na wlaczenie PAE/NX. PAE - Physical Address Extension pozwala na korzsytanie z wiecej niz 4 GB RAM, jego aktywacja jest wymagana w przypadku przydzielenia wiekszej ilosc pamiecie RAM do wirtualnej maszyny niz 4 GB. NE - No Execute zabezpiecza system przed wykonaniem sie nieautoryzowanego kodu umieszonego w obszarach pamieci (chroni przed `code injection`) <br>***W tym procesie instalacji: `opcja ta ma byc zaznaczona`.*** (zwiekszy to bezpieczenstwo systemu i pozwoli na ewentualne zwiekszenie pamieci RAM maszyny wirtualnej w przyszlosci) |
+| Wlacz PAE/NX | Opcja ta pozwala na wlaczenie PAE/NX. <br>**PAE - Physical Address Extension** pozwala na korzystanie z wiecej niz 4 GB RAM, jego aktywacja jest wymagana w przypadku przydzielenia wiekszej ilosci pamiecie RAM do wirtualnej maszyny niz 4 GB. <br>**NX - No Execute** zabezpiecza system przed wykonaniem sie nieautoryzowanego kodu umieszonego w obszarach pamieci (chroni przed `code injection`) <br>***W tym procesie instalacji: `opcja ta ma byc zaznaczona`.*** (zwiekszy to bezpieczenstwo systemu i pozwoli na ewentualne zwiekszenie pamieci RAM maszyny wirtualnej w przyszlosci) |
 | Wlacz zagniezdzone VT-x/AMD-V | Opcja ta pozwala na zagniezdzone wirtualizacje, gdy tworzymy wirtualne srodowisko w wirtualnym srodowisku. <br>***W tym procesie instalacji: `opcja ta ma byc odznaczona jezeli system hosta nie jest systemem wirtualnym`.***  |
 
 ### System - Akceleracja
 | Opcja | Opis |
 | --- | --- |
-| Interfejs Parawirtualizacji | Opcja ta pozwala na wybor interfejsu wirtualizacyjnego wykorzystywanego do stworzenia wirtualnego srodowiska dla maszyny wirtualnej. <br>***W tym procesie instalacji: `nalezy zostawic domysla opcje`.*** |
+| Interfejs Parawirtualizacji | Opcja ta pozwala na wybor interfejsu wirtualizacyjnego wykorzystywanego do stworzenia wirtualnego srodowiska dla maszyny wirtualnej. <br>***W tym procesie instalacji: `nalezy zostawic domyslna opcje`.*** |
 | Wlacz zagniezdzone stronnicowanie | Opcja ta pozwala na bezposrednie wykorzsytywanie zasob pamieci fizycznej, bez potrzeby przelaczania sie miedzy kontekstami wirutalnego srodowiska a fizycznego. Jego aktywacja zwieksza wydajnosc szczegolnie, gdy maszyna wirtualna jest uruchamiana w innej maszynie wirtualnej. <br>***W tym procesie instalacji: `opcja ta ma byc odznaczona jezeli system hsota nie jest systemem wirtualnym`.*** |
 
 ### Ekran - Ekran
@@ -155,13 +155,13 @@
 | Pozwol na wielokrotne polaczenia | Opcja ta pozwala na lacznenie sie wielu uzytkownikow w tym samym czasie z wirutualna maszyna. |
 
 > [!WARNING]
-> Dzialanie zdalnego pulpitu bedzie dostepne dopiero po zainstalowaniu `VirtualBox Extension Pack`, z podstawy VirtualBox nie ma wsparcia.
+> Dzialanie zdalnego pulpitu bedzie dostepne dopiero po zainstalowaniu `VirtualBox Extension Pack`, z podstawy VirtualBox nie posiada wsparcia.
 
 ### Ekran - Nagrywanie
 | Opcja | Opis |
 | --- | --- |
 | Wlacz Nagrywanie | Opcja ta pozwala na nagrywanie aktywnosci maszyny wirtualnej odrazy po jej uruchomieniu i przerwaniu po jej wylaczeniu. <br>***W tym procesie instalacji: `opcja ta ma byc odznaczona`.*** (nie ma potrzeby nagrywania srodowiska serwerowego) |
-| ... | Reszta opcji sluzy do konfiguracji jakosci i rozdzielczosci nagrywanego obrazu, w przypadku instalowania systemu dokladne wyjasnienie tych opcji jest niepotrzebne |
+| ... | Reszta opcji sluzy do konfiguracji jakosci i rozdzielczosci nagrywanego obrazu, w przypadku instalowania systemu dokladne wyjasnienie tych opcji nie jest konieczne |
 
 
 
