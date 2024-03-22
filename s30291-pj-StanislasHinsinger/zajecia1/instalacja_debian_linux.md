@@ -189,6 +189,67 @@ W tej sekcji mozna ustawiac kontrolery pamieci masowej i przydzielac do nich odp
 | Hot-pluggable | Opcja ta daje mozliwosc odlaczania i ponowego laczenia dysku podczas pracy systemu operacyjnego, bez potrzeby jego resetowania. |
 
 
+### Dzwiek
+| Opcja | Opis |
+| --- | --- |
+| Wlacz dzwiek | Opcja ta pozwala na aktywowanie przechwytywania dzwieku z wirtualnej maszyny poprzez sterownik dzwieku. <br>***W tym procesie instalacji: `opcja ta ma byc odznaczona`.*** (nie ma zapotrzebowania na wykorzystanie dzwieku w srodowisku serwerowym) |
+| Sterownik dzwieku gospodarza | W tej opcji mozna wybrac poprzez jaki sterownik bedzie przekazywany dzwiek z wirtualnej maszyny do systemu hosta. |
+| Kontroler audio | Opcja ta pozwala na wybor kontrolera audio wirtualnej maszyny. `ICH AC97` jest najstarzym kontrolerem i bedzie zapewniac kompatyblinosc dla starszy systemow. `SoundBlaster16` takze jest kontrolerem starszej generacji. `Intel HD Audio` jest to najnowszy standard dzwieku oferujacy lepsza jakosc i szereg dodatkowych funkcji.|
+| Wlacz wyjscie dzwieku | Opcja ta aktywuje przekazywanie dzwieku z wirtualnej maszyny do hosta. |
+| Wlacz wejscie dzwieku | Opcja ta aktywuje przekazywanie dzwieku z urzadzen hosta do wirtualnej maszyny. (o ile zostaly wczesniej prawidlowo podlaczone i skonfigurowane). |
+
+
+### Siec
+W tej sekcji mozna skonfigurowac karty sieciowe maszyny wirtualnej (maksymalnie do 4).
+
+* **Dla tego procesu instalacji wykorzystamy 1 karte sieciowa i skonfigurujemy ja jako mostkowana karta sieciowa, tak aby maszyna byla oddzielnie zarejestrowana w sieci hosta (gdzie w nazwie bedzie trzeba ustawic karte sieciowa uzywana przez hosta).** 
+
+| Typ Sieci | Opis |
+| --- | --- |
+| NAT | `Network Address Translation` - jest to siec umozliwiajaca maszynom wirtualnym na dostep do internetu poprzez hosta, gdzie host bedzie dzialac jako router a maszyny beda posiadac swoje prywatne adresy IP, ktore beda tlumaczone na publiczny adres hosta. |
+| Siec Mostkowa | Siec ta pozwala wirtualnej maszynie dzialac jak pelnoprawne urzadzenie w sieci fizycznej. Kazda maszyna dostaje swoj wlasny adres w sieci fizycznej, co pozwala jej na komunikacje z lokalnymi urzadzeniami w sieci.
+| Siec Wewnetrzna | Laczy maszyny wirtualne wewnatrz srodowiska wirtualnego, ale bez dostepu do hosta i sieci zewnetrznej. Przydatne, gdy nalezy stworzyc siec komunikujacych ze soba maszyn wirtualnych np. cluster baz danych. |
+| Siec Hosta | Pozwala na komunikacje tylko miedzy maszyna wirtualna a hostem. (brak mozliwosci laczenia sie z sieciami zewnetrznymi)
+| Rodzajowy Sterownik | Pozwala na ustawienie niestandardowego sterownika sieciowego dla danej maszyny wirtualnej. Wykorzystywane, gdy potrzebne jest dostosowanie sie do specjalnych sterownikow lub wymagan sprzetowych. |
+| Siec NAT | Pozwala na tworzenie wielu sieci NAT w ktorej kazda z nich bedzie dzialac niezaleznie. |
+| Cloud Network | Pozwala na laczenie sie infrastruktura dostawcow uslug chmury takich jak AWS, AZURE czy GCP.
+
+
+**Dodatkowe opcje, ktore mozna znalezc w tej kategorii:**
+| Opcja | Opis |
+| --- | --- |
+| Typ karty | Tutaj mozna ustawic typ emulowanej karty sieciowej. Kazda z nich bedzie w pelni dzialala dla podstawowego wykorzystania przez maszyne wirtualna, jedna do bardziej zaawansowanych konfiguracji karty sieciowej przez maszyne wirtualna, moze byc zalecane wykorzystanie edycji `SERVER` zamiast `DESKTOP`. <br>***W tym procesie instalacji: `wystarczy wybranie opcji Intel PRO/100 MT Desktop`.*** |
+| Tryb nasluchiwania | Ustawienie to pozwala na aktywowanie nasluchiwania calego ruchu ramek sieciowych, nawet tych ktore nie sa adresowane do maszyny wirtualnej. Tryb ten moze byc aktywowany w momencie, gdy chcemy monitorowac caly ruch w danej sieci. Ze wzgledow bezpieczenstwa i na przeplyw potencjalnie wrazliwych danych nie jest to zalecane. <br>***W tym procesie instalacji: `nalezy wybrac "Odmawiaj"`.*** |
+| Adres MAC | Tutaj znajduje sie adres MAC karty sieciowej maszyny wirtualnej. Z podstawy kazdy adres MAC maszyny wirtualnej VirtualBox bedzie zaczynal sie od `080027`. Adres ten mozna ponownie zregenerowac wybierajac przycisk regenerajci po prawej stronie. <br>***W tym procesie instalacji: `nie nalezy dokonywac zmian`.*** |
+| Kabel Podlaczony | Opcja ta pozwala na ustawienie, czy karta sieciowa bedzie podlaczona do sieci czy tez nie. Przydatne gdy chcemy odlaczyc maszyne od danej sieci, ale nie chcemy calkowicie odlaczac karty sieciowej. |
+
+### Porty Szeregowe
+Sekcja ta zostanie pominieta, ze wzgledow na calkowity brak wykorzystania tej portow szeregowych w tym procesie instalacyjnym i ewentualnym uzytkowaniu systemu operacyjnego, ponadto bardzo rzadko takie porty sa instalowane na maszynach wirtualnych uzytku codziennego czy serwerowego. Wiekszosc urzadzen wykorzystuje standart komunikacji USB.
+
+### USB
+Sekcja ta pozwala na bezposrednie podlaczenie urzadzen USB hosta z maszyna wirtualna. Mozna wybrac miedzy standardami USB 1.1, USB 2.0 i USB 3.0. Urzadzenia mozna dodawac poprzez przycisk `+` w prawym panelu. Mozna takze dodwac filty, dzieki ktorym w latwy sposb mozna ustawic automatyczne instalowanie urzadzen.
+
+### Udostepniane foldery
+Sekcja ta pozwala na udostepnienie folderow hosta maszynie wirtualnej, dzieki czemu w latwy sposob mozna ustanowic komunikacje miedzy nimi. Folder mozna udostepnic klikajac na przycisk `+` w prawym panelu. Na potrzeby tego procesu instalacyjnego nie bedzie wykorzystania udostepniania folderow, dlatego w tej sekcji nie zostanie wprowadzona jakakolwiek zmiana.
+
+| Opcja | Opis |
+| --- | --- |
+| Sciezka do folderu | Lokalizacja folderu u hosta, ktory bedzie sie udostepnialo. |
+| Nazwa Folderu | Nazwa tego folderu. |
+| Punkt Montowania | Lokalizacja na maszynie wirtualnej w jakiej zostanie ten folder zamontowany. |
+| Tylko do odczytu | Opcja ta blokuje mozliwosc zapisu przez maszyne wirtualna w tym folderze. Przydatne, gdy nie chcemy w jakikolwiek sposob dawac dostep do systemu hosta maszynie wirtualnej. |
+| Automatyczne Montowanie | Opcja ta sprawi, ze VirtualBox bedzie automatycznie montowal ten folder do systemu przy kazdy uruchomieniu wirtualnej maszyny.
+
+> [!WARNING]
+> Dla niektorych systemow operacyjnych wirtualnej maszyny bedzie wymagane zainstalowanie i konfiguracja `VirtualBox Guest Additions` do prawidlowego automatycznego montowania udostepnianych folderow.
+
+### Interfejs Uzytkownika
+Sekcja tak sluzy tylko do konfigurowania interfejsu okna wirtualnej maszyny. Opcje te maja aspekt czysto wizualny dla uzytkownika korzystajacy z VirtualBox'a i nie maja jakiegokolwiek wplywu na proces instalacyjny systemu czy tez jego prawidlowe dzialanie, dlatego tez sekcja ta zostanie pominieta.
+
+ 
+
+
+
 
 
 
