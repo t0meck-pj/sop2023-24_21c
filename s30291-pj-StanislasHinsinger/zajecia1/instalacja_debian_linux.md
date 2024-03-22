@@ -244,9 +244,13 @@ Sekcja ta pozwala na udostepnienie folderow hosta maszynie wirtualnej, dzieki cz
 > Dla niektorych systemow operacyjnych wirtualnej maszyny bedzie wymagane zainstalowanie i konfiguracja `VirtualBox Guest Additions` do prawidlowego automatycznego montowania udostepnianych folderow.
 
 ### Interfejs Uzytkownika
-Sekcja tak sluzy tylko do konfigurowania interfejsu okna wirtualnej maszyny. Opcje te maja aspekt czysto wizualny dla uzytkownika korzystajacy z VirtualBox'a i nie maja jakiegokolwiek wplywu na proces instalacyjny systemu czy tez jego prawidlowe dzialanie, dlatego tez sekcja ta zostanie pominieta.
+Sekcja ta sluzy tylko do konfigurowania interfejsu okna wirtualnej maszyny. Opcje te maja aspekt czysto wizualny dla uzytkownika korzystajacy z VirtualBox'a i nie maja jakiegokolwiek wplywu na proces instalacyjny systemu czy tez jego prawidlowe dzialanie, dlatego tez sekcja ta zostanie pominieta.
 
- 
+## Finalny proces instalacji
+
+7. Po prawidlowym skonfigurowaniu wszystkich opcji w ustawieniach, nalezy kliknac na przycisk `OK`.
+8. Teraz wszystko jest juz gotowe i mozna przejsc do finalnego procesu instalacji systemu operacyjnego. W tym celu nalezy uruchomic maszyne przyciskiem `Uruchom`. 
+
 
 
 
