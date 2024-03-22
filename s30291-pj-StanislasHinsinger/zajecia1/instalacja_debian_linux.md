@@ -143,7 +143,7 @@
 | Wlacz akceleracje 3D | Opcja ta pozwala na aktywowanie akceleracji sprzetowej 3D hosta do poprawy wydajnosci renderowania grafiki. <br>***W tym procesie instalacji: `opcja ta ma byc odznaczona`.*** (nie ma potrzeby aktywacji akceleracji 3D w srodowisku serwerowym) |
 
 > [!NOTE]
-> **Typy kontrolerow grafiki i ich opis:** <br>* **VBoxVGA** - jest to starszy kontroler grafiki VirtualBox, jest on kompatybilny z wieloma systemami operacyjnymi ale moze nie zapewniac najlepsze wydajnosci. <br>* **VMSVGA** - jest to ulepszony kontroler grafiki VirtualBox, posiada czesciowa akceleracje sprzetowa 3D i jest zalecany dla nowszych systemow operacyjnych. <br>* **VBoxSVGA** - jest to najnowszy kontroler grafiki VirtualBox, posiada wieksze wsparcie akceleracji sprzetowej niz VMSVGA, co sprawia, ze jest zalecany do wymagajacych zastosowan maszyny wirtualnej zwiazanych z renderowanie grafiki. <br>* **Brak** - do maszyny wirtualnie nie zostaje podpiety jakiekolwiek adapter grafiki, co sprawi, ze maszyna wirutalana nie bedzie renderowac obrazu, a dostep do niej bedzie moglo odbyc sie tylko poprzez ssh.
+> **Typy kontrolerow grafiki i ich opis:** <br>* `VBoxVGA` - jest to starszy kontroler grafiki VirtualBox, jest on kompatybilny z wieloma systemami operacyjnymi ale moze nie zapewniac najlepsze wydajnosci. <br>* `VMSVGA` - jest to ulepszony kontroler grafiki VirtualBox, posiada czesciowa akceleracje sprzetowa 3D i jest zalecany dla nowszych systemow operacyjnych. <br>* `VBoxSVGA` - jest to najnowszy kontroler grafiki VirtualBox, posiada wieksze wsparcie akceleracji sprzetowej niz VMSVGA, co sprawia, ze jest zalecany do wymagajacych zastosowan maszyny wirtualnej zwiazanych z renderowanie grafiki. <br>* `Brak` - do maszyny wirtualnie nie zostaje podpiety jakiekolwiek adapter grafiki, co sprawi, ze maszyna wirutalana nie bedzie renderowac obrazu, a dostep do niej bedzie moglo odbyc sie tylko poprzez ssh.
 
 ### Ekran - Zdalny Pulpit
 | Opcja | Opis |
@@ -162,6 +162,31 @@
 | --- | --- |
 | Wlacz Nagrywanie | Opcja ta pozwala na nagrywanie aktywnosci maszyny wirtualnej odrazy po jej uruchomieniu i przerwaniu po jej wylaczeniu. <br>***W tym procesie instalacji: `opcja ta ma byc odznaczona`.*** (nie ma potrzeby nagrywania srodowiska serwerowego) |
 | ... | Reszta opcji sluzy do konfiguracji jakosci i rozdzielczosci nagrywanego obrazu, w przypadku instalowania systemu dokladne wyjasnienie tych opcji nie jest konieczne |
+
+### Pamiec
+W tej sekcji mozna ustawiac kontrolery pamieci masowej i przydzielac do nich odpowiednie nosnik danych. W tym tworzyc takze emulowane nosniki zawierajace dane z folderow z komputera hosta. Dostepnych kontrolerow jest wiele, ale kluczowymi sa kontrolery IDE i SATA, ktore sa juz domyslnie ustawione. Ponizej znajduje sie informacja odnosnie kazdego dostepnego kontrolera.
+
+* *Dla tego procesu instalacyjnego w kontrolerze IDE powinnien sie znalezc obraz instalatora `.iso`, a w kontrolerze SATA dysk `.vhd`, ktory zostal utworzony wraz z wirtualna maszyna.*
+
+| Kontroler | Opis |
+| --- | --- |
+| PIIX4/PIIX3/ICH6 (IDE)| `Integrated Drive Electornics` - sa emulowane chipsety kontrolerow I/O pozwalajacych na montowanie nosnikow danych. Posiadaja one najwieksza kompatybilnosc z systemami operacyjnymi. <br> ***Maksymalna ilosc montowalnych nosinkow:** `4` |
+| AHCI (SATA) | `Serial Advanced Technology Attachment` - kontroler ten posiada wieksza przepustownosc w porownaniu do IDE. Ponadto oferuje mozliwosc `Hot Swappingu` pozwalajacego na wymiane dysku podczas pracy systemu operacyjnego bez jego resetowania. (jest to jedyny kontroler oferujacy taka mozliwosc w VirtualBox) <br> ***Maksymalna ilosc montowalnych nosinkow:*** `30`*** |
+| LsiLogic (SCSI) | `Small Computer System Interface` - jest to kontroler, ktory bedzie oferowal wieksza kompatybilnosc z systemami w porownaniu do SATA ale nie posiada w VirtualBoxie opcji Hot Swappingu. <br> ***Maksymalna ilosc montowalnych nosinkow: `15`*** |
+| Floppy | Jest to kontroler pozwalajacy na emulowanie dyskietek. <br> ***Maksymalna ilosc montowalnych nosinkow: `2`*** |
+| LsiLogic SAS | `Serial Attached SCSI` - jest to kontroler obslugujacy dyski SAS, ktore sa bardzie zaawansowane i zapewniaja wieksza wydajnosc i niezawodnosc w porownaniu do dyskow SATA. Interfejs ten obsluguje spinanie dyskow w macierz RAID i zarzadzanie matryca dyskow. Posiada mozliwosc podpiecia duzej ilosci dyskow co jest preferowanym kontrolerem dla systemow serwerowych. | <br> ***Maksymalna ilosc montowalnych nosinkow: `255`*** |
+| VirtIO | Jest to kontroler stworzony specjalnie z mysla o wirtualizacji do wydajnej i optymalnej pracy z hostem. Obsluguje on dyski roznego typu, ale wymagac bedzie instalacji dodatkowych sterownikow na maszynie wirtualnej do uzyskania pelnego wsparcia.  | <br> ***Maksymalna ilosc montowalnych nosinkow: `255`*** |
+| USB | `Universal Serial Bus` - jest to kontroler, ktory pozwala na montowanie i bezposrednia komunikacje urzadzen hosta z wirtualnym srodowiskiem, tak jakby byly one podpiete bezposrednio z wirtualnym systemem. <br> ***Maksymalna ilosc montowalnych nosinkow: `8`*** |
+
+**Dodatkowe opcje, ktore mozna znalezc w tej kategorii:**
+| Opcja | Opis |
+| --- | --- |
+| Live CD/DVD | Opcja ta daje mozliwosc uruchomienia systemu bezposrednio z nosnika bez jego instalacji na dysk. Gdzie ewentualnie dane ustawione podczas korzystania z systemu zostana utracone. (lub nie, jezeli zostanie dokonana ich kopia na inny nosnik) |
+| Nazwa | Pozwala ustawic nazwe danego kontrolera. |
+| Typ | Pozwala ustawic rodzaj danego kontrolera. |
+| Ilosc Portow | Pozwala ustawic ilosc obslugiwanych portow na danym kontrolerze. |
+| Dysk SSD | Opcja ta sprawia, ze montowany dysk bedzie traktowany jak dysk SSD (opcja ta powinna byc aktywowana tylko gdy mamy doczynienia z fizycznym dyskiem SSD) |
+| Hot-pluggable | Opcja ta daje mozliwosc odlaczania i ponowego laczenia dysku podczas pracy systemu operacyjnego, bez potrzeby jego resetowania. |
 
 
 
