@@ -68,8 +68,14 @@
 * **Use an Exsiting Virtual Hard Disk File:** `pozwala na wybranie już istniejącego wirtualnego dysk twardego [gdy chcemy wykorzystać już stworzony i zapisany system operacyjny]`
 * **Do Not Add a Virtual Disk:** `nie podpina żadnego wirtualnego dysku do tej maszyny, w zamian można wykorzystać podczas uruchamiania sam napęd optyczny, dyskietkę lub USB`
 
-> [!NOTE]
-> **Typy dysków i ich opis:** <br>* VDI - <br>* VHD - <br>* VMDK - <br>* HDD - <br>* QCOW - <br>* QED -
+| Typ dysku | Opis dysku |
+| --- | --- |
+| VDI | Format dysku wirtualnego używany przez VirtualBox. Jest to domyślny format dla nowo tworzonych maszyn wirtualnych. |
+| VHD | Format dysku wirtualnego, który jest szeroko stosowany i obsługiwany przez różne platformy wirtualizacyjne, w tym przez VirtualBox. |
+| VMDK | Format dysku wirtualnego używany przez VMware, ale obsługiwany także przez VirtualBox. |
+| HDD | Ogólna kategoria dysków twardych, obejmująca różne formaty używane przez różne platformy wirtualizacyjne. |
+| QCOW | Format dysku wirtualnego używany przez QEMU, który może być również obsługiwany przez VirtualBox. |
+| QED | Format dysku wirtualnego zastosowany w QEMU, który może być również używany w VirtualBox. |
 
 > [!TIP]
 > *Minimalna przestrzeń wymagana przez dany system zawsze można znaleźć na stronie dystrybutora. W przypadku rodziny systemów `Debian` te minimalne wymagania można znaleźć na [oficjalnej stronie Debian.org](https://www.debian.org/releases/stable/i386/ch03s04.en.html)*
@@ -142,8 +148,12 @@
 | Kontroler Grafiki | Opcja ta pozwala na wyboru emulowanego kontrolera grafiki.  <br>***W tym procesie instalacji: `należy wybrać VMSVGA`*** |
 | Włącz akceleracje 3D | Opcja ta pozwala na aktywowanie akceleracji sprzętowej 3D hosta do poprawy wydajności renderowania grafiki. <br>***W tym procesie instalacji: `opcja ta ma być odznaczona`.*** (nie ma potrzeby aktywacji akceleracji 3D w środowisku serwerowym) |
 
-> [!NOTE]
-> **Typy kontrolerów grafiki i ich opis:** <br>* `VBoxVGA` - jest to starszy kontroler grafiki VirtualBox, jest on kompatybilny z wieloma systemami operacyjnymi ale może nie zapewniać najlepsze wydajności. <br>* `VMSVGA` - jest to ulepszony kontroler grafiki VirtualBox, posiada częściowa akceleracje sprzętowa 3D i jest zalecany dla nowszych systemów operacyjnych. <br>* `VBoxSVGA` - jest to najnowszy kontroler grafiki VirtualBox, posiada większe wsparcie akceleracji sprzętowej niż VMSVGA, co sprawia, ze jest zalecany do wymagających zastosowań maszyny wirtualnej związanych z federowanie grafiki. <br>* `Brak` - do maszyny wirtualnie nie zostaje podpięty jakiekolwiek adapter grafiki, co sprawi, ze maszyna wirtualna nie będzie renerowa obrazu, a dostęp do niej będzie mogło odbyć się tylko poprzez SSH.
+| Kontroler Grafiki | Opis kontrolera |
+| --- | --- |
+| VBoxVGA | Starszy kontroler grafiki oferujący kompatybilność wsteczną z starszymi wersjami VirtualBox. |
+| VMSVGA | Aktualny kontroler grafiki, zapewniający lepszą wydajność i obsługę nowszych funkcji graficznych. |
+| VBoxSVGA | Kontroler grafiki zaprojektowany specjalnie dla systemów operacyjnych obsługujących akcelerację sprzętową 3D. |
+| Brak | Kontroler grafiki nie jest przypisany do maszyny wirtualnej, co powoduje brak wyświetlanego obrazu. Dostęp do maszyny może odbywać się jedynie poprzez SSH lub inną formę zdalnego dostępu. Ta opcja jest przydatna w przypadku maszyn serwerowych, gdzie interfejs graficzny nie jest wymagany, co minimalizuje zużycie zasobów systemowych. |
 
 ### Ekran - Zdalny Pulpit
 | Opcja | Opis |
@@ -271,6 +281,38 @@ Sekcja ta śluzy tylko do konfigurowania interfejsu okna wirtualnej maszyny. Opc
 > [!NOTE]
 > Zalecane jest przydzielenie do SWAPu tyle pamięci: <br> - **[GDY RAM DO 2 GB]** -> SWAP = 2 * (ILOSC RAM) <br> - **[GDY RAM > 2 GB]** -> SWAP = (ILOSC RAM) + 2 GB
 
+**Wyjaśnienie reszty dostępnych opcji wykorzystania danej partycji (Use as):**
+| Opcja | Opis |
+| --- | --- |
+| Ext4 journaling | System plików Ext4 z mechanizmem dziennikowania, zapewniający stabilność danych i wysoką wydajność. |
+| Ext3 journaling | Poprzednia wersja systemu plików Ext z mechanizmem dziennikowania, oferująca podobne cechy do Ext4, ale z mniejszymi możliwościami optymalizacji. |
+| Ext2 | Starsza wersja systemu plików Ext bez mechanizmu dziennikowania, oferująca podstawową funkcjonalność bez dodatkowych zabezpieczeń. |
+| btrfs journaling | System plików Btrfs z mechanizmem dziennikowania, charakteryzujący się elastycznością, obsługą kopiowania migawkowego i replikacji. |
+| JFS | System plików JFS (Journaling File System), zapewniający szybki dostęp do danych i wysoką niezawodność. |
+| XFS | System plików XFS, zapewniający wysoką wydajność i skalowalność, szczególnie przy obsłudze dużych plików i woluminów. |
+| FAT16 | System plików FAT16, obsługujący małe partycje i pliki o ograniczonym rozmiarze. |
+| FAT32 | System plików FAT32, obsługujący większe partycje i pliki w porównaniu do FAT16. |
+| Swap Area | Specjalna partycja używana jako przestrzeń wymiany, służąca do przechowywania danych wykorzystywanych przez system, gdy brakuje pamięci RAM. |
+| physical volume for encryption | Partycja przeznaczona do szyfrowania danych, wykorzystywana w technologiach szyfrowania dysków. |
+| physical volume for RAID | Partycja przeznaczona do wykorzystania w macierzach RAID, służąca do zwiększenia niezawodności i wydajności przechowywanych danych. |
+| physical volume for LVM | Partycja przeznaczona do wykorzystania w systemie zarządzania logicznymi woluminami (LVM), umożliwiającym elastyczne zarządzanie przestrzenią dyskową. |
+| do not use the partition | Opcja wyboru, aby nie wykorzystywać danej partycji, pozostawiając ją niewykorzystaną w systemie. |
+
+**Wyjaśnienie dostępnych opcji ustawień montowania danej partycji (Mount Options):**
+| Opcja | Opis |
+| --- | --- |
+| discard | Opcja umożliwiająca natychmiastowe usuwanie danych (TRIM) dla urządzeń SSD, co może poprawić wydajność i trwałość dysku. |
+| noatime | Opcja wyłączająca aktualizację czasu dostępu do plików, co może zwiększyć wydajność systemu poprzez ograniczenie operacji zapisu na dysku. |
+| nodiratime | Opcja podobna do noatime, ale dotyczy tylko katalogów, pomijając aktualizację czasu dostępu tylko dla nich. |
+| realtime | Opcja umożliwiająca oznaczenie partycji jako obszar czasu rzeczywistego, co jest przydatne w systemach wymagających precyzyjnej synchronizacji czasu. |
+| nodesv | Opcja blokująca tworzenie specjalnych plików urządzeń (np. /dev/null, /dev/random) na danej partycji, co może zwiększyć bezpieczeństwo systemu. |
+| nosuid | Opcja blokująca wykonanie plików z ustawionym bitem suid, co może ograniczyć potencjalne luki bezpieczeństwa w systemie. |
+| noexec | Opcja blokująca wykonywanie plików wykonywalnych na danej partycji, co może zapobiec wykonaniu złośliwego kodu. |
+| ro | Opcja montowania partycji jako tylko do odczytu (read-only), uniemożliwiająca zapisywanie na niej danych. |
+| sync | Opcja wymuszająca synchroniczne operacje zapisu na danej partycji, co może zwiększyć niezawodność systemu kosztem wydajności. |
+| userquota | Opcja umożliwiająca obsługę limitów dyskowych dla użytkowników na danej partycji. |
+| grpquota | Opcja umożliwiająca obsługę limitów dyskowych dla grup użytkowników na danej partycji. |
+| user_xattr | Opcja umożliwiająca obsługę rozszerzonych atrybutów użytkownika na danej partycji, co pozwala na przechowywanie dodatkowych metadanych plików. |
 20. Tworzenie partycji `Home`. W partycji tej zostanie uwzględniony katalog domowy użytkowników. Zalecane jest jego oddzielenie, ze względów na fakt, ze jeżeli pamięć tej partycji zostanie wypełniona, to nie będzie to miało wpływu na prawidłowe funkcjonowanie systemu. W celu utworzenia tej partycji należy ponownie wybrać opcje z tagiem `FREE SPACE`, tam wybrać opcje `Create a new partition` i tutaj ustawić przestrzeń jaka zostanie przydzielona dla użytkowników. Dla tego procesu instalacyjnego przeznaczone zostanie 26GB (reszta wolnej przestrzeni przeznaczona będzie dla systemu i reszty katalogów). Partycja ta będzie także ustawiona jako partycja logiczna na początku wolnej przestrzeni. W konfiguracji tej partycji pozostawiony zostanie system plików `Ext4 journaling`, ze względów na wystarczająca wydajność i niezawodność, która dla systemu serwerowego jest kluczowa. Dodatkowo w konfiguracji należy zmienić `Mount point`, w którym ustawić trzeba `/home`. Reszta ustawień konfiguracyjnych ma być niezmieniona. Gdy wszystko zostanie ustawione, należy wybrać zapisać konfiguracje tej partycji wybierając `Done setting up the partition`.
 
 21. Tworzenie partycji ogólnej `/` (root). Partycja ta będzie partycja ogólna, w której znajdować się będą wszystkie innego katalogi systemowe i do której zostanie przydzielona reszta wolnej przestrzeni dyskowej. Ponownie należy wybrać opcje z tagiem `FREE SPACE`. W ilości przydzielanej pamięć należy wprowadzić cala wolna przestrzeń, czyli `10 GB`. Zamiast wybierać partycje logiczna należy tym razem wybrać partycje `Primary` (ze względów na to, ze przestrzeń ta będzie ogólna dla systemu). Tutaj także pozostawiony zostanie podstawowy system plików `Ext4 journaling`. Mount point ma wskazywać na `/`. A reszta ustawień ma pozostać bez zmian. Po prawidłowym ustawieniu należy zapisać ta partycje wybierając `Done setting up the partition`.
@@ -281,20 +323,37 @@ Sekcja ta śluzy tylko do konfigurowania interfejsu okna wirtualnej maszyny. Opc
 
 22. I właśnie w taki sposób prawidłowo została podzielona i skonfigurowana cala przestrzeń dyskowa. Aby zakończyć ten proces należy wybrać opcje `Finish partitioning and write changes to disk` a następnie `Yes`. Po tym zostanie rozpoczęty proces instalacji podstawy systemu.
 
-23.
+23. Po zainstalowaniu się podstawy systemu, na ekranie powinno wyskoczyć powiadomienie `Configure the package manager`, w którym mamy opcje zeskanować inne nośniki, które mogłyby zostać użyte na potrzeby `package manager'a`. W tym procesie instalacyjnym dodatkowe nośniki nie zostały wprowadzone, wiec należy wybrać opcje `No`. Po czym zostanie wyświetlone okno wyboru kraju z którego zostanie dokonany klon pobieranych plików systemu do finalnego procesu instalacyjnego. W tym przypadku należy wybrać `Poland`. Wyświetlone zostaną dostępne serwery archiwów systemowych, gdzie optymalnie należy wybrać serwer znajdujący się najbliżej lokalizacji instalowanego systemu. W przypadku Trójmiasta zalecane jest wybranie opcji `ftp.task.gda.pl`, jeżeli podczas instalacji wyskoczy błąd z informacja, ze serwer ten jest niedostępny lub  że nie można pobrać plików instalacyjnych, to w takim przypadku należy wybrać innych serwer dostępny z listy. Po wybraniu serwera, instalator zapyta o informacje czy do uzyskania dostępu do Internetu wykorzystany ma być serwer `Proxy`. Jeżeli sieć, w której instalowany jest system nie posiada ograniczaj dostępowych to należy zostawić tą przestrzeń pustą, w innym przypadku należy uzupełnić to pole danymi serwera Proxy.
 
+24. W trakcie pobierania plików instalacyjnych prawdopodobnie wyświetli się informacja odnośnie `ankiety popularnościowej`, w której nie trzeba brać udziału, dlatego tez w tym przypadku należy wybrać opcje `No`.
 
+25. W trakcie instalacji, wyskoczy okno z wyborem Software'u do zainstalowania. Opcje te można zaznaczać i odznaczać korzystając ze spacji. Na potrzeby tego procesu instalacyjnego systemu serwerowego zaznaczone powinny być tylko opcje `SSH server` i `Standard system utilities`.  Po wybraniu należy przejść do dalszego etapu instalacji poprzez przycisk `Continue`.
 
+| Opcja | Opis dostępnych opcji |
+| --- | --- |
+| Debian desktop environment | Opcja instalowania podstawowych aplikacji i narzędzi dla systemu z wykorzystaniem domowym. |
+| GNOME | Środowisko graficzne zapewniające intuicyjny interfejs użytkownika oraz obsługę aplikacji. |
+| Xfce | Lekkie środowisko graficzne, charakteryzujące się niskim zużyciem zasobów systemowych. |
+| GNOME Flashback | Wersja GNOME o uproszczonym interfejsie, przypominająca starsze wersje GNOME. |
+| KDE Plasma | Środowisko graficzne oferujące bogate funkcje i elastyczność w dostosowaniu wyglądu. |
+| Cinnamon | Środowisko graficzne o interfejsie zbliżonym do tradycyjnych systemów operacyjnych. |
+| MATE | Lekkie i prostsze w obsłudze środowisko graficzne, bazujące na starszych wersjach GNOME. |
+| LXDE | Bardzo lekkie środowisko graficzne, zapewniające minimalne zużycie zasobów systemowych. |
+| LXQt | Nowoczesne, lekkie środowisko graficzne zbudowane na Qt, oferujące niskie zużycie zasobów. |
+| Web Server | Opcja instalująca serwer WWW, umożliwiający udostępnianie stron internetowych. |
+| SSH Server | Instalacja serwera SSH, umożliwiającego zdalne logowanie i zarządzanie systemem przez SSH. |
+| Standard system utilities | Podstawowe narzędzia systemowe niezbędne do prawidłowego funkcjonowania systemu operacyjnego. |
 
+26. Po zainstalowaniu się systemu wyskoczy okno konfiguracyjne `GRUB boot loader'a`, który zajmuje się startowanie systemu z dysku. W oknie konfiguracyjny wyświetlona zostanie informacja, że system ten jest jedynym zainstalowanym na tym komputerze i czy ma skonfigurować automatycznie bootloadera dla tego systemu. Z racji tego, że na środowisku serwerowym operować będzie tylko jeden system, to należy wybrać opcje `Yes`, a w kolejnej sekcji wybrać dysk na który jest zainstalowany system, czyli `dev/sda`.
 
+27. Po finalnej konfiguracji systemu i zakończeniu się instalacji wyskoczy komunikat z informacja, ze proces ten zakończył się pomyślnie. Teraz wystarczy zresetować system, wybierając `Continue`.
 
+28. Na samym końcu warto by było jeszcze zamknąć maszynę i w ustawieniach tej wirtualnej maszyny w sekcji `System - Płyta Główna odznaczyć `Napęd Optyczny`, ponieważ nie będzie on już potrzebny, a w sekcji `Pamięć` należy usunąć kontroler `IDE`, ponieważ system jest prawidłowy zainstalowany ma dysku.
 
+> [!TIP]
+> *System serwerowy można uruchomić w tle używając bezgłowego startu.*
 
+> [!TIP]
+> *Aby połączyć z maszyna poprzez SSH należy rozpoznać pod jakim prywatnym adresem IP w tej sieci jest ten system podpięty. Aby uzyskać taką informacje należy użyć polecenia `hostname -I`. A potem wykorzystać ten adres w procesie łączenia się.*
 
-
-
-
-
-
-
- 
+**To by było na tyle z procesu instalacji systemu operacyjnego. Ćwiczenie to wymagało dogłębnego zaznajomienia się z każdą opcją w systemie, na trzeba było poświęcić większą ilość czasu niż początkową przewidywałem, ale z pewnością moja wiedza na temat samych maszyn wirtualnych i działania fundamentalnych elementów systemów operacyjnych się znacznie poszerzyła (wcześnie tylko potrafiłem odpalić automatyczną instalacje bez głębszego przemyślenia, teraz dokładnie rozumiem każdy proces instalacji i jak wiele możliwości to otwiera na lepszą konfiguracje środowiska wirtualnej maszyny i samego systemu)**
