@@ -91,7 +91,7 @@
 | Opcja | Opis |
 | --- | --- |
 | Nazwa | Tutaj można zmienić nazwę maszyny wirtualnej. <br>***W tym procesie instalacji: `nie należy dokonywać zmian`.*** |
-| Typ | Tutaj można zmienić typ maszyny wirtualnej. <br>**W tym procesie instalacji: `nie należy dokonywać zmian`.*** |
+| Typ | Tutaj można zmienić typ maszyny wirtualnej. <br>***W tym procesie instalacji: `nie należy dokonywać zmian`.*** |
 | Wersja | Tutaj można zmienić wersje maszyny wirtualnej. <br>***W tym procesie instalacji: `nie należy dokonywać zmian`.*** |
 
 ### Ogólne - Zaawansowane
@@ -171,7 +171,7 @@
 | Opcja | Opis |
 | --- | --- |
 | Włącz Nagrywanie | Opcja ta pozwala na nagrywanie aktywności maszyny wirtualnej odrazy po jej uruchomieniu i przerwaniu po jej wyłączeniu. <br>***W tym procesie instalacji: `opcja ta ma być odznaczona`.*** (nie ma potrzeby nagrywania środowiska serwerowego) |
-| ... | Reszta opcji śluzy do konfiguracji jakości i rozdzielczości nagrywanego obrazu, w przypadku instalowania systemu dokładne wyjaśnienie tych opcji nie jest konieczne |
+| ... | Reszta opcji służy do konfiguracji jakości i rozdzielczości nagrywanego obrazu, w przypadku instalowania systemu dokładne wyjaśnienie tych opcji nie jest konieczne |
 
 ### Pamięć
 W tej sekcji można ustawiać kontrolery pamięci masowej i przydzielać do nich odpowiednie nośnik danych. W tym tworzyć także emulowane nośniki zawierające dane z folderów z komputera hosta. Dostępnych kontrolerów jest wiele, ale kluczowymi są kontrolery IDE i SATA, które są już domyślnie ustawione. Poniżej znajduje się informacja odnośnie każdego dostępnego kontrolera.
@@ -350,10 +350,12 @@ Sekcja ta śluzy tylko do konfigurowania interfejsu okna wirtualnej maszyny. Opc
 
 28. Na samym końcu warto by było jeszcze zamknąć maszynę i w ustawieniach tej wirtualnej maszyny w sekcji `System - Płyta Główna odznaczyć `Napęd Optyczny`, ponieważ nie będzie on już potrzebny, a w sekcji `Pamięć` należy usunąć kontroler `IDE`, ponieważ system jest prawidłowy zainstalowany ma dysku.
 
+## Słowa na koniec
+
 > [!TIP]
 > *System serwerowy można uruchomić w tle używając bezgłowego startu.*
 
 > [!TIP]
-> *Aby połączyć z maszyna poprzez SSH należy rozpoznać pod jakim prywatnym adresem IP w tej sieci jest ten system podpięty. Aby uzyskać taką informacje należy użyć polecenia `hostname -I`. A potem wykorzystać ten adres w procesie łączenia się.*
+> *Aby połączyć się z maszyna poprzez SSH należy rozpoznać pod jakim prywatnym adresem IP w tej sieci jest ten system podpięty. Aby uzyskać taką informacje należy użyć polecenia `hostname -I`. A potem wykorzystać ten adres w procesie łączenia się.*
 
-**To by było na tyle z procesu instalacji systemu operacyjnego. Ćwiczenie to wymagało dogłębnego zaznajomienia się z każdą opcją w systemie, na trzeba było poświęcić większą ilość czasu niż początkową przewidywałem, ale z pewnością moja wiedza na temat samych maszyn wirtualnych i działania fundamentalnych elementów systemów operacyjnych się znacznie poszerzyła (wcześnie tylko potrafiłem odpalić automatyczną instalacje bez głębszego przemyślenia, teraz dokładnie rozumiem każdy proces instalacji i jak wiele możliwości to otwiera na lepszą konfiguracje środowiska wirtualnej maszyny i samego systemu)**
+**To by było na tyle z procesu instalacji systemu operacyjnego.** Ćwiczenie to wymagało dogłębnego zaznajomienia się z każdą opcją w systemie, gdzie trzeba było poświęcić większą ilość czasu niż początkową przewidywałem, ale z pewnością moja wiedza na temat samych maszyn wirtualnych i działania fundamentalnych elementów systemów operacyjnych się znacznie poszerzyła. (wcześniej tylko potrafiłem odpalić automatyczną instalacje bez głębszego przemyślenia, teraz dokładnie rozumiem cały proces instalacji i jak wiele możliwości otwiera na lepszą konfiguracje środowiska wirtualnej maszyny i samego systemu)
