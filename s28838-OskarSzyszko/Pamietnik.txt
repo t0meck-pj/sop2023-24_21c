@@ -1,0 +1,9 @@
+2024-03-20
+Moj kochany pamietniczku na dzisiejszych zajeciach :
+-powtozylem jak sie twozy wirtualne maszyny, czego sie nauczylem uczeszczajac do technikum
+
+Prowadzoncy przyblizył nam plan naucznia na ten semestr, a nastepnie opisal instalacje Debian'a w VirtualBox.
+
+Zaskoczyla mnie troche ilosc wszystkich opcji przy instalacji Debian'a ponieraz w technikum nie zaglembialismy sie az tak w ten temat.
+
+Przyjemnie sie slucha przykladow z zycia ktorymi czasamim prowadzoncy przerwie na chwile cwiczenia i da nam odetchnac od ogromu wiedzy ktora musimy przyswoic.

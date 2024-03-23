@@ -1,0 +1,85 @@
+Przygotowanie VirtualBox:
+
+1. Utworzenie nowej maszyny:
+   - Nazwa: Debian
+   - Typ: Linux
+   - Wersja: Debian x64
+
+2. Przydzielenie pamięci RAM:
+   - Rozmiar: 512 MB (rekomendowana wartość)
+
+3. Tworzenie nowego dysku wirtualnego VDI:
+   - Format: VDI (VirtualBox Disk Image), pozostałe formaty (VHD dla Hyper-V, VMDK dla VMWare) nie są potrzebne w tym przypadku
+
+4. Wybór dynamicznego rozmiaru dysku:
+   - Ze względu na brak wymagań wydajnościowych systemu 
+   - Dynamiczny rozmiar nie zajmuje miejsca na dysku od razu, lecz przydziela je w miarę wzrostu danych
+
+5. Przydzielenie rozmiaru dysku:
+   - Rozmiar: 3 GB, zapewniając trochę zapasu dla wymaganych 2 GB przez system
+
+6. Opcje "System":
+   - Urządzenie wskazujące: Mysz PS/2 (ze względu na korzystanie z myszy)
+   - Ilość CPU: 2 (przy ustawieniu na 1 instalacja wywoływała "Kernel Panic")
+   - Pozostałe opcje: domyślne
+
+7. Opcje "Ekran":
+   - Domyślne ustawienia
+
+8. Opcje "Dźwięk":
+   - Wyłączony dźwięk (brak potrzeby używania audio)
+
+9. Ustawienia sieci:
+   - Tryb NAT (Network Address Translation) dla dostępu do internetu
+
+10. Porty szeregowe:
+    - Wyłączony (brak potrzeby ich używania)
+
+11. Włączony kontroler USB
+
+12. Pozostałe opcje VirtualBox pozostawiam domyślne
+
+Instalacja Debiana:
+
+1. Wybór opcji Install (instalacja) bez interfejsu graficznego.
+   - W opcjach zaawansowanych dostępne są także tryby instalacji w trybie graficznym eksperta, tryb ratowania (rescue mode) oraz automatyczna instalacja (automated install). Wszystkie te tryby są dostępne zarówno w trybie graficznym, jak i bez graficznym.
+
+2. Wybór języka: angielski
+
+3. Lokalizacja: Polska (dla wyboru optymalnego serwera)
+
+4. Wybór układu klawiatury: en_US.UTF-8 (używany w polsce)
+
+5. Nie ustawiam polskich znaków, ponieważ nie będę z nich korzystał, wybieram American/English.
+
+6. Hostname (nazwa hosta): debian
+
+7. Ustawienia domeny pomijam, ponieważ nie jest mi potrzebna w tym przypadku.
+
+8. Ustalam hasło dla użytkownika root oraz tworzę swoje konto użytkownika.
+
+9. Konfiguracja partycji dysku:
+   - Ręczne ustawienie partycji
+   - Przydzielam 2 GB dla systemu (zgodnie z rekomendacją)
+   - Tworze dodatkową partycję o rozmiarze 1 GB do przechowywania plików
+
+10. Nie tworzę partycji swap, ponieważ przydzielona wcześniej pamięć RAM na maszynie jest wystarczająca.
+
+11. Obie partycje ustawiam jako primary, ponieważ jest ich mniej niż 4.
+
+12. Wybór systemu plików: Ext4 (najnowszy)
+
+13. Pomijam opcję wyboru płyty.
+
+14. Wybór serwera lustrzanego (mirror server):
+    - Wybieram serwer najbliżej mojej lokalizacji, konkretnie na Politechnice Gdańskiej: ftp.task.gda.pl
+
+15. Pomijam dodawanie proxy, ponieważ nie jest mi to potrzebne.
+
+16. Opcję zbierania statystyk pozostawiam na "Nie".
+
+17. Przy wyborze oprogramowania pozostawiam domyślne opcje, instaluję tylko serwer SSH i podstawowe narzędzia.
+
+18. Instalacja bootloadera GRUB, ponieważ bez niego system nie uruchomi się. Instaluję go w /dev/sda.
+
+19. Instalacja zakończona pomyślnie.
