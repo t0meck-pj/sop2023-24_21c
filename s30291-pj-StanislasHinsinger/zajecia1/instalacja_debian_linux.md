@@ -3,253 +3,285 @@
 **Autorstwa:** `Stanislas Hinsinger - s30291`
 
 ## Tworzenie wirtualnej maszyny
-1. Nalezy uruchomic aplikacje `VirtualBox`. W przypadku jej braku na systemie, mozna ja pobrac [z oficjalnej strony VirtualBox](https://www.virtualbox.org) 
-2. Do stworzenia nowej maszyny wirtualnej wybieramy opcje `Maszyna` [znajdujaca sie na gornym pasku] i tam wybieramy opcje `Nowa`.
-3. Na ekranie wyswietli sie okno `Utworz wirtualna maszyne`. 
+1. Należy uruchomić aplikacje `VirtualBox`. W przypadku jej braku na systemie, można ja pobrać [z oficjalnej strony VirtualBox](https://www.virtualbox.org) 
+2. Do stworzenia nowej maszyny wirtualnej wybieramy opcje `Maszyna` [znajdująca się na górnym pasku] i tam wybieramy opcje `Nowa`.
+3. Na ekranie wyświetli się okno `Utwórz wirtualna maszynę`. 
 
 > [!TIP]
-> W przypadku pierwszego tworzenia maszyny wirtualnej, kreator bedzie ustawiony w trybie "Przewodnika", ze wzgledu na latwieszy dostep do wyboru opcji, nalezy przelaczyc sie na tryb "Eksperta" (przycisk na dole okna).
+> W przypadku pierwszego tworzenia maszyny wirtualnej, kreator będzie ustawiony w trybie "Przewodnika", ze względu na łatwiejszy dostęp do wyboru opcji, należy przełączyć się na tryb "Eksperta" (przycisk na dole okna).
 
 > [!NOTE]
-> Do kolejnych etapow potrzebne bedzie posiadanie na komputerze pliku obrazu instalatora systemu Debian 12. Plik ten mozna pobrac bezposrednio z [oficjalnej strony](https://www.debian.org/distrib/). <br>
-> <br> *Jezeli posiadamy dostep do internetu na wirutalnej maszynie to wybieramy `Small Installation Image` w przeciwnym wypadku powinnismy pobrac `Complete Installation Image` (zawiera on wszystkie potrzebne pakiety instalacyjne, bez potrzeby dodatkowego klonowania z innego serwera podczas instalacji) <br><br> Nalezy takze wybrac odpowiedni rodzaj pliku instalacyjnego, w przypadku wirtualnej maszyny, bedziemy instalowali system na 64-bitowej architekturze `amd64`.*
+> Do kolejnych etapów potrzebne będzie posiadanie na komputerze pliku obrazu instalatora systemu Debian 12. Plik ten można pobrać bezpośrednio z [oficjalnej strony](https://www.debian.org/distrib/). <br>
+> <br> *Jeżeli posiadamy dostęp do Internetu na wirtualnej maszynie to wybieramy `Small Installation Image` w przeciwnym wypadku powinniśmy pobrać `Complete Installation Image` (zawiera on wszystkie potrzebne pakiety instalacyjne, bez potrzeby dodatkowego klonowania z innego serwera podczas instalacji) <br><br> Należy także wybrać odpowiedni rodzaj pliku instalacyjnego, w przypadku wirtualnej maszyny, będziemy instalowali system na 64-bitowej architekturze `amd64`.*
 
 ## Kategorie kreatora
 > [!IMPORTANT]
-> **W tym konkretnym procesie instalacyjnym zostanie wykorzystana wersja obrazu instalatora `Small Installation Image`,** poniewaz bedziemy instalowali system z dostepem do internetu i taka wersja bedzie szybsza do pobrania przez hosta.
+> **W tym konkretnym procesie instalacyjnym zostanie wykorzystana wersja obrazu instalatora `Small Installation Image`,** ponieważ będziemy instalowali system z dostępem do Internetu i taka wersja będzie szybsza do pobrania przez hosta.
 
 ### Name and Operating System
 | Opcja |  Opis |
 | --- | --- |
-| Nazwa | Tutaj wprowadzamy nazwe naszego systemu operacyjnego do rozpozniania wirtualnych maszyn. <br>***Dla tego procesu instalacyjnego wykorzystamy: `Debian 12 - Server`.*** |
-| Folder | Tutaj wybieramy folder gdzie ma zostac zainstalowany nasz system i wszystkie jego pliki powiazane z maszyna wirtualna i srodowiskiem VirutalBox. <br>***Dla tego procesu instalacyjnego wykorzystamy: `...\...\VirtualBox\Systemy`.*** |
-| ISO Image | Tutaj wybieramy obraz systemu w postaci pliku **.iso** (moze to byc obraz gotowego systemu lub instalatora) <br>***Dla tego procesu instalacyjnego wykorzystamy: `wczesniej pobrany obraz instalatora systemu Debian 12`.*** |
-| Typ  | Tutaj wybieramy rodzine wykorzystywanego systemu operacyjnego, jezeli jest to dystrybucja z rodziny Windows to wybieramy Microsoft Windows, jezeli jest to dystrybucja z rodziny Mac OS to wybieramy Mac Os X [warto podkreslic, ze formalnie powinno sie instalowac systemy z rodziny Mac OS X tylko na systemie hosta Mac OS), jezeli jest to dystrybucja z rodziny Linux (Ubuntu, Debian, Fedora itd.) to wybieramy Linux. <br>***Dla tego procesu instalacyjnego wybieramy: `Linux (poniewaz Debian nalezy do tej rodziny systemow)`.*** |
-| Wersja | Tutaj nalezy wprowadzic wersje systemu jaka bedzie wykorzystywana. (np. Typ = Microsoft Windows, Wersja = Windows 10) <br>***Dla tego procesu instalacyjnego wybieramy: `Debian (64-bit)`.*** |
-| Skip Unattended Installation | Opcja ta pozwala na pominiecie automatycznego wykonania procesow instalacyjnych przez VirtualBox. <br>***Dla tego procesu instalacyjnego: `opcja ta ma byc zaznaczona`.*** |
+| Nazwa | Tutaj wprowadzamy nazwę naszego systemu operacyjnego do rozpoznania wirtualnych maszyn. <br>***Dla tego procesu instalacyjnego wykorzystamy: `Debian 12 - Server`.*** |
+| Folder | Tutaj wybieramy folder gdzie ma zostać zainstalowany nasz system i wszystkie jego pliki powiązane z maszyna wirtualna i środowiskiem VirutalBox. <br>***Dla tego procesu instalacyjnego wykorzystamy: `...\...\VirtualBox\Systemy`.*** |
+| ISO Image | Tutaj wybieramy obraz systemu w postaci pliku **.iso** (może to być obraz gotowego systemu lub instalatora) <br>***Dla tego procesu instalacyjnego wykorzystamy: `wcześniej pobrany obraz instalatora systemu Debian 12`.*** |
+| Typ  | Tutaj wybieramy rodzinne wykorzystywanego systemu operacyjnego, jeżeli jest to dystrybucja z rodziny Windows to wybieramy Microsoft Windows, jeżeli jest to dystrybucja z rodziny Mac OS to wybieramy Mac Os X [warto podkreślić, ze formalnie powinno się instalować systemy z rodziny Mac OS X tylko na systemie hosta Mac OS), jeżeli jest to dystrybucja z rodziny Linux (Ubuntu, Debian, Fedora itd.) to wybieramy Linux. <br>***Dla tego procesu instalacyjnego wybieramy: `Linux (ponieważ Debian należy do tej rodziny systemów)`.*** |
+| Wersja | Tutaj należy wprowadzić wersje systemu jaka będzie wykorzystywana. (np. Typ = Microsoft Windows, Wersja = Windows 10) <br>***Dla tego procesu instalacyjnego wybieramy: `Debian (64-bit)`.*** |
+| Skip Unattended Installation | Opcja ta pozwala na pominiecie automatycznego wykonania procesów instalacyjnych przez VirtualBox. <br>***Dla tego procesu instalacyjnego: `opcja ta ma być zaznaczona`.*** |
 > [!WARNING]
-> *Warto podkreslic, ze jezeli na liscie wersji systemow nie znajduja sie opcje 64-bitowych systemow, to oznacza, ze system hosta jest systemem 32-bitowym lub jest uruchomiona dodatkowa wirtualizacja jak np. HyperV, ktora wplywa na to srodowisko wirtualizacyjne.*
+> *Warto podkreślić, ze jeżeli na liście wersji systemów nie znajdują się opcje 64-bitowych systemów, to oznacza, ze system hosta jest systemem 32-bitowym lub jest uruchomiona dodatkowa wirtualizacja jak np. HyperV, która wpływa na to środowisko wirtualizacyjne.*
 ### Unattended Install
 
 | Opcja |  Opis |
 | --- | --- |
-| Username and Password | Tutaj wprowadzamy dane konta uzytkownika jakie ma zostac utworzone. (bedzie sie go stosowac do zalogowania do systemu) |
-| Additional Options | Tutaj znajduja sie dodatkowe opcje, ktore beda wykonane podczas automatycznej instalacji. <br> `Hostname:` nazwa komputera w sieci <br> `Domain Name:` nazwa domeny sieci do ktorej ten system bedzie podpiety |
+| Username and Password | Tutaj wprowadzamy dane konta użytkownika jakie ma zostać utworzone. (będzie się go stosować do zalogowania do systemu) |
+| Additional Options | Tutaj znajdują się dodatkowe opcje, które Beda wykonane podczas automatycznej instalacji. <br> `Hostname:` nazwa komputera w sieci <br> `Domain Name:` nazwa domeny sieci do której ten system będzie podpięty |
 
 > [!CAUTION]
-> **Dla tego rodzaju instalacji systemu nie bedziemy korzystac z zadnych z opcji w kategorii `Unattended Install`,** poniewaz proces instalacji zostanie wykonany manualnie, z wyborem specjalnych ustawien, aby system ten byl odpowiednio przygotowany pod wykorzystanie serwerowe.
+> **Dla tego rodzaju instalacji systemu nie będziemy korzystać z żadnych z opcji w kategorii `Unattended Install`,** ponieważ proces instalacji zostanie wykonany manualnie, z wyborem specjalnych ustawień, aby system ten był odpowiednio przygotowany pod wykorzystanie serwerowe.
 
 ### Hardware
 
 | Opcja |  Opis |
 | --- | --- |
-| RAM | Tutaj wprowadzamy ilosc ramu jaka chcemy przydzielic wirtualnemy systemowi. (Nie powinno sie przydzielac wszystkich dostepnych zasobow hosta) [nalezy takze dokonac rozsadnego przydzialu zasobow, ktorych rzeczywiscie ewentualna maszyna moze wykorzystac] <br>***Dla tego procesu instalacyjnego ustawimy: `2048 MB`.*** |
-| Processors | Tutaj wybiramy ile dostepnych watkow hosta chcemy przydzielic wirutalnej maszynie. (Nie powinno sie przydzielac wszystkich dostepnych watkow hosta) <br>***Dla tego procesu instalacyjnego ustawimy: `2 CPU`*** ( dzieki temu srodowisko serwerowe bedzie moglo w pelni wykorzystac potencjal ewentualnych podstawowych aplikacji wielowatkowych, a sam proces instalacji bedzie szybszy ) |
-| Enable EFI | Opcja ta sluzy do obslugi `Extensible Firmware Interface`, ktory zastepuje standardowy interfejs firmware'u komputera `BIOS`. Posiada on lepsze wsparcie i wykorzystanie nowszego sprzetu i dodatkowe rozszerzenia np. podpisow cyfrowych umozliwiajacych korzystanie z **Secure Boot** i weryfikacji podpisow cyfrowych systemu i sterownikow. Opcje ta zaznacza sie glownie w przypadku korzystania z wirtualnej maszyny w sposob Desktopowy, gdzie instalujemy systemy pokroju Windows 10/11, czy Mac OS. Dla systemow instalowanych z mysla o serwerowym wykorzystaniu jak Ubuntu czy Debian nie bedzie to raczej w pelni wykorzystywane.  <br>***Dla tego procesu instalacyjnego: `opcja ta ma byc odznaczona`.***  |
+| RAM | Tutaj wprowadzamy ilość pamięci ram jaką chcemy przydzielić wirtualnemu systemowi. (Nie powinno się przydzielać wszystkich dostępnych zasobów hosta) [należy także dokonać rozsądnego przydziału zasobów, których rzeczywiście ewentualna maszyna może wykorzystać] <br>***Dla tego procesu instalacyjnego ustawimy: `2048 MB`.*** |
+| Processors | Tutaj wybieramy ile dostępnych wątków hosta chcemy przydzielić wirtualnej maszynie. (Nie powinno się przydzielać wszystkich dostępnych wątków hosta) <br>***Dla tego procesu instalacyjnego ustawimy: `2 CPU`*** ( dzięki temu środowisko serwerowe będzie mogło w pełni wykorzystać potencjał ewentualnych podstawowych aplikacji wielowątkowych, a sam proces instalacji będzie szybszy ) |
+| Enable EFI | Opcja ta śluzy do obsługi `Extensible Firmware Interface`, który zastępuje standardowy interfejs firmware'u komputera `BIOS`. Posiada on lepsze wsparcie i wykorzystanie nowszego sprzętu i dodatkowe rozszerzenia np. podpisów cyfrowych umożliwiających korzystanie z **Secure Boot** i weryfikacji podpisów cyfrowych systemu i sterowników. Opcje ta zaznacza się głownie w przypadku korzystania z wirtualnej maszyny w sposób Desktopowy, gdzie instalujemy systemy pokroju Windows 10/11, czy Mac OS. Dla systemów instalowanych z myślą o serwerowym wykorzystaniu jak Ubuntu czy Debian nie będzie to raczej w pełni wykorzystywane.  <br>***Dla tego procesu instalacyjnego: `opcja ta ma być odznaczona`.***  |
 
 > [!TIP]
-> *Minimalne zasoby potrzebne dla danego systemu zawsze mozna znalezc na stronie dystrybutora. W przypadku rodziny systemow `Debian` te minimalne wymagania mozna znalezc na [oficjalnej stronie Debian.org](https://www.debian.org/releases/stable/i386/ch03s04.en.html)*
+> *Minimalne zasoby potrzebne dla danego systemu zawsze można znaleźć na stronie dystrybutora. W przypadku rodziny systemów `Debian` te minimalne wymagania można znaleźć na [oficjalnej stronie Debian.org](https://www.debian.org/releases/stable/i386/ch03s04.en.html)*
 
 
 ### Hard Disk
 
-**W tej zakladce do wyboru sa 3 opcje:**
-* **Create a Virutal Hard Disk Now:** `pozwala na stworzenie i podpiecie wirtualnego dysku twardego do tej wirtualnej maszyny wirtualnej` 
+**W tej zakładce do wyboru są 3 opcje:**
+* **Create a Virutal Hard Disk Now:** `pozwala na stworzenie i podpięcie wirtualnego dysku twardego do tej wirtualnej maszyny wirtualnej` 
 <br>( **TA OPCJE WYBIERZEMY DLA INSTALACJI SYSTEMU** )
 
 | Opcja |  Opis |
 | --- | --- |
-| Location and Size | Tutaj wprowadzamy lokalizacje w ktorej chcemy aby nasz wirtualny dysk sie znalazl. <br>***Dla tego procesu instalacyjnego wybieramy: `...\...\VirtualBox\Systemy\Debian 12 - Server\Debian 12 - Server.vdi`.*** |
-| Suwak Pamieci | Za pomoca tego suwaka mozemy ustawic ilosc przestrzeni dyskowej dostepnej dla danego systemu operacyjnego. <br>***Dla tego procesu instalacyjnego ustawimy: `40 GB`.*** (bedzie to przestrzen wystaczajaca na zapotrzebowania systemu i ewentualnych podstawowych uzytkownikow serwera) |
-| Type and Variant | Tutaj ustawiamy jakiego typu chcemy aby ten wirtualny dysk byl. Opis kazdego rodzaju znalezc bedzie mozna w komentarzach nizej. <br>***Dla tego procesu instalacyjnego wybieramy: `VDI (VirtualBox Disk Image)`*** (poniewaz bedzie on najbardziej optymalna opcja dla naszego zastosowania tego systemu)|
-| Pre-allocate Full Size | Opcja ta pozwala na bezposrednia alokacje przestrzeni dyskowej (do tej ktora zostala ustawiona). Moze to byc przydatne w przypadku, gdy chcemy zminimalizowac czas zapisu, ktory bedzie ewentualnie spowalaniany przez dynamiczne alokowanie przestrzeni przez srodowisko VirtualBox. <br>***Dla tego procesu instalacyjnego: `opcja ta ma byc odznaczona` (dynamiczne alokowanie przestrzeni nie powinno miec znaczacego wplywu na optymalne dzialanie systemu dla wykorzystania serwerowego).***|
-| Split into 2GB parts | Opcja ta pozwala na podzielenie dysku na 2GB czesci. Co mogloby byc wymaganiem w przypadku korzystania z systemu plikow FAT (w ktorym maksymalna wielkosc pliku to 4GB), lub tez chcielibysmy w latwiejszy sposob przesylac mniejsze pliki dysku przez siec zamiast jednego duzego. <br>***Dla tego procesu instalacyjnego: `opcja ta ma byc odznaczona`*** |
+| Location and Size | Tutaj wprowadzamy lokalizacje w której chcemy aby nasz wirtualny dysk się znalazł. <br>***Dla tego procesu instalacyjnego wybieramy: `...\...\VirtualBox\Systemy\Debian 12 - Server\Debian 12 - Server.vdi`.*** |
+| Suwak Pamieci | Za pomocą tego suwaka możemy ustawić ilość przestrzeni dyskowej dostępnej dla danego systemu operacyjnego. <br>***Dla tego procesu instalacyjnego ustawimy: `40 GB`.*** (będzie to przestrzeń wystarczająca na zapotrzebowania systemu i ewentualnych podstawowych użytkowników serwera) |
+| Type and Variant | Tutaj ustawiamy jakiego typu chcemy aby ten wirtualny dysk był. Opis każdego rodzaju znaleźć będzie można w komentarzach niżej. <br>***Dla tego procesu instalacyjnego wybieramy: `VDI (VirtualBox Disk Image)`*** (ponieważ będzie on najbardziej optymalna opcja dla naszego zastosowania tego systemu)|
+| Pre-allocate Full Size | Opcja ta pozwala na bezpośrednia alokacje przestrzeni dyskowej (do tej która została ustawiona). Może to być przydatne w przypadku, gdy chcemy zminimalizować czas zapisu, który będzie ewentualnie spowalniany przez dynamiczne alokowanie przestrzeni przez środowisko VirtualBox. <br>***Dla tego procesu instalacyjnego: `opcja ta ma być odznaczona` (dynamiczne alokowanie przestrzeni nie powinno mieć znaczącego wpływu na optymalne działanie systemu dla wykorzystania serwerowego).***|
+| Split into 2GB parts | Opcja ta pozwala na podzielenie dysku na 2GB części. Co mogłoby być wymaganiem w przypadku korzystania z systemu plików FAT (w którym maksymalna wielkość pliku to 4GB), lub tez chcielibyśmy w łatwiejszy sposób przesyłać mniejsze pliki dysku przez siec zamiast jednego dużego. <br>***Dla tego procesu instalacyjnego: `opcja ta ma być odznaczona`*** |
 
-* **Use an Exsiting Virtual Hard Disk File:** `pozwala na wybranie juz istniejacego wirtualnego dysk twardego [gdy chcemy wykorzystac juz stworzyny i zapisany system operacyjny]`
-* **Do Not Add a Virtual Disk:** `nie podpina zadnego wirtualnego dysku do tej maszyny, w zamian mozna wykorzystac podczas uruchamiania sam naped optyczny, dyskietke lub usb`
+* **Use an Exsiting Virtual Hard Disk File:** `pozwala na wybranie już istniejącego wirtualnego dysk twardego [gdy chcemy wykorzystać już stworzony i zapisany system operacyjny]`
+* **Do Not Add a Virtual Disk:** `nie podpina żadnego wirtualnego dysku do tej maszyny, w zamian można wykorzystać podczas uruchamiania sam napęd optyczny, dyskietkę lub USB`
 
 > [!NOTE]
-> **Typy dyskow i ich opis:** <br>* VDI - <br>* VHD - <br>* VMDK - <br>* HDD - <br>* QCOW - <br>* QED -
+> **Typy dysków i ich opis:** <br>* VDI - <br>* VHD - <br>* VMDK - <br>* HDD - <br>* QCOW - <br>* QED -
 
 > [!TIP]
-> *Minimalna przestrzen wymagana przez dany system zawsze mozna znalezc na stronie dystrybutora. W przypadku rodziny systemow `Debian` te minimalne wymagania mozna znalezc na [oficjalnej stronie Debian.org](https://www.debian.org/releases/stable/i386/ch03s04.en.html)*
+> *Minimalna przestrzeń wymagana przez dany system zawsze można znaleźć na stronie dystrybutora. W przypadku rodziny systemów `Debian` te minimalne wymagania można znaleźć na [oficjalnej stronie Debian.org](https://www.debian.org/releases/stable/i386/ch03s04.en.html)*
 
 
 ## Dalsze kroki
-4. Po prawidlowym ustawieniu wszystkich opcji w kreatorze wybieramy przycisk `Zakoncz`.
-5. Do VirtualBoxa zostanie dodana skonfigurowana maszyna o wprowadzonej nazwie. `Debian 12 - Server`. Przed jej uruchomieniem nalezy jeszcze skonfigorowac pare dodatkowych opcji w ustawieniach.
-6. Wchodzimy w opcje `Ustawienia` w zakladce wyboru akcji danej maszyny wirtualnej (u gory okna).
+4. Po prawidłowym ustawieniu wszystkich opcji w kreatorze wybieramy przycisk `Zakończ`.
+5. Do VirtualBoxa zostanie dodana skonfigurowana maszyna o wprowadzonej nazwie. `Debian 12 - Server`. Przed jej uruchomieniem należy jeszcze skonfigurować parę dodatkowych opcji w ustawieniach.
+6. Wchodzimy w opcje `Ustawienia` w zakładce wyboru akcji danej maszyny wirtualnej (u góry okna).
 
 ## Ustawienia
-### Ogolne - Podstawowe
+### Ogólne - Podstawowe
 | Opcja | Opis |
 | --- | --- |
-| Nazwa | Tutaj mozna zmienic nazwe maszyny wirtualnej. <br>***W tym procesie instalacji: `nie nalezy dokonywac zmian`.*** |
-| Typ | Tutaj mozna zmienic typ maszyny wirtualnej. <br>**W tym procesie instalacji: `nie nalezy dokonywac zmian`.*** |
-| Wersja | Tutaj mozna zmienic wersje maszyny wirtualnej. <br>***W tym procesie instalacji: `nie nalezy dokonywac zmian`.*** |
+| Nazwa | Tutaj można zmienić nazwę maszyny wirtualnej. <br>***W tym procesie instalacji: `nie należy dokonywać zmian`.*** |
+| Typ | Tutaj można zmienić typ maszyny wirtualnej. <br>**W tym procesie instalacji: `nie należy dokonywać zmian`.*** |
+| Wersja | Tutaj można zmienić wersje maszyny wirtualnej. <br>***W tym procesie instalacji: `nie należy dokonywać zmian`.*** |
 
-### Ogolne - Zaawansowane
+### Ogólne - Zaawansowane
 | Opcja | Opis |
 | --- | --- |
-| Folder Migawek (Snapshots) | Tutaj mozna ustawicc folder w ktorym beda umieszczane Snapshoty (zapisy kontrolne systemu). Zapisy te pozwalaj na przywracanie maszyny wirtualnej do poprzedniego zapisanego stanu. <br>***W tym procesie instalacji: `nie nalezy dokonywac zmian`.*** |
-| Wspoldzielony schowek | Tutaj mozna ustawic czy schowek systemu hosta ma byc wpoldzielony ze schowkiem wirutalnej maszyny. <br>***W tym procesie instalacji: `opcja ta powinna byc wylaczona`*** (nie ma koniecznosci posiadania wspoldzielonego schowka, w szczegolnosci gdy logowanie bedzie sie odbywalo tylko przez ssh) |
-| Przeciaganie i upuszczanie | Tutaj mozna ustawic czy przeciaganie plikow i ich upuszczanie z systemu hosta na system wirtualnej maszyny bedzie wspierane. <br>***W tym procesie instalacji: `opcja ta powinna byc wylaczona`*** (szczegolnie ze wzgledow na fakt, ze system bedzie wykorzystywany serwerowo, gdzie interakcje beda mogly odbywac sie tylko przez klawiature) |
+| Folder Migawek (Snapshots) | Tutaj można ustawić folder w którym Beda umieszczane Snapshoty (zapisy kontrolne systemu). Zapisy te pozwalaj na przywracanie maszyny wirtualnej do poprzedniego zapisanego stanu. <br>***W tym procesie instalacji: `nie należy dokonywać zmian`.*** |
+| Współdzielony schowek | Tutaj można ustawić czy schowek systemu hosta ma być współdzielony ze schowkiem wirtualnej maszyny. <br>***W tym procesie instalacji: `opcja ta powinna być wyłączona`*** (nie ma konieczności posiadania współdzielonego schowka, w szczególności gdy logowanie będzie się odbywało tylko przez SSH) |
+| Przeciąganie i upuszczanie | Tutaj można ustawić czy przeciąganie plików i ich upuszczanie z systemu hosta na system wirtualnej maszyny będzie wspierane. <br>***W tym procesie instalacji: `opcja ta powinna być wyłączona`*** (szczególnie ze względów na fakt, ze system będzie wykorzystywany serwerowo, gdzie interakcje będą mogły odbywać się tylko przez klawiaturę) |
 
-### Ogolne - Szyfrowanie dysku:
+### Ogólne - Szyfrowanie dysku:
 | Opcja | Opis |
 | --- | --- |
-| Wlacz szyfrowanie dysku | Opcja ta wlacza szyfrowanie na dysku. <br>***W tym procesie instalacji: `opcja ta ma byc odznaczona`.*** (nie ma wymogow szyfrowania dla tego konkretnego wykorzystania maszyny wirtualnej) |
-| Szyfr | Tutaj mozna wybrac szyfr jaki bedzie wykorzysytywany do procesu szyforwania i odszyfrowywania tresci z dyskow systemowych maszyny wirtualnej. Z podstawy do wyboru sa dwa szyfry, ktore roznia sie dlugoscia. |
-| Haslo | W tej sekcji mozna ustawic haslo wykorzystywane do procesu szyfrowania i odszyfrowywania. [warto podkreslic, ze dokonywania zmian hasla moze doprowadzic do nieprawidlowego odszyfrowania juz zapisanej tresci] |
+| Włącz szyfrowanie dysku | Opcja ta włącza szyfrowanie na dysku. <br>***W tym procesie instalacji: `opcja ta ma być odznaczona`.*** (nie ma wymogów szyfrowania dla tego konkretnego wykorzystania maszyny wirtualnej) |
+| Szyfr | Tutaj można wybrać szyfr jaki będzie wykorzystywany do procesu szyfrowania i odszyfrowywania treści z dysków systemowych maszyny wirtualnej. Z podstawy do wyboru sa dwa szyfry, które różnią się długością. |
+| Hasło | W tej sekcji można ustawić hasło wykorzystywane do procesu szyfrowania i odszyfrowywania. [warto podkreślić, ze dokonywania zmian hasła może doprowadzić do nieprawidłowego odszyfrowania już zapisanej treści] |
 
 > [!WARNING]
-> Proces szyfrowania i odszyfrowywania tresci na dysku dodatkowo obciaza system podczas kazdego wykonywania odczytu/zapisu, co moze spowolnic calosciowe dzialanie maszyny wirtualnej.
+> Proces szyfrowania i odszyfrowywania treści na dysku dodatkowo obciąża system podczas każdego wykonywania odczytu/zapisu, co może spowolnić całościowe działanie maszyny wirtualnej.
 
-### System - Plyta Glowna
+### System - Płyta Główna
 | Opcja | Opis |
 | --- | --- |
-| RAM | Tutaj mozna ustawic ilosc przydzielonej pamiec RAM do maszyny wirtualnej.  <br>***W tym procesie instalacji: `nie nalezy dokonywac zmian`.*** |
-| Kolejnosc bootowania | Tutaj mozna ustawic kolejnosc w jakiej wirtualna maszyna bedzie uruchamiac dane urzadzenia i ewentualnie probwac uruchomic z nich system operacyjny. <br>***W tym procesie instalacji: `Powinnismy miec zaznaczone tylko "Naped optyczny" i "Dysk Twardy"`*** (gdzie naped optyczny bedzie wykorzystany tylko do procesu instalacji systemu, potem ta opcje bedzie nalezalo odznaczyc, reszta opcji jest nie potrzebna dla tego rodzaju wykorzystania systemu) |
-| Chipset | Tutaj mozna dokonac wyboru chipsetu wirtualnej plyty glownej jaki bedzie wykorzystywany. PIIX3 jest podstawowym rodzajem chipsetu, ktory bedzie mial wsparcie dla wiekszosci instalowanych systemow jednak posiada mniejsze mozliwosci niz chipset ICH9, ktory jest eksperymentalnym chipsetem oferujacym lepsze wsparcie dla takich systemow jak Mac OS X, ale nie bedzie on wszedzie wspierany i nie jest zalecany jezeli jezeli jego posiadania nie jest wymogiem sposobu wykorzystania maszyny. <br>***W tym procesie instalacji: `wybierzemy PIIX3`.*** |
-| TPM | Opcja pozwalana na wybor wersji symulowanego modulu Trusted Platform Module, ktory moze byc wykorzysytwany do uruchamiania systemu z Secure Boot, przechowywania kluczy szyfrowania, czy tez weryfikowania podpisow cyfrowych. Symulowanie takiego modulu bedzie wymagane w przypadku korzystania z takiego systemu jak Windows 11. <br>***W tym procesie instalacji: `nalezy wybrac brak`.*** (system Debian nie posiada takiego wymogu i nie bedzie wykorzystania zadnych elementow TPM w zastosowaniu serwerowym wirtualnej maszyny) |
-| Urzadzenie Wskazujace | Tutaj mozna wybrac rodzaj symulacji urzadzenia wskazujacego, gdy bedziemy jezdzic po ekranie wirtualnej maszyny kursorem hosta. <br>***W tym procesie instalacji: `wybierzemy Mysz PS/2`.*** (poniewaz nie bedziemy korzystac z kursora w srodowisku serwerowym) |
-| Wlacz I/O APIC | Opcja ta pozwala na emulowanie bardziej zaawansowanego kontrolera przerwan (Input/Output Advanced Programmable Interrupt Controller), ktory bedzie w bardziej wydaje sposob zarzadzal przekazywanie przerwan miedzy roznymi wirtualnymi sprzetami danego srodowiska (karty sieciowe, kontrolery dyskow, itd.). <br>***W tym procesie instalacji: `opcja ta ma byc zaznaczona`*** (I/O APIC jest nowszym i bardziej rozbudowany kontrolerem przerwan, co dla srodowiska serwerowego moze byc przydatne) |
-| Enable Hardware Clock in UTC Time | Opcja ta pozwala na ustawienie zegaru sprzetowego tak, aby dzialal on dla strefy UTC niezaleznie od strefy czasowej hosta. Jego wylaczenie bedzie wykorzystywalo czas systemowy hosta. <br>***W tym procesie instalacji: `opcja ta ma byc odznaczona`*** (ze wzgledow na wykorzystanie serwerowe instalowanego systemu, bardzo przydatne bedzie posiadanie tego samego czasu zegara systemowego co host, ze wzgledow na zapis i odczyt ewentualnych "logow") |
-| Wlacz EFI | Opcja ta pozwala na wlaczenie EFI (Extensible Firmware Interface), dokladnie zostalo wyjasnione czym to jest w sekcji kreatora. <br>***W tym procesie instalacji: `opcja ta ma byc odznaczona`*** |
-| Enable Secure Boot | Opcja ta pozwala na wlaczenie mechanizmu bezpieczenstwa Secure Boot podczas uruchamiania systemu. Ma on na celu zapobieganie ladowania nieautoryzowanego oprogramowania podczas uruchamiania systemu. Potrzebe wlaczenia tej opcji znajdziemy podczas korzystania z systemow Windows 8, 10, 11 czy Windows Server do zwiekszenia bezpieczenstwa uzytkowania. <br>***W tym procesie instalacji: `opcja ta ma byc odznaczona`*** (system Debian od wersji 10 wspiera Secure Boot, ale dla tego srodowiska serwerowego nie ma takiej potrzeby) |
-| Reset Keys to Default | Opcja ta pozwala na zresetowanie kluczy wykorzystywanych przez Secure Boot do tych podstawowych (cofnie to wszystkie zmiany kluczy dokonanych przez uzytkownika). <br>***W tym procesie instalacji: `nie nalezy dokonywac zmian`*** |
+| RAM | Tutaj można ustawić ilość przydzielonej pamięć RAM do maszyny wirtualnej.  <br>***W tym procesie instalacji: `nie należy dokonywać zmian`.*** |
+| Kolejność bootowania | Tutaj można ustawić kolejność w jakiej wirtualna maszyna będzie uruchamiać dane urządzenia i ewentualnie próbować uruchomić z nich system operacyjny. <br>***W tym procesie instalacji: `Powinniśmy mieć zaznaczone tylko "Napęd optyczny" i "Dysk Twardy"`*** (gdzie napęd optyczny będzie wykorzystany tylko do procesu instalacji systemu, potem, ta opcje będzie należało potem odznaczyć, reszta opcji jest nie potrzebna dla tego rodzaju wykorzystania systemu) |
+| Chipset | Tutaj można dokonać wyboru chipsetu wirtualnej płyty głównej jaki będzie wykorzystywany. PIIX3 jest podstawowym rodzajem chipsetu, który będzie miał wsparcie dla większości instalowanych systemów jednak posiada mniejsze możliwości niż chipset ICH9, który jest eksperymentalnym chipsetem oferującym lepsze wsparcie dla takich systemów jak Mac OS X, ale nie będzie on wszędzie wspierany i nie jest zalecany jeżeli jego posiadania nie jest wymogiem sposobu wykorzystania maszyny. <br>***W tym procesie instalacji: `wybierzemy PIIX3`.*** |
+| TPM | Opcja pozwalana na wybór wersji symulowanego modułu `Trusted Platform Module`, który może być wykorzystywany do uruchamiania systemu z Secure Boot, przechowywania kluczy szyfrowania, czy tez weryfikowania podpisów cyfrowych. Symulowanie takiego modułu będzie wymagane w przypadku korzystania z takiego systemu jak Windows 11. <br>***W tym procesie instalacji: `należy wybrać brak`.*** (system Debian nie posiada takiego wymogu i nie będzie wykorzystania żadnych elementów TPM w zastosowaniu serwerowym wirtualnej maszyny) |
+| Urządzenie Wskazujące | Tutaj można wybrać rodzaj symulacji urządzenia wskazującego, gdy będziemy jeździć po ekranie wirtualnej maszyny kursorem hosta. <br>***W tym procesie instalacji: `wybierzemy Mysz PS/2`.*** (ponieważ nie będziemy korzystać z kursora w środowisku serwerowym) |
+| Włącz I/O APIC | Opcja ta pozwala na emulowanie bardziej zaawansowanego kontrolera przerwań (Input/Output Advanced Programmable Interrupt Controller), który będzie w bardziej wydaje sposób zarządzał przekazywaniem przerwań miedzy rożnymi wirtualnymi sprzętami danego środowiska (karty sieciowe, kontrolery dysków, itd.). <br>***W tym procesie instalacji: `opcja ta ma być zaznaczona`*** (I/O APIC jest nowszym i bardziej rozbudowany kontrolerem przerwań, co dla środowiska serwerowego może być przydatne) |
+| Enable Hardware Clock in UTC Time | Opcja ta pozwala na ustawienie zegar sprzętowego tak, aby działał on dla strefy UTC niezależnie od strefy czasowej hosta. Jego wyłączenie będzie wykorzystywało czas systemowy hosta. <br>***W tym procesie instalacji: `opcja ta ma być odznaczona`*** (ze względów na wykorzystanie serwerowe instalowanego systemu, bardzo przydatne będzie posiadanie tego samego czasu zegara systemowego co host, ze względów na zapis i odczyt ewentualnych "logów") |
+| Włącz EFI | Opcja ta pozwala na włączenie EFI (Extensible Firmware Interface),  dokładnie zostało wyjaśnione czym to jest w sekcji kreatora. <br>***W tym procesie instalacji: `opcja ta ma być odznaczona`*** |
+| Enable Secure Boot | Opcja ta pozwala na włączenie mechanizmu bezpieczeństwa Secure Boot podczas uruchamiania systemu. Ma on na celu zapobieganie lądowania nieautoryzowanego oprogramowania podczas uruchamiania systemu. Potrzebę włączenia tej opcji znajdziemy podczas korzystania z systemów Windows 8, 10, 11 czy Windows Server do zwiększenia bezpieczeństwa użytkowania. <br>***W tym procesie instalacji: `opcja ta ma być odznaczona`*** (system Debian od wersji 10 wspiera Secure Boot, ale dla tego środowiska serwerowego nie ma takiej potrzeby) |
+| Reset Keys to Default | Opcja ta pozwala na zresetowanie kluczy wykorzystywanych przez Secure Boot do tych podstawowych (cofnie to wszystkie zmiany kluczy dokonanych przez użytkownika). <br>***W tym procesie instalacji: `nie należy dokonywać zmian`*** |
 
 ### System - Procesor
 | Opcja | Opis |
 | --- | --- |
-| Processors | Tutaj mozna zmienic ilosc przydzielonych watkow procesora. (jezeli chcemy uzyskac wieksza wydajnosc mozna zwiekszyc ilosc wykorzysytwanych CPU) <br>***W tym procesie instalacji: `nalezey ustawic na 2 CPU`.*** |
-| Wykorzystanie Procesora | Tutaj mozna ustawic w ilu procentach maksymalnie moze byc obciazony jeden CPU, zmniejszenie tej wartosci moze byc przydatne, gdy maszynie wirtualnej zostana przydzielone wszystkie dostepne CPU hosta i podczas pelnego obciazenia maszyny nie bedzie to calkowicie spowalnialo pracy hosta. <br>***W tym procesie instalacji: `nalezy ustawic na 100% lub na 70% jezeli przydzielone zostaly wszystkie dostepne CPU hosta`.*** |
-| Wlacz PAE/NX | Opcja ta pozwala na wlaczenie PAE/NX. <br>**PAE - Physical Address Extension** pozwala na korzystanie z wiecej niz 4 GB RAM, jego aktywacja jest wymagana w przypadku przydzielenia wiekszej ilosci pamiecie RAM do wirtualnej maszyny niz 4 GB. <br>**NX - No Execute** zabezpiecza system przed wykonaniem sie nieautoryzowanego kodu umieszonego w obszarach pamieci (chroni przed `code injection`) <br>***W tym procesie instalacji: `opcja ta ma byc zaznaczona`.*** (zwiekszy to bezpieczenstwo systemu i pozwoli na ewentualne zwiekszenie pamieci RAM maszyny wirtualnej w przyszlosci) |
-| Wlacz zagniezdzone VT-x/AMD-V | Opcja ta pozwala na zagniezdzone wirtualizacje, gdy tworzymy wirtualne srodowisko w wirtualnym srodowisku. <br>***W tym procesie instalacji: `opcja ta ma byc odznaczona jezeli system hosta nie jest systemem wirtualnym`.***  |
+| Processors | Tutaj można zmienić ilość przydzielonych wątków procesora. (jeżeli chcemy uzyskać większa wydajność można zwiększyć ilość wykorzystywanych CPU) <br>***W tym procesie instalacji: `należy ustawić na 2 CPU`.*** |
+| Wykorzystanie Procesora | Tutaj można ustawić w ilu procentach maksymalnie może być obciążony jeden CPU, zmniejszenie tej wartości może być przydatne, gdy maszynie wirtualnej zostaną przydzielone wszystkie dostępne CPU hosta i podczas pełnego obciążenia maszyny nie będzie to całkowicie spowalniało pracy hosta. <br>***W tym procesie instalacji: `należy ustawić na 100% lub na 70% jeżeli przydzielone zostały wszystkie dostępne CPU hosta`.*** |
+| Włącz PAE/NX | Opcja ta pozwala na włączenie PAE/NX. <br>**PAE - Physical Address Extension** pozwala na korzystanie z więcej niż 4 GB RAM, jego aktywacja jest wymagana w przypadku przydzielenia większej ilości pamięci RAM do wirtualnej maszyny niż 4 GB. <br>**NX - No Execute** zabezpiecza system przed wykonaniem się nieautoryzowanego kodu umieszonego w obszarach pamięci (chroni przed `code injection`) <br>***W tym procesie instalacji: `opcja ta ma być zaznaczona`.*** (zwiększy to bezpieczeństwo systemu i pozwoli na ewentualne zwiększenie pamięci RAM maszyny wirtualnej w przyszłości) |
+| Włącz zagnieżdżone VT-x/AMD-V | Opcja ta pozwala na zagnieżdżone wirtualizacje, gdy tworzymy wirtualne środowisko w wirtualnym środowisku. <br>***W tym procesie instalacji: `opcja ta ma być odznaczona jeżeli system hosta nie jest systemem wirtualnym`.***  |
 
 ### System - Akceleracja
 | Opcja | Opis |
 | --- | --- |
-| Interfejs Parawirtualizacji | Opcja ta pozwala na wybor interfejsu wirtualizacyjnego wykorzystywanego do stworzenia wirtualnego srodowiska dla maszyny wirtualnej. <br>***W tym procesie instalacji: `nalezy zostawic domyslna opcje`.*** |
-| Wlacz zagniezdzone stronnicowanie | Opcja ta pozwala na bezposrednie wykorzsytywanie zasob pamieci fizycznej, bez potrzeby przelaczania sie miedzy kontekstami wirutalnego srodowiska a fizycznego. Jego aktywacja zwieksza wydajnosc szczegolnie, gdy maszyna wirtualna jest uruchamiana w innej maszynie wirtualnej. <br>***W tym procesie instalacji: `opcja ta ma byc odznaczona jezeli system hsota nie jest systemem wirtualnym`.*** |
+| Interfejs Parawirtualizacji | Opcja ta pozwala na wybór interfejsu witalizacyjnego wykorzystywanego do stworzenia wirtualnego środowiska dla maszyny wirtualnej. <br>***W tym procesie instalacji: `należy zostawić domyślna opcje`.*** |
+| Włącz zagnieżdżone stronnicowanie | Opcja ta pozwala na bezpośrednie wykorzystywanie zasób pamięci fizycznej, bez potrzeby przełączania się miedzy kontekstami wirtualnego środowiska a fizycznego. Jego aktywacja zwiększa wydajność szczególnie, gdy maszyna wirtualna jest uruchamiana w innej maszynie wirtualnej. <br>***W tym procesie instalacji: `opcja ta ma być odznaczona jeżeli system hosta nie jest systemem wirtualnym`.*** |
 
 ### Ekran - Ekran
 | Opcja | Opis |
 | --- | --- |
-| Pamiec Wideo | Opcja ta pozwala na ustawienie ile pamieci wideo ma byc przeznaczone dla wirtualnej maszyny. ( przykladowo do wyswietlenia jednej klatki na ekranie (YxZ)px bedziemy potrzebowali Y*Z bajtow) Jezeli korzystamy z bardziej rozbudowanego srodowiska graficznego, np. Windows 10, zalecane byloby zwiekszenie ilosci tej pamieci do 128MB<br>***W tym procesie instalacji: `nalezy ustawic 16MB`.*** (serwerowe wykorzystanie praktycznie wogole nie bedzie wykorzystywalo tej pamieci) |
-| Ilosc Monitorow | Mozna ustawic ile monitorow bedzie podpietych do wirtualnego srodowiska. <br>***W tym procesie instalacji: `nalezy ustawic na 1`.*** |
-| Scale Factor | Pozwala na ustawienie skali danego monitora.  <br>***W tym procesie instalacji: `nie nalezy dokonywac zmian`.*** |
-| Kontroler Grafiki | Opcja ta pozwala na wyboru emulowanego kontrolera grafiki.  <br>***W tym procesie instalacji: `nalezy wybrac VMSVGA`*** |
-| Wlacz akceleracje 3D | Opcja ta pozwala na aktywowanie akceleracji sprzetowej 3D hosta do poprawy wydajnosci renderowania grafiki. <br>***W tym procesie instalacji: `opcja ta ma byc odznaczona`.*** (nie ma potrzeby aktywacji akceleracji 3D w srodowisku serwerowym) |
+| Pamięć Wideo | Opcja ta pozwala na ustawienie ile pamięci wideo ma być przeznaczone dla wirtualnej maszyny. ( przykładowo do wyświetlenia jednej klatki na ekranie (YxZ)px będziemy potrzebowali Y*Z bajtów) Jeżeli korzystamy z bardziej rozbudowanego środowiska graficznego, np. Windows 10, zalecane byłoby zwiększenie ilości tej pamięci do 128MB<br>***W tym procesie instalacji: `należy ustawić 16MB`.*** (serwerowe wykorzystanie praktycznie nie będzie wykorzystywało tej pamięci) |
+| Ilość Monitorów | Można ustawić ile monitorów będzie podpiętych do wirtualnego środowiska. <br>***W tym procesie instalacji: `należy ustawić na 1`.*** |
+| Scale Factor | Pozwala na ustawienie skali danego monitora.  <br>***W tym procesie instalacji: `nie należy dokonywać zmian`.*** |
+| Kontroler Grafiki | Opcja ta pozwala na wyboru emulowanego kontrolera grafiki.  <br>***W tym procesie instalacji: `należy wybrać VMSVGA`*** |
+| Włącz akceleracje 3D | Opcja ta pozwala na aktywowanie akceleracji sprzętowej 3D hosta do poprawy wydajności renderowania grafiki. <br>***W tym procesie instalacji: `opcja ta ma być odznaczona`.*** (nie ma potrzeby aktywacji akceleracji 3D w środowisku serwerowym) |
 
 > [!NOTE]
-> **Typy kontrolerow grafiki i ich opis:** <br>* `VBoxVGA` - jest to starszy kontroler grafiki VirtualBox, jest on kompatybilny z wieloma systemami operacyjnymi ale moze nie zapewniac najlepsze wydajnosci. <br>* `VMSVGA` - jest to ulepszony kontroler grafiki VirtualBox, posiada czesciowa akceleracje sprzetowa 3D i jest zalecany dla nowszych systemow operacyjnych. <br>* `VBoxSVGA` - jest to najnowszy kontroler grafiki VirtualBox, posiada wieksze wsparcie akceleracji sprzetowej niz VMSVGA, co sprawia, ze jest zalecany do wymagajacych zastosowan maszyny wirtualnej zwiazanych z renderowanie grafiki. <br>* `Brak` - do maszyny wirtualnie nie zostaje podpiety jakiekolwiek adapter grafiki, co sprawi, ze maszyna wirutalana nie bedzie renderowac obrazu, a dostep do niej bedzie moglo odbyc sie tylko poprzez ssh.
+> **Typy kontrolerów grafiki i ich opis:** <br>* `VBoxVGA` - jest to starszy kontroler grafiki VirtualBox, jest on kompatybilny z wieloma systemami operacyjnymi ale może nie zapewniać najlepsze wydajności. <br>* `VMSVGA` - jest to ulepszony kontroler grafiki VirtualBox, posiada częściowa akceleracje sprzętowa 3D i jest zalecany dla nowszych systemów operacyjnych. <br>* `VBoxSVGA` - jest to najnowszy kontroler grafiki VirtualBox, posiada większe wsparcie akceleracji sprzętowej niż VMSVGA, co sprawia, ze jest zalecany do wymagających zastosowań maszyny wirtualnej związanych z federowanie grafiki. <br>* `Brak` - do maszyny wirtualnie nie zostaje podpięty jakiekolwiek adapter grafiki, co sprawi, ze maszyna wirtualna nie będzie renerowa obrazu, a dostęp do niej będzie mogło odbyć się tylko poprzez SSH.
 
 ### Ekran - Zdalny Pulpit
 | Opcja | Opis |
 | --- | --- |
-| Wlacz serwer | Opcja ta pozwala na uruchamianie sie serwera zdalnego pulpitu podczas wlaczania systemu, co daje dostep do podlaczenia sie do niego bezposrednio poprzez wykorzystanie aplikacji zadlanego laczenie sie na innym komputerze. <br>***W tym procesie instalacji: `opcja ta ma byc odznaczona`.*** (zdalny dostep do maszyny wirtualnej bedzie odbywal sie przez ssh) |
-| Port Serwera | Port na ktorym ma zostac podpiety serwer zdalnego laczenia sie. [podstawowy to 3389] |
-| Metoda uwierzytelniania | Pozwala na wybor w jakii sposob bedzie uzytkownik otrzymywal dostep do pulpitu maszyny wirtualnej. |
-| Limit czasu uwierzytelniania | Limit czasu na przeprowadzenie procesu autoryzacji uzytkownika (podany w milisekudnach). | 
-| Pozwol na wielokrotne polaczenia | Opcja ta pozwala na lacznenie sie wielu uzytkownikow w tym samym czasie z wirutualna maszyna. |
+| Włącz serwer | Opcja ta pozwala na uruchamianie się serwera zdalnego pulpitu podczas włączania systemu, co daje dostęp do podłączenia się do niego bezpośrednio poprzez wykorzystanie aplikacji zdalnego leczenie się na innym komputerze. <br>***W tym procesie instalacji: `opcja ta ma być odznaczona`.*** (zdalny dostęp do maszyny wirtualnej będzie odbywał się przez SSH) |
+| Port Serwera | Port na którym ma zostać podpięty serwer zdalnego leczenia się. [podstawowy to 3389] |
+| Metoda uwierzytelniania | Pozwala na wybór w jaki sposób będzie użytkownik otrzymywał dostęp do pulpitu maszyny wirtualnej. |
+| Limit czasu uwierzytelniania | Limit czasu na przeprowadzenie procesu autoryzacji użytkownika (podany w milisekudnach). | 
+| Pozwól na wielokrotne polaczenia | Opcja ta pozwala na leczenie się wielu użytkowników w tym samym czasie z wirtualna maszyna. |
 
 > [!WARNING]
-> Dzialanie zdalnego pulpitu bedzie dostepne dopiero po zainstalowaniu `VirtualBox Extension Pack`, z podstawy VirtualBox nie posiada wsparcia.
+> Działanie zdalnego pulpitu będzie dostępne dopiero po zainstalowaniu `VirtualBox Extension Pack`, z podstawy VirtualBox nie posiada wsparcia.
 
 ### Ekran - Nagrywanie
 | Opcja | Opis |
 | --- | --- |
-| Wlacz Nagrywanie | Opcja ta pozwala na nagrywanie aktywnosci maszyny wirtualnej odrazy po jej uruchomieniu i przerwaniu po jej wylaczeniu. <br>***W tym procesie instalacji: `opcja ta ma byc odznaczona`.*** (nie ma potrzeby nagrywania srodowiska serwerowego) |
-| ... | Reszta opcji sluzy do konfiguracji jakosci i rozdzielczosci nagrywanego obrazu, w przypadku instalowania systemu dokladne wyjasnienie tych opcji nie jest konieczne |
+| Włącz Nagrywanie | Opcja ta pozwala na nagrywanie aktywności maszyny wirtualnej odrazy po jej uruchomieniu i przerwaniu po jej wyłączeniu. <br>***W tym procesie instalacji: `opcja ta ma być odznaczona`.*** (nie ma potrzeby nagrywania środowiska serwerowego) |
+| ... | Reszta opcji śluzy do konfiguracji jakości i rozdzielczości nagrywanego obrazu, w przypadku instalowania systemu dokładne wyjaśnienie tych opcji nie jest konieczne |
 
-### Pamiec
-W tej sekcji mozna ustawiac kontrolery pamieci masowej i przydzielac do nich odpowiednie nosnik danych. W tym tworzyc takze emulowane nosniki zawierajace dane z folderow z komputera hosta. Dostepnych kontrolerow jest wiele, ale kluczowymi sa kontrolery IDE i SATA, ktore sa juz domyslnie ustawione. Ponizej znajduje sie informacja odnosnie kazdego dostepnego kontrolera.
+### Pamięć
+W tej sekcji można ustawiać kontrolery pamięci masowej i przydzielać do nich odpowiednie nośnik danych. W tym tworzyć także emulowane nośniki zawierające dane z folderów z komputera hosta. Dostępnych kontrolerów jest wiele, ale kluczowymi są kontrolery IDE i SATA, które są już domyślnie ustawione. Poniżej znajduje się informacja odnośnie każdego dostępnego kontrolera.
 
-* *Dla tego procesu instalacyjnego w kontrolerze IDE powinnien sie znalezc obraz instalatora `.iso`, a w kontrolerze SATA dysk `.vhd`, ktory zostal utworzony wraz z wirtualna maszyna.*
+* *Dla tego procesu instalacyjnego w kontrolerze IDE powinien się znaleźć obraz instalatora `.iso`, a w kontrolerze SATA dysk `.vhd`, który został utworzony wraz z wirtualna maszyna.*
 
 | Kontroler | Opis |
 | --- | --- |
-| PIIX4/PIIX3/ICH6 (IDE)| `Integrated Drive Electornics` - sa emulowane chipsety kontrolerow I/O pozwalajacych na montowanie nosnikow danych. Posiadaja one najwieksza kompatybilnosc z systemami operacyjnymi. <br> ***Maksymalna ilosc montowalnych nosinkow:** `4` |
-| AHCI (SATA) | `Serial Advanced Technology Attachment` - kontroler ten posiada wieksza przepustownosc w porownaniu do IDE. Ponadto oferuje mozliwosc `Hot Swappingu` pozwalajacego na wymiane dysku podczas pracy systemu operacyjnego bez jego resetowania. (jest to jedyny kontroler oferujacy taka mozliwosc w VirtualBox) <br> ***Maksymalna ilosc montowalnych nosinkow:*** `30`*** |
-| LsiLogic (SCSI) | `Small Computer System Interface` - jest to kontroler, ktory bedzie oferowal wieksza kompatybilnosc z systemami w porownaniu do SATA ale nie posiada w VirtualBoxie opcji Hot Swappingu. <br> ***Maksymalna ilosc montowalnych nosinkow: `15`*** |
-| Floppy | Jest to kontroler pozwalajacy na emulowanie dyskietek. <br> ***Maksymalna ilosc montowalnych nosinkow: `2`*** |
-| LsiLogic SAS | `Serial Attached SCSI` - jest to kontroler obslugujacy dyski SAS, ktore sa bardzie zaawansowane i zapewniaja wieksza wydajnosc i niezawodnosc w porownaniu do dyskow SATA. Interfejs ten obsluguje spinanie dyskow w macierz RAID i zarzadzanie matryca dyskow. Posiada mozliwosc podpiecia duzej ilosci dyskow co jest preferowanym kontrolerem dla systemow serwerowych. | <br> ***Maksymalna ilosc montowalnych nosinkow: `255`*** |
-| VirtIO | Jest to kontroler stworzony specjalnie z mysla o wirtualizacji do wydajnej i optymalnej pracy z hostem. Obsluguje on dyski roznego typu, ale wymagac bedzie instalacji dodatkowych sterownikow na maszynie wirtualnej do uzyskania pelnego wsparcia.  | <br> ***Maksymalna ilosc montowalnych nosinkow: `255`*** |
-| USB | `Universal Serial Bus` - jest to kontroler, ktory pozwala na montowanie i bezposrednia komunikacje urzadzen hosta z wirtualnym srodowiskiem, tak jakby byly one podpiete bezposrednio z wirtualnym systemem. <br> ***Maksymalna ilosc montowalnych nosinkow: `8`*** |
+| PIIX4/PIIX3/ICH6 (IDE)| `Integrated Drive Electornics` - są emulowane chipsety kontrolerów I/O pozwalających na montowanie nośników danych. Posiadają one największa kompatybilność z systemami operacyjnymi. <br> ***Maksymalna ilość montowalnych nosików:** `4` |
+| AHCI (SATA) | `Serial Advanced Technology Attachment` - kontroler ten posiada większa przepustowość w porównaniu do IDE. Ponadto oferuje możliwość `Hot Swappingu` pozwalającego na wymianę dysku podczas pracy systemu operacyjnego bez jego resetowania. (jest to jedyny kontroler oferujący taka możliwość w VirtualBox) <br> ***Maksymalna ilość montowalnych nosików:*** `30`*** |
+| LsiLogic (SCSI) | `Small Computer System Interface` - jest to kontroler, który będzie oferował większa kompatybilność z systemami w porównaniu do SATA ale nie posiada w VirtualBoxie opcji Hot Swappingu. <br> ***Maksymalna ilość montowalnych nosików: `15`*** |
+| Floppy | Jest to kontroler pozwalający na emulowanie dyskietek. <br> ***Maksymalna ilość montowalnych nosików: `2`*** |
+| LsiLogic SAS | `Serial Attached SCSI` - jest to kontroler obsługujący dyski SAS, które są bardzie zaawansowane i zapewniają większa wydajność i niezawodność w porównaniu do dysków SATA. Interfejs ten obsługuje spinanie dysków w macierz RAID i zarzadzanie matryca dysków. Posiada możliwość podpięcia dużej ilości dysków co jest preferowanym kontrolerem dla systemów serwerowych. | <br> ***Maksymalna ilość montowalnych nosików: `255`*** |
+| VirtIO | Jest to kontroler stworzony specjalnie z myślą o wirtualizacji do wydajnej i optymalnej pracy z hostem. Obsługuje on dyski rożnego typu, ale wymagać będzie instalacji dodatkowych sterowników na maszynie wirtualnej do uzyskania pełnego wsparcia.  | <br> ***Maksymalna ilość montowalnych nosików: `255`*** |
+| USB | `Universal Serial Bus` - jest to kontroler, który pozwala na montowanie i bezpośrednia komunikacje urządzeń hosta z wirtualnym środowiskiem, tak jakby były one podpięte bezpośrednio z wirtualnym systemem. <br> ***Maksymalna ilość montowalnych nosików: `8`*** |
 
-**Dodatkowe opcje, ktore mozna znalezc w tej kategorii:**
+**Dodatkowe opcje, które można znaleźć w tej kategorii:**
 | Opcja | Opis |
 | --- | --- |
-| Live CD/DVD | Opcja ta daje mozliwosc uruchomienia systemu bezposrednio z nosnika bez jego instalacji na dysk. Gdzie ewentualnie dane ustawione podczas korzystania z systemu zostana utracone. (lub nie, jezeli zostanie dokonana ich kopia na inny nosnik) |
-| Nazwa | Pozwala ustawic nazwe danego kontrolera. |
-| Typ | Pozwala ustawic rodzaj danego kontrolera. |
-| Ilosc Portow | Pozwala ustawic ilosc obslugiwanych portow na danym kontrolerze. |
-| Dysk SSD | Opcja ta sprawia, ze montowany dysk bedzie traktowany jak dysk SSD (opcja ta powinna byc aktywowana tylko gdy mamy doczynienia z fizycznym dyskiem SSD) |
-| Hot-pluggable | Opcja ta daje mozliwosc odlaczania i ponowego laczenia dysku podczas pracy systemu operacyjnego, bez potrzeby jego resetowania. |
+| Live CD/DVD | Opcja ta daje możliwość uruchomienia systemu bezpośrednio z nośnika bez jego instalacji na dysk. Gdzie ewentualnie dane ustawione podczas korzystania z systemu zostaną utracone. (lub nie, jeżeli zostanie dokonana ich kopia na inny nośnik) |
+| Nazwa | Pozwala ustawić nazwę danego kontrolera. |
+| Typ | Pozwala ustawić rodzaj danego kontrolera. |
+| Ilość Portów | Pozwala ustawić ilość obsługiwanych portów na danym kontrolerze. |
+| Dysk SSD | Opcja ta sprawia, ze montowany dysk będzie traktowany jak dysk SSD (opcja ta powinna byc aktywowana tylko gdy mamy odczynienia z fizycznym dyskiem SSD) |
+| Hot-pluggable | Opcja ta daje możliwość odłączania i pionowego podłączenia dysku podczas pracy systemu operacyjnego, bez potrzeby jego resetowania. |
 
 
-### Dzwiek
+### Dźwięk
 | Opcja | Opis |
 | --- | --- |
-| Wlacz dzwiek | Opcja ta pozwala na aktywowanie przechwytywania dzwieku z wirtualnej maszyny poprzez sterownik dzwieku. <br>***W tym procesie instalacji: `opcja ta ma byc odznaczona`.*** (nie ma zapotrzebowania na wykorzystanie dzwieku w srodowisku serwerowym) |
-| Sterownik dzwieku gospodarza | W tej opcji mozna wybrac poprzez jaki sterownik bedzie przekazywany dzwiek z wirtualnej maszyny do systemu hosta. |
-| Kontroler audio | Opcja ta pozwala na wybor kontrolera audio wirtualnej maszyny. `ICH AC97` jest najstarzym kontrolerem i bedzie zapewniac kompatyblinosc dla starszy systemow. `SoundBlaster16` takze jest kontrolerem starszej generacji. `Intel HD Audio` jest to najnowszy standard dzwieku oferujacy lepsza jakosc i szereg dodatkowych funkcji.|
-| Wlacz wyjscie dzwieku | Opcja ta aktywuje przekazywanie dzwieku z wirtualnej maszyny do hosta. |
-| Wlacz wejscie dzwieku | Opcja ta aktywuje przekazywanie dzwieku z urzadzen hosta do wirtualnej maszyny. (o ile zostaly wczesniej prawidlowo podlaczone i skonfigurowane). |
+| Włącz dźwięk | Opcja ta pozwala na aktywowanie przechwytywania dźwięku z wirtualnej maszyny poprzez sterownik dźwięku. <br>***W tym procesie instalacji: `opcja ta ma być odznaczona`.*** (nie ma zapotrzebowania na wykorzystanie dźwięku w środowisku serwerowym) |
+| Sterownik dźwięku gospodarza | W tej opcji można wybrać poprzez jaki sterownik będzie przekazywany dźwięk z wirtualnej maszyny do systemu hosta. |
+| Kontroler audio | Opcja ta pozwala na wybór kontrolera audio wirtualnej maszyny. `ICH AC97` jest najstarszym kontrolerem i będzie zapewniać kompatybilność dla starszy systemów. `SoundBlaster16` także jest kontrolerem starszej generacji. `Intel HD Audio` jest to najnowszy standard dźwięku oferujący lepsza jakość i szereg dodatkowych funkcji.|
+| Włącz wyjście dźwięku | Opcja ta aktywuje przekazywanie dźwięku z wirtualnej maszyny do hosta. |
+| Włącz wejście dźwięku | Opcja ta aktywuje przekazywanie dźwięku z urządzeń hosta do wirtualnej maszyny. (o ile zostały wcześniej prawidłowo podłączone i skonfigurowane). |
 
 
-### Siec
-W tej sekcji mozna skonfigurowac karty sieciowe maszyny wirtualnej (maksymalnie do 4).
+### Sieć
+W tej sekcji można skonfigurować karty sieciowe maszyny wirtualnej (maksymalnie do 4).
 
-* **Dla tego procesu instalacji wykorzystamy 1 karte sieciowa i skonfigurujemy ja jako mostkowana karta sieciowa, tak aby maszyna byla oddzielnie zarejestrowana w sieci hosta (gdzie w nazwie bedzie trzeba ustawic karte sieciowa uzywana przez hosta).** 
+* **Dla tego procesu instalacji wykorzystamy `1 kartę sieciowa` i skonfigurujemy ja jako `mostkowaną kartę sieciową`, tak aby maszyna była oddzielnie zarejestrowana w sieci hosta (gdzie w nazwie będzie trzeba ustawić kartę sieciowa używana przez hosta podłączoną do internetu).** 
 
 | Typ Sieci | Opis |
 | --- | --- |
-| NAT | `Network Address Translation` - jest to siec umozliwiajaca maszynom wirtualnym na dostep do internetu poprzez hosta, gdzie host bedzie dzialac jako router a maszyny beda posiadac swoje prywatne adresy IP, ktore beda tlumaczone na publiczny adres hosta. |
-| Siec Mostkowa | Siec ta pozwala wirtualnej maszynie dzialac jak pelnoprawne urzadzenie w sieci fizycznej. Kazda maszyna dostaje swoj wlasny adres w sieci fizycznej, co pozwala jej na komunikacje z lokalnymi urzadzeniami w sieci.
-| Siec Wewnetrzna | Laczy maszyny wirtualne wewnatrz srodowiska wirtualnego, ale bez dostepu do hosta i sieci zewnetrznej. Przydatne, gdy nalezy stworzyc siec komunikujacych ze soba maszyn wirtualnych np. cluster baz danych. |
-| Siec Hosta | Pozwala na komunikacje tylko miedzy maszyna wirtualna a hostem. (brak mozliwosci laczenia sie z sieciami zewnetrznymi)
-| Rodzajowy Sterownik | Pozwala na ustawienie niestandardowego sterownika sieciowego dla danej maszyny wirtualnej. Wykorzystywane, gdy potrzebne jest dostosowanie sie do specjalnych sterownikow lub wymagan sprzetowych. |
-| Siec NAT | Pozwala na tworzenie wielu sieci NAT w ktorej kazda z nich bedzie dzialac niezaleznie. |
-| Cloud Network | Pozwala na laczenie sie infrastruktura dostawcow uslug chmury takich jak AWS, AZURE czy GCP.
+| NAT | `Network Address Translation` - jest to siec umożliwiająca maszynom wirtualnym na dostęp do Internetu poprzez hosta, gdzie host będzie działać jako router a maszyny będą posiadać swoje prywatne adresy IP, które będą tłumaczone na publiczny adres hosta. |
+| Siec Mostkowa | Siec ta pozwala wirtualnej maszynie działać jak pełnoprawne urządzenie w sieci fizycznej. Każda maszyna dostaje swój własny adres w sieci fizycznej, co pozwala jej na komunikacje z lokalnymi urządzeniami w sieci.
+| Siec Wewnętrzna | Lachy maszyny wirtualne wewnątrz środowiska wirtualnego, ale bez dostępu do hosta i sieci zewnętrznej. Przydatne, gdy należy stworzyć siec komunikujących ze sobą maszyn wirtualnych np. cluster baz danych. |
+| Siec Hosta | Pozwala na komunikacje tylko miedzy maszyna wirtualna a hostem. (brak możliwości leczenia się z sieciami zewnętrznymi)
+| Rodzajowy Sterownik | Pozwala na ustawienie niestandardowego sterownika sieciowego dla danej maszyny wirtualnej. Wykorzystywane, gdy potrzebne jest dostosowanie sie do specjalnych sterowników lub wymagań sprzętowych. |
+| Siec NAT | Pozwala na tworzenie wielu sieci NAT w której każda z nich będzie działać niezależnie. |
+| Cloud Network | Pozwala na leczenie się infrastruktura dostawców usług chmury takich jak AWS, AZURE czy GCP.
 
 
-**Dodatkowe opcje, ktore mozna znalezc w tej kategorii:**
+**Dodatkowe opcje, które można znaleźć w tej kategorii:**
 | Opcja | Opis |
 | --- | --- |
-| Typ karty | Tutaj mozna ustawic typ emulowanej karty sieciowej. Kazda z nich bedzie w pelni dzialala dla podstawowego wykorzystania przez maszyne wirtualna, jedna do bardziej zaawansowanych konfiguracji karty sieciowej przez maszyne wirtualna, moze byc zalecane wykorzystanie edycji `SERVER` zamiast `DESKTOP`. <br>***W tym procesie instalacji: `wystarczy wybranie opcji Intel PRO/100 MT Desktop`.*** |
-| Tryb nasluchiwania | Ustawienie to pozwala na aktywowanie nasluchiwania calego ruchu ramek sieciowych, nawet tych ktore nie sa adresowane do maszyny wirtualnej. Tryb ten moze byc aktywowany w momencie, gdy chcemy monitorowac caly ruch w danej sieci. Ze wzgledow bezpieczenstwa i na przeplyw potencjalnie wrazliwych danych nie jest to zalecane. <br>***W tym procesie instalacji: `nalezy wybrac "Odmawiaj"`.*** |
-| Adres MAC | Tutaj znajduje sie adres MAC karty sieciowej maszyny wirtualnej. Z podstawy kazdy adres MAC maszyny wirtualnej VirtualBox bedzie zaczynal sie od `080027`. Adres ten mozna ponownie zregenerowac wybierajac przycisk regenerajci po prawej stronie. <br>***W tym procesie instalacji: `nie nalezy dokonywac zmian`.*** |
-| Kabel Podlaczony | Opcja ta pozwala na ustawienie, czy karta sieciowa bedzie podlaczona do sieci czy tez nie. Przydatne gdy chcemy odlaczyc maszyne od danej sieci, ale nie chcemy calkowicie odlaczac karty sieciowej. |
+| Typ karty | Tutaj można ustawić typ emulowanej karty sieciowej. Każda z nich będzie w pełni działała dla podstawowego wykorzystania przez maszynę wirtualna, jedna do bardziej zaawansowanych konfiguracji karty sieciowej przez maszynę wirtualna, może być zalecane wykorzystanie edycji `SERVER` zamiast `DESKTOP`. <br>***W tym procesie instalacji: `wystarczy wybranie opcji Intel PRO/100 MT Desktop`.*** |
+| Tryb nasłuchiwania | Ustawienie to pozwala na aktywowanie nasłuchiwania całego ruchu ramek sieciowych, nawet tych które nie są adresowane do maszyny wirtualnej. Tryb ten może być aktywowany w momencie, gdy chcemy monitorować cały ruch w danej sieci. Ze względów bezpieczeństwa i na przepływ potencjalnie wrażliwych danych nie jest to zalecane. <br>***W tym procesie instalacji: `należy wybrać Odmawiaj`.*** |
+| Adres MAC | Tutaj znajduje się adres MAC karty sieciowej maszyny wirtualnej. Z podstawy kazdy adres MAC maszyny wirtualnej VirtualBox będzie zaczynał się od `080027`. Adres ten można ponownie zregenerować wybierając przycisk regeneracji po prawej stronie. <br>***W tym procesie instalacji: `nie należy dokonywać zmian`.*** |
+| Kabel Podłączony | Opcja ta pozwala na ustawienie, czy karta sieciowa będzie podłączona do sieci czy tez nie. Przydatne gdy chcemy odłączyć maszynę od danej sieci, ale nie chcemy całkowicie odłączać karty sieciowej. |
 
 ### Porty Szeregowe
-Sekcja ta zostanie pominieta, ze wzgledow na calkowity brak wykorzystania tej portow szeregowych w tym procesie instalacyjnym i ewentualnym uzytkowaniu systemu operacyjnego, ponadto bardzo rzadko takie porty sa instalowane na maszynach wirtualnych uzytku codziennego czy serwerowego. Wiekszosc urzadzen wykorzystuje standart komunikacji USB.
+Sekcja ta zostanie pominięta, ze względów na całkowity brak wykorzystania portów szeregowych w tym procesie instalacyjnym i ewentualnym użytkowaniu systemu operacyjnego, ponadto bardzo rzadko takie porty są instalowane na maszynach wirtualnych użytku codziennego czy serwerowego. Większość urządzeń wykorzystuje standard komunikacji USB. Ewentualne zastosowanie, będzie można odnaleźć podczas instalacji o wiele starszych systemów operacyjnych.
 
 ### USB
-Sekcja ta pozwala na bezposrednie podlaczenie urzadzen USB hosta z maszyna wirtualna. Mozna wybrac miedzy standardami USB 1.1, USB 2.0 i USB 3.0. Urzadzenia mozna dodawac poprzez przycisk `+` w prawym panelu. Mozna takze dodwac filty, dzieki ktorym w latwy sposb mozna ustawic automatyczne instalowanie urzadzen.
+Sekcja ta pozwala na bezpośrednie podłączenie urządzeń USB hosta z maszyna wirtualna. Można wybrać miedzy standardami USB 1.1, USB 2.0 i USB 3.0. Urządzenia można dodawać poprzez przycisk `+` w prawym panelu. Można także dodać filtry, dzięki którym w łatwy sposób można ustawić automatyczne instalowanie urządzeń.
 
-### Udostepniane foldery
-Sekcja ta pozwala na udostepnienie folderow hosta maszynie wirtualnej, dzieki czemu w latwy sposob mozna ustanowic komunikacje miedzy nimi. Folder mozna udostepnic klikajac na przycisk `+` w prawym panelu. Na potrzeby tego procesu instalacyjnego nie bedzie wykorzystania udostepniania folderow, dlatego w tej sekcji nie zostanie wprowadzona jakakolwiek zmiana.
+### Udostępniane foldery
+Sekcja ta pozwala na udostepnienie folderów hosta maszynie wirtualnej, dzięki czemu w łatwy sposób można ustanowić komunikacje miedzy nimi. Folder można udostępnić klikając na przycisk `+` w prawym panelu. Na potrzeby tego procesu instalacyjnego nie będzie wykorzystania udostępniania folderów, dlatego w tej sekcji nie zostanie wprowadzona jakakolwiek zmiana.
 
 | Opcja | Opis |
 | --- | --- |
-| Sciezka do folderu | Lokalizacja folderu u hosta, ktory bedzie sie udostepnialo. |
+| Ścieżka do folderu | Lokalizacja folderu u hosta, który będzie się udostępniało. |
 | Nazwa Folderu | Nazwa tego folderu. |
 | Punkt Montowania | Lokalizacja na maszynie wirtualnej w jakiej zostanie ten folder zamontowany. |
-| Tylko do odczytu | Opcja ta blokuje mozliwosc zapisu przez maszyne wirtualna w tym folderze. Przydatne, gdy nie chcemy w jakikolwiek sposob dawac dostep do systemu hosta maszynie wirtualnej. |
-| Automatyczne Montowanie | Opcja ta sprawi, ze VirtualBox bedzie automatycznie montowal ten folder do systemu przy kazdy uruchomieniu wirtualnej maszyny.
+| Tylko do odczytu | Opcja ta blokuje możliwość zapisu przez maszynę wirtualna w tym folderze. Przydatne, gdy nie chcemy w jakikolwiek sposób dawać dostęp do modyfikacji systemu hosta maszyny wirtualnej. |
+| Automatyczne Montowanie | Opcja ta sprawi, ze VirtualBox będzie automatycznie montował ten folder do systemu przy każdy uruchomieniu wirtualnej maszyny.
 
 > [!WARNING]
-> Dla niektorych systemow operacyjnych wirtualnej maszyny bedzie wymagane zainstalowanie i konfiguracja `VirtualBox Guest Additions` do prawidlowego automatycznego montowania udostepnianych folderow.
+> Dla niektórych systemów operacyjnych wirtualnej maszyny będzie wymagane zainstalowanie i konfiguracja `VirtualBox Guest Additions` do prawidłowego automatycznego montowania udostępnianych folderów.
 
-### Interfejs Uzytkownika
-Sekcja ta sluzy tylko do konfigurowania interfejsu okna wirtualnej maszyny. Opcje te maja aspekt czysto wizualny dla uzytkownika korzystajacy z VirtualBox'a i nie maja jakiegokolwiek wplywu na proces instalacyjny systemu czy tez jego prawidlowe dzialanie, dlatego tez sekcja ta zostanie pominieta.
+### Interfejs Użytkownika
+Sekcja ta śluzy tylko do konfigurowania interfejsu okna wirtualnej maszyny. Opcje te maja aspekt czysto wizualny dla użytkownika korzystający z VirtualBox'a i nie maja jakiegokolwiek wpływu na proces instalacyjny systemu czy tez jego prawidłowe działanie, dlatego tez sekcja ta zostanie pominięta.
 
 ## Finalny proces instalacji
+7. Po prawidłowym skonfigurowaniu wszystkich opcji w ustawieniach, należy kliknąć na przycisk `OK`.
+8. Teraz wszystko jest już gotowe i można przejść do finalnego procesu instalacji systemu operacyjnego. W tym celu należy uruchomić maszynę przyciskiem `Uruchom`. 
+9. Po uruchomieniu się systemu wybieramy opcje `Install`. (*nie Graphical Install, ponieważ chcemy mieć jak najbardziej wydajny proces instalacji*). Do wyboru są dostępne także inne opcje, takie jak instalowanie systemu z syntezatorem mowy, instalowanie systemu z wysokim kontrastem (dla osób niedowidzących), a także menu `Help` z informacjami pomocniczymi.
+10. Na ekranie pojawi się opcja z wyborem jeżyka. Należy wybrać `English`, ze względów na łatwiejsze wykonanie procesu instalacji czy tez odnajdowanie pomocy w Internecie w razie ewentualnych komplikacji.
+11. W kolejnym oknie, należy podać kraj z którego instalujemy system operacyjny, będzie to kluczowe w celu ustawienia prawidłowej strefy czasowej i pobierania plików z najbliższego serwera. Należy odszukać `Poland`, jeżeli nie znajduje się on na liście to należy wybrać `other`, następnie `Europe` i `Poland` (łatwiej można odnaleźć klikając na przycisk P).
+12. Następnie konfigurator instalacji poprosi o wybranie finalnych ustawień językowych i system kodowania tekstu, w tym celu należy wybrać `United States`.
+13. Kolejnym krokiem jest wybranie mapowania klawiatury, z racji tego ze klawiatura wykorzystywana w Polsce to klawiatura z mapowaniem programistycznym, to tutaj także wybierzemy mapowanie `American English`.
+14. Następnie będzie należało dokonać konfiguracji sieciowej. Na początku będzie trzeba wprowadzić `Hostname`, czyli identyfikator systemu w sieci, w tym procesie instalacyjnym użyjemy `debian12-server`. Po ustawieniu nazwy, konfigurator poprosi o wprowadzenie stosowanej domeny sieci.  Jeżeli system ten jest instalowany na lokalnej sieci domowej, to nie ma potrzeby wprowadzac specjalnej nazwy (należy pozostawić puste), jednak jeżeli instalacje dokonujemy w sieci roboczej, np. szkolnej to należy ta domenę wprowadzić. (dla PJATK będzie to `pjwstk.edu.pl`).
+15. W kolejnym kroku należy skonfigurować konto super administratora (root), który bedzie miał wszystkie potrzebne uprawnienia do pełnego zarzadzania maszyna. Aby je skonfigurować będzie trzeba wprowadzić, a potem w kolejnym oknie je powtórzyć.
 
-7. Po prawidlowym skonfigurowaniu wszystkich opcji w ustawieniach, nalezy kliknac na przycisk `OK`.
-8. Teraz wszystko jest juz gotowe i mozna przejsc do finalnego procesu instalacji systemu operacyjnego. W tym celu nalezy uruchomic maszyne przyciskiem `Uruchom`. 
+> [!CAUTION]
+> Jeżeli osoba nieautoryzowana otrzyma dostęp do konta root, to otrzymuje pełna kontrole nad maszyna. Aby zabezpieczyć się przed ewentualnymi atakami brutforce zalecane jest wprowadzenie odpowiednio silnego hasła lub przyszłościowego ustawienia dostępu tylko poprzez klucz SSH.
+
+16. Po skonfigurowaniu konta super administratora, konfigurator będzie wymagał wprowadzenie danych do konta normalnego użytkownika (nie posiadającego wszystkich uprawnień), z którego korzystanie jest zalecane dla większości codziennych wykonywanych działań. Na początku będzie należało wprowadzić pełna nazwę użytkownika (może to być imię i nazwisko), następnie login (jedno wyrazowy wykorzystywany do logowania), a na końcu hasło tego użytkownika i jego powtórzenie.  
+
+17. Kolejnym bardzo kluczowym krokiem jest partycjonowanie dysków, w którym należy wybrać opcje `Manual`. (Dla tego procesu instalacyjnego nie będziemy dokonywać bardzo zaawansowanego podziału na partycji, ponieważ korzystamy tylko z jednego dysku, a także to środowisko serwerowe nie będzie tego wymagało.)
+
+18. Na ekranie powinny się pojawić opcje `Guided partitioning`, `Configure iSCSI volumes` i `SCSI (0, 0, 0) (sda) ...`. Ostatnia opcja to dysk, na którym chcemy dokonać podziału na partycje, należy go wybrać i kliknąć `enter`. Po tym pojawi się pytanie, czy chcemy stworzyć nowa pusta tabele partycji na tym dysku (wybieramy `Yes`). Po tym zostanie utworzona partycja pusta `pri/log` z maksymalna dostępna ilością pamięci i tagiem `FREE SPACE`. Cala tą przestrzeń będzie należało rozdzielić na inne partycje.
+
+19. Tworzenie partycji `SWAP (Pamięci Wymiany)`. Partycja ta jest bardzo kluczowa do prawidłowego działania systemu i wykonywania się procesów. Do pamięci SWAP są tymczasowo zapisywane dane procesu, tak aby nie wypełniać pamięci RAM w trakcie zmiany kontekstu, a po powrocie do kontekstu oryginalnego zostaje to powrotem wczytane do pamięci RAM. Aby utworzyć ta partycje przechodzimy do opcji zawierająca tag `FREE SPACE` i klikamy enter. Wyskoczy komunikat z kilkoma opcjami, gdzie będzie należało wybrać opcje `Create a new partition`. Następnie będzie należało podać ilość pamięci, która zostanie przeznaczona dla SWAPu. Z racji tego, ze przydzielone zostało do tej maszyny 2GB RAM, to do SWAP'u będzie trzeba przydzielić 4 GB i wybrać `Continue`. Następnie będzie trzeba wybrać czy partycja ta ma być `Primary` czy `Logical`. (dla `Primary` można przydzielić tylko 3 partycje,  a dla `Logical` o wiele więcej ] w zależności od wybranego kontrolera dysków]), w tym przypadku dla SWAP zostanie utworzona partycja logiczna. W kolejnym oknie będzie trzeba wybrać czy partycja ma być stworzona na początku czy na końcu. W ogólnym kontekście nie ma to już wielkiego znaczenia w tych czasach, a wiec zostanie wybrana opcja `Beginning`. W kolejnym oknie do wyboru będą opcje konfiguracyjne tej konkretnej partycji. Dla SWAP'u do zmiany będzie tylko opcja pierwsza `Use as`, do której należy wejść i tam wybrać opcje `swap area`. Dla konfiguracji pamięci wymiany to by było tyle, wiec teraz należy wybrać opcje `Done setting up the partition`, aby zakończyć proces tworzenia tej partycji. Po prawidłowym ustawieniu, w liście utworzonych partycji powinna pojawić się stworzona partycja o numerze `#5`, z przydzielonymi `4GB` przestrzeni w postaci `swap`.
+
+> [!NOTE]
+> Zalecane jest przydzielenie do SWAPu tyle pamięci: <br> - **[GDY RAM DO 2 GB]** -> SWAP = 2 * (ILOSC RAM) <br> - **[GDY RAM > 2 GB]** -> SWAP = (ILOSC RAM) + 2 GB
+
+20. Tworzenie partycji `Home`. W partycji tej zostanie uwzględniony katalog domowy użytkowników. Zalecane jest jego oddzielenie, ze względów na fakt, ze jeżeli pamięć tej partycji zostanie wypełniona, to nie będzie to miało wpływu na prawidłowe funkcjonowanie systemu. W celu utworzenia tej partycji należy ponownie wybrać opcje z tagiem `FREE SPACE`, tam wybrać opcje `Create a new partition` i tutaj ustawić przestrzeń jaka zostanie przydzielona dla użytkowników. Dla tego procesu instalacyjnego przeznaczone zostanie 26GB (reszta wolnej przestrzeni przeznaczona będzie dla systemu i reszty katalogów). Partycja ta będzie także ustawiona jako partycja logiczna na początku wolnej przestrzeni. W konfiguracji tej partycji pozostawiony zostanie system plików `Ext4 journaling`, ze względów na wystarczająca wydajność i niezawodność, która dla systemu serwerowego jest kluczowa. Dodatkowo w konfiguracji należy zmienić `Mount point`, w którym ustawić trzeba `/home`. Reszta ustawień konfiguracyjnych ma być niezmieniona. Gdy wszystko zostanie ustawione, należy wybrać zapisać konfiguracje tej partycji wybierając `Done setting up the partition`.
+
+21. Tworzenie partycji ogólnej `/` (root). Partycja ta będzie partycja ogólna, w której znajdować się będą wszystkie innego katalogi systemowe i do której zostanie przydzielona reszta wolnej przestrzeni dyskowej. Ponownie należy wybrać opcje z tagiem `FREE SPACE`. W ilości przydzielanej pamięć należy wprowadzić cala wolna przestrzeń, czyli `10 GB`. Zamiast wybierać partycje logiczna należy tym razem wybrać partycje `Primary` (ze względów na to, ze przestrzeń ta będzie ogólna dla systemu). Tutaj także pozostawiony zostanie podstawowy system plików `Ext4 journaling`. Mount point ma wskazywać na `/`. A reszta ustawień ma pozostać bez zmian. Po prawidłowym ustawieniu należy zapisać ta partycje wybierając `Done setting up the partition`.
+
+> [!NOTE]
+> W procesie konfiguracji wirtualnej maszyny został stworzony dysk o pojemności 40GB. 4GB zostały przeznaczone dla przestrzeni wymiany, a dla reszty systemu według [minimalnych zalecen](https://www.debian.org/releases/stable/i386/ch03s04.en.html) w wersji `No Dektop`, czyli tej która jest instalowana, potrzebne jest minimum 4GB przestrzeni. Dla bezawaryjnego korzystania i pozostawienia wolnej przestrzeni dodano dodatkowo 6GB dla przyszłych aplikacji, zaokrąglając wymagana przestrzeń ogólna `/` do 10GB dla systemu, z tego względu na katalog `Home` można było przeznaczyć `26GB`.
+
+
+22. I właśnie w taki sposób prawidłowo została podzielona i skonfigurowana cala przestrzeń dyskowa. Aby zakończyć ten proces należy wybrać opcje `Finish partitioning and write changes to disk` a następnie `Yes`. Po tym zostanie rozpoczęty proces instalacji podstawy systemu.
+
+23.
 
 
 
@@ -264,3 +296,5 @@ Sekcja ta sluzy tylko do konfigurowania interfejsu okna wirtualnej maszyny. Opcj
 
 
 
+
+ 
