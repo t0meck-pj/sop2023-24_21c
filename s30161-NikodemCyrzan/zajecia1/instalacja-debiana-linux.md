@@ -517,4 +517,4 @@ Ważne jest wybranie jak najbliższego archiwum, aby skrócić niepotrzebne opó
 
 ### GRUB boot loader
 
-`// TODO`
+GRUB jest programem rozruchowym zajmującym się uruchamianiem kernela systemu operacyjnego. 
