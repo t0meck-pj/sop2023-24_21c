@@ -494,6 +494,9 @@ logical - partycja przeznaczona tylko do przechowywania danych. Gdy tworzy się 
 -   FAT16 file system - system plików posługujący się 16-bitowym adresowaniem, które ograniczało pojemność dysków do 32 MB.
 -   FAT32 file system - system plików posługujący się 32-bitowym adresowaniem wykorzystywany często w dyskach przenośnych jak Pendrive, czy dyskach zewnętrznych.
 -   swap area - dodatkowa przestrzeń na dysku służąca jako zapasowa pamięć RAM. Przestrzeń swap powinna być 2 razy większa niż pamięć RAM, jeśli jest jej mniej niż 2GB. W przeciwnym wypadku powinno być jej tyle co pamięć RAM + 2 GB.
+-   physical volume for encryption - partycja z przeznaczeniem do szyfrowania danych.
+-   physical volume for RAID - partycja z przeznaczeniem do tworzenia macierzy RAID, umożliwiających zwiększanie wydajności i niezawodoności dysków przechowujących dane.
+-   physical volume for LVM - partycja z przeznaczeniem do użycia z systemem LVM, do zarządzania przestrzenią dyskową.
 
 ### Konfiguracja menadżera paczek
 
