@@ -1,0 +1,7 @@
+${#TEKST} - długość ciągu znaków
+
+${TEKST:p} - podciąg rozpoczynający się od znaku o indeksie p
+
+${TEKST:p:l} - podciąg rozpoczynający się od znaku o indeksie p, a długości l
+
+${TEKST/w/z} - zamienia tekst pasujący do "w" na tekst "z"

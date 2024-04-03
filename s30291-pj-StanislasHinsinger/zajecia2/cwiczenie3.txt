@@ -1,0 +1,10 @@
+#PATH - 
+#RANDOM - Losowa wartosc liczbowa (0 do 32767)
+#PWD - Wyswietlany jest aktualny katalog na ktory odbywaja sie operacje
+#PS1 - Prefix stosowany przy wpisywaniu polecenia, (podstawowo user@host)
+#USER - Nazwa uzytkownika
+#HOSTNAME - Nazwa hosta
+#OSTYPE - Rodzaj systemu operacyjnego
+
+
+
