@@ -1,0 +1,18 @@
+Treść zadania:
+Przygotuj skrypt, który odczyta plik (jego nazwa ma być argumentem skryptu) i
+wypisze go na terminalu tak, aby wszystkie wystąpienia Twojego imienia były
+podświetlone na czerwono.
+
+Kod wykonanego zadania znajduje się w pliku "zadanie_domowe.sh".
+Program koloruje moje imię na czerwono za każdym razem, bez względu na ilość.
+
+Oczkiwałem tego wyniku, zwłaszcza, że już wcześniej miałem styczność z
+kolorowaniem poszczególnych słów za pomocą komend w bashu i trzeba też przyznać,
+że nie jest to wcale dlugi program (o ile zrobiłem go dobrze).Podczas
+wykonywania ćwiczeń które znajdowały się na stronie nauczyłem się bardzo dużo
+na temat działania ze stringami, po co są zmienne wbudowane oraz jak wykonywać
+bardzo podstawowe skrypty.
+
+Myślę, że nową wiedzę zwłaszcza związaną ze skryptami będę mógł wykorzystać
+do zrobienia jakiś bardziej użytecznych skryptów np. za pomocą pythona ponieważ
+jest to rzecz której chciałbym się nauczyć.
