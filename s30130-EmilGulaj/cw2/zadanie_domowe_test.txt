@@ -1,4 +1,0 @@
-Emil ma kota, a kot ma Emila. Plus jest to test czy imie "Emil" będzie na
-czerwono.
-Emil też działa w innych linijkach!
-Emil.
