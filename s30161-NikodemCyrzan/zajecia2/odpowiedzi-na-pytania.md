@@ -131,3 +131,13 @@ Nazwa urządzenia
 
 Umożliwia sprawdzenie na jakim systemie operacyjnym został uruchomiony skrypt.
 
+&ensp;
+
+# Ćwiczenie 4
+
+```bash
+X=$(ls -l)
+echo "$X"
+```
+
+Powód dla którego `echo $X` zwróci rezultat jako ciąg bez znaków nowej lini jest taki, że komenda echo potraktuje wszystkie znaki białe jako osobne argumenty.
