@@ -107,9 +107,27 @@ Zmienna przechowująca aktualną ścieżkę roboczą. Przydatne na przykład do 
 Zmienna przechowująca aktualne ustawienia prompta, na przykład zmienienie jej:
 
 ```bash
-PS1="test: "
+PS1="test|$USER: "
 ```
 
-USER
-HOSTNAME
-OSTYPE
+Spowoduje, że w terminalu przed miejscem w którym można wprowadzać tekst, będzie pojawiać się takie coś:
+
+```terminal
+test|username: 
+```
+
+Umożliwia to stworzenie własnego prompta wyświetlającego jakieś przydatne informacje.
+
+## `USER`
+
+Nazwa aktualnego użytkownika. Może być przydatna do sprawdzenia który użytkownik używa skryptu, ale dużo bezpieczniejsze byłoby użycie `$(whoami)`,
+ponieważ `$USER` można nadpisać
+
+## `HOSTNAME`
+
+Nazwa urządzenia
+
+## `OSTYPE`
+
+Umożliwia sprawdzenie na jakim systemie operacyjnym został uruchomiony skrypt.
+
