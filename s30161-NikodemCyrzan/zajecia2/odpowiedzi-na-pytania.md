@@ -140,4 +140,4 @@ X=$(ls -l)
 echo "$X"
 ```
 
-Powód dla którego `echo $X` zwróci rezultat jako ciąg bez znaków nowej lini jest taki, że komenda echo potraktuje wszystkie znaki białe jako osobne argumenty.
+Powód dla którego `echo $X` zwróci rezultat jako ciąg bez znaków nowej lini jest taki, że komenda echo potraktuje wszystkie znaki nowej lini jako osobne argumenty dla echo.
