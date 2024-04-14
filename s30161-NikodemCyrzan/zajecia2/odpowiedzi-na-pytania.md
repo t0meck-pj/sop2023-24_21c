@@ -85,7 +85,7 @@ bash test.sh 1 2 3 4
 4
 ```
 
-Z rezultatu można wywniosokwać, że `$*` traktuje wszystkie argumenty jako jeden ciąg, natomiast `$@` dzieli je na osobne argumenty.
+Z rezultatu można wywniosokwać, że `$*` traktuje wszystkie argumenty jako jeden ciąg, natomiast `$@` dzieli je na osobne ciągi.
 
 # Ćwiczenie 3
 
