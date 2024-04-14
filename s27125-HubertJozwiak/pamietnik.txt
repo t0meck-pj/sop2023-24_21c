@@ -1,0 +1,9 @@
+2024-03-10
+Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem/lam sie:
+- Jak zainstalować system Debian używając programu VirtualBox.
+- Zaskakująca była ilość opcji oraz możliwości konfiguracji systemu.
+- Było to dla mnie bardzo ciekawe doświadczenie, ponieważ wcześniej
+nie zagłębiałem się w zaawansowane opcje konfiguracji systemu.
+- Ilość materiału na tych zajęciach była dosyć duża, więc
+musiałem poświęcić więcej czasu na zrozumienie i przyswojenie wiedzy.
+
