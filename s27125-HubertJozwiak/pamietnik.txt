@@ -1,3 +1,13 @@
+2024-03-24
+Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem/lam sie:
+- Tworzenia podstawowych skryptów w języku Bash.
+- Jak działają zmienne środoiwskowe w powłokach.
+- Operacji na ciągach znaków.
+- Było to dla mnie tylko przypomnienie, ponieważ już wcześniej
+miałem styczność z tymi zagadnieniami.
+- Zadania nie były trudne, ale pozwoliły mi na utrwalenie wiedzy
+na temat skryptów w Bashu.
+
 2024-03-10
 Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem/lam sie:
 - Jak zainstalować system Debian używając programu VirtualBox.
@@ -6,4 +16,3 @@ Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem/lam sie:
 nie zagłębiałem się w zaawansowane opcje konfiguracji systemu.
 - Ilość materiału na tych zajęciach była dosyć duża, więc
 musiałem poświęcić więcej czasu na zrozumienie i przyswojenie wiedzy.
-
