@@ -1,0 +1,6 @@
+X=$(ls -l)
+echo $X
+
+Zmienna X zawiera wynik działania polecenia ls -l, ale bez znaków nowej linii, ponieważ
+komenda echo potraktuje znaki nowej linii jako osobne argumenty. W celu zachowania
+formatowania wyniku polecenia ls -l, należy użyć cudzysłowów, np. echo "$X".
