@@ -26,8 +26,9 @@ W kwestii `pamietnik.txt`. Prosze by w nim zawierac:
 Prosze w nim NIE zawierac rozwiazan zadan.
 
 Opis rozwiazania zadan powinien zawierac (tyczy sie to wszystkich zajec/zadan gdzie tylko mozliwe):
+- Linie prosze lamac po 80 znakow (za wyjatkiem ewentualnych wynikow polecen wklejonych wprost)
 - Primo!
-  - Opisy nalezy wykonywac samodzielnie
+  - Opisy nalezy wykonywac samodzielnie (w tym zabrania sie uzywania ChatGPT)
     - Opisy do zadan grupowych takze kazdy student wykonuje samodzielnie ze swojej perspektywy
   - Plagiatow nie toleruje
   - Sekcje skopiowane z Internetu maja byc oznaczone by nie byly potraktowane jako plagiat
