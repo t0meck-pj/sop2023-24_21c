@@ -2,113 +2,123 @@ Tresc zadania:
 Instalacja systemu linux na maszynach wirtualnych
 
 Ponizej staralalem sie opisac caly proces tworzenia maszyny wirtualnej, wraz ze
-wszystkimi mozliwymi opcjami do wyboru (nawet gdy czegos nie wybieralem to 
-staralem sie opisac wszystkie mozliwe opcje, po co i dlaczego.) Staralem sie 
-rowniez pisac bez polskich znakow w razie gdyby jakis edytor tekstu ich nie 
+wszystkimi mozliwymi opcjami do wyboru (nawet gdy czegos nie wybieralem to
+staralem sie opisac wszystkie mozliwe opcje, po co i dlaczego.) Staralem sie
+rowniez pisac bez polskich znakow w razie gdyby jakis edytor tekstu ich nie
 rozpoznawal.
 
-Pobralem instalator ze strony https://www.virtualbox.org/wiki/Downloads 
+Pobralem instalator ze strony https://www.virtualbox.org/wiki/Downloads
 odpowiedni do mojego systemu.
 
-W panelu glownym klikam "nowa" - rozpoczyna to proces tworzenia nowej maszyny 
+W panelu glownym klikam "nowa" - rozpoczyna to proces tworzenia nowej maszyny
 wirtualnej.
-Klikam "tryb eksperta"(znajdujacy sie na dole okna), ze względu na to, ze bedzie 
-to wygodniejsze dla mnie do opisywania calej instrukcji (aczkolwiek przy wyborze 
-"trybu przewodnika" dalej mozna korzystac z ponizszej instrukcji gdyz beda 
+Klikam "tryb eksperta"(znajdujacy sie na dole okna), ze wzglÄ™du na to, ze
+bedzie
+to wygodniejsze dla mnie do opisywania calej instrukcji (aczkolwiek przy wyborze
+"trybu przewodnika" dalej mozna korzystac z ponizszej instrukcji gdyz beda
 nieznaczne roznice np.).
+
 
 -- Sekcja Name and Operating System
 
-- W polu "Nazwa" wpisuje "Debian12" (Jest to nazwa maszyny wirtualnej).
-	- Poniewaz "Debian" oznacza system ktorego instalacja bede sie zajmowac
-	a "12" jest od wersji tego systemu.
 
-- Wybieram folder instalacji, jako domyślny podany przez virtual boxa, ponieważ 
-na moim prywatnym komputerze jest ten folder według mnie odpowiedni (ale w 
-przypadku gdyby nie byl odpowiedni, to trzeba kliknac strzalke w dol znajdujaca 
-sie na koncu pola i wybrac odpowiedni folder, lub wpisac odpowiednia sciezke do 
+- W polu "Nazwa" wpisuje "Debian12" (Jest to nazwa maszyny wirtualnej).
+        - Poniewaz "Debian" oznacza system ktorego instalacja bede sie zajmowac
+        a "12" jest od wersji tego systemu.
+
+- Wybieram folder instalacji, jako domyslny podany przez virtual boxa,
+poniewaz
+na moim prywatnym komputerze jest ten folder wedlug mnie odpowiedni (ale w
+przypadku gdyby nie byl odpowiedni, to trzeba kliknac strzalke w dol znajdujaca
+sie na koncu pola i wybrac odpowiedni folder, lub wpisac odpowiednia sciezke do
 folderu recznie).
 
-- W polu "ISO Image" wybieram (lub wpisuje recznie) sciezke do  wczesniej 
-pobranego obrazu dysku systemu operacyjnego Debian (na moment pisania tego jest 
-to debian-12.5.0) ktorego pobralem z głownej strony debiana (link: 
+- W polu "ISO Image" wybieram (lub wpisuje recznie) sciezke do  wczesniej
+pobranego obrazu dysku systemu operacyjnego Debian (na moment pisania tego jest
+to debian-12.5.0) ktorego pobralem z glownej strony debiana (link:
 https://www.debian.org/download).
 
-	- Wybieram ten konkretny plik dlatego, bo jest to dokladnie ten system z 
-	ta wersja ktora chce zainstalowac.
+        - Wybieram ten konkretny plik dlatego, bo jest to dokladnie ten system z
+        ta wersja ktora chce zainstalowac.
 
-- Virtual box na tym momencie sam powinien uzupełnic pola "Typ" oraz "Wersja" 
-wybierajac "Linux" i "Debian (64-bit)". (Jeśli się to nie stało (ponieważ np. 
-została wpisana inna nazwa), są to pola które też bym wybrał. (W przypadku 
-instalacji innego systemu trzeba by bylo dobrac inny "Typ" oraz "Wersje").
+- Virtual box na tym momencie sam powinien uzupelnic pola "Typ" oraz "Wersja"
+wybierajac "Linux" i "Debian (64-bit)". Jezli sie to nie stalo (poniewaz
+np. zostala wpisana inna nazwa), sa to pola ktore tez bym wybral‚.
+(W przypadku instalacji innego systemu trzeba by bylo dobrac inny
+"Typ" oraz "Wersje").
 
-	-  W polu "Typ" nie wybieram nic innego poza Linuxem poniewaz Debian jest 
-	systemem operacyjnym ktory jest oparty na linuxie a nie np. na Windowsie.
+        -  W polu "Typ" nie wybieram nic innego poza Linuxem poniewaz Debian 
+		jest systemem operacyjnym ktory jest oparty na linuxie a nie np. na
+		Windowsie.
 
-	- W polu Wersja wybieram "Debian (64-Bit)" poniewaz procesor w moim 
-	komputerze jest w stanie taką wersje obsluzyc (a nie tylko wersje 32bit),
-	a skoro moze, to chce zeby VM dzialal dzieki temu potencjalnie szybciej.
-	(Opcja z Debianem 32-bit moze byc uzyteczna w momencie gdy nie posiada
-	sie takiego procesora)
+        - W polu Wersja wybieram "Debian (64-Bit)" poniewaz procesor w moim
+        komputerze jest w stanie takÄ… wersje obsluzyc (a nie tylko wersje
+		32bit), a skoro moze, to chce zeby VM dzialal dzieki temu
+		potencjalnie szybciej.(Opcja z Debianem 32-bit moze byc uzyteczna
+		w momencie gdy nie posiada sie takiego procesora)
 
-		- Dlaczego nie wybrac np. debian 11 lub debian 6 skoro i tak 
-		odbedzie sie instalacja z obrazu dysku? To moze prowadzic
- 		do ewentualnych	problemow w instalacji, lub na jakimkolwiek
-		pozniejszym procesie, i po prostu nie jest to zalecane tak
-		samo jak mozliwosci podczas doboru pamieci opisywany pozniej.
-		(Jesli cos mozna, to nie znaczy ze warto)
+                - Dlaczego nie wybrac np. debian 11 lub debian 6 skoro i tak
+                odbedzie sie instalacja z obrazu dysku? To moze prowadzic
+                do ewentualnych problemow w instalacji, lub na jakimkolwiek
+                pozniejszym procesie, i po prostu nie jest to zalecane tak
+                samo jak mozliwosci podczas doboru pamieci opisywany pozniej.
+                (Jesli cos mozna, to nie znaczy ze warto)
 
-- Zaznaczam Kwadrat "Skip Unattended Installation", ponieważ chce przeprowadzić 
-całkowitą instalację "od A do Z". Jeśli ten kwadrat pozostawilbym pusty, Virtual 
-Box zrobilby duzo rzeczy za mnie w pozniejszych etapach, ale nie korzystam z tego
-bo wole to zrobic wszystko na wlasna reke. (Warto pozostawic ta opcje odznaczona
-w momencie gdy z jakiegos powodu trzeba zrobic maszyne jak najszybciej)
+- Zaznaczam Kwadrat "Skip Unattended Installation", poniewaz chce
+przeprowadzic
+calkowita instalacja "od A do Z". Jezeli ten kwadrat pozostawilbym pusty,
+VirtualBox zrobilby duzo rzeczy za mnie w pozniejszych etapach,
+ale nie korzystam z tego bo wole to zrobic wszystko na wlasna reke.
+(Warto pozostawic ta opcje odznaczona w momencie gdy z jakiegos
+powodu trzeba zrobic maszyne jak najszybciej).
 
 
 -- Sekcja Unattended Install
 
 
-- Z racji wcześniej wybranej opcji "Skip Unattended Installation", nic tutaj nie
- wybralem bo nie mialem nawet takiej mozliwosci.
+- Z racji wczesniej wybranej opcji "Skip Unattended Installation", nic tutaj
+nie wybralem bo nie mialem nawet takiej mozliwosci.
+
 ACZKOLWIEK:
 
 
 --- Podsekcja Username and Password
 
 
-- W przypadku gdy opcja "Skip Unattended Installation" pozostala by odznaczona, 
-warto wprowadzic nazwe uzytkownika w polu "Username" oraz wymyslic i wpisac haslo
-w polu "Password" oraz "Repeat Password". Jest to po prostu tworzenie glownego 
-uzytkownika systemu. (Uzylem slowa 'warto', poniewaz nie jest to wymagane i 
-proces instalacji i tak sie otworzy.)
+- W przypadku gdy opcja "Skip Unattended Installation" pozostala by odznaczona,
+warto wprowadzic nazwe uzytkownika w polu "Username" oraz wymyslic i wpisac
+haslo w polu "Password" oraz "Repeat Password". Jest to po prostu tworzenie 
+glownego uzytkownika systemu. (Uzylem slowa 'warto', poniewaz nie jest to
+wymagane i proces instalacji i tak sie otworzy.)
 
-- Można takze zaznaczyc kwadrat "Guest Additions" ktory pozwala na dodanie 
-swojego obrazu dysku z dodatkowym sterownikami lub aplikacjami ktore chcielibysmy
- miec zaimplementowane w maszynie.
+- Mozna takze zaznaczyc kwadrat "Guest Additions" ktory pozwala na dodanie
+swojego obrazu dysku z dodatkowym sterownikami lub aplikacjami ktore
+chcielibysmy miec zaimplementowane w maszynie.
 
 
 --- Podsekcja Additional Options
 
 
 - Pole "Product Key" powinno byc wyszarzone, to dlatego bo Debian nie potrzebuje
- zadnego klucza produktu bo jest dostepny dla kazdego za darmo, lecz jesli 
-instaluje sie np Windowsa, taki klucz produktu trzeba wtedy podac, by moc przejsc
- do instalacji.
+zadnego klucza produktu bo jest dostepny dla kazdego za darmo, lecz jesli
+instaluje sie np Windowsa, taki klucz produktu trzeba wtedy podac, by moc
+przejsc
+do instalacji.
 
-- Pole "Hostname" odpowiada za nazwe potencjalnego serwera ktory mialby byc na 
-maszynie (zazwyczaj automatycznie jest tam uzyta nazwa maszyny, ale mozna ja 
+- Pole "Hostname" odpowiada za nazwe potencjalnego serwera ktory mialby byc na
+maszynie (zazwyczaj automatycznie jest tam uzyta nazwa maszyny, ale mozna ja
 zmienic).
 
-- W polu "Domain Name" ustawia sie nazwe domeny na ktora moga polaczyc sie np. 
+- W polu "Domain Name" ustawia sie nazwe domeny na ktora moga polaczyc sie np.
 inne VM'y za pomoca np. DNS (Domain Name System).
 
-- Kwadrat "Install in Background" sluzy do tego by okno od instalacji VM'a bylo 
-schowane. Warto tego uzyc ze wzgledu na (dlugi) czas trwania instalacji warto 
+- Kwadrat "Install in Background" sluzy do tego by okno od instalacji VM'a bylo
+schowane. Warto tego uzyc ze wzgledu na (dlugi) czas trwania instalacji warto
 uzyc takiej opcji.
 
-	- Zeby pokazac okno instalacji gdy wybralo sie taka opcje, wystarczy 
-	wrocic do glownego panelu i kliknac ikone strzalki w prawo z
-	podpisem "pokaz".
+        - Zeby pokazac okno instalacji gdy wybralo sie taka opcje, wystarczy
+        wrocic do glownego panelu i kliknac ikone strzalki w prawo z
+        podpisem "pokaz".
 
 
 -- Sekcja Hardware
@@ -116,169 +126,173 @@ uzyc takiej opcji.
 
 - Jesli chodzi o RAM to wybieram dokladnie 2048MB, poniewaz:
 
-	- Uwazam ze taka ilosc jest optymalna dla maszyny ktora stworze,
-	(Calkiem szybko sie zainstaluje, i raczej nie bedzie potrzeby
-	zmieniania tej wartosci) ale jesli okaze sie, ze ta wartosc
-	jest za duza, lub za mala, zmienie ja juz po utworzeniu maszyny.
+        - Uwazam ze taka ilosc jest optymalna dla maszyny ktora stworze,
+        (Calkiem szybko sie zainstaluje, i raczej nie bedzie potrzeby
+        zmieniania tej wartosci) ale jesli okaze sie, ze ta wartosc
+        jest za duza, lub za mala, zmienie ja juz po utworzeniu maszyny.
 
-		- Jest to nie bez powodu taka wartosc poniważ:
+                - Jest to nie bez powodu taka wartosc poniwaÅ¼:
 
-			- Mozna podac np. 2047MB ale z racji tego jak komputer
-			przydziela pamiec (w oparciu o wielokrotnosc liczby dwa)
-			jest to nie wskazane poniewaz w powyzszym przypadku ten
-			1MB ktory by musial zostac odejty do najblizszej liczby
-			podzielnej przez dwa zostal by po prostu nigdzie nie 
-			przydzielony.
+                        - Mozna podac np. 2047MB ale z racji tego jak komputer
+                        przydziela pamiec (w oparciu o wielokrotnosc liczby dwa)
+                        jest to nie wskazane poniewaz w powyzszym przypadku ten
+                        1MB ktory by musial zostac odejty do najblizszej liczby
+                        podzielnej przez dwa zostal by po prostu nigdzie nie
+                        przydzielony.
 
-			- Mozna podac np. 2004 i mimo ze jest to liczba podzielna
-			przez dwa, nie zaleca sie uzywania takiej wartosci,
-			poniewaz nie jest to optymalne dla przydzielania pamieci
-			przez system(przypomne - komputery dzialaja w
-			oparciu wielokrotnosci liczby dwa (2,4,16....1024, 2048, 4096...)
+                        - Mozna podac np. 2004 i mimo ze jest to liczba
+						podzielna przez dwa, nie zaleca sie uzywania takiej
+						wartosci, poniewaz nie jest to optymalne dla
+						przydzielania pamieci przez system
+						(przypomne - komputery dzialaja w oparciu wielokrotnosci
+						liczby dwa (2,4,16....1024, 2048, 4096...))
 
-- Wybieram dwie jednostki pod wykonawcze, (opisane jako Processors: 2) glownie na
-czas instalacji, po to by trwala ona chociaz nieco krocej, a potem jesli zajdzie 
-taka potrzeba, albo zwieksze ilosc procesorow, albo zmniejsze, zaleznie od 
-wymagan.
+- Wybieram dwie jednostki pod wykonawcze, (opisane jako Processors: 2) glownie
+na czas instalacji, po to by trwala ona chociaz nieco krocej,
+a potem jesli zajdzietaka potrzeba, albo zwieksze ilosc procesorow, albo zmniejsze,
+zaleznie od wymagan.
 
-- Zaznaczam Kwadrat "Enable EFI (special OSes only)" ponieważ chce by nowsza 
-technologia od BIOSu była wykorzystywana w mojej maszynie, co przelozy sie na jej
-szybszy start.
+- Zaznaczam Kwadrat "Enable EFI (special OSes only)" poniewaz chce by nowsza
+technologia od BIOSu byÅ‚a wykorzystywana w mojej maszynie, co przelozy sie na
+jej szybszy start.
 
 
 -- Sekcja Hard Disk
 
 
-- Wybieram opcje "Create a Virtual Hard Disk Now" poniewaz chce juz teraz 
+- Wybieram opcje "Create a Virtual Hard Disk Now" poniewaz chce juz teraz
 zagospodarowac dokladnie 20GB miejsca na dysku, uwazam ze jest to odpowiednia
-ilosc do zadan tej maszyny, ewentualnie taka wartosc jeszcze zwieksze 
+ilosc do zadan tej maszyny, ewentualnie taka wartosc jeszcze zwieksze
 (zmniejszyc akurat w tym przypadku nie bede mogl) W celu ewentualnego zmienienia
 wartosci wystarczy uzyc dostepnego paska, lub recznie wpisania wartosci.
-Wybieram domyslna sciezke wybrana przez virtual boxa poniewaz mi odpowiada (Gdyby
-nie odpowiadala to trzeba kliknac zolta ikonke znajdujaca sie po prawej stronie
-i wybrac odpowiednia sciezke, lub wpisac ja recznie).
+Wybieram domyslna sciezke wybrana przez virtual boxa poniewaz mi odpowiada
+(Gdyby nie odpowiadala to trzeba kliknac zolta ikonke znajdujaca sie po prawej
+stronie i wybrac odpowiednia sciezke, lub wpisac ja recznie).
 
-	- Nie wybieram "Use an Existing Virtual Hard Disk File" bo nie mam 
-	przygotowanego zadnego przygotowanego wirtualnego dysku ktorego moglbym i 
-	chcialbym uzyc. Jednakze gdyby zaszla taka potrzeba wystarczy wybrac ta opcje, 
-	kliknac zolta ikone na prawo, w celu wyboru dysku, i po tym jak pojawi sie nowe 
-	okno, w nim wybrac "Dodaj". W tym momencie trzeba wybrac plik obrazu dysku, ktory
-	virtualbox powinien wykorzystac. Po wybraniu i kliknieciu "otworz" warto jest 
-	odswiezyc klikajac "Refresh" i ten dysk powinien sie tam pojawic mozliwy do 
-	wyboru.
+        - Nie wybieram "Use an Existing Virtual Hard Disk File" bo nie mam
+        przygotowanego zadnego przygotowanego wirtualnego dysku ktorego moglbym
+		i chcialbym uzyc. Jednakze gdyby zaszla taka potrzeba wystarczy wybrac
+		ta opcje, kliknac zolta ikone na prawo, w celu wyboru dysku, i po tym
+		jak pojawi sie nowe okno, w nim wybrac "Dodaj". W tym momencie trzeba
+		wybrac plik obrazudysku, ktoryvirtualbox powinien wykorzystac.
+		Po wybraniu i kliknieciu "otworz" wartojestodswiezyc klikajac "Refresh"
+		i ten dysk powinien sie tam pojawic mozliwydo wyboru.
 
-	- Nie wybieram "Do Not Add a Virtual Hard Disk" bo chce zeby moja maszyna
- 	wirtualna posiadala wirtualny dysk na ktorym znajda sie np. potencjalne aplikacje.
-
-
-	--- Podsekcja Hard Disk File Type and Variant
+        - Nie wybieram "Do Not Add a Virtual Hard Disk" bo chce zeby moja
+		maszyna wirtualna posiadala wirtualny dysk na ktorym znajda sie np.
+		potencjalne aplikacje.
 
 
-- W podsekcji "Hard Disk File Type and Variant" 
+        --- Podsekcja Hard Disk File Type and Variant
 
-- Kwadrat "Pre-allocate Full Size" zaznaczam, poniewaz dzieki przypisaniu 
-wczesniej wybranych 20GB na czas instalacji, zdecydowanie ja przyspieszy, oraz 
-zabezpieczy przed przypadkowym zabraknieciem miejsca na dysku. 
+
+- W podsekcji "Hard Disk File Type and Variant"
+
+- Kwadrat "Pre-allocate Full Size" zaznaczam, poniewaz dzieki przypisaniu
+wczesniej wybranych 20GB na czas instalacji, zdecydowanie ja przyspieszy, oraz
+zabezpieczy przed przypadkowym zabraknieciem miejsca na dysku.
 
 - Wybieram VDI (VirtualBox Disk Image) poniewaz jest to standardowy obraz dysku
 dla virtualbox o najszerszych zastosowaniach a ja chce zeby to byl wlasnie tego
 typu dysk.
 
-	- Nie wybieram VHD (Virtual Hard Disk) bo jest to format uzywany przez 
-	format microsoftu (HyperV i Microsoft Azure) a nie bedzie to maszyna ktora bedzie
-	pracowac na windowsie, ktory takiej opcji potrzebuje. Dobrze by to bylo 
-	wykorzystac w momencie kiedy przewidywalo by sie uzywanie chociaz jednego z 
-	powyzszych narzedzi. 
+        - Nie wybieram VHD (Virtual Hard Disk) bo jest to format uzywany przez
+        format microsoftu (HyperV i Microsoft Azure) a nie bedzie to maszyna
+		ktora bedziepracowac na windowsie, ktory takiej opcji potrzebuje.
+		Dobrze by to bylo wykorzystac w momencie kiedy przewidywalo by sie
+		uzywanie chociaz jednego z powyzszych narzedzi.
 
-	- Nie wybieram VMDK (Virtual Machine Disk) bo nie przwiduje bym uzywal
-	tej maszyny w innym programie jak np. "VMware". Uzyteczne gdy przewiduje sie 
-	zmieniac miedzy roznymi wirtualizatorami (co nie jest zalecane ze wzgledu na 
-	sterowniki).
+        - Nie wybieram VMDK (Virtual Machine Disk) bo nie przwiduje bym uzywal
+        tej maszyny w innym programie jak np. "VMware". Uzyteczne gdy przewiduje
+		siezmieniac miedzy roznymi wirtualizatorami (co nie jest zalecane
+		ze wzgledu na sterowniki).
 
-		- Jesli bym wybral to kwadrat "Split into 2GB parts" zrobilby sie
-		mozliwy do wybrania, i oznaczalo by to ze mozna podzielic VMa na pliki po 2GB, 
-		ktore moglyby by byc uzyteczne np. podczas kopiowania i transportowania danych.
+                - Jesli bym wybral to kwadrat "Split into 2GB parts" zrobilby
+				sie mozliwy do wybrania, i oznaczalo by to ze mozna podzielic
+				VMa na pliki po 2GB, ktore moglyby by byc uzyteczne np.
+				podczas kopiowania i transportowania danych.
 
-	- Nie wybieram HDD bo wybrane wczesniej 20GB bedzie "wyciagniete" z 
-	mojego dysku ktory nie jest czysty i pelny w 100%. Uzyteczne gdy ma sie 
-	specjalnie osobny dysk dla wirtualnej maszyny a oczekuje sie jak najwiekszej 
-	wydajnosci.
+        - Nie wybieram HDD bo wybrane wczesniej 20GB bedzie "wyciagniete" z
+        mojego dysku ktory nie jest czysty i pelny w 100%. Uzyteczne gdy ma sie
+        specjalnie osobny dysk dla wirtualnej maszyny a oczekuje sie jak
+		najwiekszej wydajnosci.
 
-	- Nie wybieram QCOW (QEMU Copy On Write) bo nie chce wykorzystywac 
-	strategii ktora ten typ dysku oferuje, tzn. straetegii ktora podczas tego jak 
-	zacznie sie edytowac jakis plik, to gdzies w (okreslonym miejscu) w dysku 
-	zapisuje sie jego kopia, ktora jest usuwana dopiero w momencie kiedy edycja na 
-	tym pliku zostania ukonczona. W moim przypadku, na maszynie nie bede edytowal za 
-	wiele plikow, wiec nie przewiduje by ten emulator byl w moim przypadku przydatny.
+        - Nie wybieram QCOW (QEMU Copy On Write) bo nie chce wykorzystywac
+        strategii ktora ten typ dysku oferuje, tzn. straetegii ktora podczas
+		tego jak zacznie sie edytowac jakis plik, to gdzies w
+		(okreslonym miejscu) w dysku zapisuje sie jego kopia, ktora jest
+		usuwana dopiero w momencie kiedy edycja na tym pliku zostania ukonczona.
+		W moim przypadku, na maszynie nie bede edytowal za wiele plikow, wiec
+		nie przewiduje by ten emulator byl w moim przypadku przydatny.
 
-	- Nie wybieram QED bo jest to zwykly dysk QEMU bez opcji "Copy On Write"
-	Klikam "Zakończ" co tworzy VM'a.
+        - Nie wybieram QED bo jest to zwykly dysk QEMU bez opcji "Copy On Write"
+        Klikam "Zakoncz" co tworzy VM'a.
 
-Po powrocie do głównego Menu, wybieram "Ustawienia" by móc go jeszcze bardziej 
-dostosować przed rozpoczęciem instalacji
+Po powrocie do glownego Menu, wybieram "Ustawienia" by moc go jeszcze
+bardziej dostosowac przed rozpoczeciem instalacji.
 
 
--- Sekcja Ogólne
+-- Sekcja Ogolne
 
 
 --- Pod sekcja "Podstawowe"
 
-- W polu "nazwa" jest możliwa zmiana nazwy maszyny wirtualnej, ja nic nie bede 
-zmienial ale taka opcja moze byc przydatna, kiedy na etapie produkcji okaze sie 
+- W polu "nazwa" jest moÅ¼liwa zmiana nazwy maszyny wirtualnej, ja nic nie bede
+zmienial ale taka opcja moze byc przydatna, kiedy na etapie produkcji okaze sie
 ze jednak jest potrzebny od inna nazwa, lub np byla jakas literowka.
 
-- W polu "Typ" istnieje mozliwosc zmiany typu maszyny wirtualnej, ja ponownie nie
- bede nic tutaj zmienial, ale warto wiedziec ze jest taka mozliwosc.
+- W polu "Typ" istnieje mozliwosc zmiany typu maszyny wirtualnej, ja ponownie
+nie bede nic tutaj zmienial, ale warto wiedziec ze jest taka mozliwosc.
 
-- W polu "wersja" mozna zmienic wersje, ja ponownie nie bede nic zmienial, ale 
+- W polu "wersja" mozna zmienic wersje, ja ponownie nie bede nic zmienial, ale
 mozliwosc zawsze istnieje.
 
 
 --- Podsekcja "Zaawanoswane"
 
 
-- W polu "folder migawek" znajduje sie sciezka do miejsca gdzie beda 
-przetrzymywane migawki (z eng. snapshots). Ja ta opcje pozostawiam taka jaka jest
-domyslna, ale zeby ja zmienic wystarczy kliknac na strzalke znajdujaca sie po 
-prawej stronie, i wybrac odpowiedni folder, lub wpisac sciezke recznie.
+- W polu "folder migawek" znajduje sie sciezka do miejsca gdzie beda
+przetrzymywane migawki (z eng. snapshots). Ja ta opcje pozostawiam taka jaka
+jest domyslna, ale zeby ja zmienic wystarczy kliknac na strzalke znajdujaca
+sie po prawej stronie, i wybrac odpowiedni folder, lub wpisac sciezke recznie.
 
-- Pole "Wspoldzielony schowek" odpowiada za tworzenia schowka, ja ta opcje 
+- Pole "Wspoldzielony schowek" odpowiada za tworzenia schowka, ja ta opcje
 pozostawiam wylaczona poniewaz nie bedzie mi potrzebna:
 
-	- Wylaczony oznacza ze schowek znajduej sie tylko na maszynie wirtualnej
+        - Wylaczony oznacza ze schowek znajduej sie tylko na maszynie wirtualnej
 
-	- Gospodarz do goscia oznacza ze opcja "wspoldzielony schowek" bedzie 
-	mozliwa tylko dla gospodarza (hosta)
+        - Gospodarz do goscia oznacza ze opcja "wspoldzielony schowek" bedzie
+        mozliwa tylko dla gospodarza (hosta)
 
-	- Gosc do gospodarza oznacza ze opcja "wspoldzielony schowek" bedzie 
-	mozliwa tylko dla goscia (guesta
+        - Gosc do gospodarza oznacza ze opcja "wspoldzielony schowek" bedzie
+        mozliwa tylko dla goscia (guesta)
 
-	- dwukierunkowy oznacza ze opcja "wspoldzielony schowek" bedzie mozliwa 
-	dla wszystkich
+        - dwukierunkowy oznacza ze opcja "wspoldzielony schowek" bedzie mozliwa
+        dla wszystkich
 
-- Pole "Przeciaganie i upuszczanie" umozliwia przesowanie plikow po ekranie w 
-srodowisku graficznym, za pomoca myszy. Ja ta opcje pozostawiam wylaczona bo moja
-wirtualna maszyna nie bedzie jej potrzebowala. Zeby to wlaczyc wystarczy kliknac
-na strzalke w dol, i wybrac jedna z opcji:
+- Pole "Przeciaganie i upuszczanie" umozliwia przesowanie plikow po ekranie w
+srodowisku graficznym, za pomoca myszy. Ja ta opcje pozostawiam wylaczona bo
+moja wirtualna maszyna nie bedzie jej potrzebowala. Zeby to wlaczyc wystarczy
+kliknac na strzalke w dol, i wybrac jedna z opcji:
 
-	- Wylaczone oznacza ze opcja "przeciaganie i upuszczanie" nie dziala 
-	nigdzie
+        - Wylaczone oznacza ze opcja "przeciaganie i upuszczanie" nie dziala
+        nigdzie
 
-	- Gospodarz do goscia oznacza ze opcja "przeciaganie i upuszczanie" 
-	bedzie mozliwa tylko dla gospodarza (hosta)
+        - Gospodarz do goscia oznacza ze opcja "przeciaganie i upuszczanie"
+        bedzie mozliwa tylko dla gospodarza (hosta)
 
-	- Gosc do gospodarza oznacza ze opcja "przeciaganie i upuszczanie" bedzie
-	mozliwa tylko dla goscia (guesta)
+        - Gosc do gospodarza oznacza ze opcja "przeciaganie i upuszczanie"
+		bedzie mozliwa tylko dla goscia (guesta)
 
-	- dwukierunkowy oznacza ze opcja "przeciagnie i upuszczanie" bedzie 
-	mozliwa dla wszystkich
+        - dwukierunkowy oznacza ze opcja "przeciagnie i upuszczanie" bedzie
+        mozliwa dla wszystkich
 
 
 --- Podsekcja "Opis"
 
 
-- W polu "Opis" mozna dodac opis maszyny wirtualnej, by np. sprecyzowac czym 
-dokladnie sie zajmuje, jesli nazwa nie wystarczy, lub po prostu jest ich tak 
+- W polu "Opis" mozna dodac opis maszyny wirtualnej, by np. sprecyzowac czym
+dokladnie sie zajmuje, jesli nazwa nie wystarczy, lub po prostu jest ich tak
 wiele, ze opis moze byc bardzo przydatny. W tym wypadku nie mam za wiele maszyn,
 wiec to pole pozostawie puste.
 
@@ -287,108 +301,112 @@ wiec to pole pozostawie puste.
 
 
 - Kwadrat "Wlacz szyfrowanie dysku" pozwala wlaczyc opcje szyfrowania danych. O
-ile bezpieczenstwo jest zawsze wazne, to jednak jest ono czasami niepotrzebne, 
+ile bezpieczenstwo jest zawsze wazne, to jednak jest ono czasami niepotrzebne,
 tak jak w mojej maszynie, dlatego zostawiam ten kwadrat odznaczony (Uzywam slowa
 "niepotrzebne" bo algorytmy szyfrujace musza zostac wykonane co jest kosztowne w
-procesach co powoduje dluzszy czas oczekiwania na zapis i odczyt danych). 
-Przydatne gdy jest np. polityka bezpieczenstwa w firmie ktora wymusza by 
+procesach co powoduje dluzszy czas oczekiwania na zapis i odczyt danych).
+Przydatne gdy jest np. polityka bezpieczenstwa w firmie ktora wymusza by
 korzystac z szyfrowania jesli jest tylko taka mozliwosc.
 
-	- W polu "szyfr" mozna wybrac algorytm szyfrowania.
+        - W polu "szyfr" mozna wybrac algorytm szyfrowania.
 
-	- W polu "wprowadz nowe haslo" trzeba podac haslo ktore bedzie potrzebne
- do wlaczenia dysku maszyny wirtualnej - czyli wlasciwie maszyny wirtualnej.
+        - W polu "wprowadz nowe haslo" trzeba podac haslo ktore bedzie potrzebne
+		do wlaczenia dysku maszyny wirtualnej - czyli wlasciwie maszyny
+		wirtualnej.
 
-	- W polu "potwierdz nowe haslo" trzeba wpisac to samo haslo co w 
-powyzszym polu w celu jego potwierdzenia.
+        - W polu "potwierdz nowe haslo" trzeba wpisac to samo haslo co w
+		powyzszym polu w celu jego potwierdzenia.
 
 
 -- Sekcja System
 
 
---- Podsekcja "Płyta Główna"
+--- Podsekcja "Plyta Glowna"
 
 
-- W polu "RAM" mozna dokonac korekty przydzielonego RAMu o ktorej wspominalem 
-podczas tworzenia maszyny. Ja tutaj nic nie zmieniam bo jeszcze nie zaczalem 
+- W polu "RAM" mozna dokonac korekty przydzielonego RAMu o ktorej wspominalem
+podczas tworzenia maszyny. Ja tutaj nic nie zmieniam bo jeszcze nie zaczalem
 instalowac VM'a.
 
-- W polu "Kolejnosc bootowania" znajduja sie wszysktie nosniki danych ktore 
-system bedzie po kolei sprawdzal w celu odnalezienia zapisanych danych. Ja 
-odznaczam w tym wypadku "dyskietka" bo takiej nie posiadam. Zostawilem "naped 
+- W polu "Kolejnosc bootowania" znajduja sie wszysktie nosniki danych ktore
+system bedzie po kolei sprawdzal w celu odnalezienia zapisanych danych. Ja
+odznaczam w tym wypadku "dyskietka" bo takiej nie posiadam. Zostawilem "naped
 optyczny" poniewaz to z pliku obrazu dysku bedzie instalowany system oraz "dysk
-twardy" poniewaz gdy bede chcial w przyszlosci po raz kolejny wlaczyc maszyne, 
+twardy" poniewaz gdy bede chcial w przyszlosci po raz kolejny wlaczyc maszyne,
 to wlasnie bedzie z tej opcji korzystac.
 
-- W polu "Chipset" sa mozliwe do wyboru chipsety, ktore beda emulowane w 
-wirtualnej maszynie. Ja wybieram chipset PIIX3 poniewaz moim systemem operacyjnym
-jest linux ktory jest wspierany przez ten chipset.
+- W polu "Chipset" sa mozliwe do wyboru chipsety, ktore beda emulowane w
+wirtualnej maszynie. Ja wybieram chipset PIIX3 poniewaz moim systemem
+operacyjnym jest linux ktory jest wspierany przez ten chipset.
 
-	- Chipset PIIX3 jest to chipset ktory jest wspierany dla wiekszosci 
-	systemow operacyjnych - wiekszosci bo bez np. Mac OS X.
+        - Chipset PIIX3 jest to chipset ktory jest wspierany dla wiekszosci
+        systemow operacyjnych - wiekszosci bo bez np. Mac OS X.
 
-	- Chipset ICH9 jest to rozbudowany eksperymentalny chipset wlasnie dzieki
-	ktoremu mozna uzywac takich systemo operacyjnych jak Mac OS X (ktore nie sa 
-	wspierane przez PIIX3) oraz przedewszystkim jest bardziej wydajny, aczkolwiek nie 
-	zaleca sie jego uzywania dopoki nie jest to absolutnie wymagane.
+        - Chipset ICH9 jest to rozbudowany eksperymentalny chipset wlasnie
+		dzieki ktoremu mozna uzywac takich systemo operacyjnych jak
+		Mac OS X (ktore nie sa wspierane przez PIIX3) oraz przedewszystkim
+		jest bardziej wydajny, aczkolwiek nie zaleca sie jego uzywania
+		dopoki nie jest to absolutnie wymagane.
 
-- Pole TPM (Trusted Platform Module) jest uzywany w celu zwiekszenia 
-bezpieczenstwa komputera, i jest glownie wymagany w nowszych wersjach systemu 
-windows. Ja nie bede tego uzywal bo na wirtualnej maszyne nie bede instalowal 
-systemu windows, jesli bylaby taka potrzeba to do wyboru sa dwie wersje (mozna 
-kliknac strzalke w dol i wtedy sie one pojawia)
+- Pole TPM (Trusted Platform Module) jest uzywany w celu zwiekszenia
+bezpieczenstwa komputera, i jest glownie wymagany w nowszych wersjach systemu
+windows. Ja nie bede tego uzywal bo na wirtualnej maszyne nie bede instalowal
+systemu windows, jesli bylaby taka potrzeba to do wyboru sa dwie wersje (mozna
+kliknac strzalke w dol i wtedy sie one pojawia).
 
-	- v1.2 Jest zalecany do uzycia ze starszymi windowsami windows jak np. 
-win 7 lub win 8 ze wzgledu na wieksza kompatybilnosc niz nowsza wersja.
+        - v1.2 Jest zalecany do uzycia ze starszymi windowsami windows jak np.
+		win 7 lub win 8 ze wzgledu na wieksza kompatybilnosc niz nowsza wersja.
 
-	- v2.0 Jest wlasciwie tym wszystkim co ma v1.2 ale na starszych systemach
-	windows (takich jak win 7 lub win 8) nie wszystkie jego funkcje dzialaja
-	np. nie obsluguja szyfrowania SHA-2. Przez co jest bardziej zalecany
-	do uzycia w nowszych 
-	systemach windows (takich jak win 10 i win 11)
+        - v2.0 Jest wlasciwie tym wszystkim co ma v1.2 ale na starszych
+		systemach windows (takich jak win 7 lub win 8) nie wszystkie
+		jego funkcje dzialaja np. nie obsluguja szyfrowania SHA-2.
+		Przez co jest bardziej zalecany do uzycia w nowszych systemach
+		windows (takich jak win 10 i win 11).
 
-- W polu "Urzadzenie wskazujace" wybiera sie urzadzenie ktore bedzie odpowiadalo 
-za wskazywanie. Moja maszyna wirtualna nie potrzebuje czegos juz tak 
-zaawansowanego jak "tablet USB" wiec wybieram opcje "Mysz PS/2" bo nie ma opcji 
-"brak" wiec jest to opcja ktora jest najmniej wymagajaca. Jednakze jesli trzeba 
+- W polu "Urzadzenie wskazujace" wybiera sie urzadzenie ktore bedzie odpowiadalo
+za wskazywanie. Moja maszyna wirtualna nie potrzebuje czegos juz tak
+zaawansowanego jak "tablet USB" wiec wybieram opcje "Mysz PS/2" bo nie ma opcji
+"brak" wiec jest to opcja ktora jest najmniej wymagajaca. Jednakze jesli trzeba
 by bylo taka opcje dostosowac to:
 
-	- "Mysz PS/2" tyczy sie starego rodzaju myszek komputerowych z wejsciem 
-	PS/2. Przydatna opcja jesli np. posiada sie taka mysz, lub chce sie wybrac jakas 
-	najmniej wymagajaca opcje.
+        - "Mysz PS/2" tyczy sie starego rodzaju myszek komputerowych z wejsciem
+        PS/2. Przydatna opcja jesli np. posiada sie taka mysz, lub chce sie
+		wybrac jakas najmniej wymagajaca opcje.
 
-	- "Tablet USB" jest to opcja ktora komunikuje maszynie ze jest w wejsciu 
-	USB jakies narzedzie wskazujace ktore moze zachowywac sie jak mysz komputerowa. 
-	Przydatne przy np. nowszych myszach komputerowych.
+        - "Tablet USB" jest to opcja ktora komunikuje maszynie ze jest w wejsciu
+        USB jakies narzedzie wskazujace ktore moze zachowywac sie jak mysz
+		komputerowa. Przydatne przy np. nowszych myszach komputerowych.
 
-	- "Wielodotykowy Tablet USB" jest to rozszerzenie do poprzedniej opcji 
-	"Tablet USB" ktora jest zalecana w przypadku instalowania systemu windows 8 lub 
-	wyzszej. Przydatna podczas instalowania tego typu systemow.
+        - "Wielodotykowy Tablet USB" jest to rozszerzenie do poprzedniej opcji
+        "Tablet USB" ktora jest zalecana w przypadku instalowania systemu
+		windows 8 lub wyzszej. Przydatna podczas instalowania tego typu systemow.
 
-	- "USB MT TouchScreen and TouchPad" jest to opcja dla maszyny ktora 
-	powinna obsluzyc takze ekran dotykowy, lub touchpad znajdujacy sie zazwyczaj w 
-	laptopach. Przydatne gdy jest potrzbne GUI a pracuje sie tylko na laptopie badz 
-	tablecie.
+        - "USB MT TouchScreen and TouchPad" jest to opcja dla maszyny ktora
+        powinna obsluzyc takze ekran dotykowy, lub touchpad znajdujacy sie
+		zazwyczaj w laptopach. Przydatne gdy jest potrzbne GUI a pracuje sie
+		tylko na laptopie badz tablecie.
 
 - Rozszerzone Wlasciwosci:
 
-	- "Wlacz I/O APIC" jest to nowsza wersja "PIC" ktora musi byc uzywana w
-	przypadku systemow 64 bitowych. Z tego powodu pozostawiam ta opcje zaznaczona.
+        - "Wlacz I/O APIC" jest to nowsza wersja "PIC" ktora musi byc uzywana w
+        przypadku systemow 64 bitowych. Z tego powodu pozostawiam ta opcje
+		zaznaczona.
 
-	- "Enable Hardware Clock in UTC Time" umozliwia wyswietlanie czasu w 
-	wybranej przez hosta strefie czasowej. (Ja pozostawiam zaznaczone bo chce by taki
-	czas widnial i pokazywal ile juz nad tym pracuje.)
+        - "Enable Hardware Clock in UTC Time" umozliwia wyswietlanie czasu w
+        wybranej przez hosta strefie czasowej. (Ja pozostawiam zaznaczone bo
+		chce by taki czas widnial i pokazywal ile juz nad tym pracuje.)
 
-	- "Wlacz EFI (tylko specjalne systymy operacyjne)" - pozostawiam wlaczone
-	z tego samego powodu co wczesniej.
+        - "Wlacz EFI (tylko specjalne systymy operacyjne)" - pozostawiam
+		wlaczone z tego samego powodu co wczesniej.
 
-		- "Enable Secure Boot "z ang. pozwala na emulowanie bezpiecznego
-	wlaczania maszyny, jest wymagana do uzywania z nowszymi systemami windows 
-	(takich jak win 10 i win 11. Ja ta opcje pozostawiam odznaczona bo jej nie musze 
-	uzywac, i jej nie potrzebuje.
+                - "Enable Secure Boot "z ang. pozwala na emulowanie bezpiecznego
+        		wlaczania maszyny, jest wymagana do uzywania z nowszymi systemami
+				windows 
+				(takich jak win 10 i win 11. Ja ta opcje pozostawiam odznaczona
+				bo jej nie musze uzywac, i jej nie potrzebuje.)
 
-			- "Reset Keys to Default" sluzy do resetowania kluczy 
-			ktore sa potrzebne do "Enable Secure Boot".
+                        - "Reset Keys to Default" sluzy do resetowania kluczy
+                        ktore sa potrzebne do "Enable Secure Boot".
 
 
 --- Podsekcja "Procesor"
@@ -397,39 +415,39 @@ by bylo taka opcje dostosowac to:
 - W polu "Processors" mozna zmienic ilosc procesorow. Ja nie bede nic zmienial,
  bo wybrana przeze mnie wczesniej wartosc dalej jest odpowiednia.
 
-- W polu "Wykorzystywanie procesora" mozna wybrac procentowy udzial kazdego z 
-wybranych wczesniej procesorow. Ja zostawiam na 100% bo chce by wybrane przez 
+- W polu "Wykorzystywanie procesora" mozna wybrac procentowy udzial kazdego z
+wybranych wczesniej procesorow. Ja zostawiam na 100% bo chce by wybrane przez
 mnie porocesory tyle z siebie dawaly.
 
 - "Rozszerzone Wlasciwosci":
-	- "Wlacz Pae/NX" przydatne jesli na systemie 32 bitowym chce sie uzyc 
-	wiecej niz 4gb pamieci RAM. Dodatkowo niektore systemy operacyjne potrzebuja tej
-	opcji w celu samego wlaczenia maszyny wirtualnej. Z racji ze to bedzie system 64
-	bitowy pozostawiam ta opcje odznaczona.
+        - "Wlacz Pae/NX" przydatne jesli na systemie 32 bitowym chce sie uzyc
+        wiecej niz 4gb pamieci RAM. Dodatkowo niektore systemy operacyjne
+		potrzebuja tej opcji w celu samego wlaczenia maszyny wirtualnej.
+		Z racji ze to bedzie system 64 bitowy pozostawiam ta opcje odznaczona.
 
-	- "Wlacz zagniezdzone VT-x/AMD-V" jest to zagniezdzona wirtualizacja 
-	ktora umozliwia tworzenie maszyny wirtualnej w maszynie wirtualnej. Przydatne w 
-	wyjatkowych przypadkach, kiedy np. pracuje sie na windowsie i trzeba zrobic nowy 
-	serwer za pomoca linuxa, mozna by bylo zrobi VM'a z linuxem i na nim zrobic nowy 
-	serwer.
+        - "Wlacz zagniezdzone VT-x/AMD-V" jest to zagniezdzona wirtualizacja
+        ktora umozliwia tworzenie maszyny wirtualnej w maszynie wirtualnej.
+		Przydatne w wyjatkowych przypadkach, kiedy np. pracuje sie na
+		windowsie i trzeba zrobic nowy serwer za pomoca linuxa,
+		mozna by bylo zrobi VM'a z linuxem i na nim zrobic nowy serwer.
 
 
 --- Podsekcja "Akceleracja"
 
 
-- Interfejs parawirtualizacji jest po to by usprawnic wykonywanie plikow na 
-poszczegolnych systemach operacyjnych: 
+- Interfejs parawirtualizacji jest po to by usprawnic wykonywanie plikow na
+poszczegolnych systemach operacyjnych:
 
-	- "Minimalny" - Zalecany do uzycia z systemami Mac OS X
+        - "Minimalny" - Zalecany do uzycia z systemami Mac OS X
 
-	- "Hyper-V" - interfejs rozpoznawny przez system windows 7 i nowsze. Jest
-	rekomendowany do uzywania systemow operacyjnych windows.
+        - "Hyper-V" - interfejs rozpoznawny przez system windows 7 i nowsze.
+		Jest rekomendowany do uzywania systemow operacyjnych windows.
 
-	- "KVM" - interfejs dla systemow operacyjnych linux z kernelem nowszym 
-	niz 2.6.25. Polecany do uzywania z systemami operacyjnymi linux.
+        - "KVM" - interfejs dla systemow operacyjnych linux z kernelem nowszym
+        niz 2.6.25. Polecany do uzywania z systemami operacyjnymi linux.
 
-- Wirtualizacja sprzetowa: "wlacz zagniezdzone stronicowanie" decyduje o tym czy 
-VM powinien korzystac z zagniezdzonego stronicowania, czyli pobierania danych i 
+- Wirtualizacja sprzetowa: "wlacz zagniezdzone stronicowanie" decyduje o tym czy
+VM powinien korzystac z zagniezdzonego stronicowania, czyli pobierania danych i
 wykorzystywania ich w pamieci podstawowej.
 
 
@@ -439,35 +457,35 @@ wykorzystywania ich w pamieci podstawowej.
 --- Podsekcja "Ekran"
 
 
-- "Pamiec wideo" jest to ile potrzebnej pamieci na wyswietlenie jednej klatki, 
-liczy sie to: rodziedzlczosc monitora * ilosc bitow.W moim przypadku jest to 1920
-* 1080 * 32 = 66,355,200bitow / 8 = 8,294,400 bajtow = ok. 8 MB wiec ja maszynie
-zostawiam tyle ile jest. 
+- "Pamiec wideo" jest to ile potrzebnej pamieci na wyswietlenie jednej klatki,
+liczy sie to: rodziedzlczosc monitora * ilosc bitow.W moim przypadku jest to
+1920 * 1080 * 32 = 66,355,200bitow / 8 = 8,294,400 bajtow = ok. 8 MB
+wiec ja maszynie zostawiam tyle ile jest.
 
-- "Ilosc monitorow" uwazam ze jeden bedzie wystarczajacy wiec zostawiam tak jak 
+- "Ilosc monitorow" uwazam ze jeden bedzie wystarczajacy wiec zostawiam tak jak
 jest.
 
-- "Scale Factor" jest to skalowanie, ktore w razie czego mozna zwiekszych zeby np
-bylo cos lepiej widoczne. Ja zostawiam tak jak jest.
+- "Scale Factor" jest to skalowanie, ktore w razie czego mozna zwiekszych zeby
+np. bylo cos lepiej widoczne. Ja zostawiam tak jak jest.
 
 - "Kontroler grafiki"
-	- Ja wybieram "VMSVGA" poniewaz jest to standardowy kontroler grafiki dla
-	systemu operacyjnego linux. 
+        - Ja wybieram "VMSVGA" poniewaz jest to standardowy kontroler grafiki
+		dla systemu operacyjnego linux.
 
-		- nie wybieram "VBoxVGA" poniewaz jest to domyslny kontroler 
-		grafiki dla systemow operacyjnych przed windowsem 7, a ja bede uzywal 
-		linuxa.(Warto wspomniec ze ten kontroler nie wspiera akceleracji 3D) Przydatny 
-		gdyby ktos chcial wytestowac windowsa 95
+                - nie wybieram "VBoxVGA" poniewaz jest to domyslny kontroler
+                grafiki dla systemow operacyjnych przed windowsem 7, a ja bede
+				uzywal linuxa.(Warto wspomniec ze ten kontroler nie wspiera 
+				akceleracji 3D) Przydatny gdyby ktos chcial wytestowac windowsa 95
 
-		- nie wybieram "VBoxSVGA" poniewaz jest to domyslny kontroler dla
-		systemow operacyjnych od windows 7 
+                - nie wybieram "VBoxSVGA" poniewaz jest to domyslny kontroler 
+				dla systemow operacyjnych od windows 7
 
-		- Brak jest to opcja dla kogos kto w ogole nie chce posiadac 
-		zadnej grafiki. Moze byc przydatne kiedy wszystko jest juz zainstalowane, a 
-		dostep do maszyny jest przez siec.
+                - Brak jest to opcja dla kogos kto w ogole nie chce posiadac
+                zadnej grafiki. Moze byc przydatne kiedy wszystko jest juz 
+				zainstalowane, a dostep do maszyny jest przez siec.
 
-- Rozszerzone wlasciwosci: kwadrat wlacz akceleracje 3D pozostawiam nie 
-zaznaczony bo nie bedzie mi potrzebna. Mogła by byc uzyteczna gdyby ktos np 
+- Rozszerzone wlasciwosci: kwadrat wlacz akceleracje 3D pozostawiam nie
+zaznaczony bo nie bedzie mi potrzebna. MogÅ‚a by byc uzyteczna gdyby ktos np
 chcial odpalic gre na maszynie wirtualnej.
 
 
@@ -478,213 +496,229 @@ chcial odpalic gre na maszynie wirtualnej.
 zdalnego pulpitu. Przydatne gdy ktos chce sie podlaczyc do maszyny przez
 np. menadzer pulpitu zdalnego
 
-	- "Port serwera" domyslnie jest to 3389, lecz gdy pulpit zdalny jest 
-	wlaczony na maszynie to trzeba by bylo podac inny numer portu.
+        - "Port serwera" domyslnie jest to 3389, lecz gdy pulpit zdalny jest
+        wlaczony na maszynie to trzeba by bylo podac inny numer portu.
 
-	- "Metoda uwierzytelnienia"
+        - "Metoda uwierzytelnienia"
 
-		- "Brak" jest to brak jakiegokolwiek uwierzytelnienia (nie 
-		zalecane)
+                - "Brak" jest to brak jakiegokolwiek uwierzytelnienia (nie
+                zalecane)
 
-		- Metoda uwierzytelnienia "Zewnetrzna" jest robiona przez osobna
-		biblioteke uwierzytelniajaca zaleznie od systemu operacyjnego uzytkownika.
+                - Metoda uwierzytelnienia "Zewnetrzna" jest robiona przez osobna
+                biblioteke uwierzytelniajaca zaleznie od systemu operacyjnego 
+				uzytkownika.
 
-		- uwierzytelnienie metoda "Gosc" jest to uwierzytelnienie ktorego
-		dokonuje gosc za pomoca specjalnego komponentu, a nie host. (Nie zalecana ze 
-		wzgledu na ciagle testowanie tej metody.)
+                - uwierzytelnienie metoda "Gosc" jest to uwierzytelnienie
+				ktorego dokonuje gosc za pomoca specjalnego komponentu, a nie host.
+				(Nie zalecana ze wzgledu na ciagle testowanie tej metody.)
 
-	- "Limit czasu uwierzytelnienia" jest to limit czasowy na 
-	uwierzytelnienie uzytkownika wyrazony w milisekundach
+        - "Limit czasu uwierzytelnienia" jest to limit czasowy na
+        uwierzytelnienie uzytkownika wyrazony w milisekundach
 
-	- Rozszerzone wlasciwosci: kwadrat "pozwol na wielokrotne polaczenia" 
-	oznacza ze moze zostac wykonanych wiele roznych polaczen do jednego serwera. 
-	Przydatne gdyby z opcji podlaczenia chcialo skorzystac kilka urzadzen.
+        - Rozszerzone wlasciwosci: kwadrat "pozwol na wielokrotne polaczenia"
+        oznacza ze moze zostac wykonanych wiele roznych polaczen do jednego
+		serwera. Przydatne gdyby z opcji podlaczenia chcialo skorzystac
+		kilka urzadzen.
 
 
 --- Podsekcja "Nagrywanie"
 
 
-- kwadrat "wlacz nagrywanie" pozostawiam nie zaznaczony, poniewaz nie przwiduje 
-bym chcial nagrywac to co sie dzieje w maszynie wirtualnej. Jest to przydatne gdy
-np. testuje sie roznego rodzaju wirusy i chce sie to pozniej np. przeanalizowac.
+- kwadrat "wlacz nagrywanie" pozostawiam nie zaznaczony, poniewaz nie przwiduje
+bym chcial nagrywac to co sie dzieje w maszynie wirtualnej. Jest to przydatne
+gdy np. testuje sie roznego rodzaju wirusy i chce sie to pozniej np.
+przeanalizowac.
 
-	- "Tryb nagrywania"
+        - "Tryb nagrywania"
 
-		- "Tylko obraz" jest to tylko przechwytywanie obrazu
+                - "Tylko obraz" jest to tylko przechwytywanie obrazu
 
-		- "Tylko dzwiek" jest to przechwytywanie tylko dzwieki
+                - "Tylko dzwiek" jest to przechwytywanie tylko dzwieki
 
-		- "Obraz/dzwiek" jest to przechwytywanie i obrazu i dzwieku
+                - "Obraz/dzwiek" jest to przechwytywanie i obrazu i dzwieku
 
-	- "sciezka do pliku" jest to sciezka do nagrania, ktora mozna tutaj zmienic
-	poprzez klikniece strzalki w dol znajdujcej sie na prawo i wybrania 
-	odpowiedniej sciezki.
+        - "sciezka do pliku" jest to sciezka do nagrania, ktora mozna tutaj
+		zmienic poprzez klikniece strzalki w dol znajdujcej sie na prawo i
+		wybrania odpowiedniej sciezki.
 
-	- "Frame Size" jest to wybor rozdzielczosci jednej klatki ktora jest 
-	nagrywana. Na prawo znajduja sie opcje by moc samemu zdefiniowac rozdzielczosc.
+        - "Frame Size" jest to wybor rozdzielczosci jednej klatki ktora jest
+        nagrywana. Na prawo znajduja sie opcje by moc samemu zdefiniowac
+		rozdzielczosc.
 
-	- "Frame Rate" jest to ilosc klatek na sekunde z jaka bedzie nagrywany 
-	film, mozna zmienic ta wartosc poprzez uzycie suwaka lub wpisania ilosci klatek.
+        - "Frame Rate" jest to ilosc klatek na sekunde z jaka bedzie nagrywany
+        film, mozna zmienic ta wartosc poprzez uzycie suwaka lub wpisania ilosci
+		klatek.
 
-	- "Jakosc Obrazu" jest to jakos obraz wyrazona w kilobitach na sekunde
+        - "Jakosc Obrazu" jest to jakos obraz wyrazona w kilobitach na sekunde
 
-	- "Jakos dzwieku" jesli dzwieki sa wlaczone to istnieje mozliwosc
-	wyboru jakosci dzwieku.
+        - "Jakos dzwieku" jesli dzwieki sa wlaczone to istnieje mozliwosc
+        wyboru jakosci dzwieku.
 
-	- "screens" wybor dostepnych ekranow.
+        - "screens" wybor dostepnych ekranow.
 
 
--- Sekcja Pamięć
+-- Sekcja Pamieci
 
 
 --- Podsekcja: Kontroler
 
 - "Naped optyczny" pozostawiam taki jaki jest domyslny poniewaz juz na poczatku
-wybralem odpowiedni obraz dysku. Przydatne gdyby ktos teraz tuz przed 
-zainstalowaniem systemu postanowil to zmienic. 
+wybralem odpowiedni obraz dysku. Przydatne gdyby ktos teraz tuz przed
+zainstalowaniem systemu postanowil to zmienic.
 
-- kwadrat Live CD/DVD pozostawiam nie zaznaczony poniewaz chce by obraz dysku 
-zostal usuniety z maszyny po zainstalowaniu juz systemu operacyjnego. 
-Pozostawienie go moze byc przydatne gdyby ktos chcial zrobic np. writualna 
+- kwadrat Live CD/DVD pozostawiam nie zaznaczony poniewaz chce by obraz dysku
+zostal usuniety z maszyny po zainstalowaniu juz systemu operacyjnego.
+Pozostawienie go moze byc przydatne gdyby ktos chcial zrobic np. writualna
 maszyne w maszynie wirtualnej uzywajac tego samego obrazu dysku.
 
 - "Nazwa" jest to nazwa kontrolera pamieci, tutaj nic nie zmieniam i pozostawiam
  jak jest
 
-- "Typ": Tutaj znajduja sie wszystkie dostepne typy kontrolerów mozliwe do 
+- "Typ": Tutaj znajduja sie wszystkie dostepne typy kontrolerÃ³w mozliwe do
 dodania.
 
-- kwadrat "uzyj buforowania wejscia/wyjscia gospodarza" pozostawiam nie 
-zaznaczony, bo oznacza on ze dane wyjsciowe zadania do pamieci sa wysylane do 
-pamieci dyskowej a nie bezposrednio do urzadzenia wyjsciowego, co jest mi nie 
+- kwadrat "uzyj buforowania wejscia/wyjscia gospodarza" pozostawiam nie
+zaznaczony, bo oznacza on ze dane wyjsciowe zadania do pamieci sa wysylane do
+pamieci dyskowej a nie bezposrednio do urzadzenia wyjsciowego, co jest mi nie
 potrzebne bo i tak nie bede uzywal urzadzen wyjscia.
+
 
 --- Podsekcja: Kontroler SATA
 
 
 - Pole "Dysk twardy" mozliwy wybor portu SATA
 
-- kwadrat "Dysk SSD" zaznaczam poniewaz moj dysk jest dyskiem ssd 
+- kwadrat "Dysk SSD" zaznaczam poniewaz moj dysk jest dyskiem ssd
 
-- kwadrat "Hot-pluggable" zostawiam niezaznaczony poniewaz u mnie jest to dysk 
+- kwadrat "Hot-pluggable" zostawiam niezaznaczony poniewaz u mnie jest to dysk
 ktorego nie moge w kazdej chwili podlaczyc i odlaczyc.
 
 
--- Sekcja Dźwięk
+-- Sekcja Dzwiek
 
 
-- Kwadrat "wlacz dzwiek" odznaczam gdy moja maszyna nie bedzie potrzebowala 
+- Kwadrat "wlacz dzwiek" odznaczam gdy moja maszyna nie bedzie potrzebowala
 dzwieku uzywac dzwieku.
 
-	- Sterownik dzwieku gospodarza
+        - Sterownik dzwieku gospodarza
 
-		- "Domyslny" automatycznie wybiera najlepszy sterownik dzwieku 
-		zaleznie od systemu operacyjnego
+                - "Domyslny" automatycznie wybiera najlepszy sterownik dzwieku
+                zaleznie od systemu operacyjnego
 
-		- "Windows Audio Session" nie za bardzo rozni sie jakoscia 
-		dzwieku od Windows DirectSound, ale daje wieksza mozliwosc kontroli nad dzwiekiem.
+                - "Windows Audio Session" nie za bardzo rozni sie jakoscia
+                dzwieku od Windows DirectSound, ale daje wieksza mozliwosc
+				kontroli nad dzwiekiem.
 
-		- "Windows DirectSound" sterownik dzwiekowy.
+                - "Windows DirectSound" sterownik dzwiekowy.
 
-		- "Null Audio" pozwala zobaczyc karte dzwiekowa, lecz uniemozliwia jej uzycie.
+                - "Null Audio" pozwala zobaczyc karte dzwiekowa, lecz
+				uniemozliwia jej uzycie.
 
-	- Kontroler audio lista kontrolerow audio ktore lepiej lub gorzej moga
-	sie komponowac z roznymi systemami operacyjnymi.
+        - Kontroler audio lista kontrolerow audio ktore lepiej lub gorzej moga
+        sie komponowac z roznymi systemami operacyjnymi.
 
-	- Rozszerzone wlasciwosci:
+        - Rozszerzone wlasciwosci:
 
-		- kwadrat "wlacz wyjscie dzwieku" oznacza dzwiek wychodzacy z
-		maszyny wirtualnej, np. muzyka. Uzyteczne gdyby ktos chcial sluchac jakis
-		dzwiekow uzywajac do tego maszyny wirtualnej.
+                - kwadrat "wlacz wyjscie dzwieku" oznacza dzwiek wychodzacy z
+                maszyny wirtualnej, np. muzyka. Uzyteczne gdyby ktos chcial
+				sluchac jakis dzwiekow uzywajac do tego maszyny wirtualnej.
 
-		- kwadrat "wlacz wejscie dzwieku" oznacza ze dzwiek bedzie 
-		przechwytywany do maszyny wirtualnej (np. poprzez mikrofon). Uzyteczne gdyby ktos
-		chcial uzywac maszyny wirtualnej do komunikacji glosowej.
-
-
--- Sekcja Sieć
+                - kwadrat "wlacz wejscie dzwieku" oznacza ze dzwiek bedzie
+                przechwytywany do maszyny wirtualnej (np. poprzez mikrofon).
+				Uzyteczne gdyby ktos chcial uzywac maszyny wirtualnej
+				do komunikacji glosowej.
 
 
-- kwadrat "wlacz karte sieciowa" zostawiam zaznaczona, bo chce by moja maszyna 
+-- Sekcja Siec
+
+
+- kwadrat "wlacz karte sieciowa" zostawiam zaznaczona, bo chce by moja maszyna
 miala karte sieciowa.
 
-	- "Podlaczona do":
+        - "Podlaczona do":
 
-		- "NAT" (network adress translation) umozliwia dostep do 
-		internetu bez tworzenia osobnego adresu IP. Uzyteczny gdy chce sie uzywac 
-		internetu tylko do uzywania przegladarki, sprawdzania mail itd. Wlasnie ten 
-		rodzaj wybieram ze wzgledu na to ze nie potrzebuje niczego wiecej do swojej 
-		maszyny wirutalnej.
+                - "NAT" (network adress translation) umozliwia dostep do
+                internetu bez tworzenia osobnego adresu IP. Uzyteczny gdy
+				chce sie uzywac internetu tylko do uzywania przegladarki,
+				sprawdzania mail itd. Wlasnie ten rodzaj wybieram ze
+				wzgledu na to ze nie potrzebuje niczego wiecej do swojej maszyny wirutalnej.
 
-			- Pole "Przekierowanie portow" wyswietla okno w celu 
-			konfiguracji przekierowania portow. Jest to uzyteczne jesli zajdzie potrzeba 
-			podlaczenia sie z maszyna wirtualna za pomoca sieci (pod warunkiem ze maszyna 
-			jest podlaczona do NAT)
+                        - Pole "Przekierowanie portow" wyswietla okno w celu
+                        konfiguracji przekierowania portow. Jest to uzyteczne
+						jesli zajdzie potrzeba podlaczenia sie z maszyna
+						wirtualna za pomoca sieci (pod warunkiem ze maszyna
+						jest podlaczona do NAT)
 
-		- Mostkowana karta sieciowa (bridged) maszyna staje sie osobnym 
-		urzadzeniem podlaczonym pod siec tak samo jak kazdy inny komputer. W sieci takze 
-		jest widoczna dla innych urzadzen. Uzyteczne do przykladowo testowania laczenia 
-		sie bzeposredniego z innym urzadzeniem w tej samej sieci.
+                - Mostkowana karta sieciowa (bridged) maszyna staje sie osobnym
+                urzadzeniem podlaczonym pod siec tak samo jak kazdy inny
+				komputer. W sieci takze jest widoczna dla innych urzadzen.
+				Uzyteczne do przykladowo testowania laczenia sie bzeposredniego
+				z innym urzadzeniem w tej samej sieci.
 
-		- "Sieć wewnetrzna" siec odseparowana od hosta. Przydatne do 
-		robienia wewnetrznych clusterow, w ktorych maszyny wirtualne musza komunikowac 
-		sie tylko miedzy soba bedac w jednej sieci.
+                - "Siec wewnetrzna" siec odseparowana od hosta. Przydatne do
+                robienia wewnetrznych clusterow, w ktorych maszyny wirtualne
+				musza komunikowac sie tylko miedzy soba bedac w jednej sieci.
 
-		- "Karta sieci izolowanej (host-only)" Tylko i wylacznie 
-		komunikacja miedzy maszyna wirtualna a hostem.
+                - "Karta sieci izolowanej (host-only)" Tylko i wylacznie
+                komunikacja miedzy maszyna wirtualna a hostem.
 
-		- "Rodzajowy sterownik" pozwala uzytkownikowi na wybranie 
-		wlasnego sterownika. Przydatne gdy zadna z powyzszych opcji się nie sprawdzi.
+                - "Rodzajowy sterownik" pozwala uzytkownikowi na wybranie
+                wlasnego sterownika. Przydatne gdy zadna z powyzszych opcji sie
+				nie sprawdzi.
 
-			- "Rodzajowe wlasciwosci" jest tutaj miejsce na wpisanie
-			wlasciwosci wlasnego sterownika.
+                        - "Rodzajowe wlasciwosci" jest tutaj miejsce na wpisanie
+                        wlasciwosci wlasnego sterownika.
 
-		- "Sieć NAT" pozwala na polaczenia wychodzace.
+                - "Siec NAT" pozwala na polaczenia wychodzace.
 
-		- "Cloud Network EXPERIMENTAL" pozwala na podlaczenie maszyny
-		wirtualnej do podadresu znajdujacego sie w usludze chmurowej (np. Azure). 
-		Przydatne w momencie laczenia maszyny wirtualnej z chmura.
+                - "Cloud Network EXPERIMENTAL" pozwala na podlaczenie maszyny
+                wirtualnej do podadresu znajdujacego sie w usludze chmurowej
+				(np. Azure). Przydatne w momencie laczenia maszyny wirtualnej
+				z chmura.
 
-		- "Niepodlaczona" karta sieciowa jest, ale nie ma mozliwosci 
-		podlaczenia do zadnej sieci. 
+                - "Niepodlaczona" karta sieciowa jest, ale nie ma mozliwosci
+                podlaczenia do zadnej sieci.
 
 - "Typ karty":
 
-	- PCnet-PCI II (Am79C970A) opcja zalecana do wirtualizacji staszych 
-	systemow (takich jak win 2000, win 95, win 98).
+        - PCnet-PCI II (Am79C970A) opcja zalecana do wirtualizacji staszych
+        systemow (takich jak win 2000, win 95, win 98).
 
-	- PCnet-FAST III (Am79C973) domyslna opcja uzywana przez prawie wszystkie
-	systemy operacyjne.
+        - PCnet-FAST III (Am79C973) domyslna opcja uzywana przez prawie
+		wszystkie systemy operacyjne.
 
-	- Intel PRO/1000 MT Dekstop (82540EM) dziala ze wszystkimi sytemami windows
-	od windows vista.
+        - Intel PRO/1000 MT Dekstop (82540EM) dziala ze wszystkimi sytemami 
+		windows od windows vista.
 
-	- Intel PRO/1000 T Server (82543GC) dziala z Windowsem XP
+        - Intel PRO/1000 T Server (82543GC) dziala z Windowsem XP
 
-	- Intel PRO/1000 MT Server (82545EM) ten wybor ulatwia umport maszyn w formacie
-	OVF (open Virtualization Format).
+        - Intel PRO/1000 MT Server (82545EM) ten wybor ulatwia umport maszyn w
+		formacie OVF (open Virtualization Format).
 
-	- Sieć parawirtualizowana (virtio-net) specjalny specjalistyczny tryb w 
-	ktorym nie jest wirutalizowana zadna karta, zamiast tego jest otwarty specjalny 
-	inferejs dla systemu goscia gdzie mozliwe jest uzycie sterownikow.
+        - Siec parawirtualizowana (virtio-net) specjalny specjalistyczny tryb w
+        ktorym nie jest wirutalizowana zadna karta, zamiast tego jest otwarty
+		specjalny inferejs dla systemu goscia gdzie mozliwe jest uzycie
+		sterownikow.
 
-- "Tryb nasłuchiwania":
+- "Tryb nasluchiwania":
 
-	- "Odmawiaj" caly ruch jest schowany dla maszyny wirtualnej. Jest to 
-	domyslna opcja.
+        - "Odmawiaj" caly ruch jest schowany dla maszyny wirtualnej. Jest to
+        domyslna opcja.
 
-	- "Pozwalaj maszynom wirtualnym" caly ruch sieciowy jest schowany przed 
-	przed maszyna wirtualna, poza ruchem z i do maszyny.
-	- "Pozwalaj" tryb bez jakichkolwiek restrykcji. Maszyna wirtualna moze 
-	zobaczyc caly ruch przychodzacy i wychdzacy ruch sieciowy.
+        - "Pozwalaj maszynom wirtualnym" caly ruch sieciowy jest schowany przed
+        przed maszyna wirtualna, poza ruchem z i do maszyny.
+        - "Pozwalaj" tryb bez jakichkolwiek restrykcji. Maszyna wirtualna moze
+        zobaczyc caly ruch przychodzacy i wychdzacy ruch sieciowy.
 
-- Pole "Adres MAC" jest to losowo generowany adres MAC.(Pierwsze szesc bitow jest
- typowe dla virtualboxa pozostale szesc jest losowo generowane).
+- Pole "Adres MAC" jest to losowo generowany adres MAC.(Pierwsze szesc bitow
+jest
+typowe dla virtualboxa pozostale szesc jest losowo generowane).
 
-- kwadrat "kabel podlaczony" "odlacza" i "podlacza" wrtualny kabel. To oznacza po
-prostu ze zaznaczony kwadrat "daje internet" a odznaczony go "nie daje". Jest to
-uzyteczna opcja do "odlaczania internetu" bez odlaczania karty sieciowej. Ja 
-zostawiam ten kwadrat zaznaczony, bo chce by maszyna miala dostep do internetu.
+- kwadrat "kabel podlaczony" "odlacza" i "podlacza" wrtualny kabel. To oznacza
+po prostu ze zaznaczony kwadrat "daje internet" a odznaczony go "nie daje".
+Jest to uzyteczna opcja do "odlaczania internetu" bez odlaczania karty
+sieciowej. Ja zostawiam ten kwadrat zaznaczony, bo chce by maszyna miala
+dostep do internetu.
 
 
 -- Sekcja Porty Szeregowe
@@ -692,68 +726,68 @@ zostawiam ten kwadrat zaznaczony, bo chce by maszyna miala dostep do internetu.
 
 - kwadrat "wlacz port szeregowy" odznaczam poniewaz sa mi one nie potrzebne.
 
-	- Numer portu 
+        - Numer portu
 
-		- "IRQ" liczba linii IRQ (nie zaleca sie ich zmieniania, wraz z 
-		Adresem portu wejscia/wyjscia, ale jest taka mozliwosc).
+                - "IRQ" liczba linii IRQ (nie zaleca sie ich zmieniania, wraz z
+                Adresem portu wejscia/wyjscia, ale jest taka mozliwosc).
 
-	- Tryp pracy portu
+        - Tryp pracy portu
 
-		- "Odlaczony" maszyna bedzie widziec port, ale bedzie sie on 
-		zachowywal jakby go nie bylo. Przydatne jesli chcemy zachowac port szeregowy, 
-		tylko chcemy go po prostu wylaczyc na jakis czas.
+                - "Odlaczony" maszyna bedzie widziec port, ale bedzie sie on
+                zachowywal jakby go nie bylo. Przydatne jesli chcemy zachowac
+				port szeregowy, 	tylko chcemy go po prostu wylaczyc na jakis czas.
 
-		- "Lacze komunikacyjne gospodarza" konfigurowanie portu zeby 
-		polaczyl sie z orpogramowaniem komunikacyjnym na hoscie. Przydatne do robienia 
-		tzw. "Pipe"
+                - "Lacze komunikacyjne gospodarza" konfigurowanie portu zeby
+                polaczyl sie z orpogramowaniem komunikacyjnym na hoscie.
+				Przydatne do robienia tzw. "Pipe"
 
-		- "Urzadzenie gospodarza" Laczy wirtualny port z fizycznym portem
-		hosta. Pozwala na transportowanie otrzymywanych danych w maszynie wirtualnej
-		bezposrednio do hosta.
+                - "Urzadzenie gospodarza" Laczy wirtualny port z fizycznym
+				portem hosta. Pozwala na transportowanie otrzymywanych
+				danych w maszynie wirtualnej bezposrednio do hosta.
 
-		- "Plik Raw" wysyla otrzymane dane w formie pliku do hosta. 
-		Przydatne podczas np. zbierania danych diagnostycznych.
+                - "Plik Raw" wysyla otrzymane dane w formie pliku do hosta.
+                Przydatne podczas np. zbierania danych diagnostycznych.
 
-		- "TCP" umozliwia uzywania portu jako server lub do podlaczania
-		sie do innych serwerow.
+                - "TCP" umozliwia uzywania portu jako server lub do podlaczania
+                sie do innych serwerow.
 
-	- kwadrat "Podlacz do istniejacego lacza komunikacyjnego/gniazda" podany 
-	adres lub sciezka sa uznawane za istniejace i jest proba podlaczenia sie. (nie 
-	przydtane gdy chce sie uzywac TCP jako serwer)
+        - kwadrat "Podlacz do istniejacego lacza komunikacyjnego/gniazda" podany
+        adres lub sciezka sa uznawane za istniejace i jest proba podlaczenia
+		sie. (nie przydtane gdy chce sie uzywac TCP jako serwer)
 
-	- "sciezka/adres" miejsce na wpisanie sciezki lub adresu w ktorym 
-	znajduje sie port szeregowy hosta lub adres portu.
+        - "sciezka/adres" miejsce na wpisanie sciezki lub adresu w ktorym
+        znajduje sie port szeregowy hosta lub adres portu.
 
 
 -- Sekcja USB
 
 
-- kwadrat "wlacz kontroler USB" zostawiam zaznaczony, poniewaz chce by VM widzial
-ze moja klawiatura jest podlaczona
+- kwadrat "wlacz kontroler USB" zostawiam zaznaczony, poniewaz chce by VM
+widzial ze moja klawiatura jest podlaczona
 
-	- "Kontroler USB 1.1 (OHCI)" Przestarzala opcja. Uzyteczne gdy nie 
-	przewiduje sie miec NICZEGO podlaczonego do maszyny wirtualnej.
+        - "Kontroler USB 1.1 (OHCI)" Przestarzala opcja. Uzyteczne gdy nie
+        przewiduje sie miec NICZEGO podlaczonego do maszyny wirtualnej.
 
-	- "Kontroler USB 2.0 (OHCI + EHCI)" Wsparcie dla USB 2.0, uzyteczne dla 
-	wiekszosci urzadzen. Ja zostawiam zaznaczona ta opcje poniewaz chce by moja 
-	klawiatura zostala obsluzona, ale nie musi byc to w duzych predkosciach oferowane
-	przez USB 3.0.
+        - "Kontroler USB 2.0 (OHCI + EHCI)" Wsparcie dla USB 2.0, uzyteczne dla
+        wiekszosci urzadzen. Ja zostawiam zaznaczona ta opcje poniewaz chce by
+		moja klawiatura zostala obsluzona, ale nie musi byc to w duzych
+		predkosciach oferowane przez USB 3.0.
 
-	- "Kontroler USB 3.0 (xHCI)" Wsparcie dla USB 3.0. Przydatne jesli zalezy
-	na predkosci przesylu danych (np. podpiety dysk).
+        - "Kontroler USB 3.0 (xHCI)" Wsparcie dla USB 3.0. Przydatne jesli
+		zalezy na predkosci przesylu danych (np. podpiety dysk).
 
-	- Pole "Filtry urzadzen USB" daje mozliwosc by wyfiltorwac maszynie, 
-	jakich podpietych urzadzen nie odczytywala. Ja pozostawie ta sekcje pusta ale 
-	zeby cos dodac wystarczy kliknac ikonke "+" znajdujaca sie po prawej stronie, i 
-	wybrac interesujace urzadzenie.
-
-
--- Sekcja Udostępniane foldery
+        - Pole "Filtry urzadzen USB" daje mozliwosc by wyfiltorwac maszynie,
+        jakich podpietych urzadzen nie odczytywala. Ja pozostawie ta sekcje
+		pusta ale zeby cos dodac wystarczy kliknac ikonke "+" znajdujaca
+		sie po prawej stronie, i wybrac interesujace urzadzenie.
 
 
-- Jesli zaszlaby potrzeba przetransportowania folderu z hosta do maszyny 
-wirtualnej, mozna to zrobic przez ta sekcje, dodajac odpowiendi folder za pomoca 
-przycisku z "+" znajdujacym sie po prawej stronie, i dodaniem odpowiedniego 
+-- Sekcja Udostepniane foldery
+
+
+- Jesli zaszlaby potrzeba przetransportowania folderu z hosta do maszyny
+wirtualnej, mozna to zrobic przez ta sekcje, dodajac odpowiendi folder za pomoca
+przycisku z "+" znajdujacym sie po prawej stronie, i dodaniem odpowiedniego
 folderu.
 
 
@@ -763,75 +797,76 @@ folderu.
 - "Visual State" Opcje ustawienia okna wirtualnej maszyny.
 
 - "Mini ToolBar"
-	- kwadrat "Wyświetl w trybie pelnego ekranu/Seamless" odznaczam bo nie 
-bede tego potrzebowac do maszyny ktora tworze.
+        - kwadrat "WyÅ›wietl w trybie pelnego ekranu/Seamless" odznaczam bo nie
+		bede tego potrzebowac do maszyny ktora tworze.
 
-		- kwadrat "Show at Top of Screen" powoduje ze pasek narzedzi 
-ktory jest zawsze w dolnej czesci ekranu, jest przesuniety do gory. Ja zostawiam 
-ta opcje odznaczona, bo wole miec pasek na dole.
+                - kwadrat "Show at Top of Screen" powoduje ze pasek narzedzi
+				ktory jest zawsze w dolnej czesci ekranu, jest przesuniety
+				do gory. Ja zostawiam ta opcje odznaczona, bo wole miec pasek
+				na dole.
 
 Klikam "OK" znajdujace sie na dole strony zeby potwierdzic wprowadzone zmiany.
 
 Klikam Uruchom
 po tym jak pojawilo sie okno wirtualnej maszyny:
 
-- "Graphical Install"  Instalowanie z GUI. Przydatna dal osob ktore chca 
+- "Graphical Install"  Instalowanie z GUI. Przydatna dal osob ktore chca
 popatrzec na proces instalacji, lub uzywac myszki do jej kontynuowania.
 
 - "Install" Instalowanie bez GUI (tekstowo). Przydatne przy maszynach ktore maja
- mniej RAMu, poniewaz instalowanie z GUI moze wiecej takiego RAMu potrzebowac 
-czasami na tyle ze moze sie nawet nie wlaczyc. Wybieram ta opcje bo chce by 
-maszyna nie musiala renderowac obrazu, dzieki czemu szybciej moze sie 
+ mniej RAMu, poniewaz instalowanie z GUI moze wiecej takiego RAMu potrzebowac
+czasami na tyle ze moze sie nawet nie wlaczyc. Wybieram ta opcje bo chce by
+maszyna nie musiala renderowac obrazu, dzieki czemu szybciej moze sie
 zainstalowac.
 
 - "Advanced Options" Opcje zaawansowane konfiguracji instalatora.
 
-- "Accessible dark contrast installer menu" Opcja ciemniejszym kontrascie, dla 
+- "Accessible dark contrast installer menu" Opcja ciemniejszym kontrascie, dla
 osob ktore maja problem ze wzrokiem.
 
 - "Help" Opcja szukania pomocy.
 
-- "Install with speech synthesis" Opcja dla osob ktore sa niewidome. (Wszystkie 
+- "Install with speech synthesis" Opcja dla osob ktore sa niewidome. (Wszystkie
 opcje beda odczytywane, wiec trzeba miec wlaczony dzwiek w maszynie wirtualnej).
 
-- Wybieram jezyk "English" bo wole ten jezyk, oraz uznaje go za bardziej 
-przydatny w celu pozniejszego ewentualnego wyszukiwania informacji na temat 
+- Wybieram jezyk "English" bo wole ten jezyk, oraz uznaje go za bardziej
+przydatny w celu pozniejszego ewentualnego wyszukiwania informacji na temat
 np. bledow.
 
-- Wybieram lokalizacje:  Other -> Europe -> Poland: bo chce by byla prawidlowa 
+- Wybieram lokalizacje:  Other -> Europe -> Poland: bo chce by byla prawidlowa
 strefa czasowa, oraz by potencjalne pliki do pobrania, byly pobierane z serwerow
 znajdujacych sie w Polsce (pobieranie nie bedzie zajmowac tak duzo czasu jak by
 to bylo w przypadku innych krajow/ kontynentow).
 
-- w "Configure locales" wybieram United States - en_US.UTF-8 poniewaz chce by 
-system operacyjny i aplikacje uzywaly formatu np. numeru, daty, czasu etc. 
-dostepnego dla stanow zjednoczonych i nie chce miec polskich znakow 
+- w "Configure locales" wybieram United States - en_US.UTF-8 poniewaz chce by
+system operacyjny i aplikacje uzywaly formatu np. numeru, daty, czasu etc.
+dostepnego dla stanow zjednoczonych i nie chce miec polskich znakow
 diakretycznych.
 
-- Jako "Keymap" wybieram American English, poniewaz uzywam klawiatury na ktorej 
+- Jako "Keymap" wybieram American English, poniewaz uzywam klawiatury na ktorej
 nie ma przyciskow z polskimi znakami diakretycznymi.
 
-- W "Configure the network" w polu "Hostname" wpisuje nazwe maszyny wirtualnej 
+- W "Configure the network" w polu "Hostname" wpisuje nazwe maszyny wirtualnej
 "debian12" i klikam "continue" (za pomoca klawiatury).
 
-- W polu domena mozna wpisac nazwe swojej domeny jesli sie takowa posiada, ja nie
-posiadam wiec nic nie wpisuje, i klikam "continue".
+- W polu domena mozna wpisac nazwe swojej domeny jesli sie takowa posiada, ja
+nie posiadam wiec nic nie wpisuje, i klikam "continue".
 
 - W "Set up users and passwords". Pole "Root Password" odpowiada za haslo roota,
-czyli administratora w systemach linux. Ja wpisuje nieskomplikowane haslo i 
+czyli administratora w systemach linux. Ja wpisuje nieskomplikowane haslo i
 klikam "continue".
 
-	- kwadrat "Show Password in Clear" po zaznaczeniu pokaze wpisane haslo 
-	zamiast gwiazdek.
+        - kwadrat "Show Password in Clear" po zaznaczeniu pokaze wpisane haslo
+        zamiast gwiazdek.
 
-- Pole "Re-enter password to verify" jest w celu potwierdzenia wpisanego hasla w 
-poprzednim kroku. Powtarzam i klikam "continue". 
+- Pole "Re-enter password to verify" jest w celu potwierdzenia wpisanego hasla w
+poprzednim kroku. Powtarzam i klikam "continue".
 
-- w polu "Full name for the new user" wpisuje sie pelne imie i nazwisko nowego 
-uzytkownia, poniewaz nigdy nie pracuje sie na uzytkowniku "root" (ze wzgledow 
+- w polu "Full name for the new user" wpisuje sie pelne imie i nazwisko nowego
+uzytkownia, poniewaz nigdy nie pracuje sie na uzytkowniku "root" (ze wzgledow
 bezpieczenstwa). klikam "continue".
 
-- W polu "Username for your account" wpisuje login uzytkownia i klikam 
+- W polu "Username for your account" wpisuje login uzytkownia i klikam
 "continue".
 
 - W polu "choose a password for the new user" wpisuje haslo i klikam "continue".
@@ -840,269 +875,282 @@ bezpieczenstwa). klikam "continue".
 
 - W Sekcji "Partition disks" wybiera sie podzial na partycje dysku.
 
-	- "Guided - use entire disk" jest to opcja w ktorej uzytkownikowi 
-	najbardziej sie "pomaga", lub "prowadzi go za reke". Ja wybieram wlasnie ta 
-	opcje, bo chce by moja maszyna powstala jak najszybciej.
+        - "Guided - use entire disk" jest to opcja w ktorej uzytkownikowi
+        najbardziej sie "pomaga", lub "prowadzi go za reke". Ja wybieram wlasnie
+		ta opcje, bo chce by moja maszyna powstala jak najszybciej.
 
-	- "Guided - use entire disk and set up LVM" jest to opcja podobna do 
-	poprzedniej, ale dodatkowo ustawia sie LVM (Linux Volume Manager), ktory moze byc
- 	bardzo uzyteczny.
+        - "Guided - use entire disk and set up LVM" jest to opcja podobna do
+        poprzedniej, ale dodatkowo ustawia sie LVM (Linux Volume Manager), ktory
+		moze byc bardzo uzyteczny.
 
-	- "Guided - use entire disk and set up encrypted LVM" Opcja podobna do 
-	poprzedniej, tylko ze LVM jest dodatkowo zaszyfrowany. 
+        - "Guided - use entire disk and set up encrypted LVM" Opcja podobna do
+        poprzedniej, tylko ze LVM jest dodatkowo zaszyfrowany.
 
-	- Manual - Jest to opcja w ktorej wszystko robi sie calkowicie samemu.
+        - Manual - Jest to opcja w ktorej wszystko robi sie calkowicie samemu.
 
-		- "Guided partitioning" umozliwia cofniecie sie do opcji "Guided".
+                - "Guided partitioning" umozliwia cofniecie sie do opcji
+				"Guided".
 
-		- "Configure software RAID" umozliwa "laczenie" kilku fizycznych 
-		dyskow w jeden wirtualny dysk.
+                - "Configure software RAID" umozliwa "laczenie" kilku fizycznych
+                dyskow w jeden wirtualny dysk.
 
-		- "Configure the Logical Volume Manager" umozliwa konfigurowanie 
-		LVM.
+                - "Configure the Logical Volume Manager" umozliwa konfigurowanie
+                LVM.
 
-		- "Configure encrypted volumes" umozliwia encryptowanie partycji 
-		(w tym LVM).
+                - "Configure encrypted volumes" umozliwia encryptowanie partycji
+                (w tym LVM).
 
-		- "Configure ISCSI volumes" podlaczenie partycji dyskow np. z 
-		jakiegos serwera, ktore nie sa fizycznymi dyskami ale wyswietalajace sie jako 
-		takie
+                - "Configure ISCSI volumes" podlaczenie partycji dyskow np. z
+                jakiegos serwera, ktore nie sa fizycznymi dyskami ale
+				wyswietalajace sie jako takie.
 
-		- "XXX.XGB FREE SPACE" umozliwia tworzenie partycji na na wirtualnym dysku.
+                - "XXX.XGB FREE SPACE" umozliwia tworzenie partycji na na
+				wirtualnym dysku.
 
-- W sekcje "Partition disks" wybieram dostepny dysk. (SCSI3 oznacza Small 
-Computer System Interface 3, a zera oznaczaja kolejno: kontroler, dysk, partycje.
-Jest 21.5GB dlatego ze wczesniej wybrane przezemnie 20GB bylo zle oznaczone. 
-Prawdziwy 1GB to 1000MB, a wczesniej bylo podane ze 1GB to 1024MB. Tym sposobem 
-po powrocie do prawdziwych GB posiadamy ich 21.5 a nie 20)
+- W sekcje "Partition disks" wybieram dostepny dysk. (SCSI3 oznacza Small
+Computer System Interface 3, a zera oznaczaja kolejno: kontroler, dysk,
+partycje. Jest 21.5GB dlatego ze wczesniej wybrane przezemnie 20GB
+bylo zle oznaczone. Prawdziwy 1GB to 1000MB, a wczesniej bylo podane
+ze 1GB to 1024MB. Tym sposobem po powrocie do prawdziwych GB
+posiadamy ich 21.5 a nie 20).
 
 - W Podsekcji "Partitioning Scheme":
 
-	- Wybieram "All file in one partition (recommended for new users)" 
-	dlatego bo poki co nie umiem uzywac pozostalych opcji, ale gdy sie naucze bede 
-	instalowal systemy inaczej.
+        - Wybieram "All file in one partition (recommended for new users)"
+        dlatego bo poki co nie umiem uzywac pozostalych opcji, ale gdy sie
+		naucze bede instalowal systemy inaczej.
 
-		- Pokazuje sie jak zostaly skonfigurowane partycje, i klikam 
-	"Finish partitioning and write changes to disk"
+                - Pokazuje sie jak zostaly skonfigurowane partycje, i klikam
+        		"Finish partitioning and write changes to disk"
 
-	- "Separate /home partition" Ta opcja umozliwia posiadanie "home" na 
-	osobnej partycji, co moze byc uzyteczne gdy chce sie np. przeinstalowac system, 
-	bez ingerowania w dane uzytkownikow.
-		- 
-	- "Separate /home, /var, and /tmp partitions" Ta opcja umozliwia by 
-	katalogi "home", "var" i "tmp" byly w osobnych partycjach. (W folderze "var" 
-	znajduja sie wszystkie pliki ktore nie sa przydzielone nigdzie indziej np. logi)
-	To moze byc uzyteczne w wypadku w ktorym jest problem zalogowania sie do 
-	serwera. I wlasnie zazwyczaj oznacza to ze partycja "var" jest przepelniona.
- 
-		- Pamiec typu "swap" umozliwia systemowi zapisanie danych, a 
-		potem ich odzyskanie i uzycie. Jest to nijako pomoc dla RAMu, gdy np. cos zabiera
-		bardzo duza ilosc RAMu, czesc danych z pamieci jest przekazywane do partycji 
-		swap, a potem gdy obciazenie z RAMu zejdzie, szybko sie te dane odzyskuje. Ilosc
-		GB partycji swap, powinien wynosic: ilosc RAM + 2GB. np. jesli ilosc RAMu w 
-		komputerze to 16GB, to swap musi miec conajmniej 18GB.
+        - "Separate /home partition" Ta opcja umozliwia posiadanie "home" na
+        osobnej partycji, co moze byc uzyteczne gdy chce sie np. przeinstalowac
+		system, bez ingerowania w dane uzytkownikow.
+                -
+        - "Separate /home, /var, and /tmp partitions" Ta opcja umozliwia by
+        katalogi "home", "var" i "tmp" byly w osobnych partycjach. (W folderze
+		"var" znajduja sie wszystkie pliki ktore nie sa przydzielone nigdzie
+		indziej np. logi) To moze byc uzyteczne w wypadku w ktorym jest
+		problem zalogowania sie do serwera. I wlasnie zazwyczaj oznacza
+		to ze partycja "var" jest przepelniona.
 
-		- "How to use this partition":
+                - Pamiec typu "swap" umozliwia systemowi zapisanie danych, a
+                potem ich odzyskanie i uzycie. Jest to nijako pomoc dla RAMu,
+				gdy np. cos zabiera bardzo duza ilosc RAMu, czesc danych z
+				pamieci jest przekazywane do partycji swap, a potem gdy
+				obciazenie z RAMu zejdzie, szybko sie te dane odzyskuje.
+				Ilosc GB partycji swap, powinien wynosic: ilosc RAM + 2GB.
+				np. jesli ilosc RAMu w komputerze to 16GB, to swap musi miec
+				conajmniej 18GB.
 
-			- "Ext4 journaling file system" jest szybszy od Ext 2 i
-			ma journaling, ale dziala inaczej.
+                - "How to use this partition":
 
-			- "Ext3 journaling file system" Ext2 + journaling czyli
-			system ktory zapisuje kazda dokonana zmiane. (zapisuje ze zostala dokonana
-			zmiana np. w pliku).Przydatne gdy np. wysatpi awaria zasilania podczas zapisu, to
-			komputer na podstawie journalingu bedzie w stanie ponowic np. jakies akcje 
-			zapisania ktore mogly sie nie dokona. Ext3 Przez journraling Jest nieco 
-			wolniejszy od Ext2.
+                        - "Ext4 journaling file system" jest szybszy od Ext 2 i
+                        ma journaling, ale dziala inaczej.
 
-			- "Ext2 file system" podstawowy system plikow, wydajny 
-			ale bez tzw. journalingu
+                        - "Ext3 journaling file system" Ext2 + journaling czyli
+                        system ktory zapisuje kazda dokonana zmiane. (zapisuje
+						ze zostala dokonana zmiana np. w pliku).Przydatne gdy np.
+						wysatpi awaria zasilania podczas zapisu, to komputer na
+						podstawie journalingu bedzie w stanie ponowic np. jakies
+						akcje zapisania ktore mogly sie nie dokona. Ext3 Przez
+						journraling Jest nieco wolniejszy od Ext2.
 
-			- "btrfs journaling file system" jest to "copy on write" 
-			system, ktory zamiast journalingu, zapisuje zmiany w innym miejscu, po czym 
-			linkuje te zmiany. (dziala nieco jak git). Uzywany glownie na serwerach.
+                        - "Ext2 file system" podstawowy system plikow, wydajny
+                        ale bez tzw. journalingu
 
-			- "JFS journaling file system" Uzywany na serwerach
+                        - "btrfs journaling file system" jest to "copy on write"
+                        system, ktory zamiast journalingu, zapisuje zmiany w 
+						innym miejscu, po czym linkuje te zmiany.
+						(dziala nieco jak git). Uzywany glownie na serwerach.
 
-			- "XFS jounraling file system" Nowszy od JFS, utrzymywany
-			aktualnie system journalingu. Uzywany na serwerach.
+                        - "JFS journaling file system" Uzywany na serwerach
 
-			- "FAT16 file system" File Allocation Table ktory oznacza
-			16-bitowy system plikow. Uzyteczny na malych partycjach od 16MB do 2GB. Nie 
-			uzywany na linuxach.
+                        - "XFS jounraling file system" Nowszy od JFS,
+						utrzymywany aktualnie system journalingu. Uzywany
+						na serwerach.
 
-			- "FAT32 file system" nowszy system plikow od FAT16, jest
-			to 32-bitowy system plikow, pozwala na uzycie w partycjach od 4GB do 16GB. Nie 
-			uzywany na linuxach.
+                        - "FAT16 file system" File Allocation Table ktory
+						oznacza 16-bitowy system plikow. Uzyteczny na
+						malych partycjach od 16MB do 2GB. Nie uzywany
+						na linuxach.
 
-			- "swap area" wybiera sie swap (opisany wczesniej).
+                        - "FAT32 file system" nowszy system plikow od FAT16,
+						jest to 32-bitowy system plikow, pozwala na uzycie w
+						partycjach od 4GB do 16GB. Nie uzywany na linuxach.
 
-			- "Reserved BIOS boot area".
+                        - "swap area" wybiera sie swap (opisany wczesniej).
 
-			- "ChromeOS kernel partition" partycja do wsparcie 
-			autoaktualizacji a przypadkowej korupcji plikow.
+                        - "Reserved BIOS boot area".
 
-			- "EFI System Partition".
+                        - "ChromeOS kernel partition" partycja do wsparcie
+                        autoaktualizacji a przypadkowej korupcji plikow.
 
-			- "physical volume for encryption".
+                        - "EFI System Partition".
 
-			- "physical volume for RAID" partycje przydzielone dla 
-			RAID.
-			- "physical volume for LVM" partycja przydzielona dla 
-			LVM.
-			- "do not use the partition" Brak uzycia partycji
+                        - "physical volume for encryption".
 
-		- "Mount options":
+                        - "physical volume for RAID" partycje przydzielone dla
+                        RAID.
+                        - "physical volume for LVM" partycja przydzielona dla
+                        LVM.
+                        - "do not use the partition" Brak uzycia partycji
 
-			- "boot" musi byc to partycja podstawowa w ktorej 
-			znajduja sie dane bootujace musi miec ustawiona flage bootujaca.
+                - "Mount options":
 
-			- "home" nie musi byc podstawowa, zawiera wszystkie dane 
-			uzytkownikow.
+                        - "boot" musi byc to partycja podstawowa w ktorej
+                        znajduja sie dane bootujace musi miec ustawiona flage
+						bootujaca.
 
-			- "tmp" pliki tymczasowe.
+                        - "home" nie musi byc podstawowa, zawiera wszystkie dane
+                        uzytkownikow.
 
-			- "usr" dane statyczne ktore sluza tylko do uzycia.
+                        - "tmp" pliki tymczasowe.
 
-			- "var" dane zmienne (najczesciej logi).
+                        - "usr" dane statyczne ktore sluza tylko do uzycia.
 
-			- "srv" dane serwerow.
+                        - "var" dane zmienne (najczesciej logi).
 
-			- "opt" opcjonalne pakiety nie pochodzace z menadzera 
-			pakietow.
+                        - "srv" dane serwerow.
 
-			- "usr/local" lokalna hierarchia danych dla uzytkownikow.
+                        - "opt" opcjonalne pakiety nie pochodzace z menadzera
+                        pakietow.
 
-			- "enter manually" wpisuje sie wlasna sciezke.
+                        - "usr/local" lokalna hierarchia danych dla
+						uzytkownikow.
 
-			- "do not mount it" nie montuje tego w zadnym z w 
-			powyzszych.
+                        - "enter manually" wpisuje sie wlasna sciezke.
+
+                        - "do not mount it" nie montuje tego w zadnym z w
+                        powyzszych.
 
 
-		- Mount options:
+                - Mount options:
 
-			- "discard" - 
+                        - "discard" -
 
-			- "noatime" - nie aktualizuj dostepu inode(plik systemowy
-dla linuxa) z kazdym dostepem.
+                        - "noatime" - nie aktualizuj dostepu inode(plik
+						systemowy dla linuxa) z kazdym dostepem.
 
-			- "nodiratime" - nie aktualizuj czasow dostepu inode
+                        - "nodiratime" - nie aktualizuj czasow dostepu inode
 
-			- "relatime" - aktualizuj inode 
+                        - "relatime" - aktualizuj inode
 
-			- "nodev" -
+                        - "nodev" -
 
-			- "nosuid" - 
+                        - "nosuid" -
 
-			- "noexec" - nie pozwala na uzywanie plikow binarnych
+                        - "noexec" - nie pozwala na uzywanie plikow binarnych
 
-			- "ro" - tylko do odczytu
+                        - "ro" - tylko do odczytu
 
-			- "sync" - wszystko jest synchronizowane
+                        - "sync" - wszystko jest synchronizowane
 
-			- "usrquota" - system limitowania pamieci dyskowej dla
-			uzytkownika.
+                        - "usrquota" - system limitowania pamieci dyskowej dla
+                        uzytkownika.
 
-			- "grpquota" - system limitowania pamieci dyskowej dla 
-			grup.
+                        - "grpquota" - system limitowania pamieci dyskowej dla
+                        grup.
 
-			- "user_xattr" - wspiera rozszerzone atrybuty uzytkownika
+                        - "user_xattr" - wspiera rozszerzone atrybuty
+						uzytkownika
 
-		- "Label" nazywanie partycji
+                - "Label" nazywanie partycji
 
-		- "Reserved blocks" ilosc blokow zarezerwowana dla roota 
-		(przydatne do naprawy systemu)
+                - "Reserved blocks" ilosc blokow zarezerwowana dla roota
+                (przydatne do naprawy systemu)
 
-		- "Typical usage"
+                - "Typical usage"
 
-			- "standard" standard
+                        - "standard" standard
 
-			- "news" czestmo zmieniajace sie dane
+                        - "news" czestmo zmieniajace sie dane
 
-			- "largefile" duze pliki
+                        - "largefile" duze pliki
 
-			- "largefile4" duze pliki zapisane w 4 blokach
+                        - "largefile4" duze pliki zapisane w 4 blokach
 
-		- "Bootable flag" musi byc ustawiona, poniewaz inaczej system sie
-		nie zabootuje.
+                - "Bootable flag" musi byc ustawiona, poniewaz inaczej system
+				sie nie zabootuje.
 
- - W kolejnej sekcji jestem pytany o potwierdzenie, czy takie zmiany maja zostac 
+ - W kolejnej sekcji jestem pytany o potwierdzenie, czy takie zmiany maja zostac
 wpisne w dysk, klikam "Yes".
 
-- "Configure the package manager" jestem pytany czy chce instalowac z dodatkowej 
+- "Configure the package manager" jestem pytany czy chce instalowac z dodatkowej
 plyty, klikam "No".
 
-- Wybieram "Poland" bo chce by z Polskich serwerow byly pobierane dodatkowe 
+- Wybieram "Poland" bo chce by z Polskich serwerow byly pobierane dodatkowe
 pliki.
 
 - Wybieram "ftp.task.gda.pl" bo jest to server znajdujacy sie najblizej mnie.
 
-- Jestem pytany czy posiadam informacje proxy, z racji ze ja takiej nie posiadam 
+- Jestem pytany czy posiadam informacje proxy, z racji ze ja takiej nie posiadam
 
-w polu "HTTP proxy information (blank for none):" nic nie wpisuje, i klikam 
+w polu "HTTP proxy information (blank for none):" nic nie wpisuje, i klikam
 "continue".
 
-- Jestem pytany czy chce uczestniczyc w anonimowej ankiecie zwiazanej z moimi 
+- Jestem pytany czy chce uczestniczyc w anonimowej ankiecie zwiazanej z moimi
 wyborami. Wybieram "No" bo dopiero sie ucze, i nie chce by byly wysylane
 nieprawdziwe informacje spowodowane przez moj proces nauki.
 
 - W Sekcji Software selection
 
-	- Debian desktop environment
+        - Debian desktop environment
 
-	- GNOME - najnowsza wersja GNOME, moze byc niestabilny, jest nieco 
-ładniejszy i bardziej przejrzysty od GNOME flashback.
+        - GNOME - najnowsza wersja GNOME, moze byc niestabilny, jest nieco
+		ladniejszy i bardziej przejrzysty od GNOME flashback.
 
-	- Xfce - najprostsze/najszybsze srodowisko graficzne.
+        - Xfce - najprostsze/najszybsze srodowisko graficzne.
 
-	- GNOME Flashback - stara wersja GNOME, wykorzystuje wiecej zasobow niz
-	Xfce, ale jest latwiejszy w obsludze.
+        - GNOME Flashback - stara wersja GNOME, wykorzystuje wiecej zasobow niz
+        Xfce, ale jest latwiejszy w obsludze.
 
-	- KDE Plasma - Bardzo ładne GUI, pobiera za to bardzo duzo zasobow.
+        - KDE Plasma - Bardzo Å‚adne GUI, pobiera za to bardzo duzo zasobow.
 
-	- Cinnamon - podobne GUI windowsa.
+        - Cinnamon - podobne GUI windowsa.
 
-	- MATE - podobne do GUI windowsa.
+        - MATE - podobne do GUI windowsa.
 
-	- LXDE - podobne do GUI windowsa.
+        - LXDE - podobne do GUI windowsa.
 
-	- LXQt - nowsza wersja LXDE podobne do GUI windowsa.
+        - LXQt - nowsza wersja LXDE podobne do GUI windowsa.
 
-	- web server - serwer webowy (umozliwiajacy przechowywanie stron www)
+        - web server - serwer webowy (umozliwiajacy przechowywanie stron www)
 
-	- SSH server - serwer SSH (umozliwiajacy zdalne polaczenie z serwerem)
+        - SSH server - serwer SSH (umozliwiajacy zdalne polaczenie z serwerem)
 
-	- standard system utilities nie jest wymagane, ale system jest bez tego 
-	praktycznie nie uzywalny (zawiera wszystkie podstawowe opcje jak np. podstawowe 
-	komendy)
+        - standard system utilities nie jest wymagane, ale system jest bez tego
+        praktycznie nie uzywalny (zawiera wszystkie podstawowe opcje jak np.
+		podstawowe komendy)
 
 - klikam "continue"
 
-- W sekcji "Configuring grub-pc" jestem pytany gdzie nalezy zainstalowac boot 
+- W sekcji "Configuring grub-pc" jestem pytany gdzie nalezy zainstalowac boot
 manager. Mozliwy do zainstalowania w dwoch miejsch.
 
-- master boot record - tylko jedna partycja ma master boot record ktory decyduje 
+- master boot record - tylko jedna partycja ma master boot record ktory decyduje
 jaka partycja zostanie uzyta do bootowania.
 
 - boot record - kazda partycja ma boot record.
 
 - W sekcji "Device for boot loader installation"
 
-	- "Enter device manually" - umozliwia wprowadzenie recznie partycji z 
-	boot loadem
-	- /dev/sda - wybiera domyslny boot loader
+        - "Enter device manually" - umozliwia wprowadzenie recznie partycji z
+        boot loadem
+        - /dev/sda - wybiera domyslny boot loader
 
-- "Finish the installation" jestem pytany czy chce zakonczyc proces instalacji, 
-chce wiec klikam "continue". Maszyna sie restartuje i po wlaczeniu ponownie mam 
+- "Finish the installation" jestem pytany czy chce zakonczyc proces instalacji,
+chce wiec klikam "continue". Maszyna sie restartuje i po wlaczeniu ponownie mam
 dostep do maszyny.
 
 Podsumowanie:
-Kilkukrotnie przerabialem kilka roznych wariacji tworzenia VM'a, wiec na ten 
-moment wiedzialem czego moge sie po nim spodziewac, i podczas testowania roznych 
-maszyn, zrozumialem jak wazne bylo obycie sie z procesem ich tworzenia. 
+Kilkukrotnie przerabialem kilka roznych wariacji tworzenia VM'a, wiec na ten
+moment wiedzialem czego moge sie po nim spodziewac, i podczas testowania roznych
+maszyn, zrozumialem jak wazne bylo obycie sie z procesem ich tworzenia.
 Zaskoczylo mnie to jak bardzo taka instalacje mozna rozbic na czesci pierwsze, i
- jak tak naprawde nie za duzo wiem na ten temat. Zazwyczaj po prostu 
-"przeskipowywalem" proces instalacji, bez glebszego wczytywania sie, a teraz 
-rozumiem jak duze znaczenie to moze miec, i jak powinienem sie tym zajmowac. 
-Napewno bede bardziej zwracal uwage na wszystkie mozliwe opcje wyboru, gdy 
-cokolwiek bede instalowal...A no i oczywiscie nauczylem sie tez jak tworzyc i 
+jak tak naprawde nie za duzo wiem na ten temat. Zazwyczaj po prostu
+"przeskipowywalem" proces instalacji, bez glebszego wczytywania sie, a teraz
+rozumiem jak duze znaczenie to moze miec, i jak powinienem sie tym zajmowac.
+Napewno bede bardziej zwracal uwage na wszystkie mozliwe opcje wyboru, gdy
+cokolwiek bede instalowal...A no i oczywiscie nauczylem sie tez jak tworzyc i
 instalowac wirtualna maszyne.
