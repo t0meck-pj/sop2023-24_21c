@@ -1,0 +1,13 @@
+$*, $@ - wszystkie argumenty skryptu. Ale obie zmienne różnią się trochę. Kiedy? ($* przyjmie wszystkie argumenty jako jeden ciag tekstowy, $@ przyjmie argumenty jako oddzielne ciagi znakow oddzielone znakiem bialym, przydatne gdy chcemy przekazac je jako argumenty do innej funkcji i chcemy aby zostaly one przyjete jako rozne arugmenty a nie jako jeden dlugi.)
+
+$0 - przeważnie mówi się, że jest to nazwa skryptu. Nie. To ścieżka i sposób uruchomienia skryptu. Ale zawsze znajduje się w tej zmiennej nazwa. To fakt.
+
+$1, $2, ... - kolejne argumenty skryptu
+
+$# - ilość argumentów przekazanych do skryptu
+
+$? - kod zakończenia ostatniego polecenia
+
+$$ - PID procesu bieżącej powłoki
+
+$! - PID ostatnio uruchomionego procesu w tle
