@@ -1,0 +1,48 @@
+"Co się stało? Czy potrafisz wyjaśnić"
+Wywołując komendę "bash" odpaliłem dodatkową 
+instancje basha do której nie przeszyły wcześniej utworzone zmienne, a zmienne 
+stworzone w nowej instancji nie przejdą do pierwotnej instancji.
+
+"Co jest nie tak? jak to naprawić?" 
+Tekst zmiennej nie wydrukował się bo bash 
+rozpoznał słowo "dłuższy" jako komendę zamiast część zmiennej. By to naprwić 
+wystarczy wszystkie elementy zmiennej wziąć w cudzysłów lub apostof.
+
+"""Jaka jest różnica między " a ' ?""" 
+Jeśli w cudzysłowiu jest podana nazwa 
+zmiennej to zostatnie ona zinterpretowana i odczytana. W apostrofach za to będzie po 
+prostu wszystko dosłownie- tak jak jest napisane wypisywane.
+
+"Czym różnią się $* i $@?"
+Argumenty z $* są oddawane po kolei bez sprawdzania czy np.
+jeden argument jest stworzony z kilku słów w cudzysłowiu.
+$@ za to, zwraca już na to uwagę.
+
+Ćw3
+PATH - Zwraca ścieżkę do katalogu który posiada komendy oraz skrypty.
+Przydatne jeśli napisze się jakiś skrypt który chce się używać wszędzie (dowolnym katalogu).
+
+RANDOM - Zwraca losową liczbę
+Przydatna funkcja do np. tworzenia hashy.
+
+PWD - Zwraca ścieżkę w której obecnie się znajdujesz.
+Przydatne do pozysikwania tej informacji.
+
+PS1 - Zwraca jak aktualnie wygląda prompt.
+Przydatne to zmiany tego co wyświetla aktualny prompt, w celu
+np. jego upiększenia. 
+
+USER - Zwraca nazwe usera na którym jesteśmy zalogwani.
+Przydatne jeśli ktoś się przełącza między userami.
+
+HOSTNAME - Zwraca nazwe hosta.
+Przydatne jeśli ktoś chce np. użyć tego w skrypcie.
+
+OSTYPE - Zwraca nazwe systemu operacyjnego który działa na maszynie.
+Przydatne jeśli skrypt musi rozpoznawać co robić dla każdego systemu.
+
+Ćw4
+"Czemu jest różnica w zwykłym wywołaniu ls -l a echo $x (x=$(ls -l))"
+Rozwiązaniem jest użycie echo "$x" bo przy wywołaniu echo $x
+komenda echo rozdziela wszystkie słowa używając spacji zamiast wyświetlać
+tak jak jest "dosłownie".
