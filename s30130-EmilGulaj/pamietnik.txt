@@ -1,24 +1,68 @@
 2024-03-10
 Moj kochany pamietniczku:
-To byly zajecia co prawda wprowadzajace do samego przedmiotu, jak i do pierwszego zadania
-ktore było omawiane na wykladzie, ale i tak były ciekawe. Dowiedzialem sie jak bardzo
-duzo nie wiem, i jak to czego nie wiem jest mi potrzebne. Zdecydowanie musze nauczyc sie
-tego jak dziala Git/Github, bo nie mam o tym zielonego pojecia, a wydaje sie byc bardzo
-uzytecznym narzedziem. Przedewszystkim zaskoczylo mnie to, ze wiedza na temat
-gita/linuxa, jest taka istotna by chociazby otrzymac pierwsza prace, ale gdy
-sie nad tym zastanowilem, rzeczywiscie ma to sens. Zajecia wydaja sie byc jedne
-z ciekawszych na tej uczelni, i podoba mi sie to jak
-na kazdym momencie jestesmy wrzucani na głeboka wode.
+
+Opis zajec
+	To byly zajecia co prawda wprowadzajace do samego przedmiotu, 
+	jak i do pierwszego zadania ktore było omawiane na wykladzie,
+	ale i tak były ciekawe.
+
+Czego sie nauczyles
+	Dowiedzialem sie jak bardzo duzo nie wiem, i jak to czego nie wiem 
+	jest mi potrzebne.
+
+Co jest dla Ciebie jeszcze nie jasne i musisz poglebic temat
+	Zdecydowanie musze nauczyc sie tego jak dziala Git/Github,
+	bo nie mam o tym zielonego pojecia, a wydaje sie byc bardzo
+	uzytecznym narzedziem. 
+
+Co bylo zaskakujacego
+	Przedewszystkim zaskoczylo mnie to, ze wiedza na temat gita/linuxa,
+	jest taka istotna by chociazby otrzymac pierwsza prace, ale
+	gdy sie nad tym zastanowilem, rzeczywiscie ma to sens.
+
+Twoje przemyslenia o calych zajeciach i zadaniach
+	Zajecia wydaja sie byc jedne z ciekawszych na tej uczelni, i podoba
+	mi sie to jak na kazdym momencie jesteśmy wrzucani na głeboka wode.
+
 
 2024-03-24
 Moj kochany pamietniczku:
-Te zajęcia były całkiem ciekawe, mimo że miałem już wcześniej styczność ze skryptowaniem
-i tak było to ciekawe, jak dużo różnych rzeczy można z tym zrobić. Myślę, że to będzie
-bardzo przydatna umiejętność, ale muszę się tego jeszcze trochę nauczyć. Zaskoczyło mnie to
-jak użyteczne mogą być skrypty w życiu codziennym, i jak zawsze to jak dużo nie wiem.
-Bardzo fajnym pomysłem jest nagrywanie rozwiązań niektórych problemów, bo np. bardzo 
-przydatne jest to by móc to sobie na spokojnie obejrzeć później bo na 99% trafi się na ten
-sam problem.
+
+Opis zajec
+	Na tych zajeciach zajmowalismy sie pisaniem podstawowych
+	skryptow w bashu.
+
+Czego sie nauczyles
+	Nauczylem sie jak robic podstawowe skrypty, oraz wielu
+	ciekawych rzeczy na temat wykorzystania basha w zyciu
+	codziennym.
+
+Co jest dla Ciebie jeszcze nie jasne i musisz poglebic temat
+	Zdecydowanie musze się jeszcze sporo nauczyć na temat skryptów
+	a najbardziej interesuje mnie tworzenie ich w np. pythonie.
+
+Co bylo zaskakujacego
+	Zaskoczylo mnie to jak użyteczne mogą być skrypty w życiu
+	codziennym, i jak dużo nie wiemna temat linuxa,
+	basha i tym podobnych.
+
+Twoje przemyslenia o calych zajeciach i zadaniach
+	Te zajęcia były całkiem ciekawe a najbardziej podoba mi sie pomysl
+	nagrywania rozwiązań niektórych problemów, bo np. 
+	bardzo przydatne jest to by móc to sobie na spokojnie obejrzeć
+	później bo na 99% trafi się na ten sam problem.
+
 
 2024-04-14
 Moj kochany pamietniczku:
+
+Opis zajec
+
+Czego sie nauczyles
+
+Co jest dla Ciebie jeszcze nie jasne i musisz poglebic temat
+
+Co bylo zaskakujacego
+
+Twoje przemyslenia o calych zajeciach i zadaniach
+
