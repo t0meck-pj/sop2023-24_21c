@@ -12,7 +12,7 @@ odpowiedni do mojego systemu.
 
 W panelu glownym klikam "nowa" - rozpoczyna to proces tworzenia nowej maszyny
 wirtualnej.
-Klikam "tryb eksperta"(znajdujacy sie na dole okna), ze wzglÄ™du na to, ze
+Klikam "tryb eksperta"(znajdujacy sie na dole okna), ze wzgledu na to, ze
 bedzie
 to wygodniejsze dla mnie do opisywania calej instrukcji (aczkolwiek przy wyborze
 "trybu przewodnika" dalej mozna korzystac z ponizszej instrukcji gdyz beda
@@ -163,7 +163,7 @@ jej szybszy start.
 - Wybieram opcje "Create a Virtual Hard Disk Now" poniewaz chce juz teraz
 zagospodarowac dokladnie 20GB miejsca na dysku, uwazam ze jest to odpowiednia
 ilosc do zadan tej maszyny, ewentualnie taka wartosc jeszcze zwieksze
-(zmniejszyc akurat w tym przypadku nie bede mogl) W celu ewentualnego zmienienia
+(zmniejszyc akurat w tym przypadku nie bede mogl). W celu ewentualnego zmienienia
 wartosci wystarczy uzyc dostepnego paska, lub recznie wpisania wartosci.
 Wybieram domyslna sciezke wybrana przez virtual boxa poniewaz mi odpowiada
 (Gdyby nie odpowiadala to trzeba kliknac zolta ikonke znajdujaca sie po prawej
@@ -183,7 +183,7 @@ stronie i wybrac odpowiednia sciezke, lub wpisac ja recznie).
 		potencjalne aplikacje.
 
 
-        --- Podsekcja Hard Disk File Type and Variant
+ --- Podsekcja Hard Disk File Type and Variant
 
 
 - W podsekcji "Hard Disk File Type and Variant"
@@ -262,13 +262,13 @@ pozostawiam wylaczona poniewaz nie bedzie mi potrzebna:
         - Wylaczony oznacza ze schowek znajduej sie tylko na maszynie wirtualnej
 
         - Gospodarz do goscia oznacza ze opcja "wspoldzielony schowek" bedzie
-        mozliwa tylko dla gospodarza (hosta)
+        mozliwa tylko dla gospodarza (hosta).
 
         - Gosc do gospodarza oznacza ze opcja "wspoldzielony schowek" bedzie
-        mozliwa tylko dla goscia (guesta)
+        mozliwa tylko dla goscia (guesta).
 
         - dwukierunkowy oznacza ze opcja "wspoldzielony schowek" bedzie mozliwa
-        dla wszystkich
+        dla wszystkich.
 
 - Pole "Przeciaganie i upuszczanie" umozliwia przesowanie plikow po ekranie w
 srodowisku graficznym, za pomoca myszy. Ja ta opcje pozostawiam wylaczona bo
@@ -276,16 +276,16 @@ moja wirtualna maszyna nie bedzie jej potrzebowala. Zeby to wlaczyc wystarczy
 kliknac na strzalke w dol, i wybrac jedna z opcji:
 
         - Wylaczone oznacza ze opcja "przeciaganie i upuszczanie" nie dziala
-        nigdzie
+        nigdzie.
 
         - Gospodarz do goscia oznacza ze opcja "przeciaganie i upuszczanie"
-        bedzie mozliwa tylko dla gospodarza (hosta)
+        bedzie mozliwa tylko dla gospodarza (hosta).
 
         - Gosc do gospodarza oznacza ze opcja "przeciaganie i upuszczanie"
-		bedzie mozliwa tylko dla goscia (guesta)
+		bedzie mozliwa tylko dla goscia (guesta).
 
         - dwukierunkowy oznacza ze opcja "przeciagnie i upuszczanie" bedzie
-        mozliwa dla wszystkich
+        mozliwa dla wszystkich.
 
 
 --- Podsekcja "Opis"
@@ -386,7 +386,7 @@ by bylo taka opcje dostosowac to:
 		zazwyczaj w laptopach. Przydatne gdy jest potrzbne GUI a pracuje sie
 		tylko na laptopie badz tablecie.
 
-- Rozszerzone Wlasciwosci:
+- Rozszerzone Wlasciwosci
 
         - "Wlacz I/O APIC" jest to nowsza wersja "PIC" ktora musi byc uzywana w
         przypadku systemow 64 bitowych. Z tego powodu pozostawiam ta opcje
@@ -419,7 +419,7 @@ by bylo taka opcje dostosowac to:
 wybranych wczesniej procesorow. Ja zostawiam na 100% bo chce by wybrane przez
 mnie porocesory tyle z siebie dawaly.
 
-- "Rozszerzone Wlasciwosci":
+- Rozszerzone Wlasciwosci
         - "Wlacz Pae/NX" przydatne jesli na systemie 32 bitowym chce sie uzyc
         wiecej niz 4gb pamieci RAM. Dodatkowo niektore systemy operacyjne
 		potrzebuja tej opcji w celu samego wlaczenia maszyny wirtualnej.
@@ -459,7 +459,7 @@ wykorzystywania ich w pamieci podstawowej.
 
 - "Pamiec wideo" jest to ile potrzebnej pamieci na wyswietlenie jednej klatki,
 liczy sie to: rodziedzlczosc monitora * ilosc bitow.W moim przypadku jest to
-1920 * 1080 * 32 = 66,355,200bitow / 8 = 8,294,400 bajtow = ok. 8 MB
+1920 * 1080 * 32 = 66,355,200 bitow / 8 = 8,294,400 bajtow = ok. 8 MB
 wiec ja maszynie zostawiam tyle ile jest.
 
 - "Ilosc monitorow" uwazam ze jeden bedzie wystarczajacy wiec zostawiam tak jak
@@ -475,17 +475,17 @@ np. bylo cos lepiej widoczne. Ja zostawiam tak jak jest.
                 - nie wybieram "VBoxVGA" poniewaz jest to domyslny kontroler
                 grafiki dla systemow operacyjnych przed windowsem 7, a ja bede
 				uzywal linuxa.(Warto wspomniec ze ten kontroler nie wspiera 
-				akceleracji 3D) Przydatny gdyby ktos chcial wytestowac windowsa 95
+				akceleracji 3D) Przydatny gdyby ktos chcial wytestowac windowsa 95.
 
                 - nie wybieram "VBoxSVGA" poniewaz jest to domyslny kontroler 
-				dla systemow operacyjnych od windows 7
+				dla systemow operacyjnych od windows 7.
 
                 - Brak jest to opcja dla kogos kto w ogole nie chce posiadac
                 zadnej grafiki. Moze byc przydatne kiedy wszystko jest juz 
 				zainstalowane, a dostep do maszyny jest przez siec.
 
 - Rozszerzone wlasciwosci: kwadrat wlacz akceleracje 3D pozostawiam nie
-zaznaczony bo nie bedzie mi potrzebna. MogÅ‚a by byc uzyteczna gdyby ktos np
+zaznaczony bo nie bedzie mi potrzebna. Moga‚a by byc uzyteczna gdyby ktos np
 chcial odpalic gre na maszynie wirtualnej.
 
 
@@ -502,7 +502,7 @@ np. menadzer pulpitu zdalnego
         - "Metoda uwierzytelnienia"
 
                 - "Brak" jest to brak jakiegokolwiek uwierzytelnienia (nie
-                zalecane)
+                zalecane).
 
                 - Metoda uwierzytelnienia "Zewnetrzna" jest robiona przez osobna
                 biblioteke uwierzytelniajaca zaleznie od systemu operacyjnego 
@@ -572,7 +572,7 @@ Pozostawienie go moze byc przydatne gdyby ktos chcial zrobic np. writualna
 maszyne w maszynie wirtualnej uzywajac tego samego obrazu dysku.
 
 - "Nazwa" jest to nazwa kontrolera pamieci, tutaj nic nie zmieniam i pozostawiam
- jak jest
+ jak jest.
 
 - "Typ": Tutaj znajduja sie wszystkie dostepne typy kontrolerÃ³w mozliwe do
 dodania.
@@ -586,9 +586,9 @@ potrzebne bo i tak nie bede uzywal urzadzen wyjscia.
 --- Podsekcja: Kontroler SATA
 
 
-- Pole "Dysk twardy" mozliwy wybor portu SATA
+- Pole "Dysk twardy" mozliwy wybor portu SATA.
 
-- kwadrat "Dysk SSD" zaznaczam poniewaz moj dysk jest dyskiem ssd
+- kwadrat "Dysk SSD" zaznaczam poniewaz moj dysk jest dyskiem ssd.
 
 - kwadrat "Hot-pluggable" zostawiam niezaznaczony poniewaz u mnie jest to dysk
 ktorego nie moge w kazdej chwili podlaczyc i odlaczyc.
@@ -647,7 +647,7 @@ miala karte sieciowa.
                         konfiguracji przekierowania portow. Jest to uzyteczne
 						jesli zajdzie potrzeba podlaczenia sie z maszyna
 						wirtualna za pomoca sieci (pod warunkiem ze maszyna
-						jest podlaczona do NAT)
+						jest podlaczona do NAT).
 
                 - Mostkowana karta sieciowa (bridged) maszyna staje sie osobnym
                 urzadzeniem podlaczonym pod siec tak samo jak kazdy inny
@@ -690,7 +690,7 @@ miala karte sieciowa.
         - Intel PRO/1000 MT Dekstop (82540EM) dziala ze wszystkimi sytemami 
 		windows od windows vista.
 
-        - Intel PRO/1000 T Server (82543GC) dziala z Windowsem XP
+        - Intel PRO/1000 T Server (82543GC) dziala z Windowsem XP.
 
         - Intel PRO/1000 MT Server (82545EM) ten wybor ulatwia umport maszyn w
 		formacie OVF (open Virtualization Format).
@@ -711,8 +711,7 @@ miala karte sieciowa.
         zobaczyc caly ruch przychodzacy i wychdzacy ruch sieciowy.
 
 - Pole "Adres MAC" jest to losowo generowany adres MAC.(Pierwsze szesc bitow
-jest
-typowe dla virtualboxa pozostale szesc jest losowo generowane).
+jest typowe dla virtualboxa pozostale szesc jest losowo generowane).
 
 - kwadrat "kabel podlaczony" "odlacza" i "podlacza" wrtualny kabel. To oznacza
 po prostu ze zaznaczony kwadrat "daje internet" a odznaczony go "nie daje".
@@ -735,11 +734,11 @@ dostep do internetu.
 
                 - "Odlaczony" maszyna bedzie widziec port, ale bedzie sie on
                 zachowywal jakby go nie bylo. Przydatne jesli chcemy zachowac
-				port szeregowy, 	tylko chcemy go po prostu wylaczyc na jakis czas.
+				port szeregowy, tylko chcemy go po prostu wylaczyc na jakis czas.
 
                 - "Lacze komunikacyjne gospodarza" konfigurowanie portu zeby
                 polaczyl sie z orpogramowaniem komunikacyjnym na hoscie.
-				Przydatne do robienia tzw. "Pipe"
+				Przydatne do robienia tzw. "Pipe".
 
                 - "Urzadzenie gospodarza" Laczy wirtualny port z fizycznym
 				portem hosta. Pozwala na transportowanie otrzymywanych
@@ -753,7 +752,7 @@ dostep do internetu.
 
         - kwadrat "Podlacz do istniejacego lacza komunikacyjnego/gniazda" podany
         adres lub sciezka sa uznawane za istniejace i jest proba podlaczenia
-		sie. (nie przydtane gdy chce sie uzywac TCP jako serwer)
+		sie. (nie przydtane gdy chce sie uzywac TCP jako serwer).
 
         - "sciezka/adres" miejsce na wpisanie sciezki lub adresu w ktorym
         znajduje sie port szeregowy hosta lub adres portu.
@@ -763,7 +762,7 @@ dostep do internetu.
 
 
 - kwadrat "wlacz kontroler USB" zostawiam zaznaczony, poniewaz chce by VM
-widzial ze moja klawiatura jest podlaczona
+widzial ze moja klawiatura jest podlaczona.
 
         - "Kontroler USB 1.1 (OHCI)" Przestarzala opcja. Uzyteczne gdy nie
         przewiduje sie miec NICZEGO podlaczonego do maszyny wirtualnej.
@@ -957,7 +956,7 @@ posiadamy ich 21.5 a nie 20).
 						journraling Jest nieco wolniejszy od Ext2.
 
                         - "Ext2 file system" podstawowy system plikow, wydajny
-                        ale bez tzw. journalingu
+                        ale bez tzw. journalingu.
 
                         - "btrfs journaling file system" jest to "copy on write"
                         system, ktory zamiast journalingu, zapisuje zmiany w 
@@ -1032,19 +1031,19 @@ posiadamy ich 21.5 a nie 20).
                         - "noatime" - nie aktualizuj dostepu inode(plik
 						systemowy dla linuxa) z kazdym dostepem.
 
-                        - "nodiratime" - nie aktualizuj czasow dostepu inode
+                        - "nodiratime" - nie aktualizuj czasow dostepu inode.
 
-                        - "relatime" - aktualizuj inode
+                        - "relatime" - aktualizuj inode.
 
                         - "nodev" -
 
                         - "nosuid" -
 
-                        - "noexec" - nie pozwala na uzywanie plikow binarnych
+                        - "noexec" - nie pozwala na uzywanie plikow binarnych.
 
-                        - "ro" - tylko do odczytu
+                        - "ro" - tylko do odczytu.
 
-                        - "sync" - wszystko jest synchronizowane
+                        - "sync" - wszystko jest synchronizowane.
 
                         - "usrquota" - system limitowania pamieci dyskowej dla
                         uzytkownika.
@@ -1053,22 +1052,22 @@ posiadamy ich 21.5 a nie 20).
                         grup.
 
                         - "user_xattr" - wspiera rozszerzone atrybuty
-						uzytkownika
+						uzytkownika.
 
-                - "Label" nazywanie partycji
+                - "Label" nazywanie partycji.
 
                 - "Reserved blocks" ilosc blokow zarezerwowana dla roota
-                (przydatne do naprawy systemu)
+                (przydatne do naprawy systemu).
 
                 - "Typical usage"
 
-                        - "standard" standard
+                        - "standard" standard.
 
-                        - "news" czestmo zmieniajace sie dane
+                        - "news" czestmo zmieniajace sie dane.
 
-                        - "largefile" duze pliki
+                        - "largefile" duze pliki.
 
-                        - "largefile4" duze pliki zapisane w 4 blokach
+                        - "largefile4" duze pliki zapisane w 4 blokach.
 
                 - "Bootable flag" musi byc ustawiona, poniewaz inaczej system
 				sie nie zabootuje.
@@ -1095,7 +1094,7 @@ nieprawdziwe informacje spowodowane przez moj proces nauki.
 
 - W Sekcji Software selection
 
-        - Debian desktop environment
+        - Debian desktop environment.
 
         - GNOME - najnowsza wersja GNOME, moze byc niestabilny, jest nieco
 		ladniejszy i bardziej przejrzysty od GNOME flashback.
@@ -1115,13 +1114,13 @@ nieprawdziwe informacje spowodowane przez moj proces nauki.
 
         - LXQt - nowsza wersja LXDE podobne do GUI windowsa.
 
-        - web server - serwer webowy (umozliwiajacy przechowywanie stron www)
+        - web server - serwer webowy (umozliwiajacy przechowywanie stron www).
 
-        - SSH server - serwer SSH (umozliwiajacy zdalne polaczenie z serwerem)
+        - SSH server - serwer SSH (umozliwiajacy zdalne polaczenie z serwerem).
 
         - standard system utilities nie jest wymagane, ale system jest bez tego
         praktycznie nie uzywalny (zawiera wszystkie podstawowe opcje jak np.
-		podstawowe komendy)
+		podstawowe komendy).
 
 - klikam "continue"
 
@@ -1136,8 +1135,9 @@ jaka partycja zostanie uzyta do bootowania.
 - W sekcji "Device for boot loader installation"
 
         - "Enter device manually" - umozliwia wprowadzenie recznie partycji z
-        boot loadem
-        - /dev/sda - wybiera domyslny boot loader
+        boot loadem.
+
+        - /dev/sda - wybiera domyslny boot loader.
 
 - "Finish the installation" jestem pytany czy chce zakonczyc proces instalacji,
 chce wiec klikam "continue". Maszyna sie restartuje i po wlaczeniu ponownie mam
