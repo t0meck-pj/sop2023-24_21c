@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+    echo "Nieprawidłowa liczba argumentów"
+    exit 1
+fi
+
+if [ ! -f $1 ]; then
+    echo "Argument musi być plikiem"
+    exit 1
+fi
+
+plik=$(cat $1)
+
+echo "$plik" | sed -r 's/Hubert/\x1b[31m&\x1b[0m/g'
