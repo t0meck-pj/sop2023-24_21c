@@ -4,305 +4,516 @@ Proces instalacji systemu Debian w VirtualBox
 
 --------------------------------
 
-1. Pobieramy obraz systemu Debian ze strony https://www.debian.org/distrib/ (dostępna jest wersja small installation image, 
-która wymaga połączenia z internetem podczas instalacji, ale jest mniejsza w rozmiarze oraz wersja complete installation image, która 
-zawiera więcej pakietów i nie wymaga połączenia z internetem podczas instalacji, w naszym przypadku możemy pobrać wersję small installation image).
+1. Pobieramy obraz systemu Debian ze strony https://www.debian.org/distrib/
+(dostępna jest wersja small installation image,
+która wymaga połączenia z internetem podczas instalacji, ale jest mniejsza w
+rozmiarze oraz wersja complete installation image, która
+zawiera więcej pakietów i nie wymaga połączenia z internetem podczas
+instalacji, w naszym przypadku możemy pobrać wersję small installation
+image).
 
 2. Uruchamiamy aplikację VirtualBox (https://www.virtualbox.org/).
 
 3. Klikamy na przycisk `Nowa`.
 
-4. Włączamy `Tryb eksperta`, dzięki czemu będziemy mieli łatwiejszy dostęp do wszystkich opcji.
+4. Włączamy `Tryb eksperta`, dzięki czemu będziemy mieli łatwiejszy dostęp
+do wszystkich opcji.
 
 5. Wprowadzamy nazwę naszej maszyny wirtualnej np. `Debian`.
 
-6. Ustalamy folder docelowy, w którym chcemy przechowywać pliki maszyny wirtualnej, w naszym przypadku można zostawić domyślną lokalizację.
+6. Ustalamy folder docelowy, w którym chcemy przechowywać pliki maszyny
+wirtualnej, w naszym przypadku można zostawić domyślną lokalizację.
 
-7. Ustalamy ścieżkę dostępu do wcześniej pobranego obrazu ISO systemu Debian (nie jest to wymagane, ale ułatwi to proces instalacji systemu).
+7. Ustalamy ścieżkę dostępu do wcześniej pobranego obrazu ISO systemu
+Debian (nie jest to wymagane, ale ułatwi to proces instalacji systemu).
 
-8. Opcje `Typ` oraz `Wersja` powinny zostać ustalone automatycznie po wybraniu obrazu Debiana (lub jeśli nazwa naszej maszyny wirtualnej zawiera słowo `Debian`).
-W przeciwnym wypadku, wybieramy `Linux` jako typ systemu oraz `Debian (64-bit)` jako wersję systemu.
+8. Opcje `Typ` oraz `Wersja` powinny zostać ustalone automatycznie po wybraniu
+obrazu Debiana (lub jeśli nazwa naszej maszyny wirtualnej zawiera słowo
+`Debian`).
+W przeciwnym wypadku, wybieramy `Linux` jako typ systemu oraz `Debian (64-bit)`
+jako wersję systemu.
 
-9. Wybieramy opcję `Skip unattended installation`, ponieważ chcemy system skonfigurować ręcznie.
+9. Wybieramy opcję `Skip unattended installation`, ponieważ chcemy system
+skonfigurować ręcznie.
 
-10. Pomijamy zakładkę `Unattended Installation` i przechodzimy do zakładki `Hardware`.
+10. Pomijamy zakładkę `Unattended Installation` i przechodzimy do zakładki
+`Hardware`.
 
-11. Wprowadzamy ilość pamięci RAM, którą chcemy przydzielić maszynie wirtualnej. 
-Dla Debiana w wersji graficznej zaleca się przydzielenie co najmniej 2 GB pamięci RAM, a dla wersji bez interfejsu graficznego (tak jak w naszym przypadku) 512 MB.
+11. Wprowadzamy ilość pamięci RAM, którą chcemy przydzielić maszynie
+wirtualnej.
+Dla Debiana w wersji graficznej zaleca się przydzielenie co najmniej 2 GB
+pamięci RAM, a dla wersji bez interfejsu graficznego (tak jak w naszym
+przypadku) 512 MB.
 
-12. Wybieramy ilość procesorów, które chcemy przydzielić maszynie wirtualnej. Dla optymalnego procesu instalacji moźemy ustawić wartość 2.
-Należy pamiętać, że nie powinno się przydzielać wszystkich dostępnych procesorów, ponieważ może to spowodować problemy z wydajnością systemu hosta.
+12. Wybieramy ilość procesorów, które chcemy przydzielić maszynie
+wirtualnej. Dla optymalnego procesu instalacji moźemy ustawić wartość 2.
+Należy pamiętać, że nie powinno się przydzielać wszystkich dostępnych
+procesorów, ponieważ może to spowodować problemy z wydajnością systemu
+hosta.
 
-13. Opcja `Enable EFI` umożliwia zastępienie BIOS-u przez nowszy standard EFI, posiadający wiele usprawnień i nowych funkcji.
-W naszym przypadku nie zaznaczamy tej opcji, aby nie komplikować procesu instalacji.
+13. Opcja `Enable EFI` umożliwia zastępienie BIOS-u przez nowszy standard EFI,
+posiadający wiele usprawnień i nowych funkcji.
+W naszym przypadku nie zaznaczamy tej opcji, aby nie komplikować procesu
+instalacji.
 
-14. W zakładce `Hard Disk` wybieramy opcję `Create a virtual hard disk now`, aby utworzyć nowy dysk wirtualny.
-Opcja `Use an existing virtual hard disk file` pozwala na wybranie istniejącego dysku wirtualnego, co może być przydatne w przypadku wcześniejszej instalacji systemu.
-Opcja `Do not add a virtual hard disk` pozwala na utworzenie maszyny wirtualnej bez dysku, co może być przydatne w przypadku chęci podłączenia zewnętrznego dysku.
+14. W zakładce `Hard Disk` wybieramy opcję `Create a virtual hard disk now`,
+aby utworzyć nowy dysk wirtualny.
+Opcja `Use an existing virtual hard disk file` pozwala na wybranie istniejącego
+dysku wirtualnego, co może być przydatne w przypadku wcześniejszej instalacji
+systemu.
+Opcja `Do not add a virtual hard disk` pozwala na utworzenie maszyny wirtualnej
+bez dysku, co może być przydatne w przypadku chęci podłączenia
+zewnętrznego dysku.
 
-14. Wybieramy lokalizację oraz nazwę pliku dysku wirtualnego, w naszym przypadku można zostawić domyślną lokalizację. 
-Specyfikacja Debiana mówi, że minimalna wielkość dysku powinna wynosić 4 GB, ale w naszym przypadku możemy ustawić 40 GB, aby mieć zapas miejsca na dodatkowe pliki oraz programy do nauki.
+14. Wybieramy lokalizację oraz nazwę pliku dysku wirtualnego, w naszym
+przypadku można zostawić domyślną lokalizację.
+Specyfikacja Debiana mówi, że minimalna wielkość dysku powinna wynosić 4
+GB, ale w naszym przypadku możemy ustawić 40 GB, aby mieć zapas miejsca na
+dodatkowe pliki oraz programy do nauki.
 
 15. Wybieramy typ dysku wirtualnego:
-- `VDI (VirtualBox Disk Image)` - domyślny format dysku wirtualnego dla VirtualBox, który zapewnia optymalną wydajność.
-- `VHD (Virtual Hard Disk)` - format dysku wirtualnego używany przez Microsoft Hyper-V, który jest kompatybilny z VirtualBox.
-- `VMDK (Virtual Machine Disk)` - format dysku wirtualnego używany przez VMware, który jest kompatybilny z VirtualBox.
-- `HDD (Równoległy dysk twardy)` - dysk fizyczny, który oferuje najlepszą wydajność.
-- `QCOW (QEMU Copy-On-Write)` - format dysku wirtualnego używany przez QEMU, który jest kompatybilny z VirtualBox. 
-Copy-On-Write oznacza, że robiona jest kopia pliku podczas edycji, a zapis jest wykonywany dopiero po zakończeniu edycji, dzięki czemu unikamy utraty danych.
-- `QED (QEMU Enhanced Disk)` - format dysku wirtualnego używany przez QEMU, który jest kompatybilny z VirtualBox.
+- `VDI (VirtualBox Disk Image)` - domyślny format dysku wirtualnego dla
+VirtualBox, który zapewnia optymalną wydajność.
+- `VHD (Virtual Hard Disk)` - format dysku wirtualnego używany przez Microsoft
+Hyper-V, który jest kompatybilny z VirtualBox.
+- `VMDK (Virtual Machine Disk)` - format dysku wirtualnego używany przez
+VMware, który jest kompatybilny z VirtualBox.
+- `HDD (Równoległy dysk twardy)` - dysk fizyczny, który oferuje najlepszą
+wydajność.
+- `QCOW (QEMU Copy-On-Write)` - format dysku wirtualnego używany przez QEMU,
+który jest kompatybilny z VirtualBox.
+Copy-On-Write oznacza, że robiona jest kopia pliku podczas edycji, a zapis jest
+wykonywany dopiero po zakończeniu edycji, dzięki czemu unikamy utraty danych.
+- `QED (QEMU Enhanced Disk)` - format dysku wirtualnego używany przez QEMU,
+który jest kompatybilny z VirtualBox.
 
 W naszym przypadku wybieramy domyślny format `VDI`.
 
-16. `Pre-allocate Full Size` - opcja ta pozwala na zarezerwowanie całej przestrzeni dyskowej od razu, co może przyspieszyć proces zapisu danych, ale zajmuje więcej miejsca na dysku.
+16. `Pre-allocate Full Size` - opcja ta pozwala na zarezerwowanie całej
+przestrzeni dyskowej od razu, co może przyspieszyć proces zapisu danych, ale
+zajmuje więcej miejsca na dysku.
 W naszym przypadku nie jest to konieczne.
 
-17. `Split into 2 GB parts` - opcja ta pozwala na podzielenie pliku dysku wirtualngo na mniejsze części o wielkości 2 GB, co ułatwia przenoszenie plików między różnymi systemami plików.
+17. `Split into 2 GB parts` - opcja ta pozwala na podzielenie pliku dysku
+wirtualngo na mniejsze części o wielkości 2 GB, co ułatwia przenoszenie
+plików między różnymi systemami plików.
 W naszym przypadku nie jest to potrzebne.
 
 18. Klikamy `Zakończ` w celu zakończenia procesu tworzenia maszyny wirtualnej.
 
-19. Przed uruchomieniem maszyny, możemy dokonać dodatkowych konfiguracji w zakładce `Ustawienia`.
+19. Przed uruchomieniem maszyny, możemy dokonać dodatkowych konfiguracji w
+zakładce `Ustawienia`.
 
 20. `Ogólne`:
-W zakładce `Zaawansowane` upewniamy się, że opcje `Współdzielony schowek` oraz `Przeciąganie i upuszczanie` są ustawione na `Wyłączone`, ponieważ nie będziemy korzystać z intefesju graficznego.
-W zakładce `Opis` możemy wprowadzić dodatkowe informacje o naszej maszynie wirtualnej.
-W zakładce `Szyfrowanie dysku` możemy zabezpieczyć nasz dysk wirtualny hasłem, co zapewni dodatkową ochronę danych, ale jednocześnie obniża wydajność. W naszym przypadku nie jest to konieczne.
+W zakładce `Zaawansowane` upewniamy się, że opcje `Współdzielony schowek`
+oraz `Przeciąganie i upuszczanie` są ustawione na `Wyłączone`, ponieważ nie
+będziemy korzystać z intefesju graficznego.
+W zakładce `Opis` możemy wprowadzić dodatkowe informacje o naszej maszynie
+wirtualnej.
+W zakładce `Szyfrowanie dysku` możemy zabezpieczyć nasz dysk wirtualny
+hasłem, co zapewni dodatkową ochronę danych, ale jednocześnie obniża
+wydajność. W naszym przypadku nie jest to konieczne.
 
 21. `System`:
-W zakładce `Płyta główna` nożemy zmienić kolejność uruchamiania urządzeń, co może być przydatne w przypadku problemów z bootowaniem systemu.
-Można również zmienić chipset płyty głównej, PIIX3 jest domyślnym chipsetem dla starszych systemów, a ICH9 jest domyślnym chipsetem dla nowszych systemów.
-Opcja `TPM` pozwala na dodanie modułu TPM (Trusted Platform Module), który zapewnia dodatkowe zabezpieczenia dla systemu.
-Opcja `Urządzenie wskazujące` pozwala na wybór urządzenia do obsługi myszy, w naszym przypadku wybieramy najprostszą opcję `PS/2 Mouse`, ponieważ nie będziemy korzystać z środowiska graficznego.
-Opcja `Włącz I/O APIC` pozwala na włączenie Advanced Programmable Interrupt Controller, który zapewnia lepszą obsługę przerwań sprzętowych. Tą opcję zostawiamy włączoną domyślnie.
-Opcja `Enable Hardware Clock in UTC Time` pozwala na ustawienie zegara systemowego w czasie UTC, co może być przydatne w przypadku korzystania z wielu systemów operacyjnych. Ta opcja jest domyślnie włączona.
-Opcja `Włącz EFI` ponownie pozwala na zastąpienie BIOS-u przez nowszy standard EFI, co może być przydatne w przypadku problemów z bootowaniem systemu lub chęci skorzystania z systemu Secure Boot (Secure Boot to mechanizm zabezpieczający system przed atakami w czasie uruchamiania, który wymaga włączonego EFI).
+W zakładce `Płyta główna` nożemy zmienić kolejność uruchamiania
+urządzeń, co może być przydatne w przypadku problemów z bootowaniem
+systemu.
+Można również zmienić chipset płyty głównej, PIIX3 jest domyślnym
+chipsetem dla starszych systemów, a ICH9 jest domyślnym chipsetem dla nowszych
+systemów.
+Opcja `TPM` pozwala na dodanie modułu TPM (Trusted Platform Module), który
+zapewnia dodatkowe zabezpieczenia dla systemu.
+Opcja `Urządzenie wskazujące` pozwala na wybór urządzenia do obsługi myszy,
+w naszym przypadku wybieramy najprostszą opcję `PS/2 Mouse`, ponieważ nie
+będziemy korzystać z środowiska graficznego.
+Opcja `Włącz I/O APIC` pozwala na włączenie Advanced Programmable Interrupt
+Controller, który zapewnia lepszą obsługę przerwań sprzętowych. Tą opcję
+zostawiamy włączoną domyślnie.
+Opcja `Enable Hardware Clock in UTC Time` pozwala na ustawienie zegara
+systemowego w czasie UTC, co może być przydatne w przypadku korzystania z
+wielu systemów operacyjnych. Ta opcja jest domyślnie włączona.
+Opcja `Włącz EFI` ponownie pozwala na zastąpienie BIOS-u przez nowszy
+standard EFI, co może być przydatne w przypadku problemów z bootowaniem
+systemu lub chęci skorzystania z systemu Secure Boot (Secure Boot to mechanizm
+zabezpieczający system przed atakami w czasie uruchamiania, który wymaga
+włączonego EFI).
 
-W zakłace `Procesor` możemy zmienić ilość procesorów, co jest przydatne w przypadku problemów z wydajnością systemu.
-Suwak `Wykorzystanie procesora` pozwala na zmianę procentowego wykorzystania procesora przez maszynę wirtualną, co może być przydatne w uniknięciu problemów, jeśli mamy przydzielone wszystkie procesory hosta.
-Opcja `Włącz PAE/NX` pozwala na włączenie Physical Address Extension (PAE), który pozwala na obsługę większej ilości pamięci RAM w przypadku systemów 32 bitowych, oraz No-eXecute (NX), który zapobiega wykonywaniu kodu z obszarów pamięci, które nie są przeznaczone do tego celu. 
-Opcja `Włącz zagnieżdżone VT-x/AMD-V` pozwala na włączenie technologii wirtualizacji wewnątrz maszyny, co może być przydatne w przypadku korzystania z innych maszyn wirtualnych wewnątrz maszyny wirtualnej.
+W zakłace `Procesor` możemy zmienić ilość procesorów, co jest przydatne w
+przypadku problemów z wydajnością systemu.
+Suwak `Wykorzystanie procesora` pozwala na zmianę procentowego wykorzystania
+procesora przez maszynę wirtualną, co może być przydatne w uniknięciu
+problemów, jeśli mamy przydzielone wszystkie procesory hosta.
+Opcja `Włącz PAE/NX` pozwala na włączenie Physical Address Extension (PAE),
+który pozwala na obsługę większej ilości pamięci RAM w przypadku systemów
+32 bitowych, oraz No-eXecute (NX), który zapobiega wykonywaniu kodu z obszarów
+pamięci, które nie są przeznaczone do tego celu.
+Opcja `Włącz zagnieżdżone VT-x/AMD-V` pozwala na włączenie technologii
+wirtualizacji wewnątrz maszyny, co może być przydatne w przypadku korzystania
+z innych maszyn wirtualnych wewnątrz maszyny wirtualnej.
 
-W zakładce `Akceleracja` możemy wybrać interfejs parawirtualizacji. W naszym przypadku zostawiamy domyślną opcję.
-Opcja `Włącz zagnieżdżone stronicowanie` pozwala na włączenie zagnieżdżonego stronicowania, co może przyspieszyć proces stronicowania w przypadku korzystania z wirtualizacji wewnątrz maszyny wirtualnej.
+W zakładce `Akceleracja` możemy wybrać interfejs parawirtualizacji. W naszym
+przypadku zostawiamy domyślną opcję.
+Opcja `Włącz zagnieżdżone stronicowanie` pozwala na włączenie
+zagnieżdżonego stronicowania, co może przyspieszyć proces stronicowania w
+przypadku korzystania z wirtualizacji wewnątrz maszyny wirtualnej.
 
 22. `Ekran`:
-W zakładce `Ekran` możemy zmienić wiele ustawień związanych z wyświetlaniem obrazu.
-Suwak `Pamięć wideo` pozwala na zmianę ilości pamięci RAM przydzielonej do karty graficznej maszyny wirtualnej. W naszym przypadku gdy nie korzystamy z interfejsu graficznego, możemy zostawić domyślną wartość 16 MB.
-Suwak `Ilość monitorów` pozwala na zmianę ilości monitorów obsługiwanych przez maszynę wirtualną. W naszym przypadku zostawiamy domyślną wartość 1.
-Suwak `Scale Factor` pozwala na zmianę skali wyświetlanego obrazu, co może być przydatne w przypadku korzystania z wyższych rozdzielczości ekranu.
-Opcja `Kontroler grafiki` pozwala na wybór kontrolera graficznego, w naszym przypadku wybieramy domyślną opcję `VMSVGA`, która zapewnia optymalną wydajność dla systemu Linux.
-Opcja `Włącz akcelerację 3D` pozwala na włączenie akceleracji 3D, ale w naszym przypadku nie ma to sensu.
+W zakładce `Ekran` możemy zmienić wiele ustawień związanych z
+wyświetlaniem obrazu.
+Suwak `Pamięć wideo` pozwala na zmianę ilości pamięci RAM przydzielonej do
+karty graficznej maszyny wirtualnej. W naszym przypadku gdy nie korzystamy z
+interfejsu graficznego, możemy zostawić domyślną wartość 16 MB.
+Suwak `Ilość monitorów` pozwala na zmianę ilości monitorów obsługiwanych
+przez maszynę wirtualną. W naszym przypadku zostawiamy domyślną wartość 1.
+Suwak `Scale Factor` pozwala na zmianę skali wyświetlanego obrazu, co może
+być przydatne w przypadku korzystania z wyższych rozdzielczości ekranu.
+Opcja `Kontroler grafiki` pozwala na wybór kontrolera graficznego, w naszym
+przypadku wybieramy domyślną opcję `VMSVGA`, która zapewnia optymalną
+wydajność dla systemu Linux.
+Opcja `Włącz akcelerację 3D` pozwala na włączenie akceleracji 3D, ale w
+naszym przypadku nie ma to sensu.
 
-W zakładce `Zdalny pulpit` możemy uruchomić serwer zdalnego pulpitu, co pozwala na zdalne zarządzanie maszyną wirtualną. W naszym przypadku nie jest to potrzebne, ponieważ nie korzystamy z interfejsu graficznego.
+W zakładce `Zdalny pulpit` możemy uruchomić serwer zdalnego pulpitu, co
+pozwala na zdalne zarządzanie maszyną wirtualną. W naszym przypadku nie jest
+to potrzebne, ponieważ nie korzystamy z interfejsu graficznego.
 
-W zakładce `Nagrywanie` możemy zmienić ustawienia związane z nagrywaniem obrazu ekranu maszyny wirtualnej. W naszym przypadku nie jest to potrzebne.
+W zakładce `Nagrywanie` możemy zmienić ustawienia związane z nagrywaniem
+obrazu ekranu maszyny wirtualnej. W naszym przypadku nie jest to potrzebne.
 
 23. `Pamięć`:
-Możemy tutaj ustawiać urządzenia i kontrolery pamięci masowej, które będą dostępne dla maszyny. Domyślnie mamy ustawiony kontroler IDE z obrazem naszego systemu oraz kontroler SATA z dyskiem wirtualnym.
+Możemy tutaj ustawiać urządzenia i kontrolery pamięci masowej, które będą
+dostępne dla maszyny. Domyślnie mamy ustawiony kontroler IDE z obrazem naszego
+systemu oraz kontroler SATA z dyskiem wirtualnym.
 Do dyspozycji mamy również inne kontrolery:
-- IDE - starszy standard interfejsu dysków twardych, który jest wolniejszy od SATA.
-- SATA - nowszy standard interfejsu dysków twardych, który zapewnia lepszą wydajność. Pondato, obsługuje funkcję hot-plug, która pozwala na podłączanie i odłączanie urządzeń bez konieczności wyłączania maszyny.
-- SCSI - interfejs pamięci, który zapewnia najlepszą wydajność, ale jest mniej kompatybilny z niektórymi systemami operacyjnymi.
-- Floppy - interfejs pamięci, który pozwala na podłączenie dyskietki do maszyny wirtualnej.
-- LsiLogic SAS - interfejs pamięci, który zapewnia lepszą wydajność w przypadku korzystania z dysków SAS (Serial Attached SCSI).
-- VirtIO - interfejs pamięci, który zapewnia lepszą wydajność w przypadku korzystania z dysków wirtualnych.
-- USB - interfejs pamięci, który pozwala na podłączenie urządzeń USB do maszyny wirtualnej.
+- IDE - starszy standard interfejsu dysków twardych, który jest wolniejszy od
+SATA.
+- SATA - nowszy standard interfejsu dysków twardych, który zapewnia lepszą
+wydajność. Pondato, obsługuje funkcję hot-plug, która pozwala na
+podłączanie i odłączanie urządzeń bez konieczności wyłączania maszyny.
+- SCSI - interfejs pamięci, który zapewnia najlepszą wydajność, ale jest
+mniej kompatybilny z niektórymi systemami operacyjnymi.
+- Floppy - interfejs pamięci, który pozwala na podłączenie dyskietki do
+maszyny wirtualnej.
+- LsiLogic SAS - interfejs pamięci, który zapewnia lepszą wydajność w
+przypadku korzystania z dysków SAS (Serial Attached SCSI).
+- VirtIO - interfejs pamięci, który zapewnia lepszą wydajność w przypadku
+korzystania z dysków wirtualnych.
+- USB - interfejs pamięci, który pozwala na podłączenie urządzeń USB do
+maszyny wirtualnej.
 
 24. `Dźwięk`:
-W zakładce `Dźwięk` możemy zmienić ustawienia związane z dźwiękiem w maszynie wirtualnej.
+W zakładce `Dźwięk` możemy zmienić ustawienia związane z dźwiękiem w
+maszynie wirtualnej.
 
-Opcja `Włącz dźwięk` powinna zostać wyłączona, ponieważ nie ma potrzeby korzystania z dźwięku w naszym przypadku.
-Opcja `Sterownik dźwięku gospodarza` pozwala na wybór sterownika dźwięku, przez który będzie przesyłany dźwięk z maszyny wirtualnej do systemu hosta.
-Opcja `Kontroler audio` pozwala na wybór kontrolera dźwięku, `ICH AC97` jest domyślnym kontrolerem dźwięku dla systemów starszych, a `Intel HD Audio` jest najnowszym kontrolerem dźwięku.
+Opcja `Włącz dźwięk` powinna zostać wyłączona, ponieważ nie ma potrzeby
+korzystania z dźwięku w naszym przypadku.
+Opcja `Sterownik dźwięku gospodarza` pozwala na wybór sterownika dźwięku,
+przez który będzie przesyłany dźwięk z maszyny wirtualnej do systemu hosta.
+Opcja `Kontroler audio` pozwala na wybór kontrolera dźwięku, `ICH AC97` jest
+domyślnym kontrolerem dźwięku dla systemów starszych, a `Intel HD Audio`
+jest najnowszym kontrolerem dźwięku.
 
 25. `Sieć`:
-W zakładce `Sieć` możemy zmienić ustawienia związane z siecią w maszynie wirtualnej. Maksymalnie możemy skonfigurować 4 karty sieciowe.
+W zakładce `Sieć` możemy zmienić ustawienia związane z siecią w maszynie
+wirtualnej. Maksymalnie możemy skonfigurować 4 karty sieciowe.
 
-W naszym przypadku mamy włączoną pierwszą kartę sieciową, która jest skonfigurowana jako `NAT` (Network Address Translation), co pozwala na połączenie maszyny wirtualnej z siecią hosta.
+W naszym przypadku mamy włączoną pierwszą kartę sieciową, która jest
+skonfigurowana jako `NAT` (Network Address Translation), co pozwala na
+połączenie maszyny wirtualnej z siecią hosta.
 Dostępne są również inne opcje:
-- `Mostkowana karta sieciowa` - pozwala na połączenie maszyny wirtualnej z siecią hosta, ale dostaje ona własny adres IP z sieci hosta.
-- `Sieć wewnętrzna` - pozwala na połączenie maszyny wirtualnej z innymi maszynami wirtualnymi, ale nie ma dostępu do sieci hosta.
-- `Karta sieci izolowanej` - pozwala na połączenie maszyny wirtualnej z siecią hosta, ale nie ma dostępu do innych maszyn wirtualnych, ani do sieci zewnętrznej.
-- `Rodzajowy sterownik` - pozwala na wybór niestarownika sieciowego, który będzie używany przez maszynę wirtualną.
+- `Mostkowana karta sieciowa` - pozwala na połączenie maszyny wirtualnej z
+siecią hosta, ale dostaje ona własny adres IP z sieci hosta.
+- `Sieć wewnętrzna` - pozwala na połączenie maszyny wirtualnej z innymi
+maszynami wirtualnymi, ale nie ma dostępu do sieci hosta.
+- `Karta sieci izolowanej` - pozwala na połączenie maszyny wirtualnej z
+siecią hosta, ale nie ma dostępu do innych maszyn wirtualnych, ani do sieci
+zewnętrznej.
+- `Rodzajowy sterownik` - pozwala na wybór niestarownika sieciowego, który
+będzie używany przez maszynę wirtualną.
 - `Sieć NAT` - pozwala na tworzenie wielu sieci NAT
-- `Cloud Network` - pozwala na połączenie maszyny wirtualnej z chmurą np. Amazon Web Services, Google Cloud Platform, Microsoft Azure.
+- `Cloud Network` - pozwala na połączenie maszyny wirtualnej z chmurą np.
+Amazon Web Services, Google Cloud Platform, Microsoft Azure.
 
 26. `Porty szeregowe`:
-W zakładce `Porty szeregowe` możemy zmienić ustawienia związane z portami szeregowymi w maszynie wirtualnej.
+W zakładce `Porty szeregowe` możemy zmienić ustawienia związane z portami
+szeregowymi w maszynie wirtualnej.
 
-W naszym przypadku porty szeregowe nie będą wykorzystywane, więc wszystkie pozostawiamy wyłączone.
+W naszym przypadku porty szeregowe nie będą wykorzystywane, więc wszystkie
+pozostawiamy wyłączone.
 
 27. `USB`:
-W zakładce `USB` możemy zmienić ustawienia związane z urządzeniami USB w maszynie wirtualnej.
+W zakładce `USB` możemy zmienić ustawienia związane z urządzeniami USB w
+maszynie wirtualnej.
 
-Opcja `Kontroler USB` pozwala na wybór kontrolera USB, który będzie używany przez maszynę wirtualną. Domyślnie jest to kontroler USB 2.0 (OHCI + EHCI).
+Opcja `Kontroler USB` pozwala na wybór kontrolera USB, który będzie używany
+przez maszynę wirtualną. Domyślnie jest to kontroler USB 2.0 (OHCI + EHCI).
 
 28. `Udostępnianie foldery`:
-W zakładce `Udostępnianie foldery` możemy zmienić ustawienia związane z udostępnianiem folderów między maszyną wirtualną a systemem hosta.
+W zakładce `Udostępnianie foldery` możemy zmienić ustawienia związane z
+udostępnianiem folderów między maszyną wirtualną a systemem hosta.
 
-Możemy wybrać folder systemu hosta, który będzie dostępny dla maszyny wirtualnej. 
-Możemy również ustawić opcje związane z udostępnianiem folderów, takie jak `Automatyczne montowanie`, `Tylko do odczytu` oraz punkt montowania.
+Możemy wybrać folder systemu hosta, który będzie dostępny dla maszyny
+wirtualnej.
+Możemy również ustawić opcje związane z udostępnianiem folderów, takie
+jak `Automatyczne montowanie`, `Tylko do odczytu` oraz punkt montowania.
 
 29. `Interfejs użytkownika`:
-W tej zakładce dostępne są ustawienia związane z interfejsem użytkownika VirtualBox podczas korzystania z maszyny wirtualnej.
+W tej zakładce dostępne są ustawienia związane z interfejsem użytkownika
+VirtualBox podczas korzystania z maszyny wirtualnej.
 
 30. Po zakończeniu konfiguracji klikamy `OK`, aby zapisać zmiany.
 
 31. Uruchamiamy maszynę wirtualną, klikając na przycisk `Uruchom`.
 
 32. Początkowe menu oferuje kilka opcji, takich jak:
-- `Graphical install` - uruchamia proces instalacji systemu Debian w trybie graficznym.
+- `Graphical install` - uruchamia proces instalacji systemu Debian w trybie
+graficznym.
 - `Install` - uruchamia proces instalacji systemu Debian.
-- `Advanced options` - oferuje dodatkowe opcje instalacji, takie jak `Expert install`, `Automated install`, `Rescue mode`.
-- `Accessible dark contrast installer menu` - uruchamia instalator systemu Debian w trybie kontrastowym.
+- `Advanced options` - oferuje dodatkowe opcje instalacji, takie jak `Expert
+install`, `Automated install`, `Rescue mode`.
+- `Accessible dark contrast installer menu` - uruchamia instalator systemu
+Debian w trybie kontrastowym.
 - `Help` - wyświetla pomoc dotyczącą instalacji systemu Debian.
-- `Install with speech synthesis` - uruchamia proces instalacji systemu Debian z syntezą mowy.
+- `Install with speech synthesis` - uruchamia proces instalacji systemu Debian z
+syntezą mowy.
 
 Wybieramy opcję `Install` i naciskamy klawisz `Enter`.
 
-33. Następnie wybieramy język, w którym chcemy przeprowadzić instalację systemu Debian. W naszym przypadku wybieramy język `English`, dzięki czemu
-proces instalacji będzie bardziej przewidywalny oraz w razie problemów łatwiej będzie znaleźć rozwiązanie.
+33. Następnie wybieramy język, w którym chcemy przeprowadzić instalację
+systemu Debian. W naszym przypadku wybieramy język `English`, dzięki czemu
+proces instalacji będzie bardziej przewidywalny oraz w razie problemów
+łatwiej będzie znaleźć rozwiązanie.
 
-34. Wybieramy kraj, w którym znajdujemy się, aby ustawić odpowiednią strefę czasową oraz ustawienia regionalne. W naszym przypadku wybieramy `Other`.
+34. Wybieramy kraj, w którym znajdujemy się, aby ustawić odpowiednią strefę
+czasową oraz ustawienia regionalne. W naszym przypadku wybieramy `Other`.
 Następnie wybieramy `Europe` oraz `Poland`.
 
-35. Wybieramy układ klawiatury, który chcemy używać podczas instalacji systemu Debian. W naszym przypadku wybieramy `United States`.
+35. Wybieramy układ klawiatury, który chcemy używać podczas instalacji
+systemu Debian. W naszym przypadku wybieramy `United States`.
 
-36. Następnie instalator systemu poprosi nas o podanie nazwy hosta, którą chcemy przypisać naszej maszynie wirtualnej. Nazwa hosta powinna być unikalna w sieci,
-dlatego warto wybrać nazwę, która będzie łatwa do zapamiętania oraz zrozumienia. W naszym przypadku wybieramy nazwę `debian`.
+36. Następnie instalator systemu poprosi nas o podanie nazwy hosta, którą
+chcemy przypisać naszej maszynie wirtualnej. Nazwa hosta powinna być unikalna
+w sieci,
+dlatego warto wybrać nazwę, która będzie łatwa do zapamiętania oraz
+zrozumienia. W naszym przypadku wybieramy nazwę `debian`.
 
-37. Następnie instalator systemu poprosi nas o podanie nazwy domeny, którą chcemy przypisać naszej maszynie wirtualnej. Domena jest opcjonalna, ale może być przydatna
-w przypadku korzystania z sieci roboczej. W naszym przypadku zostawiamy to pole puste.
+37. Następnie instalator systemu poprosi nas o podanie nazwy domeny, którą
+chcemy przypisać naszej maszynie wirtualnej. Domena jest opcjonalna, ale może
+być przydatna
+w przypadku korzystania z sieci roboczej. W naszym przypadku zostawiamy to pole
+puste.
 
-38. Następnie instalator poprosi nas o podanie hasła dla użytkownika `root`. Hasło powinno być bezpieczne, ponieważ użytkownik `root` ma pełne uprawnienia
-w systemie. W naszym przypadku wpisujemy hasło `root`, ponieważ jest to maszyna wirtualna do celów edukacyjnych.
+38. Następnie instalator poprosi nas o podanie hasła dla użytkownika `root`.
+Hasło powinno być bezpieczne, ponieważ użytkownik `root` ma pełne
+uprawnienia
+w systemie. W naszym przypadku wpisujemy hasło `root`, ponieważ jest to
+maszyna wirtualna do celów edukacyjnych.
 
-39. Następnie instalator poprosi nas o potwierdzenie hasła dla użytkownika `root`. Wpisujemy ponownie hasło `root` i naciskamy klawisz `Enter`.
+39. Następnie instalator poprosi nas o potwierdzenie hasła dla użytkownika
+`root`. Wpisujemy ponownie hasło `root` i naciskamy klawisz `Enter`.
 
-40. W kolejnym korku instalator poprosi nas o utworzenie zwykłego użytkownika, który będzie używany do codziennej pracy w systemie. Na początku jesteśmy
-pytanie o prawdziwe imię użytkownika. W naszym przypadku, aby nie komplikować procesu instalacji, wpisujemy imię `user`.
+40. W kolejnym korku instalator poprosi nas o utworzenie zwykłego użytkownika,
+który będzie używany do codziennej pracy w systemie. Na początku jesteśmy
+pytanie o prawdziwe imię użytkownika. W naszym przypadku, aby nie komplikować
+procesu instalacji, wpisujemy imię `user`.
 
-41. Następnie instalator poprosi nas o podanie nazwy użytkownika. Nazwa użytkownika powinna być unikalna w systemie, dlatego warto wybrać nazwę, która będzie
-łatwa do zapamiętania oraz zrozumienia. W naszym przypadku wybieramy nazwę `user`.
+41. Następnie instalator poprosi nas o podanie nazwy użytkownika. Nazwa
+użytkownika powinna być unikalna w systemie, dlatego warto wybrać nazwę,
+która będzie
+łatwa do zapamiętania oraz zrozumienia. W naszym przypadku wybieramy nazwę
+`user`.
 
-42. Następnie instalator poprosi nas o podanie hasła dla użytkownika `user`, a następnie o potwierdzenie hasła.
+42. Następnie instalator poprosi nas o podanie hasła dla użytkownika `user`,
+a następnie o potwierdzenie hasła.
 
-43. Kolejnym krokiem jest wybór metody partycjonowania dysku. W naszym przypadku wybieramy opcję `Manual`, aby ręcznie podzielić dysk na partycje
+43. Kolejnym krokiem jest wybór metody partycjonowania dysku. W naszym
+przypadku wybieramy opcję `Manual`, aby ręcznie podzielić dysk na partycje
 i jak najlepiej dostosować system do naszych potrzeb.
 
-44. Następnie instalator poprosi nas o wybór dysku, na którym chcemy zainstalować system. W naszym przypadku wybieramy dysk `SCSI (sda)`, który jest domyślnym
+44. Następnie instalator poprosi nas o wybór dysku, na którym chcemy
+zainstalować system. W naszym przypadku wybieramy dysk `SCSI (sda)`, który
+jest domyślnym
 dyskiem wirtualnym dla maszyny wirtualnej. Naciskamy klawisz `Enter`.
 
-45. Instalator powinien zapytać czy chcemy utworzyć nową tabelę partycji na dysku. W naszym przypadku wybieramy opcję `Yes`, aby utworzyć nową tabelę partycji.
-Po takiej operacji powinniśmy mieć utworzoną jedną partycję o rozmiarze całego dysku o nazwie `pri/log`.
+45. Instalator powinien zapytać czy chcemy utworzyć nową tabelę partycji na
+dysku. W naszym przypadku wybieramy opcję `Yes`, aby utworzyć nową tabelę
+partycji.
+Po takiej operacji powinniśmy mieć utworzoną jedną partycję o rozmiarze
+całego dysku o nazwie `pri/log`.
 
-46. Następnie możemy przystąpić do utworzenia pierwszej partycji. Wybieramy opcję `pri/log` i naciskamy klawisz `Enter`.
+46. Następnie możemy przystąpić do utworzenia pierwszej partycji. Wybieramy
+opcję `pri/log` i naciskamy klawisz `Enter`.
 
-47. Jako pierwszą partycję utworzymy partycję `swap`, która będzie służyć jako przestrzeń wymiany. Wybieramy opcję `Create a new partition` i naciskamy klawisz `Enter`.
+47. Jako pierwszą partycję utworzymy partycję `swap`, która będzie
+służyć jako przestrzeń wymiany. Wybieramy opcję `Create a new partition` i
+naciskamy klawisz `Enter`.
 
-48. Następnie instalator poprosi nas o podanie rozmiaru partycji. Dla partycji `swap` zaleca się przydzielenie tyle pamięci ile mamy pamięci RAM plus dodatkowe 2 GB.
-Jeśli mamy mniej niż 2 GB pamięci RAM, to przydzielamy 2 razy tyle ile mamy pamięci RAM.
-W naszym przypadku przydzielamy 4 GB pamięci dla partycji `swap`. Wpisujemy wartość `4 GB` i naciskamy klawisz `Enter`.
+48. Następnie instalator poprosi nas o podanie rozmiaru partycji. Dla partycji
+`swap` zaleca się przydzielenie tyle pamięci ile mamy pamięci RAM plus
+dodatkowe 2 GB.
+Jeśli mamy mniej niż 2 GB pamięci RAM, to przydzielamy 2 razy tyle ile mamy
+pamięci RAM.
+W naszym przypadku przydzielamy 4 GB pamięci dla partycji `swap`. Wpisujemy
+wartość `4 GB` i naciskamy klawisz `Enter`.
 
-49. Następnie instalator poprosi nas o wybór typu partycji. Wybieramy opcję `Logical` i naciskamy klawisz `Enter`.
-Partycji logicznych może być znacznie więcej niż partycji podstawowych, ale nie mogą one być używane jako partycje rozruchowe.
+49. Następnie instalator poprosi nas o wybór typu partycji. Wybieramy opcję
+`Logical` i naciskamy klawisz `Enter`.
+Partycji logicznych może być znacznie więcej niż partycji podstawowych, ale
+nie mogą one być używane jako partycje rozruchowe.
 
-50. Następnie instalator poprosi nas o wybór miejsca, w którym chcemy umieścić partycję. Wybieramy opcję `Beginning` i naciskamy klawisz `Enter`.
+50. Następnie instalator poprosi nas o wybór miejsca, w którym chcemy
+umieścić partycję. Wybieramy opcję `Beginning` i naciskamy klawisz `Enter`.
 
-51. W następnym kroku mamy opcje wyboru systemu plików dla partycji. Klikamy na opcję `Use as` i wybieramy `swap area`.
+51. W następnym kroku mamy opcje wyboru systemu plików dla partycji. Klikamy
+na opcję `Use as` i wybieramy `swap area`.
 Pozostałe dostępne opcje to:
-- `Ext4 journaling file system` - system plików z journalingiem, który zapewnia ochronę danych w przypadku awarii systemu.
-- `Ext3 journaling file system` - starsza wersja systemu plików z journalingiem, która jest mniej wydajna od Ext4.
-- `Ext2 file system` - stara wersja systemu plików bez journalingu, która jest mniej bezpieczna od Ext3 i Ext4.
-- `Btrfs journaling file system` - system plików z journalingiem, który oferuje wiele zaawansowanych funkcji, takich jak klonowanie, kompresja, deduplikacja.
-- `XFS journaling file system` - system plików z journalingiem, który jest przeznaczony dla dużych plików i dużych wolumenów danych.
-- `JFS journaling file system` - system plików z journalingiem, który jest przeznaczony dla dużych wolumenów danych.
-- `FAT16` - system plików FAT16, który jest przeznaczony dla małych partycji i urządzeń przenośnych.
-- `FAT32` - system plików FAT32, który jest przeznaczony dla małych partycji i urządzeń przenośnych.
-- `Swap area` - partycja swap, która służy jako przestrzeń wymiany, gdy brakuje pamięci RAM.
-- `Physical volume for encryption` - partycja, która służy jako wolumen do szyfrowania danych.
-- `Physical volume for LVM` - partycja, która służy jako wolumen do zarządzania logicznymi wolumenami.
-- `Phusical volume for RAID` - partycja, która służy jako wolumen do zarządzania macierzami RAID.
+- `Ext4 journaling file system` - system plików z journalingiem, który
+zapewnia ochronę danych w przypadku awarii systemu.
+- `Ext3 journaling file system` - starsza wersja systemu plików z
+journalingiem, która jest mniej wydajna od Ext4.
+- `Ext2 file system` - stara wersja systemu plików bez journalingu, która jest
+mniej bezpieczna od Ext3 i Ext4.
+- `Btrfs journaling file system` - system plików z journalingiem, który
+oferuje wiele zaawansowanych funkcji, takich jak klonowanie, kompresja,
+deduplikacja.
+- `XFS journaling file system` - system plików z journalingiem, który jest
+przeznaczony dla dużych plików i dużych wolumenów danych.
+- `JFS journaling file system` - system plików z journalingiem, który jest
+przeznaczony dla dużych wolumenów danych.
+- `FAT16` - system plików FAT16, który jest przeznaczony dla małych partycji
+i urządzeń przenośnych.
+- `FAT32` - system plików FAT32, który jest przeznaczony dla małych partycji
+i urządzeń przenośnych.
+- `Swap area` - partycja swap, która służy jako przestrzeń wymiany, gdy
+brakuje pamięci RAM.
+- `Physical volume for encryption` - partycja, która służy jako wolumen do
+szyfrowania danych.
+- `Physical volume for LVM` - partycja, która służy jako wolumen do
+zarządzania logicznymi wolumenami.
+- `Phusical volume for RAID` - partycja, która służy jako wolumen do
+zarządzania macierzami RAID.
 - `Do not use the partition` - partycja, która nie jest używana w systemie.
 
-52. Resztę opcji pozostawiamy domyślnie i naciskamy klawisz `Done setting up the partition`.
+52. Resztę opcji pozostawiamy domyślnie i naciskamy klawisz `Done setting up
+the partition`.
 Opcje mount options:
 - `discard` - pozwala na automatyczne usuwanie nieużywanych bloków z partycji.
-- `noatime` - pozwala na wyłączenie zapisu czasu dostępu do plików, co może przyspieszyć operacje odczytu i zapisu.
-- `nodiratime` - pozwala na wyłączenie zapisu czasu dostępu do katalogów, co może przyspieszyć operacje odczytu i zapisu.
-- `relatime` - pozwala na zapis czasu dostępu do plików tylko w przypadku zmiany, co może przyspieszyć operacje odczytu i zapisu.
+- `noatime` - pozwala na wyłączenie zapisu czasu dostępu do plików, co może
+przyspieszyć operacje odczytu i zapisu.
+- `nodiratime` - pozwala na wyłączenie zapisu czasu dostępu do katalogów, co
+może przyspieszyć operacje odczytu i zapisu.
+- `relatime` - pozwala na zapis czasu dostępu do plików tylko w przypadku
+zmiany, co może przyspieszyć operacje odczytu i zapisu.
 - `nodev` - pozwala na wyłączenie dostępu do urządzeń w partycji.
 - `noexec` - pozwala na wyłączenie wykonywania plików w partycji.
 - `ro` - pozwala na zamontowanie partycji jako tylko do odczytu.
-- `sync` - pozwala na synchroniczne zapisy do partycji, co może spowolnić operacje zapisu.
+- `sync` - pozwala na synchroniczne zapisy do partycji, co może spowolnić
+operacje zapisu.
 - `usrquota` - pozwala na ustawienie limitów dyskowych dla użytkowników.
 - `grpquota` - pozwala na ustawienie limitów dyskowych dla grup.
 - `user_xattr` - pozwala na dodawanie dodatkowych atrybutów do plików.
 
-53. Następnie utworzymy partycję, na której bedą foldery domowe użytkowników. Wybieramy opcję `Create a new partition` i naciskamy klawisz `Enter`.
+53. Następnie utworzymy partycję, na której bedą foldery domowe
+użytkowników. Wybieramy opcję `Create a new partition` i naciskamy klawisz
+`Enter`.
 
-54. Tak jak wcześniej, instalator poprosi nas o podanie rozmiaru partycji. W naszym przypadku przydzielamy 7.5 GB.
+54. Tak jak wcześniej, instalator poprosi nas o podanie rozmiaru partycji. W
+naszym przypadku przydzielamy 7.5 GB.
 
-55. Następnie instalator poprosi nas o wybór typu partycji. Wybieramy opcję `Logical` i naciskamy klawisz `Enter`.
+55. Następnie instalator poprosi nas o wybór typu partycji. Wybieramy opcję
+`Logical` i naciskamy klawisz `Enter`.
 
-56. Następnie instalator poprosi nas o wybór miejsca, w którym chcemy umieścić partycję. Wybieramy opcję `Beginning` i naciskamy klawisz `Enter`.
+56. Następnie instalator poprosi nas o wybór miejsca, w którym chcemy
+umieścić partycję. Wybieramy opcję `Beginning` i naciskamy klawisz `Enter`.
 
-57. W następnym kroku ustawiamy opcję `Mount point` na `/home` i naciskamy klawisz `Done setting up the partition`.
+57. W następnym kroku ustawiamy opcję `Mount point` na `/home` i naciskamy
+klawisz `Done setting up the partition`.
 
-58. Ostatnim krokiem jest utworzenie głównej partycji systemowej zamontowanej w `/`. Wybieramy opcję `Create a new partition` i naciskamy klawisz `Enter`.
+58. Ostatnim krokiem jest utworzenie głównej partycji systemowej zamontowanej
+w `/`. Wybieramy opcję `Create a new partition` i naciskamy klawisz `Enter`.
 
-59. Następnie instalator poprosi nas o podanie rozmiaru partycji. W naszym przypadku przydzielamy resztę dostępnej przestrzeni.
+59. Następnie instalator poprosi nas o podanie rozmiaru partycji. W naszym
+przypadku przydzielamy resztę dostępnej przestrzeni.
 
-60. Następnie instalator poprosi nas o wybór typu partycji. Wybieramy opcję `Primary` i naciskamy klawisz `Enter`.
+60. Następnie instalator poprosi nas o wybór typu partycji. Wybieramy opcję
+`Primary` i naciskamy klawisz `Enter`.
 
-61. Następnie instalator poprosi nas o wybór miejsca, w którym chcemy umieścić partycję. Wybieramy opcję `Beginning` i naciskamy klawisz `Enter`.
+61. Następnie instalator poprosi nas o wybór miejsca, w którym chcemy
+umieścić partycję. Wybieramy opcję `Beginning` i naciskamy klawisz `Enter`.
 
-62. W następnym kroku pozostawiamy opcję `Mount point` jako `/` i naciskamy `Done setting up the partition`.
+62. W następnym kroku pozostawiamy opcję `Mount point` jako `/` i naciskamy
+`Done setting up the partition`.
 
-63. Aby zakończyć proces partycjonowania, naciskamy klawisz `Finish partitioning and write changes to disk`.
+63. Aby zakończyć proces partycjonowania, naciskamy klawisz `Finish
+partitioning and write changes to disk`.
 
-64. Instalator zapyta nas, czy chcemy zatwierdzić zmiany na dysku. Wybieramy opcję `Yes` i naciskamy klawisz `Enter`.
+64. Instalator zapyta nas, czy chcemy zatwierdzić zmiany na dysku. Wybieramy
+opcję `Yes` i naciskamy klawisz `Enter`.
 
-65. Następnie zostaniemy poproszeni o wykrycie dodatkowych nośników instalacyjnych. W naszym przypadku nie jest to potrzebne, więc wybieramy opcję `No` i naciskamy klawisz `Enter`.
+65. Następnie zostaniemy poproszeni o wykrycie dodatkowych nośników
+instalacyjnych. W naszym przypadku nie jest to potrzebne, więc wybieramy opcję
+`No` i naciskamy klawisz `Enter`.
 
-66. Następnie wybieramy kraj z którego będziemy pobierać oprogramowanie. W naszym przypadku wybieramy `Poland`.
+66. Następnie wybieramy kraj z którego będziemy pobierać oprogramowanie. W
+naszym przypadku wybieramy `Poland`.
 
-67. Następnie instalator poprosi nas o wybór lustra, z którego będziemy pobierać oprogramowanie. Najlepiej wybrać najbliższe lustra, aby przyspieszyć proces pobierania.
+67. Następnie instalator poprosi nas o wybór lustra, z którego będziemy
+pobierać oprogramowanie. Najlepiej wybrać najbliższe lustra, aby
+przyspieszyć proces pobierania.
 W naszym przypadku wybieramy lustro `ftp.task.gda.pl`.
 
-68. Następnie instalator poprosi nas o wybór serwera proxy. W naszym przypadku nie korzystamy z serwera proxy, więc zostawiamy to pole puste.
+68. Następnie instalator poprosi nas o wybór serwera proxy. W naszym przypadku
+nie korzystamy z serwera proxy, więc zostawiamy to pole puste.
 
 69. W przypadku pytania o ankietę możemy wybrać opcję `No`.
 
-70. Następnie instalator poprosi nas o wybór oprogramowania, które chcemy zainstalować. 
+70. Następnie instalator poprosi nas o wybór oprogramowania, które chcemy
+zainstalować.
 Mamy dostępne opcje:
-- `Debian desktop environment` - środowisko graficzne Debiana, które zawiera wiele narzędzi i aplikacji do pracy z systemem.
-- `GNOME` - środowisko graficzne GNOME, które jest jednym z najpopularniejszych środowisk graficznych dla systemów Linux.
-- `Xfce` - środowisko graficzne Xfce, które jest lekkie i szybkie, co sprawia, że jest idealne dla starszych komputerów.
-- `KDE Plasma` - środowisko graficzne KDE Plasma, które oferuje wiele zaawansowanych funkcji i efektów wizualnych.
-- `Cinnamon` - środowisko graficzne Cinnamon, które jest oparte na GNOME, ale oferuje wiele dodatkowych funkcji i ulepszeń.
-- `MATE` - środowisko graficzne MATE, które jest oparte na GNOME 2, ale oferuje wiele nowych funkcji i ulepszeń.
-- `LXDE` - środowisko graficzne LXDE, które jest bardzo lekkie i szybkie, co sprawia, że jest idealne dla starszych komputerów.
-- `LXQt` - środowisko graficzne LXQt, które jest oparte na LXDE i Qt, co sprawia, że jest bardzo lekkie i szybkie.
-- `web server` - serwer WWW, który pozwala na udostępnianie stron internetowych.
-- `Standard system utilities` - podstawowe narzędzia systemowe, które są niezbędne do pracy z systemem.
+- `Debian desktop environment` - środowisko graficzne Debiana, które zawiera
+wiele narzędzi i aplikacji do pracy z systemem.
+- `GNOME` - środowisko graficzne GNOME, które jest jednym z
+najpopularniejszych środowisk graficznych dla systemów Linux.
+- `Xfce` - środowisko graficzne Xfce, które jest lekkie i szybkie, co sprawia,
+że jest idealne dla starszych komputerów.
+- `KDE Plasma` - środowisko graficzne KDE Plasma, które oferuje wiele
+zaawansowanych funkcji i efektów wizualnych.
+- `Cinnamon` - środowisko graficzne Cinnamon, które jest oparte na GNOME, ale
+oferuje wiele dodatkowych funkcji i ulepszeń.
+- `MATE` - środowisko graficzne MATE, które jest oparte na GNOME 2, ale
+oferuje wiele nowych funkcji i ulepszeń.
+- `LXDE` - środowisko graficzne LXDE, które jest bardzo lekkie i szybkie, co
+sprawia, że jest idealne dla starszych komputerów.
+- `LXQt` - środowisko graficzne LXQt, które jest oparte na LXDE i Qt, co
+sprawia, że jest bardzo lekkie i szybkie.
+- `web server` - serwer WWW, który pozwala na udostępnianie stron
+internetowych.
+- `Standard system utilities` - podstawowe narzędzia systemowe, które są
+niezbędne do pracy z systemem.
 - `SSH server` - serwer SSH, który pozwala na zdalne zarządzanie systemem.
 
-W naszym przypadku wybieramy tylko opcje `SSH server` oraz `standard system utilities`.
+W naszym przypadku wybieramy tylko opcje `SSH server` oraz `standard system
+utilities`.
 Uwaga! Aby zaznaczyć opcję, należy użyć klawisza `Spacja`.
 
 Następnie naciskamy klawisz `Enter`.
 
-71. Teraz instalator zapyta nas, czy chcemy zainstalować program GRUB na dysku. Wybieramy opcję `Yes` i naciskamy klawisz `Enter`.
-GRUB (Grand Unified Bootloader) jest programem rozruchowym, który pozwala na uruchomienie systemu operacyjnego.
-W przypadku wielu systemów operacyjnych, GRUB pozwala na wybór systemu, który ma zostać uruchomiony.
+71. Teraz instalator zapyta nas, czy chcemy zainstalować program GRUB na dysku.
+Wybieramy opcję `Yes` i naciskamy klawisz `Enter`.
+GRUB (Grand Unified Bootloader) jest programem rozruchowym, który pozwala na
+uruchomienie systemu operacyjnego.
+W przypadku wielu systemów operacyjnych, GRUB pozwala na wybór systemu, który
+ma zostać uruchomiony.
 
-72. Następnie instalator zapyta nas, na którym dysku chcemy zainstalować GRUB. Wybieramy nasz główny dysk `dev/sda` i naciskamy klawisz `Enter`.
+72. Następnie instalator zapyta nas, na którym dysku chcemy zainstalować
+GRUB. Wybieramy nasz główny dysk `dev/sda` i naciskamy klawisz `Enter`.
 
-73. Po zakończonej instalacji GRUB, instalator poprosi nas o usunięcie nośnika instalacyjnego i naciskamy klawisz `Continue` aby zrestartować komputer.
+73. Po zakończonej instalacji GRUB, instalator poprosi nas o usunięcie
+nośnika instalacyjnego i naciskamy klawisz `Continue` aby zrestartować
+komputer.
 
-74. Teraz możemy zamknąć maszynę oraz usunąć kontroler IDE z ustawień maszyny, ponieważ nie będzie on już potrzebny.
+74. Teraz możemy zamknąć maszynę oraz usunąć kontroler IDE z ustawień
+maszyny, ponieważ nie będzie on już potrzebny.
 
 Twoje przemyslenia na temat zadania. np.
 Czy wynik byl tym jaki byl przez Ciebie oczekiwany?
@@ -312,8 +523,13 @@ Czy pojawilo sie cos zaskakujacego? Co?
 Czego cie To nauczylo?
 Do czego bedzie mozna wykorzystac nowa wiedze.
 
-Ćwiczenie przebiegło zgodnie z oczekiwaniami. Udało się zainstalować system Debian na maszynie wirtualnej w programie VirtualBox.
-Proces ten był bardziej skomplikowany niż się spodziewałem, ale dzięki temu nauczyłem się wielu nowych rzeczy dotyczących systemów Linux
-Zaskakujące dla mnie było to, jak wiele opcji i konfiguracji można dostosować podczas instalacji, ale dzięki temu ćwiczeniu teraz rozumiem każdą z nich i wiem, jakie zalety/wady i rezultaty mogą one przynieść.
-Nowa wiedza na pewno przyda mi się w przyszłości, gdy będę chciał samemu zainstalować i dostosować system Linux na swoim komputerze lub serwerze.
+Ćwiczenie przebiegło zgodnie z oczekiwaniami. Udało się zainstalować system
+Debian na maszynie wirtualnej w programie VirtualBox.
+Proces ten był bardziej skomplikowany niż się spodziewałem, ale dzięki temu
+nauczyłem się wielu nowych rzeczy dotyczących systemów Linux
+Zaskakujące dla mnie było to, jak wiele opcji i konfiguracji można
+dostosować podczas instalacji, ale dzięki temu ćwiczeniu teraz rozumiem
+każdą z nich i wiem, jakie zalety/wady i rezultaty mogą one przynieść.
+Nowa wiedza na pewno przyda mi się w przyszłości, gdy będę chciał samemu
+zainstalować i dostosować system Linux na swoim komputerze lub serwerze.
 
