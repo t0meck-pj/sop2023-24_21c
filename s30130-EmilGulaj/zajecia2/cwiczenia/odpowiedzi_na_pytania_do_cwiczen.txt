@@ -10,8 +10,8 @@ wystarczy wszystkie elementy zmiennej wziąć w cudzysłów lub apostof.
 
 """Jaka jest różnica między " a ' ?""" 
 Jeśli w cudzysłowiu jest podana nazwa 
-zmiennej to zostatnie ona zinterpretowana i odczytana. W apostrofach za to będzie po 
-prostu wszystko dosłownie- tak jak jest napisane wypisywane.
+zmiennej to zostatnie ona zinterpretowana i odczytana. W apostrofach za to
+będzie po prostu wszystko dosłownie- tak jak jest napisane wypisywane.
 
 "Czym różnią się $* i $@?"
 Argumenty z $* są oddawane po kolei bez sprawdzania czy np.
@@ -20,17 +20,20 @@ $@ za to, zwraca już na to uwagę.
 
 Ćw3
 PATH - Zwraca ścieżkę do katalogu który posiada komendy oraz skrypty.
-Przydatne jeśli napisze się jakiś skrypt który chce się używać wszędzie (dowolnym katalogu).
+Przydatne jeśli napisze się jakiś skrypt który chce się używać
+wszędzie (dowolnym katalogu).
 
 RANDOM - Zwraca losową liczbę
 Przydatna funkcja do np. tworzenia hashy.
 
 PWD - Zwraca ścieżkę w której obecnie się znajdujesz.
-Przydatne do pozysikwania tej informacji.
+Przydatne do pozyskiwania tej informacji.
 
 PS1 - Zwraca jak aktualnie wygląda prompt.
-Przydatne to zmiany tego co wyświetla aktualny prompt, w celu
-np. jego upiększenia. 
+Przydatne do zmiany tego co wyświetla aktualny prompt, w celu
+np. jego upiększenia lub wyświetlenia czegoś użytecznego jak
+aktualny branch czy aktualna godzina (oczywiście wszystkie te
+informacje beda wyswietlaly sie na moment wykonania komendy.   
 
 USER - Zwraca nazwe usera na którym jesteśmy zalogwani.
 Przydatne jeśli ktoś się przełącza między userami.
@@ -43,6 +46,6 @@ Przydatne jeśli skrypt musi rozpoznawać co robić dla każdego systemu.
 
 Ćw4
 "Czemu jest różnica w zwykłym wywołaniu ls -l a echo $x (x=$(ls -l))"
-Rozwiązaniem jest użycie echo "$x" bo przy wywołaniu echo $x
+Rozwiązaniem jest użycie echo "$x", bo przy wywołaniu echo $x
 komenda echo rozdziela wszystkie słowa używając spacji zamiast wyświetlać
 tak jak jest "dosłownie".
