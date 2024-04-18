@@ -43,7 +43,7 @@ Co jest dla Ciebie jeszcze nie jasne i musisz poglebic temat
 
 Co bylo zaskakujacego
 	Zaskoczylo mnie to jak użyteczne mogą być skrypty w życiu
-	codziennym, i jak dużo nie wiemna temat linuxa,
+	codziennym, i jak dużo nie wiem na temat linuxa,
 	basha i tym podobnych.
 
 Twoje przemyslenia o calych zajeciach i zadaniach
