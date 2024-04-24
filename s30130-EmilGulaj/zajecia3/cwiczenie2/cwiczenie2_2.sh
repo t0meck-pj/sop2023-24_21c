@@ -1,15 +1,5 @@
-# for i in {1..$#}; do
-#     echo $i;
-# done
-# 
-# echo ''
+#!/bin/bash
 
-for i in $(seq 1 1 $#); do
-    echo $i;
-done
-
-echo ''
-
-for (( i = 1; i <= $#; i++ )); do
-    echo $i;
+for i in "$@"; do
+    echo "\"$i\"";
 done

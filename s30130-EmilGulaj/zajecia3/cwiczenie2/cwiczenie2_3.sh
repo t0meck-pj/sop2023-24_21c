@@ -1,5 +1,5 @@
-files=($(ls))
+#!/bin/bash
 
-for (( i = 0; i < $(ls -1 | wc -l); i++ )); do
-    echo "Patrzcie Państwo, oto plik: " ${files[$i]}
+ls -1 | while IFS= read -r file; do
+    echo "Patrzcie Państwo, oto plik: $file"
 done
