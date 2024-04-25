@@ -57,12 +57,27 @@ Twoje przemyslenia o calych zajeciach i zadaniach
 Moj kochany pamietniczku:
 
 Opis zajec
+	Na tych zajęciach zajmowaliśmy się tym jak funkcjonują if-y,
+	pętle oraz funkcje w bashu. Do tego mieliśmy pierwsze praktyczne
+	podejście do wyrażeń regularnych.
 
 Czego sie nauczyles
+	Nauczyłem się, jak robić pętle, oraz if-y w bashu, do tego
+	jak robić funkcje, i dzięki temu też funkcje rekurencyjne
+	oraz pisania podstawowych wyrażeń regularnych.
 
 Co jest dla Ciebie jeszcze nie jasne i musisz poglebic temat
+	Zdecydowanie jeszcze nie rozumiem wszystkiego co się dzieje
+	w bardziej zaawansowanych wyrażeniach regularnych, ale
+	chętnie nauczę się tego jak to czytać i przedewszystkim pisać.
 
 Co bylo zaskakujacego
+	Najbardziej zaskoczyło mnie to, jak wyrażenia regularne
+	mimo tego jak wygladają na pierwszy rzut oka, są dosyć łatwe
+	do napisania, a przy tym bardzo użyteczne.
 
 Twoje przemyslenia o calych zajeciach i zadaniach
+	Zajęcia jak zwykle były interesujące, a zadania wymagające
+	(przynajmniej dla mnie). Ale dzięki temu, że takie były
+	to świetnie się przy nich bawiłem.
 

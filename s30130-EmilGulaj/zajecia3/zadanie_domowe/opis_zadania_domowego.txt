@@ -1,0 +1,26 @@
+Tresc zadania
+    1. Przygotuj wyrażenie regularne, które będzie sprawdzało, czy tekst jest
+    poprawnie napisanym polskim imieniem (od wielkiej litery, może mieć tylko
+    litery i zawierać polskie znaki).
+
+    2. Przygotuj wyrażenie regularne sprawdzające czy tekst jest kodem pocztowym
+    (cały tekst, czyli zaczyna się od cyfry i kończy się cyfrą).
+
+    3. Przygotuj wyrażenie regularne sprawdzające e-mail.
+
+Wykonanie zadania, uzyskany wynik i co on oznacza albo jak go rozumiesz
+    Wykonane zadanie znajduje się w pliku "zadanie_domowe.sh".
+
+    Program działa, przynajmniej na przykładach które mu podawałem radził
+    sobie doskonale.
+
+    Oznacza to, że prawdopodobnie opanowałem już pisanie if-ów w bashu
+    oraz rozumiem podstawowe wyrażenia regularne.
+
+Twoje przemyslenia na temat zadania
+    Zadanie pokazało jak wyrażenia regularne, potrafią być użyteczne
+    w prawdziwym życiu, bo nie kiedy trzeba wyszukać np. adres email
+    w bardzo długim pliku tekstowym, i robienie tego ręcznie, mogłoby
+    być dosyć frustrujące. A z tą wiedzą, będzie to chwila by takie
+    coś napisać. Bardzo użyteczna wiedza, i świetnie się bawiłem
+    robiąc to zadanie.
