@@ -1,6 +1,6 @@
 2024-04-14
 
-Opis zajeć?
+Opis zajeć
   Zajmowaliśmy się nauką o tym, w jaki sposób funkcjonują 
   warunki, pętle i funkcje.
 
