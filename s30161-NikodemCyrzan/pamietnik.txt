@@ -1,0 +1,23 @@
+2024-04-14
+
+Opis zajeć?
+  Zajmowaliśmy się nauką o tym, w jaki sposób funkcjonują 
+  warunki, pętle i funkcje.
+
+Czego sie nauczyłeś?
+  Składni basha dotyczącej warunków, pętli i funkcji. Również
+  nauczyłem się, że używając operatora =~ bash nie ma
+  pełnego wsparcia dla regexp. Jako, że podjąłem się dodatkowego
+  zadania, zobaczyłem również jak zrobić autocomplete.
+
+Co jest dla Ciebie jeszcze nie jasne i musisz pogłębić temat?
+	Nie do końca jeszcze rozumiem kiedy używa się których nawiasów.
+
+Co bylo zaskakujacego
+  Fakt, że regexp nie jest w pełni wspierany. Przez godzinę próbowałem
+  zaimplementować sprawdzanie czy tekst jest adresem email zgodnie
+  ze standardem RFC 5322, ale finalnie się poddałem.
+
+Twoje przemyslenia o calych zajeciach i zadaniach
+  Zajęcia były ciekawe, a zadania wymagające trochę wysiłku umysłowego i
+  przekopywania Internetu, więc jak zwykle świetnie.
