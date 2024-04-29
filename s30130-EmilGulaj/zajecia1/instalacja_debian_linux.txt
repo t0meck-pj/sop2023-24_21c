@@ -1,7 +1,7 @@
 Tresc zadania:
 Instalacja systemu linux na maszynach wirtualnych
 
-Ponizej staralalem sie opisac caly proces tworzenia maszyny wirtualnej, wraz ze
+Ponizej staralem sie opisac caly proces tworzenia maszyny wirtualnej, wraz ze
 wszystkimi mozliwymi opcjami do wyboru (nawet gdy czegos nie wybieralem to 
 staralem sie opisac wszystkie mozliwe opcje, po co i dlaczego.) Staralem sie 
 rowniez pisac bez polskich znakow w razie gdyby jakis edytor tekstu ich nie 
@@ -39,7 +39,7 @@ https://www.debian.org/download).
 
 - Virtual box na tym momencie sam powinien uzupełnic pola "Typ" oraz "Wersja" 
 wybierajac "Linux" i "Debian (64-bit)". (Jeśli się to nie stało (ponieważ np. 
-została wpisana inna nazwa), są to pola które też bym wybrał. (W przypadku 
+została wpisana inna nazwa), są to pola które też bym wybrał.) (W przypadku 
 instalacji innego systemu trzeba by bylo dobrac inny "Typ" oraz "Wersje").
 
 	-  W polu "Typ" nie wybieram nic innego poza Linuxem poniewaz Debian jest 
@@ -58,8 +58,8 @@ instalacji innego systemu trzeba by bylo dobrac inny "Typ" oraz "Wersje").
 		samo jak mozliwosci podczas doboru pamieci opisywany pozniej.
 		(Jesli cos mozna, to nie znaczy ze warto)
 
-- Zaznaczam Kwadrat "Skip Unattended Installation", ponieważ chce przeprowadzić 
-całkowitą instalację "od A do Z". Jeśli ten kwadrat pozostawilbym pusty, Virtual 
+- Zaznaczam Checkbox "Skip Unattended Installation", ponieważ chce przeprowadzić 
+kompletną instalację "od A do Z". Jeśli ten Checkbox pozostawilbym pusty, Virtual 
 Box zrobilby duzo rzeczy za mnie w pozniejszych etapach, ale nie korzystam z tego
 bo wole to zrobic wszystko na wlasna reke. (Warto pozostawic ta opcje odznaczona
 w momencie gdy z jakiegos powodu trzeba zrobic maszyne jak najszybciej)
@@ -82,7 +82,7 @@ w polu "Password" oraz "Repeat Password". Jest to po prostu tworzenie glownego
 uzytkownika systemu. (Uzylem slowa 'warto', poniewaz nie jest to wymagane i 
 proces instalacji i tak sie otworzy.)
 
-- Można takze zaznaczyc kwadrat "Guest Additions" ktory pozwala na dodanie 
+- Można takze zaznaczyc Checkbox "Guest Additions" ktory pozwala na dodanie 
 swojego obrazu dysku z dodatkowym sterownikami lub aplikacjami ktore chcielibysmy
  miec zaimplementowane w maszynie.
 
@@ -102,7 +102,7 @@ zmienic).
 - W polu "Domain Name" ustawia sie nazwe domeny na ktora moga polaczyc sie np. 
 inne VM'y za pomoca np. DNS (Domain Name System).
 
-- Kwadrat "Install in Background" sluzy do tego by okno od instalacji VM'a bylo 
+- Checkbox "Install in Background" sluzy do tego by okno od instalacji VM'a bylo 
 schowane. Warto tego uzyc ze wzgledu na (dlugi) czas trwania instalacji warto 
 uzyc takiej opcji.
 
@@ -124,7 +124,7 @@ uzyc takiej opcji.
 		- Jest to nie bez powodu taka wartosc poniważ:
 
 			- Mozna podac np. 2047MB ale z racji tego jak komputer
-			przydziela pamiec (w oparciu o wielokrotnosc liczby dwa)
+			przydziela pamiec (opierając się o wielokrotnosc liczby dwa)
 			jest to nie wskazane poniewaz w powyzszym przypadku ten
 			1MB ktory by musial zostac odejty do najblizszej liczby
 			podzielnej przez dwa zostal by po prostu nigdzie nie 
@@ -134,14 +134,14 @@ uzyc takiej opcji.
 			przez dwa, nie zaleca sie uzywania takiej wartosci,
 			poniewaz nie jest to optymalne dla przydzielania pamieci
 			przez system(przypomne - komputery dzialaja w
-			oparciu wielokrotnosci liczby dwa (2,4,16....1024, 2048, 4096...)
+			oparciu wielokrotnosci liczby dwa (2,4,16....1024, 2048, 4096...))
 
 - Wybieram dwie jednostki pod wykonawcze, (opisane jako Processors: 2) glownie na
 czas instalacji, po to by trwala ona chociaz nieco krocej, a potem jesli zajdzie 
 taka potrzeba, albo zwieksze ilosc procesorow, albo zmniejsze, zaleznie od 
 wymagan.
 
-- Zaznaczam Kwadrat "Enable EFI (special OSes only)" ponieważ chce by nowsza 
+- Zaznaczam Checkbox "Enable EFI (special OSes only)" ponieważ chce by nowsza 
 technologia od BIOSu była wykorzystywana w mojej maszynie, co przelozy sie na jej
 szybszy start.
 
@@ -152,14 +152,14 @@ szybszy start.
 - Wybieram opcje "Create a Virtual Hard Disk Now" poniewaz chce juz teraz 
 zagospodarowac dokladnie 20GB miejsca na dysku, uwazam ze jest to odpowiednia
 ilosc do zadan tej maszyny, ewentualnie taka wartosc jeszcze zwieksze 
-(zmniejszyc akurat w tym przypadku nie bede mogl) W celu ewentualnego zmienienia
-wartosci wystarczy uzyc dostepnego paska, lub recznie wpisania wartosci.
-Wybieram domyslna sciezke wybrana przez virtual boxa poniewaz mi odpowiada
-(Gdyby nie odpowiadala to trzeba kliknac zolta ikonke znajdujaca sie po prawej stronie
-i wybrac odpowiednia sciezke, lub wpisac ja recznie).
+W celu ewentualnego zmienienia wartosci wystarczy uzyc dostepnego paska, lub
+recznie wpisania wartosci. Wybieram domyslna sciezke wybrana przez virtual
+boxa poniewaz mi odpowiada (Gdyby nie odpowiadala to trzeba kliknac zolta
+ikonke znajdujaca sie po prawej stronie i wybrac odpowiednia sciezke,
+lub wpisac ja recznie).
 
 	- Nie wybieram "Use an Existing Virtual Hard Disk File" bo nie mam 
-	przygotowanego zadnego przygotowanego wirtualnego dysku ktorego moglbym i 
+	przygotowanego zadnego wirtualnego dysku ktorego moglbym i 
 	chcialbym uzyc. Jednakze gdyby zaszla taka potrzeba wystarczy wybrac ta opcje, 
 	kliknac zolta ikone na prawo, w celu wyboru dysku, i po tym jak pojawi sie nowe 
 	okno, w nim wybrac "Dodaj". W tym momencie trzeba wybrac plik obrazu dysku, ktory
@@ -176,7 +176,7 @@ i wybrac odpowiednia sciezke, lub wpisac ja recznie).
 
 - W podsekcji "Hard Disk File Type and Variant" 
 
-- Kwadrat "Pre-allocate Full Size" zaznaczam, poniewaz dzieki przypisaniu 
+- Checkbox "Pre-allocate Full Size" zaznaczam, poniewaz dzieki przypisaniu 
 wczesniej wybranych 20GB na czas instalacji, zdecydowanie ja przyspieszy, oraz 
 zabezpieczy przed przypadkowym zabraknieciem miejsca na dysku. 
 
@@ -195,7 +195,7 @@ typu dysk.
 	zmieniac miedzy roznymi wirtualizatorami (co nie jest zalecane ze wzgledu na 
 	sterowniki).
 
-		- Jesli bym wybral to kwadrat "Split into 2GB parts" zrobilby sie
+		- Jesli bym wybral to checkbox "Split into 2GB parts" zrobilby sie
 		mozliwy do wybrania, i oznaczalo by to ze mozna podzielic VMa na pliki po 2GB, 
 		ktore moglyby by byc uzyteczne np. podczas kopiowania i transportowania danych.
 
@@ -286,9 +286,9 @@ wiec to pole pozostawie puste.
 --- Podsekcja "Szyfrowanie Dysku"
 
 
-- Kwadrat "Wlacz szyfrowanie dysku" pozwala wlaczyc opcje szyfrowania danych. O
+- Checkbox "Wlacz szyfrowanie dysku" pozwala wlaczyc opcje szyfrowania danych. O
 ile bezpieczenstwo jest zawsze wazne, to jednak jest ono czasami niepotrzebne, 
-tak jak w mojej maszynie, dlatego zostawiam ten kwadrat odznaczony (Uzywam slowa
+tak jak w mojej maszynie, dlatego zostawiam ten checkbox odznaczony (Uzywam slowa
 "niepotrzebne" bo algorytmy szyfrujace musza zostac wykonane co jest kosztowne w
 procesach co powoduje dluzszy czas oczekiwania na zapis i odczyt danych). 
 Przydatne gdy jest np. polityka bezpieczenstwa w firmie ktora wymusza by 
@@ -466,7 +466,7 @@ bylo cos lepiej widoczne. Ja zostawiam tak jak jest.
 		zadnej grafiki. Moze byc przydatne kiedy wszystko jest juz zainstalowane, a 
 		dostep do maszyny jest przez siec.
 
-- Rozszerzone wlasciwosci: kwadrat wlacz akceleracje 3D pozostawiam nie 
+- Rozszerzone wlasciwosci: checkbox wlacz akceleracje 3D pozostawiam nie 
 zaznaczony bo nie bedzie mi potrzebna. Mogła by byc uzyteczna gdyby ktos np 
 chcial odpalic gre na maszynie wirtualnej.
 
@@ -474,7 +474,7 @@ chcial odpalic gre na maszynie wirtualnej.
 --- Podsekcja "Zdalny Pulpit"
 
 
-- Kwadrat "wlacz serwer" pozostawiam odznaczony poniewaz nie przewiduje uzywania
+- checkbox "wlacz serwer" pozostawiam odznaczony poniewaz nie przewiduje uzywania
 zdalnego pulpitu. Przydatne gdy ktos chce sie podlaczyc do maszyny przez
 np. menadzer pulpitu zdalnego
 
@@ -496,7 +496,7 @@ np. menadzer pulpitu zdalnego
 	- "Limit czasu uwierzytelnienia" jest to limit czasowy na 
 	uwierzytelnienie uzytkownika wyrazony w milisekundach
 
-	- Rozszerzone wlasciwosci: kwadrat "pozwol na wielokrotne polaczenia" 
+	- Rozszerzone wlasciwosci: checkbox "pozwol na wielokrotne polaczenia" 
 	oznacza ze moze zostac wykonanych wiele roznych polaczen do jednego serwera. 
 	Przydatne gdyby z opcji podlaczenia chcialo skorzystac kilka urzadzen.
 
@@ -504,7 +504,7 @@ np. menadzer pulpitu zdalnego
 --- Podsekcja "Nagrywanie"
 
 
-- kwadrat "wlacz nagrywanie" pozostawiam nie zaznaczony, poniewaz nie przwiduje 
+- checkbox "wlacz nagrywanie" pozostawiam nie zaznaczony, poniewaz nie przwiduje 
 bym chcial nagrywac to co sie dzieje w maszynie wirtualnej. Jest to przydatne gdy
 np. testuje sie roznego rodzaju wirusy i chce sie to pozniej np. przeanalizowac.
 
@@ -543,7 +543,7 @@ np. testuje sie roznego rodzaju wirusy i chce sie to pozniej np. przeanalizowac.
 wybralem odpowiedni obraz dysku. Przydatne gdyby ktos teraz tuz przed 
 zainstalowaniem systemu postanowil to zmienic. 
 
-- kwadrat Live CD/DVD pozostawiam nie zaznaczony poniewaz chce by obraz dysku 
+- checkbox Live CD/DVD pozostawiam nie zaznaczony poniewaz chce by obraz dysku 
 zostal usuniety z maszyny po zainstalowaniu juz systemu operacyjnego. 
 Pozostawienie go moze byc przydatne gdyby ktos chcial zrobic np. writualna 
 maszyne w maszynie wirtualnej uzywajac tego samego obrazu dysku.
@@ -554,7 +554,7 @@ maszyne w maszynie wirtualnej uzywajac tego samego obrazu dysku.
 - "Typ": Tutaj znajduja sie wszystkie dostepne typy kontrolerów mozliwe do 
 dodania.
 
-- kwadrat "uzyj buforowania wejscia/wyjscia gospodarza" pozostawiam nie 
+- checkbox "uzyj buforowania wejscia/wyjscia gospodarza" pozostawiam nie 
 zaznaczony, bo oznacza on ze dane wyjsciowe zadania do pamieci sa wysylane do 
 pamieci dyskowej a nie bezposrednio do urzadzenia wyjsciowego, co jest mi nie 
 potrzebne bo i tak nie bede uzywal urzadzen wyjscia.
@@ -564,16 +564,16 @@ potrzebne bo i tak nie bede uzywal urzadzen wyjscia.
 
 - Pole "Dysk twardy" mozliwy wybor portu SATA
 
-- kwadrat "Dysk SSD" zaznaczam poniewaz moj dysk jest dyskiem ssd 
+- checkbox "Dysk SSD" zaznaczam poniewaz moj dysk jest dyskiem ssd 
 
-- kwadrat "Hot-pluggable" zostawiam niezaznaczony poniewaz u mnie jest to dysk 
+- checkbox "Hot-pluggable" zostawiam niezaznaczony poniewaz u mnie jest to dysk 
 ktorego nie moge w kazdej chwili podlaczyc i odlaczyc.
 
 
 -- Sekcja Dźwięk
 
 
-- Kwadrat "wlacz dzwiek" odznaczam gdy moja maszyna nie bedzie potrzebowala 
+- checkbox "wlacz dzwiek" odznaczam gdy moja maszyna nie bedzie potrzebowala 
 dzwieku uzywac dzwieku.
 
 	- Sterownik dzwieku gospodarza
@@ -593,11 +593,11 @@ dzwieku uzywac dzwieku.
 
 	- Rozszerzone wlasciwosci:
 
-		- kwadrat "wlacz wyjscie dzwieku" oznacza dzwiek wychodzacy z
+		- checkbox "wlacz wyjscie dzwieku" oznacza dzwiek wychodzacy z
 		maszyny wirtualnej, np. muzyka. Uzyteczne gdyby ktos chcial sluchac jakis
 		dzwiekow uzywajac do tego maszyny wirtualnej.
 
-		- kwadrat "wlacz wejscie dzwieku" oznacza ze dzwiek bedzie 
+		- checkbox "wlacz wejscie dzwieku" oznacza ze dzwiek bedzie 
 		przechwytywany do maszyny wirtualnej (np. poprzez mikrofon). Uzyteczne gdyby ktos
 		chcial uzywac maszyny wirtualnej do komunikacji glosowej.
 
@@ -605,7 +605,7 @@ dzwieku uzywac dzwieku.
 -- Sekcja Sieć
 
 
-- kwadrat "wlacz karte sieciowa" zostawiam zaznaczona, bo chce by moja maszyna 
+- checkbox "wlacz karte sieciowa" zostawiam zaznaczona, bo chce by moja maszyna 
 miala karte sieciowa.
 
 	- "Podlaczona do":
@@ -681,16 +681,16 @@ miala karte sieciowa.
 - Pole "Adres MAC" jest to losowo generowany adres MAC.(Pierwsze szesc bitow jest
  typowe dla virtualboxa pozostale szesc jest losowo generowane).
 
-- kwadrat "kabel podlaczony" "odlacza" i "podlacza" wrtualny kabel. To oznacza po
-prostu ze zaznaczony kwadrat "daje internet" a odznaczony go "nie daje". Jest to
+- checkbox "kabel podlaczony" "odlacza" i "podlacza" wrtualny kabel. To oznacza po
+prostu ze zaznaczony checkbox "daje internet" a odznaczony go "nie daje". Jest to
 uzyteczna opcja do "odlaczania internetu" bez odlaczania karty sieciowej. Ja 
-zostawiam ten kwadrat zaznaczony, bo chce by maszyna miala dostep do internetu.
+zostawiam ten checkbox zaznaczony, bo chce by maszyna miala dostep do internetu.
 
 
 -- Sekcja Porty Szeregowe
 
 
-- kwadrat "wlacz port szeregowy" odznaczam poniewaz sa mi one nie potrzebne.
+- checkbox "wlacz port szeregowy" odznaczam poniewaz sa mi one nie potrzebne.
 
 	- Numer portu 
 
@@ -717,7 +717,7 @@ zostawiam ten kwadrat zaznaczony, bo chce by maszyna miala dostep do internetu.
 		- "TCP" umozliwia uzywania portu jako server lub do podlaczania
 		sie do innych serwerow.
 
-	- kwadrat "Podlacz do istniejacego lacza komunikacyjnego/gniazda" podany 
+	- checkbox "Podlacz do istniejacego lacza komunikacyjnego/gniazda" podany 
 	adres lub sciezka sa uznawane za istniejace i jest proba podlaczenia sie. (nie 
 	przydtane gdy chce sie uzywac TCP jako serwer)
 
@@ -728,7 +728,7 @@ zostawiam ten kwadrat zaznaczony, bo chce by maszyna miala dostep do internetu.
 -- Sekcja USB
 
 
-- kwadrat "wlacz kontroler USB" zostawiam zaznaczony, poniewaz chce by VM widzial
+- checkbox "wlacz kontroler USB" zostawiam zaznaczony, poniewaz chce by VM widzial
 ze moja klawiatura jest podlaczona
 
 	- "Kontroler USB 1.1 (OHCI)" Przestarzala opcja. Uzyteczne gdy nie 
@@ -763,10 +763,10 @@ folderu.
 - "Visual State" Opcje ustawienia okna wirtualnej maszyny.
 
 - "Mini ToolBar"
-	- kwadrat "Wyświetl w trybie pelnego ekranu/Seamless" odznaczam bo nie 
+	- checkbox "Wyświetl w trybie pelnego ekranu/Seamless" odznaczam bo nie 
 bede tego potrzebowac do maszyny ktora tworze.
 
-		- kwadrat "Show at Top of Screen" powoduje ze pasek narzedzi 
+		- checkbox "Show at Top of Screen" powoduje ze pasek narzedzi 
 ktory jest zawsze w dolnej czesci ekranu, jest przesuniety do gory. Ja zostawiam 
 ta opcje odznaczona, bo wole miec pasek na dole.
 
@@ -775,7 +775,7 @@ Klikam "OK" znajdujace sie na dole strony zeby potwierdzic wprowadzone zmiany.
 Klikam Uruchom
 po tym jak pojawilo sie okno wirtualnej maszyny:
 
-- "Graphical Install"  Instalowanie z GUI. Przydatna dal osob ktore chca 
+- "Graphical Install"  Instalowanie z GUI. Przydatna dla osob ktore chca 
 popatrzec na proces instalacji, lub uzywac myszki do jej kontynuowania.
 
 - "Install" Instalowanie bez GUI (tekstowo). Przydatne przy maszynach ktore maja
@@ -821,7 +821,7 @@ posiadam wiec nic nie wpisuje, i klikam "continue".
 czyli administratora w systemach linux. Ja wpisuje nieskomplikowane haslo i 
 klikam "continue".
 
-	- kwadrat "Show Password in Clear" po zaznaczeniu pokaze wpisane haslo 
+	- checkbox "Show Password in Clear" po zaznaczeniu pokaze wpisane haslo 
 	zamiast gwiazdek.
 
 - Pole "Re-enter password to verify" jest w celu potwierdzenia wpisanego hasla w 
