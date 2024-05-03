@@ -15,3 +15,22 @@ Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem/lam sie:
 - Było to dla mnie tylko przypomnienie, ponieważ już wcześniej
 miałem styczność z tymi zagadnieniami.
 na temat skryptów w Bashu.
+
+2024-04-14
+Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem/lam sie:
+- Używania instrukcji warunkowych w skryptach Bash (if, else, elif, case).
+- Wyrażeń regex w Bashu.
+- Jak działa pętla for oraz while.
+- Jak działają tablice w Bashu.
+- Jak deklarować funkcje w Bashu.
+- Muszę jeszcze poćwiczyć wyrażenia regularne, ponieważ
+ich składnia jest dość specyficzna.
+
+2024-04-28
+Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem/lam sie:
+- Przypomniałem sobie składnię czystego C.
+- Jak działają komentarze w ANSI C.
+- Dostrzegłem jak bardzo przydatna jest możliwość formatowania tekstu w printf.
+- Zaskoczyła mnie ilość ograniczeń w ANSI C np. konieczność deklaracji zmiennych na początku,
+komentarze są tylko wieloliniowe, brak możliwości mieszania deklaracji z kodem.
+- Dzięki takim zajęciom można dostrzeć jak wiele rzeczy ułatwiają nowoczesne języki programowania.
