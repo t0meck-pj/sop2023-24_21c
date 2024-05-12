@@ -81,3 +81,48 @@ Twoje przemyslenia o calych zajeciach i zadaniach
 	(przynajmniej dla mnie). Ale dzięki temu, że takie były
 	to świetnie się przy nich bawiłem.
 
+2024-04-28
+Moj kochany pamietniczku:
+
+Opis zajec
+	Na tych zajęciach zajmowaliśmy się nauką programowania w
+	języku C, co jest wstępem do tego co czeka nas w niedalekiej
+	już przyszłości.
+
+Czego sie nauczyles
+	Nauczyłem się podstawowych umiejętności w nowym (dla mnie)
+	języku programowania tzn. użycia pętli, operacji na plikach
+	i wskaźników. 
+
+Co jest dla Ciebie jeszcze nie jasne i musisz poglebic temat
+	Napewno wskaźniki, to jest jeszcze sprawa którą muszę
+	dokładnie przetrawić, ale wszystko inne wydaje się
+	być jak najbardziej jasne.
+
+Co bylo zaskakujacego
+	Zaskoczyło mnie to, że ten język jest naprawdę nisko poziomowy,
+	ale tak naprawdę nisko poziomowy a jednak nie jest to assembler,
+	i już rozumiem dlaczego do tworzenia np. gier używane są języki
+	takie jak c++, c, zamiast np. pythona.
+
+Twoje przemyslenia o calych zajeciach i zadaniach
+	Dużo nowych ciekawych rzeczy, całkiem wymagające zadania
+	mimo, że z poprzedniego semstru umiem podstawowego C++
+	to i tak napisanie niektórych zadań było wyjątkowo wymagających
+	ale to właśnie o to w tym chodzi.
+
+2024-05-12
+Moj kochany pamietniczku:
+
+Opis zajec
+
+Czego sie nauczyles
+	
+
+Co jest dla Ciebie jeszcze nie jasne i musisz poglebic temat
+	
+
+Co bylo zaskakujacego
+	
+
+Twoje przemyslenia o calych zajeciach i zadaniach
