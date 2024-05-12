@@ -21,3 +21,23 @@ Co bylo zaskakujacego
 Twoje przemyslenia o calych zajeciach i zadaniach
   Zajęcia były ciekawe, a zadania wymagające trochę wysiłku umysłowego i
   przekopywania Internetu, więc jak zwykle świetnie.
+
+2024-04-28
+
+Opis zajec
+	Zapoznawaliśmy się ze skłądnią i działaniem języka C.
+
+Czego sie nauczyles
+	Nauczyłem się używania standardowego wejścia/wyjścia,
+	odczytywania plików, wskaźników i tworzenia prostych
+	struktur danych.
+
+Co jest dla Ciebie jeszcze nie jasne i musisz poglebic temat
+	Wszystko czym się zajmowałem wydaje się być w miarę jasne.
+
+Co bylo zaskakujacego
+	Zaskoczyło mnie że czuć że język C jest dużo bliżej 
+	języka assembly, niż np C++.
+
+Twoje przemyslenia o calych zajeciach i zadaniach
+	Jestem usatsfakcjonowany nabytą wiedzą i gotowy na więcej.
