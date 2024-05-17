@@ -284,6 +284,9 @@ Sekcja ta służy tylko do konfigurowania interfejsu okna wirtualnej maszyny. Op
 
 18. Na ekranie powinny się pojawić opcje `Guided partitioning`, `Configure iSCSI volumes` i `SCSI (0, 0, 0) (sda) ...`. Ostatnia opcja to dysk, na którym chcemy dokonać podziału na partycje, należy go wybrać i kliknąć `enter`. Po tym pojawi się pytanie, czy chcemy stworzyć nowa pusta tabele partycji na tym dysku (wybieramy `Yes`). Po tym zostanie utworzona partycja pusta `pri/log` z maksymalna dostępna ilością pamięci i tagiem `FREE SPACE`. Cala tą przestrzeń będzie należało rozdzielić na inne partycje.
 
+> ![NOTE]
+> `SCSI (X, Y, Z) (sda)` - X to numer kontrolera, Y to numer magistrali dyskowej, Z to numer dysku na magistrali dyskowej.
+
 | Inne opcje | Opis |
 | --- | --- |
 | Guided partitioning  | Opcja ta pozwala na dokonanie partycjnowania dysków w sposób automatyczny dokonany przez proces instalatora. Będzie to najlepsza opcja dla użytkowników, którym nie zależy na szczegółowym rozkładzie partycji systemu. |
