@@ -1,10 +1,9 @@
-$PATH - katalogi ktore sa przeszukiwane w celu odnalezienia wyslanej komendy, jezeli dana komenda nie zostanie odnaleziona w zadnym z nich to wyskoczy blad "command not found"
-$RANDOM - Losowa wartosc liczbowa (0 do 32767)
-$PWD - Wyswietlany jest aktualny katalog na ktory odbywaja sie operacje
-$PS1 - Prefix stosowany przy wpisywaniu polecenia, (podstawowo user@host)
-$USER - Nazwa uzytkownika
-$HOSTNAME - Nazwa hosta
-$OSTYPE - Rodzaj systemu operacyjnego
-
+$PATH - katalogi ktore sa przeszukiwane w celu odnalezienia wyslanej komendy, jezeli dana komenda nie zostanie odnaleziona w zadnym z nich to wyskoczy blad "command not found", informacja ta, może być to przydatne do sprawdzania czy dana komenda istnieje, a przy jej braku ewentualnie instalować dodatkowe pakiety.
+$RANDOM - Losowa wartosc liczbowa (0 do 32767), może być przydatne do generowania losowych liczb lub losowych identyfikatorów.
+$PWD - Wyswietlany jest aktualny katalog z którego są wykonywane operacje, może być to przydatne jeżeli skrypt musi wiedzieć skąd jest wywoływany, bo jego działanie jest od tego uwarunkowane, i w takim przypadku będzie chciał dokonać przeniesienia do innego katalogu.
+$PS1 - Prefix stosowany przy wpisywaniu polecenia, (podstawowo user@host), jego modyfikacja może być przydatna jeżeli chcemy wyświetlić dodatkowo jakieś specjalne informacje, np. informacje o ilość plików w danym katalogu. 
+$USER - Nazwa uzytkownika, informacja ta może być przydatna w zapisie do logów ze skryptu.
+$HOSTNAME - Nazwa hosta tak samo jak $USER może być przydatny do logów.
+$OSTYPE - Rodzaj systemu operacyjnego, może być przydatny jeżeli skrypt ma być kompatybilny na różnych systemach operacyjnych i w zależności od systemu będzie wykonywał inną cześć kodu.
 
 

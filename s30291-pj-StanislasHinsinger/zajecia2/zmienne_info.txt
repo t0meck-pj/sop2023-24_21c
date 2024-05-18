@@ -11,3 +11,4 @@ $? - kod zakończenia ostatniego polecenia
 $$ - PID procesu bieżącej powłoki
 
 $! - PID ostatnio uruchomionego procesu w tle
+

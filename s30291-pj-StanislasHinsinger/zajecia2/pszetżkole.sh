@@ -8,3 +8,4 @@ if [[ ${imie:${#imie}-1:1} == "a" ]]; then
 else 
 	echo "$imie ma kota, a kot ma ${imie}a"
 fi
+

@@ -4,3 +4,4 @@
 # pomocy '' nie beda interpretowaly zmiennych i potraktuja je jako zwykle,
 # ciagi znakow.
 #
+

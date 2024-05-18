@@ -11,3 +11,4 @@
 
 x="Tekst dluzszy"
 echo $x
+
