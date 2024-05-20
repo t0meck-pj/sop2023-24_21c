@@ -10,7 +10,12 @@ done
 for file in ${@}; do
 	readarray -t content < ${file}
 	for i in $(seq 1 1 ${#content}); do
-		echo ${content[${#content} - i]}
+		tmp=${content[${#content} - i]}
+		line=""
+		for j in $(seq ${#tmp} -1 0); do
+			line+="${tmp:${j}:1}"
+		done
+		echo "${line}"
 	done
 done
 
