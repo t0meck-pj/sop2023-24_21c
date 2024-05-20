@@ -21,7 +21,7 @@ int main(int argc, char **argv) {
         fscanf(file, "%i", &values[i]);
         printf("%i\n", values[i]);
     }
-    
+
     fclose(file);
     free(values);
 
