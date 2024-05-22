@@ -1,0 +1,8 @@
+PATH - pokazanie ściężki, w której znajduje się nasz program
+RANDOM - dodanie losowego integera
+PWD - Print Working Directory = wyświetli ścieżkę, w której dokładnie jesteśmy
+PS1 - Prompt String 1 = generuje pop-up wyświetlany po wpisaniu komendy w
+terminalu
+USER - nazwa aktualnie zalogowanego użytkownika
+HOSTNAME - analogicznie jak user wyświetla nazwę hosta
+OSTYPE - determinuje, określa rodzaj systemu
