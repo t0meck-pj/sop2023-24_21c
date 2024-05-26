@@ -1,0 +1,17 @@
+Czy wynik był tym jaki był przez Ciebie oczekiwany?
+	Na początku pomyślałem, że chodzi o narysowanie drzewa procesów,
+    tak jak robi to pstree, co by było pewnie ciekawym wyzwaniem, ale jak
+    zrozumiałem o co chodzi to wynik był oczekiwany.
+
+Czy pojawiło sie coś zaskakujacego? Co?
+	Programuję od kilku lat i nigdy nie napodkałem na takie coś jak
+    dzielenie procesów, więc zdecydowanie to jest już dla mnie zaskakujące.
+
+Czego cię To nauczyło?
+	Kolejnego narzędzia które można wykorzystać w jakiejś sytuacji która będzie
+    wymagała zabawy z procesami.
+
+Do czego będzie można wykorzystać nową wiedzę?
+	Wydaje mi się, że dzięki funkcji fork można na przykład uruchomić drugi proces,
+    następnie użyć funkcji exec która zastąpi cały proces dziecka jakimś innym procesem.
+    Przeczytałem, że w taki sposób powłoka uruchamia programy.
