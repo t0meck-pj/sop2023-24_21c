@@ -1,0 +1,38 @@
+Czy wynik byl tym jaki byl przez Ciebie oczekiwany?
+	Wyjątkowo, spodziewałem się raczej innego wyniku.
+	Myślałem, że uda się stworzyć prawdziwe drzewo które będzie
+	możliwe do wyświetlenia w bashu, i w pewnym stopniu tam jest
+	ale liczyłem, że nie będzie tych pojedynczych procesów
+	na krańach, oraz "głównej linii" głównej.
+	
+Czy jesli nie to jakie dodatkowe wnioski z tego da sie wyciagnac?
+	Akurat w bashu, nie mogłoby to zostać narysowane w inny sposób
+	(ZA POMOCĄ PSTREE!) ale to tylko kwestia rysunku. Ważne dla mnie
+	jest to, że to działa i robi to co miało robić.
+
+Czy pojawilo sie cos zaskakujacego? Co?
+	Sama funkcja fork była dla mnie zaskoczeniem.
+	Pomimo, że jest ona sensowna to nigdy nie zastanowiłem
+	się nad tym, że takie coś może w ogóle istnieć.
+
+Czego cie To nauczylo?
+	Napewno więcej zrozumiałem jak funkcjonują procesy
+	i jak można nimi "manipulować" by osiągać różne cele.
+
+Do czego bedzie mozna wykorzystac nowa wiedze
+	Pierwsze zastosowanie jakie mi przyszło do głowy
+	gdy tylko zobaczyłem tą funkcję to pobieranie
+	np. dużej ilości plików w kilku procesach.
+	Niech proces rodzica pobiera od początku do połowy
+	a proces dziecka od połowy do końca.
+	W ten sposób jeśli sam proces pobrania czegoś zajmuje
+	sporo czasu bo załóżmy musi:
+	- otworzyć przeglądarke
+	- automatycznie wpisać frazę
+	- wybrac zdjecia z grafiki google
+	- dopiero rozpocząć pobieranie
+	- zamknąć przeglądarkę.
+	Dzięki funkcji fork (jeśli łącze internetowe nie byłoby
+	ograniczeniem) można by było w teorii pobrać pliki
+	dwa razy szybciej.
+	
