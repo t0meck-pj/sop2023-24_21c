@@ -115,14 +115,40 @@ Twoje przemyslenia o calych zajeciach i zadaniach
 Moj kochany pamietniczku:
 
 Opis zajec
+	 Na zajęciach zajmowaliśmy się dalej programowaniem w C
+	tym razem były to procesy i głównie funkcja fork.
+
+Czego sie nauczyles
+	Na tych zajeciach nauczyłem się używać i rozumieć
+	jak działa funkcja fork, oraz o jej potencjalnych zastosowaniach.
+
+Co jest dla Ciebie jeszcze nie jasne i musisz poglebic temat
+	Po wszyskich zadaniach i ćwiczeniach wszystko jest jasne
+	i myślę, że wyjątkowo zrozumiałem wszystko.
+
+Co bylo zaskakujacego
+	Nigdy nie słyszałem o funkcji fork, a wydaje się być
+	naprawdę użyteczna do wielu różnych programów.
+
+Twoje przemyslenia o calych zajeciach i zadaniach
+	Podczas tego gdy sama funkcja fork wydała mi się
+	od początku całkiem zrozumiała, to ćwiczenia
+	jak zawsze był całkiem wymagające.
+	
+
+2024-05-26
+Moj kochany pamietniczku:
+
+Opis zajec
+	 
 
 Czego sie nauczyles
 	
 
 Co jest dla Ciebie jeszcze nie jasne i musisz poglebic temat
 	
-
 Co bylo zaskakujacego
 	
 
 Twoje przemyslenia o calych zajeciach i zadaniach
+	
