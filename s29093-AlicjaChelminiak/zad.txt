@@ -1,0 +1,52 @@
+zad.1
+#!/bin/bash
+
+echo -e "Witamy w Terminalu"
+
+zad2.
+Co się stało? Czy potrafisz wyjaśnić? - Każda powłoka ma swoje własne zmienne środowiskowe i lokalne, które nie są odbierane przez inne polecenia powłoki. Po wpisaniu "bash" cofamy się do innego procesu, w którym zmienna X nie jest przypisana / ma inną wartość (można sprawdzić, w którym procesie się znajdujemy za pomocą polecenia "pstree").
+Po uruchumieniu ponownie zmienna X nie jest już dostępna, więc próba jej wykonania, wyświetlenia zwróci pustą wartość.
+Co jest nie tak? jak to naprawić? Zobacz czy pomoże zastosowanie cudzysłowów i apostrofów - Aby ta zmianna była dostępna w nowej instancji powłoki można użyć polecenia "export" przed ustawieniem wartości zmiennej X.
+Jaka jest różnica między " a ' ? - Pojedynczy cudzysłów odbiera wprowadzony tekst dosłownie, a podwójny umożliwia odczytanie znaków specjalnych.
+
+zad.3
+PATH - zmienna określająca ściężkę, w której znajduje się nasz program
+RANDOM - zmienna dodająca losowy integer
+PWD - Print Working Directory = wyświetli ścieżkę, w której dokładnie jesteśmy
+PS1 - Prompt String 1 = określa powiadomienie wyświetlane po wpisaniu nowej komendy w terminalu
+USER - zawiera informację o aktualnie zalogowanym userze
+HOSTNAME - zawiera nazwę systemu, w którym działa nasz skrypt
+OSTYPE - determinuje typ systemu
+
+zad.4
+X=$(ls -l)
+echo -e "$X"
+
+zad.5a
+A="Ala"
+
+echo "${A} ma kota, a kot ma ${A/a/e}"
+
+#!/bin/bash
+M=Michal
+echo "$M ma kota,a kot ma ${M}a"
+K=Kosma
+echo "$K ma kota,a kot ma ${K/a/e}"
+
+Zad.5b
+#!/bin/bash
+
+TEKST=$1
+echo "${TEKST:0:l}"
+echo "${TEKST: -1}"
+NOWY_TEKST=$(echo "$TEKST" | sed 's/SOP/\\e[32mSOP\\e[0m/g')
+echo -e "$NOWY_TEKST"
+
+Zad.6
+#!/bin/bash
+
+IMIE=$1
+
+NOWE_IMIE=$(echo "$IMIE" | sed 's/a$/e/g')
+
+echo "$IMIE ma kota, a kot ma $NOWE_IMIE"
