@@ -1,0 +1,434 @@
+[------ w fazie uzupelniania wszystkiego ------]
+
+===============================================================================
+[Wyklad 02 - 24.03.2024]
+
+[Systemy Operacyjne]
+
+Czym jest System Komputerowy?
+- Sprzęt + Oprogramowanie + Dane (odrębnie, żaden z nich bez innego nie jest użyteczne)
+
+System Operacyjny:
+- Zbiór ręcznych i automatycznych procdeur, które pozwalają grupie osób na efektywne współdzielenie urządzeń maszyny cyfrowej. ~Per Brinch Hansen
+- Zorganizowane zespół prodgramów, które pośredniczą między sprzętem a użytkownikie, dostarczając użytkownikom zestawu środków ułatawiających projektowanie, kodowanie, uruchamianie i eksploatację programów oraz w tym samym czasię sterują przydziałem zasobów dla zapewnienia efektywnego działania. ~Alan Shaw
+- Sam w sobie nie robi nic pożytecznego, ale zarządza i ułatwia wykonywanie użytecznych czynności. (Tworzy środowisko do pracy [environment])
+
+Perspektywa użytkownika OS:
+- Realizacja interakcji człowiek-komputer.
+
+Perspektywa systemu OS:
+- Głównie jest to API do programów uruchamianych na komputerze.
+
+System Operacyjny - warstwy:
+- Użytkownicy <-> Programy <-> System Operacyjny <-> Sprzęt
+
+MainFrame:
+- Typ systemu, w którym zasoby są współdzielone z innymi użytkownikami.
+
+Stacja Robocza:
+- Całe zasoby są pod kontrolą jednego użytkownika (większa responsywność systemu)
+
+Dystrybutor Zasobów [Resource Allocator]:
+- Przydziela zasoby poszczególnym użytkownikom/programom.
+
+Program Sterujący [Control Program]:
+- Nadzoruje działanie programów i zarządza systemami IO.
+
+Kernel (Jądro Systemu):
+- Pograrm pierwoty systemu, który działa w komputerze nieustannie (ale nie jest to BIOS)
+
+Co daje system operacyjny:
+- Spójny sposób interakcji,
+- Spójne API/ABI dla programów (Application Programming Interface/Application Binary Interface)
+- Wygoda zarządzania zasobami (system się tym zajmuje)
+- Wielodostępowość [zajmuje się kontrolą dostępu i przydzielanie zasobów użytkownikom]
+
+Systemy Wsadowe:
+- Historycznie batch to były zgrupowane programy na kartkach perforowanych.
+
+System Wieloprogramowany:
+- Zawsze wykonywane jest jedno zadanie, natomiast w momencie gdy zadanie czeka na zasoby to system przełącz proces wykonania na inne zadanie.
+
+System Wielozadaniowy:
+- Procesor wykonuje na przemian wiele zadań a przełączanie miedzy innymi jest szybkie.
+
+Systemy wielozadaniowe i wieldostępowe:
+- Mutlics (1969) -> Linux (1971) -> Linux (1991)/BSD i inne
+
+Przestrzeń uruchmienia i pamięci:
+- Przestrzeń Użytkownika
+- Przestrzeń Systemu/Jądra
+
+System Plików:
+- Sposoby zapisu danych na nośniku, który oprócz samych informacji przechowuje także opis struktury tych danych - plików i katalogów.
+
+Interpreter Poleceń:
+- Program tłumaczący i wykonujący komendy wprowadzane przez użytkownika.
+
+[WYRAŻENIE REGULARNE]
+
+Czym jest:
+- Wzorzec opisujący jakiś łańcuch symboli, czasami spotkamy się z nazwami regex, rexexp, regular expression.
+
+Wyrażenie regularne - teoria:
+- W informatycje teoretyczne są to ciągi znaków opisujące języki regularne. Jest to cześć dziedziny związanej z językami formalnymi.
+
+Po co?
+- Wyrażenia regularne są bardzo wygodne podczas wyszukiwania czegoś w tekście:
+	=: edytory tekstu
+	=: narzędzia takie jak grep, sed
+	=: walidacja pól formularzy i sprawdzanie złożoności haseł
+
+Są dwie składnie:
+- Składnia Unixowa
+- Składnia Perlowa
+
+Najważniejsze elementy z obu z nich:
+- ^ - początek linii
+- $ - koniec linii
+- . - dowolny znak
+- * - zero lub więcej wystąpeiń tego co było przed tym znakiem
+- + - poprzedni znak pojawia się 1 lub więcej razy
+- {n} - poprzedni znak pojawia się n lub więcej razy
+- {n,m} - poprzedni znak pojawia się n do m razy
+- [...] - dopasowuje dowolny z wymienionych znaków (można podawać zakres [a - z])
+- [^...] - znak nie jest jednym z wymienionych
+- () - pozwala na grupowanie
+- | - operacja OR
+- \x - gdzie x jest dowolnym z powyzszych znakow
+
+Wykorzystanie wyrażeń regularnych:
+- sed s/tekst/podmiana/g
+- grep -e tekst
+
+[SKRYPTY]
+
+Powłoka systemu/shell:
+- Program pośredniczący między systemem operacyjnym a użytkownikiem przyjmuje jego polecenia i wypisujący wyniki działania.
+
+Zmienna powłoki/środowiska:
+- Nazwana wartość przechowywana przez powłokę.
+
+Co to jest skrypt:
+- Język służacy do kontrolowania jakiejść aplikacji.
+- Jest interpretowany przez powłokę danego systemu.
+- Służą do automatyzacji wykonywania częstych poleceń.
+
+Najpopularniejsza tekstowa powłoka systemu Linux - BASH
+
+Zmienne w skryptach:
+- globalne: ZMIENNA=wartosc
+- lokalne funkcji: local ZMIENNA=wartosc
+- odczyt: $ZMIENNA albo ${ZMIENNA}
+
+Można wyeksportować zmienne w dół:
+- export ZMIENNA - eksportuje
+- unexport ZMIENNA - usuwa zmienna
+
+Można usuwać zmienne przy pomocy:
+- unset ZMIENNA (wykona takze unexport)
+
+Można przekierować standarowe wyjściej komendy do zmiennej powłoki:
+- ZMIENNA=$(echo "Witaj w Świecie")
+
+Można wykonywać wyrażenia arytmetyczne ale wtedy należy użyć 2x():
+- ZMIENNA=$((wyrażenie))
+
+
+===============================================================================
+[Wyklad 03 - 14.04.2024]
+
+Przydatne komendy:
+- echo $PATH | tr ":" "\n" (zmienia znaki ":" na \n, [wiecej znakow do zamiany to kazdy z nich bedzie odpowiadal rownolegle do zamiennika np. tr "abc" "cba" a -> c b -> b a -> c) 
+
+Opis zmiennych powłoki:
+- $PATH - zawiera lokalizacje katalogów z programami, które są sprawdzane po każdym wywołaniu komendy
+- $PS1 - zawiera informacje które pojawiają sie przed tekstem wywołania komendy (przed promptem)
+- $USER - login użytkownika
+- $RANDOM - losowa wartość liczbowa
+- $? - wartość zwrócona przez ostatni program
+- $! - numer PID ostatniego programu w tle
+- $$ - numer PID aktualnej sesji bash
+
+Inne zmienne skryptu:
+- $1 $2 $.. $n - paramentry wporwadzone do skryptu podczas wywołania
+- $# - ilość wprowadzonych parametrów
+
+CTRL+C - zabija proces
+CTRL+D - zamyka strumień wejściowy
+
+#!/lokalizacja/inteprertera - pozwala na wybor interpretera pliku
+
+Pętle w BASHu:
+- for i in {start..koniec..przejscie}; do
+- for i in a b c d e f g h; do
+- for i in {a..h}; do
+- for i in $(seq start przejscie koniec}; do
+- for (( i=0; i<10; i++ )); do
+- while [ warunek ]; do ( np. [ -e ./run_it ] - czy plik run_it istnieje )
+- NA KONIEC ZAWSZE DONE
+
+Warunki:
+- if [ waurnek ]; then
+- elif [ warunek ]; then
+- else 
+- fi
+
+- [ -e ./run_it ] - czy plik run_it istnieje
+- [ wyr1 ] && [ wyr2 ] && [ wyr3 ] - laczenie wyrazen
+- [[ $VAR =~ REGEX ]] - dopasowanie do wyrażanie regularnego
+
+
+Internal Field Separator (IFS):
+- IFS=$'\n' - dokonuje podzialu tekstu przy znaku \n (jako kolejne elementy)
+
+Program:
+- Program to obiekt pasywny, pdobnie jak zawartość pliku na dysku.
+
+Proces:
+- Porces jest obiektem aktywny. Posiada licznik rozkazów, stos procesu, sekcja danych.
+
+Wątek:
+- Fragment procesu wykonywany równolegle do niego. Proces może składać się z wielu wątków.
+
+Identyfikatory Procesów:
+- PID - Process ID
+- PPID - Parent Process ID
+
+Podstawowe komendy:
+- ps, pstree - wyświetla liste procesów
+- kill - wysyła sygnał do programu
+- top - podgląd na procesy działające w tle
+- nice - uruchamia proces z ustawianiem priorytetu
+- wait - oczekiwanie na podproces az sie skonczy
+- $! - pid ostatniego procesu w tle
+
+Funckje:
+- konstrukcja: function NAZWA() { kod }
+- nie mogą być puste
+- można je wywołać dopiero po zadeklarowaniu ich
+
+Switch:
+- konstrukcja:
+case $zmienna in
+    "wartość1" ) komenda 1 ;;
+    dopasowanie2 ) koemnda 2 ;;
+    * ) komenda domyślna 
+esac
+- można w dopasowaniu stosować podobną składnie przy nazwach plików
+
+
+Tablic w BASH:
+- TABLICA[index]=wartosc
+- declare -a NAZWATABLICA - tworzy tablice asocjacyjną (mapa)
+- TABLICA=(v1 v2 ... vN) - tworzy tablice i ustawia elementy
+- unset TABLICA - usuwa cala tablice
+- unset TABLICA[index] - usuwa konkretny element tablicy
+- dostępne zmienne:
+	=: ${TABLICA[1]} - element 1
+	=: ${TABLICA[*]} - wszystkie argumenty jako jeden napis
+	=: ${TABLICA[@]} - wszystkie argumenty jak rozdzielne
+	=: ${!TABLICA[*]} - wszstkie elementy tablicy
+	=: ${#TABLICA[*]} - liczba elemntów w tablicy
+	=: ${#TABLICA[0]} - długość elementu 0
+
+
+REGEX i BASH REMATCH:
+- $BASH_REMATCH[@] po zastosowaniu dopasowania wyrażenia regularnego (=~), będzie zawierał w sobie elementy, które zostały dopasowane do danej grupy. [index 0 zawiera cale dopasowanie]
+- przykład:
+	=: [[ s30291@gmail.com =~ ^([A-Za-z]+)@([A-Za-z]+).([A-Za-z]+) ]] && echo ${BASH_REMATCH[@]}
+	=: zwróci s30291@gmail.com s30291 gmail com
+
+Łańcuchy tekstów w BASHU:
+- VAR="ABCDabcdef"
+	=: ${VAR:2} - wycina wszystko do indeksu nr 2 (od 3 elementu zaczyna się nowy tekst)
+	=: ${VAR:n:l} - wycina znaki od indeksu n o długosci l (np. VAR:0:1 zwróci pierwszy znak
+	=: ${VAR:3:4} - Dabc
+	=: ${VAR:(-4)} - wycina do 4 znaku od końca
+	=: ${VAR:(-1)} - zwraca tylko ostatni znak
+	=: ${VAR:(-7):3} # Dab
+
+- zamiana tekstów :
+	=: ${zmienna_tekstowa/pattern/replacment} - zamieni pojedyńcze wystąpienie
+	=: ${zmienna_tekstowa//pattern/replacment} - zamieni wszystkie wystąpienia
+
+Podstawowe komendy przydatne:
+- tar - pakuje pliki do archiwum
+- wget - program do sciagania z internetu [web get]
+- tail - drukowanie n ostatnich linijek
+- head - drukowanie n pierwszych linijek
+- wc - word counter - pozwala zliczyc ilosc wierszy
+- tr - zamienia jeden znak na inny
+- expr - wykonuje obliczenia wyrazenia wyrazeniea
+- who - lista zalogowany użytkowników
+- whoami - nazwa uzytkownika
+- time [komenda] - na koncu zwraca informacje ile sie wykonywala komenda
+
+Przetwarzanie pliku linia po linii:
+- sposob 1:
+	while read line; do
+		echo $line
+	done < plik.txt
+- sposob 2:
+	cat plik.txt | while read line; do echo $line; done
+
+===============================================================================
+[Wyklad 04 - 28.04.2024]
+
+===============================================================================
+[Wyklad 05 - 12.05.2024]
+
+[PROCESY]
+
+Blok kontrolny procesu:
+- Informacja dołączona do procesu zawierająca jego stan, licznik rozkazów, rejestry procesora, parametry dla planisty (informacje o przydziale czasu procesora), informacje o przydziale pamięci, informacje do rozliczeń (Accounting informaction), informacje o stanie I/O (wykaz otwartych plików, urządzenia przypisane itp).
+
+Przełączanie procesów:
+- Obliczanie równoległe (parallel) - wiele obliczeń ten sam czas (przez wiele procesorów)
+- Obliczanie współbieżne (concurrent) - wiele procesów wykonuje się tak, że czas ich się nakłada (na przemian)
+
+Przełączanie kontekstu: (przełączanie procesora do inego procesu)
+- Zajmuje czas, ponieważ należy zapisać stan zamrożonego procesu i przywrócić stan gotowego
+
+Planista: (scheduler)
+- Program służący  do zarządzania przydziałem czasu dla procesów.
+- Działa na kolejkach: 
+	(zadań - job queue) [ lista wszystkich procesów ],
+	(urządzeń - device queue) [ proces oczekujacy na urzadzenie jest umieszczany na odpowiedniej kolejce ],
+
+Wyekspediowanie procesu: (wybranie procesu z kolejki procesów gotowych - process dispatch)
+- po wyekpediowaniu procesu dostaje on czas procesora i:
+	=: proces liczy i w pewnym momencie kończy mu się czas (znowu ląduje w kolejce procesów gotowych)
+	=: proces może zamówić operacje I/O (ląduje w kolejce I/O)
+	=: proces czeka (i jest umieszczany w odpowiedniej kolejce aż do wystąpeniea odpowiedniego zdarzenia)
+
+Priorytety procesów:
+- czas rzeczywisty (1-99)
+- normalny proces (100-139)
+
+Przełączanie kontekstu:
+- minimalizacja opóźnień (częste przełączanie)
+- zwiększanie wydajnosci obliczeniowej (rzadkie przełączanie)
+
+Procesy ograniczone:
+- (IO bound process) [ograniczony przez wejscie-wyjscie] - wiekszosc czasu spedza na czekaniu na IO.
+- (CPU bound process) - wiekszosc czasu taki proces spedza korzystajac z CPU
+
+Proces macierzysty (Parent Process):
+- proces, który uruchamia nowy proces (identyfikuje się w linux poprzez PID (Process ID))
+- proces stworzony przez proces macierzysty (posiada takze PPID (Parent Process ID) odwołujący się do rodzica)
+
+Funkcje programistyczne procesów:
+- fork (tworzy proces potomny będą kopią aktualnego procesu)
+- execlp (tworzy proces potomny który wykonuje jakąs komende ale nie tworzy kopi procesu)
+- wait (oczekuje na zakończenie procesu potomnego)
+
+Procesy potomne otrzymują cześć zasobów rodzica!
+
+Rodzaje procesów:
+- Proces niezależny - nie dzieli żadnych danych z innymi procesami
+- Proces Współpracujący (cooperating) - współdzieli zasoby z innymi procesami (np. API -> Klient)
+
+Komunikacja miedzyprocesorowa (IPC) - mechanizmy wymiany informacji między procesami
+
+Funckje przydatne: 
+	=: popen("komenda", "tryb otwarcia") - otwiera strumien do shella
+	=: pclose(f) - zamkyka strumien shella
+	=: pid() : pid_t - zwraca pid tego procesu
+	=: ppid() : pid_t - zwraca pid procesu rodzica
+	=: fork() : pid_t - klonuje proces i zwraca jego PID (u rodzica), a u dziecka (zwraca PID procesu rodzica)
+	=: wait(int *status) - czeka na zakonczenie jakiegokolwiek dziecka i zapisuje stan do zmiennej status
+	=: waitpid(pid_t pid, int *status, int options) - czeka na zakonczenie procesu o danym pid (-1 = czeka na jakiekolwiek dziecko, 0 czeka na dziecko procesu o pid podczas wywolania, >0 czeka na zakonczenie procesu o danym pid)
+
+[PAMIEC]
+
+Pamięć tworzy wielką tablicę oznaczonych adresami słów lub bajtów.
+
+Wiązanie adresów:
+- proces tłumaczenia symbolicznych nazw z adresami
+- odbywa się w etapach życha programu:
+	=: faza kompulacji - (wygenerowany program ma na stale zapisane adresy)
+	=: faza ładowania - (system operacyjny wiąże adresy w momencie ładowania kodu
+	=: faza wykonania - (w trakcie działania procesu, mogą być przemieszczane przez OS)
+
+Adresy:
+- adres fizyczny - adres oglądany przez jednostkę pamięci (fizyczna przestrzeń adresowa)
+- adres logiczny - adres wytworzony przez procesor (widziany przeez programy) (logiczna przestrezń adresowa)
+
+MMU - Memory Management Unit: (Jednostka Zarządzania Pamięcią)
+- tłumaczy adresy logiczne na fizyczne
+
+Ochrona pamięci:
+- rejestr przemieszczania w połączeniu z rejestrem granicznym (limit register)
+
+Ładowanie dynamiczne:
+- Podprogram/Biblioteka jest ładowana w momencie gdy jest potrzebny. (np. funkcja z sdl)
+
+Nakładki:
+- Machnizm polegający na podziale programu na kilka części, z których w pamięci może być załadowany tylko jeden. W momencie zakończenia wykonywania jednej części, obszar pamięci zajmowany przez jedną nakładke jest zastępowany przez inną.
+
+Mechanizm wymiany:
+- Proces może być wymieniony (swapped) poprzez zapisanie go na dysku i załadownaie innego programu w jego miejsce w pamięci RAM. Taki proces może być później wznowiony.
+
+Dynamiczny przydział pamięci:
+- system przechowuje tablicę z informacją o dostepnych częśiach pamięci
+- bloki pamięci są przydzielone programom w zależności od ich zapotrzebowania
+- programy po zakończeniu zwalniają swoje bloki pamięci
+
+Metody przydziału pamęci:
+- pierwsze dopasowanie - (pierwsze wystąpienie wystarczającej przestrzeni bloków pamięci w tablicy) 
+- najlepsze dopasowanie - (wyszkuje miejsca w którym pamięć będzie najlepiej wypełniać luke)
+- najgorsze dopasowanie - (udziela przestrzeń z najbardziej pustej przestrzeni)
+
+Stronicowanie:
+- System operacyjny przechowuje tablic stron w PCB (Process Control Blok) i ładuje ją w momencie gdy proces dostaje czas procesora.
+
+===============================================================================
+[Wyklad 06 - 26.05.2024]
+
+===============================================================================
+[Wyklad 07 - 09.06.2024]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
