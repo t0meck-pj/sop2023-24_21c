@@ -1,6 +1,0 @@
-10.03.2024:
-- Do uzupelnienia relacja z wykladu odnosnie instalacji systemu operacyjnego.
-
-24.03.2024:
-- Do uzupelnienia relacja z wykladu odnosnie poczatkow systemow operacyjnych i stosowania wyrazen regularnych.
-- Lektury do przeczytania: "Podstawy systemów operacyjnych" ~Abraham Silberschatz, Greg Gagne, Peter B. Galvin
