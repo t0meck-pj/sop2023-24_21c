@@ -43,7 +43,7 @@ Co jest dla Ciebie jeszcze nie jasne i musisz poglebic temat
 
 Co bylo zaskakujacego
 	Zaskoczylo mnie to jak użyteczne mogą być skrypty w życiu
-	codziennym, i jak dużo nie wiemna temat linuxa,
+	codziennym, i jak dużo nie wiem na temat linuxa,
 	basha i tym podobnych.
 
 Twoje przemyslenia o calych zajeciach i zadaniach
@@ -57,12 +57,98 @@ Twoje przemyslenia o calych zajeciach i zadaniach
 Moj kochany pamietniczku:
 
 Opis zajec
+	Na tych zajęciach zajmowaliśmy się tym jak funkcjonują if-y,
+	pętle oraz funkcje w bashu. Do tego mieliśmy pierwsze praktyczne
+	podejście do wyrażeń regularnych.
 
 Czego sie nauczyles
+	Nauczyłem się, jak robić pętle, oraz if-y w bashu, do tego
+	jak robić funkcje, i dzięki temu też funkcje rekurencyjne
+	oraz pisania podstawowych wyrażeń regularnych.
 
 Co jest dla Ciebie jeszcze nie jasne i musisz poglebic temat
+	Zdecydowanie jeszcze nie rozumiem wszystkiego co się dzieje
+	w bardziej zaawansowanych wyrażeniach regularnych, ale
+	chętnie nauczę się tego jak to czytać i przedewszystkim pisać.
 
 Co bylo zaskakujacego
+	Najbardziej zaskoczyło mnie to, jak wyrażenia regularne
+	mimo tego jak wygladają na pierwszy rzut oka, są dosyć łatwe
+	do napisania, a przy tym bardzo użyteczne.
 
 Twoje przemyslenia o calych zajeciach i zadaniach
+	Zajęcia jak zwykle były interesujące, a zadania wymagające
+	(przynajmniej dla mnie). Ale dzięki temu, że takie były
+	to świetnie się przy nich bawiłem.
 
+2024-04-28
+Moj kochany pamietniczku:
+
+Opis zajec
+	Na tych zajęciach zajmowaliśmy się nauką programowania w
+	języku C, co jest wstępem do tego co czeka nas w niedalekiej
+	już przyszłości.
+
+Czego sie nauczyles
+	Nauczyłem się podstawowych umiejętności w nowym (dla mnie)
+	języku programowania tzn. użycia pętli, operacji na plikach
+	i wskaźników. 
+
+Co jest dla Ciebie jeszcze nie jasne i musisz poglebic temat
+	Napewno wskaźniki, to jest jeszcze sprawa którą muszę
+	dokładnie przetrawić, ale wszystko inne wydaje się
+	być jak najbardziej jasne.
+
+Co bylo zaskakujacego
+	Zaskoczyło mnie to, że ten język jest naprawdę nisko poziomowy,
+	ale tak naprawdę nisko poziomowy a jednak nie jest to assembler,
+	i już rozumiem dlaczego do tworzenia np. gier używane są języki
+	takie jak c++, c, zamiast np. pythona.
+
+Twoje przemyslenia o calych zajeciach i zadaniach
+	Dużo nowych ciekawych rzeczy, całkiem wymagające zadania
+	mimo, że z poprzedniego semstru umiem podstawowego C++
+	to i tak napisanie niektórych zadań było wyjątkowo wymagających
+	ale to właśnie o to w tym chodzi.
+
+2024-05-12
+Moj kochany pamietniczku:
+
+Opis zajec
+	 Na zajęciach zajmowaliśmy się dalej programowaniem w C
+	tym razem były to procesy i głównie funkcja fork.
+
+Czego sie nauczyles
+	Na tych zajeciach nauczyłem się używać i rozumieć
+	jak działa funkcja fork, oraz o jej potencjalnych zastosowaniach.
+
+Co jest dla Ciebie jeszcze nie jasne i musisz poglebic temat
+	Po wszyskich zadaniach i ćwiczeniach wszystko jest jasne
+	i myślę, że wyjątkowo zrozumiałem wszystko.
+
+Co bylo zaskakujacego
+	Nigdy nie słyszałem o funkcji fork, a wydaje się być
+	naprawdę użyteczna do wielu różnych programów.
+
+Twoje przemyslenia o calych zajeciach i zadaniach
+	Podczas tego gdy sama funkcja fork wydała mi się
+	od początku całkiem zrozumiała, to ćwiczenia
+	jak zawsze był całkiem wymagające.
+	
+
+2024-05-26
+Moj kochany pamietniczku:
+
+Opis zajec
+	 
+
+Czego sie nauczyles
+	
+
+Co jest dla Ciebie jeszcze nie jasne i musisz poglebic temat
+	
+Co bylo zaskakujacego
+	
+
+Twoje przemyslenia o calych zajeciach i zadaniach
+	
