@@ -1,5 +1,5 @@
 2024-03-10
-Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem/lam sie:
+Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem sie:
 - Jak zainstalować system Debian używając programu VirtualBox.
 - Zaskakująca była ilość opcji oraz możliwości konfiguracji systemu.
 - Było to dla mnie bardzo ciekawe doświadczenie, ponieważ wcześniej
@@ -8,10 +8,40 @@ nie zagłębiałem się w zaawansowane opcje konfiguracji systemu.
 musiałem poświęcić więcej czasu na zrozumienie i przyswojenie wiedzy.
 
 2024-03-24
-Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem/lam sie:
+Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem sie:
 - Tworzenia podstawowych skryptów w języku Bash.
 - Jak działają zmienne środoiwskowe w powłokach.
 - Operacji na ciągach znaków.
 - Było to dla mnie tylko przypomnienie, ponieważ już wcześniej
 miałem styczność z tymi zagadnieniami.
 na temat skryptów w Bashu.
+
+2024-04-14
+Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem sie:
+- Używania instrukcji warunkowych w skryptach Bash (if, else, elif, case).
+- Wyrażeń regex w Bashu.
+- Jak działa pętla for oraz while.
+- Jak działają tablice w Bashu.
+- Jak deklarować funkcje w Bashu.
+- Muszę jeszcze poćwiczyć wyrażenia regularne, ponieważ
+ich składnia jest dość specyficzna.
+
+2024-04-28
+Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem sie:
+- Przypomniałem sobie składnię czystego C.
+- Jak działają komentarze w ANSI C.
+- Dostrzegłem jak bardzo przydatna jest możliwość formatowania tekstu w printf.
+- Zaskoczyła mnie ilość ograniczeń w ANSI C np. konieczność deklaracji zmiennych na początku,
+komentarze są tylko wieloliniowe, brak możliwości mieszania deklaracji z kodem.
+- Dzięki takim zajęciom można dostrzeć jak wiele rzeczy ułatwiają nowoczesne języki programowania.
+
+2024-05-12
+Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem sie:
+- Jak działa funkcja fork() w języku C oraz inne przydatne funkcje do zarządzania procesami
+np. wait(), waitpid(), getpid(), getppid().
+- Zrozumienie działania funkcji fork() nie jest łatwe, ale po kilku przykładach
+można dostrzeć jak przydatna i prosta jest ona w użyciu.
+- Zaskoczyła mnie ilość funkcji do zarządzania procesami w języku C, ponieważ
+wcześniej nie miałem z nimi styczności.
+- Mały problem napotkałem podczas załączania debuggera do programu, ponieważ
+po wywołaniu fork() debugger nie rozróżniał dzieci od rodzica.
