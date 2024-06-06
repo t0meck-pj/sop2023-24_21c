@@ -34,6 +34,7 @@ void write_messages(const char *nickname) {
         
         if (fprintf(file, "%s: %s\n", nickname, buffer) < 0) {
             perror("fprintf");
+            fclose(file);
             exit(EXIT_FAILURE);
         }
 

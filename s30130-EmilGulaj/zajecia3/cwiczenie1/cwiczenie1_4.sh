@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Rozwiązanie 1
-if (( $(ls -1 | wc -l) < 5 )); then
+if (( $(ls *.* | wc -l) < 5 )); then
     echo  "check1"
 fi
 
@@ -14,4 +14,3 @@ fi
 if (( $(find -type f | wc -l) < 5 )); then
     echo "check3"
 fi
-

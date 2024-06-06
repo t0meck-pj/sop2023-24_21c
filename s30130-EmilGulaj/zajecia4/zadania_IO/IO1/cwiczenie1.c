@@ -28,6 +28,11 @@ int main(int argc, char** argv){
     fscanf(file, "%d", &len);
     nums = malloc(len * sizeof(int));
 
+    if (nums == NULL){
+        printf("Blad alokacji pamieci");
+        return -1;
+    }
+
     for (i = 0; i < len; i++){
         fscanf(file, "%d", &nums[i]);
     }

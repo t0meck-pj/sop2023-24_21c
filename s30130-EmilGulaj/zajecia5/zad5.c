@@ -6,16 +6,20 @@
 int main(){
     int i, status,p = 0, processes = 10, nothing;
     for(i = 0; i < processes; i++){
+        p = fork();
         if (p == 0){
-            p = fork();
+            break;
         }
     }
 
-    for(i = 0; i < processes; i++){
-        waitpid(p,&status, 0);
-    }
+    if (p != 0){
+        for(i = 0; i < processes; i++){
+            wait(NULL);
+        }
 
-    scanf("%d", &nothing);
+        scanf("%d", &nothing);
+    }
+    
 
     return 0;
 }

@@ -9,6 +9,10 @@ typedef struct Node {
 void append(Node **head, int data){
     if (*head == NULL){
         *head = (Node*)malloc(sizeof(Node));
+        if (*head == NULL){
+            printf("Blad alokacji pamieci");
+            return -1;
+        }
         (*head) -> data = data;
         (*head) -> next = NULL;
     }
@@ -18,6 +22,10 @@ void append(Node **head, int data){
             current = current -> next;
         }
         current -> next = (Node*)malloc(sizeof(Node));
+        if (current == NULL){
+            printf("Blad alokacji pamieci");
+            return -1;
+        }
         current -> next -> data = data;
         current -> next -> next = NULL;
     }
@@ -26,6 +34,10 @@ void append(Node **head, int data){
 void push(Node **head, int data){
     Node  *current;
     current = (Node*)malloc(sizeof(Node));
+    if (current == NULL){
+        printf("Blad alokacji pamieci");
+        return -1;
+    }
     current -> data = data;
     current -> next = *head;
     *head = current;
