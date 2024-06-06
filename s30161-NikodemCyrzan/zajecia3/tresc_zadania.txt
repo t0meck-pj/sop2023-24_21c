@@ -1,0 +1,19 @@
+Treść zadania
+  1. Przygotuj wyrażenie regularne, które będzie sprawdzało, czy tekst jest
+     poprawnie napisanym polskim imieniem (od wielkiej litery, może mieć tylko
+     litery i zawierać polskie znaki).
+  2. Przygotuj wyrażenie regularne sprawdzające czy tekst jest kodem pocztowym
+     (cały tekst, czyli zaczyna się od cyfry i kończy się cyfrą).
+  3. Przygotuj wyrażenie regularne sprawdzające e-mail.
+
+Wykonanie zadania, uzyskany wynik i co on oznacza albo jak go rozumiesz?
+  Zadanie zostało zrealizowane w pliku "zadanie_domowe.sh".
+
+  Program dla testów które na nim wykonałem, zwracał poprawne wyniki,
+  więc wnioskuję, że poprawnie zaimplementowałem wyrażenia regularne.
+  Mam jednak świadomość, że adresy e-mail nie są sprawdzane w 100% zgodnie ze
+  standardami, w związku z trudnością zaimplementowania tego w bash.
+
+Twoje przemyślenia na temat zadania
+  Już wcześniej znałem regexp, więc zadanie nie było dla mnie szczególnie trudne,
+  a większość czasu spędziłem na szukaniu co jest wspierane przez bash.
