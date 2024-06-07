@@ -9,3 +9,4 @@ tekst=$( cat ${1} )
 echo -e "${tekst//${imie}/"\e[31m${imie}\e[0m"}"
 
 # Tekst do pracy domowej w pliku: tekst_do_pracy_domowej.txt
+
