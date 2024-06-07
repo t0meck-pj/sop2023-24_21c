@@ -80,7 +80,3 @@ jw.
 
 # Zajecia 6: Make, sygnaly, sockety
 jw.
-
-1. Zrobić branch 'instalacja-debiana'
-2. commit pliki na niego
-3. pull request z inst. deb do instalacji deb
