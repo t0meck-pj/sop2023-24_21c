@@ -4,8 +4,8 @@
 
 ## Tworzenie wirtualnej maszyny
 1. Należy uruchomić aplikacje `VirtualBox`. W przypadku jej braku na systemie, można ja pobrać [z oficjalnej strony VirtualBox](https://www.virtualbox.org) 
-3. Do stworzenia nowej maszyny wirtualnej wybieramy opcje `Maszyna` [znajdująca się na górnym pasku] i tam wybieramy opcje `Nowa`.
-4. Na ekranie wyświetli się okno `Utwórz wirtualna maszynę`. 
+2. Do stworzenia nowej maszyny wirtualnej wybieramy opcje `Maszyna` [znajdująca się na górnym pasku] i tam wybieramy opcje `Nowa`.
+3. Na ekranie wyświetli się okno `Utwórz wirtualna maszynę`. 
 
 > [!TIP]
 > W przypadku pierwszego tworzenia maszyny wirtualnej, kreator będzie ustawiony w trybie "Przewodnika", ze względu na łatwiejszy dostęp do wyboru opcji, należy przełączyć się na tryb "Eksperta" (przycisk na dole okna).
@@ -55,7 +55,7 @@
 
 **W tej zakładce do wyboru są 3 opcje:**
 * **Create a Virutal Hard Disk Now:** `pozwala na stworzenie i podpięcie wirtualnego dysku twardego do tej wirtualnej maszyny wirtualnej` 
-<br>( **Tą OPCJE WYBIERZEMY DLA INSTALACJI TEGO SYSTEMU** )
+<br>( **TĄ OPCJE WYBIERZEMY DLA INSTALACJI TEGO SYSTEMU** )
 
 | Opcja |  Opis |
 | --- | --- |
@@ -223,7 +223,7 @@ W tej sekcji można skonfigurować karty sieciowe maszyny wirtualnej.
 | Siec Hosta | Pozwala na komunikacje tylko miedzy maszyna wirtualna a hostem. (brak możliwości łączenia się z sieciami zewnętrznymi) |
 | Rodzajowy Sterownik | Pozwala na ustawienie niestandardowego sterownika sieciowego dla danej maszyny wirtualnej. Wykorzystywane, gdy potrzebne jest dostosowanie sie do specjalnych sterowników lub wymagań sprzętowych. |
 | Siec NAT | Pozwala na tworzenie wielu sieci NAT w której każda z nich będzie działać niezależnie. |
-| Cloud Network | Pozwala na łączenie się z infrastrukturą dostawców usług chmury takich jak AWS, AZURE czy GCP.
+| Cloud Network | Pozwala na łączenie się z infrastrukturą usługi chmury Oracle. [Oracle Cloud Infrastructure].
 
 
 **Dodatkowe opcje, które można znaleźć w tej kategorii:**
