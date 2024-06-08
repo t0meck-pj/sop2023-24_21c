@@ -3,8 +3,8 @@
 Jeśli tak, to niech wyświetli pierwszy parametr. Jeśli nie, to niech 
 wyświetli komunikat, że nie podano parametrów.
 
-if - kożystając ze składni wyrażeń warunkowych, ustawiam warunek, $# - 
-podaje wartość - ilość podanych argumentów, kiedy jest ich więcej niż 0, 
+if - kożystając ze składni wyrażeń warunkowych, ustawiam warunek, 
+$# - podaje wartość - ilość podanych argumentów, kiedy jest ich więcej niż 0,
 echo - drukuje tekst + argument z indexem 1. gdzie indeks 0 to sam skrypt.
 
 2.Napisz skrypt, który:
@@ -19,8 +19,8 @@ nazwie takiej jak wartość argumentu (parametru) skryptu.
 Jeśli żadne z powyższych nie nastąpiło, to niech wyświetli komunikat o 
 błędzie.
 
-Tu 'if' sprawdza czy istnieje -f - plik .cfg - konfiguracyjny. elif [[ $# != 0 
-]] - jeśli ilość arg. =/= 1, ./$1 wykonaj argument z indeksem 1.
+Tu 'if' sprawdza czy istnieje -f - plik .cfg - konfiguracyjny. elif 
+[[ $# != 0 ]] - jeśli ilość arg. =/= 1, ./$1 wykonaj argument z indeksem 1.
 
 3. Napisz skrypt, który:
 
@@ -90,33 +90,21 @@ spacje. \ sprawia, ze kolejny znak jest taktowany jako zwyły znak.
 3. Napisz skrypt, który wypisze listę plików i katalogów bieżącego 
 katalogu poprzedzając każdą nazwę pliku tekstem "Patrzcie Państwo, oto 
 plik: ".
-if [ -f "$item"] - jeśli zmienna to plik, -d jeśli zmienna to folder, * 
-wszystko w katalogu. tekst echo jest umieszczony w cudzysłowiu "" aby 
-przywołanie wartości zmiennej działało. 
+if [ -f "$item"] - jeśli zmienna to plik, -d jeśli zmienna to folder, 
+* - wszystko w katalogu. tekst echo jest umieszczony w cudzysłowiu "" 
+aby przywołanie wartości zmiennej działało. 
 
 4. Napisz skrypt, który dla każdego pliku w bieżącym katalogu, który ma 
 rozszerzenie .c wykona taką komendę:
    cc (tu_nazwa_pliku) -o (tu_nazwa_pliku_bez_rozszerzenia)
 Dla zmiennej 'file', -e - jeśli istnieje pliku w tym katalogu kończącego 
 się na ".c", wykonuje kompilacje za pomocą kompilatora 'cc' i tworzy plik 
-wykonujący bez rozszeżenia ".c". Nie działa lokalnie, ale działa na 
-szuflandii :) nie jestem w stanie wejść na stronę 
-http://lmgtfy.com/?q=example+c+file, więc utworzyłem hello world w folderze z 
-plikami zadań.
+wykonujący bez rozszeżenia ".c". Nie jestem w stanie wejść na stronę 
+http://lmgtfy.com/?q=example+c+file, testowałem na Hello World.
+
 5. Napisz skrypt, który wczyta listę plików do wypisania z wiersza poleceń, 
 a następnie wypisze ich zawartości raz w kolejności od początku do końca, 
-a raz na odwrót. Podpowiedzi:
-
-indeksy ujemne tablicy mogą się przydać
-
-można wyliczać wartości wyrażeń arytmetycznych (i+1)
-
-przyda się for
-
-może się przydać: cat oraz tac ale postaraj się zrobić to bez używania 
-tych poleceń (drukowanie znak po znaku od początku do końca i od końca do 
-początku). Pamiętaj, że nie tylko kolejność całych wierszy ma być 
-odwrócona ale także kolejność znaków w wierszu.
+a raz na odwrót.
 
 Pierwszy loop tworzy tablicę na podstawie podanych argumentów, zmienna T 
 zbiera długość tablicy (tu 2 bo ma 3 elementy), 2. loop for przekazuje 
@@ -141,19 +129,13 @@ jak sugeruje polecenie.
 
 Przygotuj funkcję obliczającą rekurencyjnie ciąg Fibonacciego. Niech wynik 
 zwraca za pomocą return. Czy są jakieś ograniczenia?
-Rekurencyjnie i return czyli:
 
-- Nie używamy pętli
 
-- Nie używamy echo
-
-- Wartość ma być zwracana przez literał return
-
-kluczem di zadania było dla mnie użycie $?, return zwraca w bashu wartościu 
-od 0-255 i nie w jest stanie bezpośrednio przekazać wartości, żeby została 
-wydrukowana w terminalu, należy wyeksportować funkcję (. ./fib badź source 
-fib), następnie ją wykonać i wywołać ostatnią wartośc za pomocą komendy 
-echo $?
+Kluczem do zadania było dla mnie użycie $?, organiczenia dotyczną return, które
+zwraca w bashu wartościu od 0-255 i nie w jest stanie bezpośrednio przekazać 
+wartości, żeby została wydrukowana w terminalu, należy wyeksportować funkcję 
+(. ./fib badź source fib), następnie ją wykonać i wywołać ostatnią wartość 
+za pomocą komendy echo $?
 
 Zadanie domowe
 1.Przygotuj wyrażenie regularne, które będzie sprawdzało, czy tekst jest 
