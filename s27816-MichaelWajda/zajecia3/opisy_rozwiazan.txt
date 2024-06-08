@@ -1,0 +1,161 @@
+Ćwiczenia 1
+1. Napisz skrypt, który sprawdzi, czy podano więcej niż jeden parametr. 
+Jeśli tak, to niech wyświetli pierwszy parametr. Jeśli nie, to niech 
+wyświetli komunikat, że nie podano parametrów.
+
+if - kożystając ze składni wyrażeń warunkowych, ustawiam warunek, 
+$# - podaje wartość - ilość podanych argumentów, kiedy jest ich więcej niż 0,
+echo - drukuje tekst + argument z indexem 1. gdzie indeks 0 to sam skrypt.
+
+2.Napisz skrypt, który:
+
+sprawdzi, czy istnieje plik config.cfg w bieżącym katalogu.
+
+Jeśli taki plik istnieje, to niech go wykona.
+
+Jeśli nie istnieje, to niech sprawdzi, czy podano argument i wykona plik o 
+nazwie takiej jak wartość argumentu (parametru) skryptu.
+
+Jeśli żadne z powyższych nie nastąpiło, to niech wyświetli komunikat o 
+błędzie.
+
+Tu 'if' sprawdza czy istnieje -f - plik .cfg - konfiguracyjny. elif 
+[[ $# != 0 ]] - jeśli ilość arg. =/= 1, ./$1 wykonaj argument z indeksem 1.
+
+3. Napisz skrypt, który:
+
+- sprawdzi, czy jego nazwa kończy się .sh .
+
+- Jeśli nie, to niech zmieni swoją nazwę poprzez dopisanie tego rozszerzenia 
+(rozszerzenie nazwy pliku). Sprawdzenie można zrobić na kilka sposobów, 
+polecam przetestować 3 typowe:
+
+- dopasowanie do wyrażenia regularnego (to jest bardziej uniwersalny sposób)
+
+- porównanie ostatnich 3 liter nazwy skryptu
+
+- użyć wbudowanego w basha mechanizmu do wyciągania części napisów ${%}, 
+${%%}, ${#}, ${##} 
+
+Zaczynam od definiowania zmiennych, $0 - adresująca odpalany skrypt, ".sh" - 
+rozszerzenie, które chcemy usunąć, które następnie porównujemy w 
+wyrażeniu if jesli nie jest takie samo, tworzymy nową zmienną, 
+przechowywującą $0, za pomocą polecenia sed i przy użyciu wyrażenia 
+regularnego usówam każdy znak po k, zamieniając go na nic, po czym dodaję 
+na końcu zmienną zawierającą .sh. 2. rozwiązanie z uproszczonym regexem po 
+niżej w komentarzu, nie rozumiem w pełni jak działa znak '%' poza tym, że 
+usówa dopoasowany po nim sufix, więc nie wybrałem go jako główne 
+rozwiązanie, aczkolwiek ta metoda usówa potrzebę użycia sed. ostatnim 
+krokiem jest podmiana otwartego skryptu na nowo stworzony z rozszeżeniem .sh i 
+zamknięcie wyrażenia 'if'. 
+
+4. Napisz skrypt, który 
+
+sprawdzi, czy w bieżącym katalogu jest więcej niż 5 plików. 
+
+Jeśli tak, to wypisze odpowiedni komunikat z informacją że tak jest.
+Podpowiem:
+
+ls - wyświetla listę plików
+
+wc - word count - zlicza znaki, słowa i linie
+
+grep ma parametr który też może podawać ilość wystąpień wzorca w 
+strumieniu - poszukać w manualu jaki to parametr
+
+może warto użyć także innego polecenia by znaleźć pliki?
+
+Tworzę zmienną zawierającą, ls -1 wyświetla listę plików w jednej 
+kolumnie,a wc -l liczy ile jest linii, alternatywnie, grep -c '^' liczy 
+pasujące linie do wyrażenia regex '^' (pozpoczęcie nowej linii). Następnie 
+wyrażenie if porównuje zmienną liczącą ilość plików z z nr.5 a echo 
+drukuje odpowiedni komunikat. Innym poleceniem, którego możemy użyj jest 
+find, pozwala ono na ustawienie dokładniejszych paramentrów zawężających 
+obszar poszukiwania (poprawiających tym wydajność), jak typy plików oraz 
+głebokość szukania, pozwala rówież na wykonanie akcji określonych w 
+manual'u.
+
+Ćwiczenia 2
+1. Napisz skrypt, który będzie wypisywał liczby od 10 do 1 co 2
+Sposóby na 2 możliwe składnie, 2. dla licz od 10 do 1 skok o 2
+
+2. Napisz skrypt, który będzie wypisywał wszystkie argumenty wywołania 
+skryptu (pamiętaj o tym, że argument może w sobie zawierać jakieś spacje) 
+napisane w cudzysłowach.
+Loop 'for' $* - dla wszytkich arugmentów, "$@" - natomiast dla osobnego 
+wypisania każdego arg. od nowej linijki bez uwzględniena spacji, jednak 
+jeśli argument będzie w cudzysłowiu potraktuje go jako całość, wliczając 
+spacje. \ sprawia, ze kolejny znak jest taktowany jako zwyły znak.
+
+3. Napisz skrypt, który wypisze listę plików i katalogów bieżącego 
+katalogu poprzedzając każdą nazwę pliku tekstem "Patrzcie Państwo, oto 
+plik: ".
+if [ -f "$item"] - jeśli zmienna to plik, -d jeśli zmienna to folder, 
+* - wszystko w katalogu. tekst echo jest umieszczony w cudzysłowiu "" 
+aby przywołanie wartości zmiennej działało. 
+
+4. Napisz skrypt, który dla każdego pliku w bieżącym katalogu, który ma 
+rozszerzenie .c wykona taką komendę:
+   cc (tu_nazwa_pliku) -o (tu_nazwa_pliku_bez_rozszerzenia)
+Dla zmiennej 'file', -e - jeśli istnieje pliku w tym katalogu kończącego 
+się na ".c", wykonuje kompilacje za pomocą kompilatora 'cc' i tworzy plik 
+wykonujący bez rozszeżenia ".c". Nie jestem w stanie wejść na stronę 
+http://lmgtfy.com/?q=example+c+file, testowałem na Hello World.
+
+5. Napisz skrypt, który wczyta listę plików do wypisania z wiersza poleceń, 
+a następnie wypisze ich zawartości raz w kolejności od początku do końca, 
+a raz na odwrót.
+
+Pierwszy loop tworzy tablicę na podstawie podanych argumentów, zmienna T 
+zbiera długość tablicy (tu 2 bo ma 3 elementy), 2. loop for przekazuje 
+poszczególne znaki do zmiennej content za pomocą przekierowania, zawartość 
+tablicy jest potem przekierowania do zmiennej, która oczytana jest przez echo 
+-n (wywołuje bez nowej linii) i drukuje dodając spację dla zachowania 
+przestrzeni pomiędzy słowami z 2 różnych argumentów. Analogicznie kolejny 
+loop for, przy czym ten zawiera jeszcze kolejny loop, który odwraca jego 
+kolejność wyciągając znak 'j' o długości 1. (z poprzednich 
+zajęć${TEKST:p:l}). Poniżej rozwiązanie z cat/tac, którego jestem bardziej 
+pewniej, jako że nie rozumiem jeszcze w pełni przekierowywania.
+
+Ćwiczenia 3
+1.Przygotuj skrypt z funkcją która będzie wypisywała tekst pokolorowany na 
+zadany kolor. Niech funkcja ta przyjmuje dwa argumenty - tekst i kolor.
+Zobacz man console_codes oraz składnię komendy echo (lub przykład z 
+poprzednich zajęć).
+
+Użycie składni case w funkcji i zintegrowanie zmiennej tekst w składnie 
+komendy echo -e (włączającej kolory), podobnie jak na poprzednich zajęciahc 
+jak sugeruje polecenie.
+
+Przygotuj funkcję obliczającą rekurencyjnie ciąg Fibonacciego. Niech wynik 
+zwraca za pomocą return. Czy są jakieś ograniczenia?
+
+
+Kluczem do zadania było dla mnie użycie $?, organiczenia dotyczną return, które
+zwraca w bashu wartościu od 0-255 i nie w jest stanie bezpośrednio przekazać 
+wartości, żeby została wydrukowana w terminalu, należy wyeksportować funkcję 
+(. ./fib badź source fib), następnie ją wykonać i wywołać ostatnią wartość 
+za pomocą komendy echo $?
+
+Zadanie domowe
+1.Przygotuj wyrażenie regularne, które będzie sprawdzało, czy tekst jest 
+poprawnie napisanym polskim imieniem (od wielkiej litery, może mieć tylko 
+litery i zawierać polskie znaki).
+^[A-ZĄĘÓŃŁŚĆŻŹ][a-ząęóńłśćżź]*
+2.Przygotuj wyrażenie regularne sprawdzające czy tekst jest kodem pocztowym 
+(cały tekst, czyli zaczyna się od cyfry i kończy się cyfrą).
+^\d|\d$
+3.Przygotuj wyrażenie regularne sprawdzające e-mail.
+^[a-zA-Z0-9._%+-]+\@[a-zA-Z]+\.[a-zA-Z]{2,}
+
+Napisz skrypt który będzie pobierał jeden argument z linii komend i 
+wypisywał informację o tym, czy jest to imie, kod pocztowy, czy też email. 
+Na przykład
+
+regex ułożony przy wykorzystaniu strony https://regex101.com/, ^ - początek 
+linii,$ - koniec linii , \d - numery, + dopasowanie do wcześniej podanych itd. 
+regex umieściłem jako zmienne globalne w utworzonej podpowłoce, żeby 
+uniknąć błędów w sklądni, jako, że nie zabraniało tego zadanie. 
+Utwórzyłem funkcję zawierającą wyrażenie 'if' dopasowywujące (=~) dane 
+zmienne zawierajace wyrażenia regularne do argumentu, coto - na końcu 
+wywołuje funkcję o tej nazwie.

@@ -1,0 +1,39 @@
+> 2020-03-24
+	> Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem/lam sie:
+	Na zajęciach i wykładach z dnia 2024.03.24 zademonstrowany został 
+	prawidłowy sposób instalacji systemu Debian12 na wirtualnej maszynie przez 
+	aplikację Virtual Box. Wykonując zadanie nauczyłem się jak ustawić 
+	wirtualną maszynę i zainstalować na niej system Debian 12 bez instalacji 
+	zbędnych komponentów takich jak interfejs graficzny. Była to moja pierwsza 
+	styczność z systemem linux, oraz pierwsze zagłębienie się w opcje 
+	dostępne przy instalacji maszyny wirtualnej. Będę jeszcze musiał do końca 
+	przyswoić poznane informacje, część opcji, jako że nie była użyta w 
+	naszym procesie a jedynie z grubsza opisana w sprawozdaniu jak niektóre 
+	ustawienia Kontrolera pamięci, pozostawiają mi obszar do dalszej nauki. 
+	Pisanie sprawozdania wymagało kilkukrotnego obejrzenia wykładu, zagłębienia 
+	się w dokumentację zarówno Virtual Box'a instalacji linuxa jak i dodatkowego 
+	research'u tłumaczącego pewne skróty i pojęcia. Była to w mojej ocenie 
+	duża ilośc materiału jak na pierwsze zajęcia, ale czuje, dużo się przy 
+	tym nauczyłem.
+
+> 2020-04-14
+	> Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem/lam sie:
+	Na zajęciach zademonstrowane zostały podstawy poruszania się w bash'u, 
+	tworzenia skryptów i własności podpowłok. Jako, że ostatni raz styczność 
+	z regex'em miałem ponad rok temu, przed urlopem zdrowotnym, było to bardzo 
+	pomocne powtórzenie. Na zajęciach nauczyłem się swobodnie poruszać się w 
+	terminalu, do dalszego zbadania mam jeszcze jak regular expressions wchodzą w 
+	interakcje z komendami z bash'a (bo wystąpił w pewnym momencie problem z 
+	użyciem regex'a wewnątrz sed), i dlaczego, wewnątrz sed,'\'- jest 
+	ignorowane, '\\' - ignorowane, '\\\' i wyżej działą jak zazwyczaj '\'??
+
+> 2020-04-28
+	> Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem/lam sie:
+	Było to jedno z zajęć, które niestety opóściłem z przyczyn zdrowotnych. 
+	Przesłuchawszy wykładu i po rozwiazaniu zadań, czuję się o wiele pewniej 
+	operując w bash'u, nauczyłem się pisać skrypty, przypomniałem sobie regex, 
+	mam jeszcze dużo do nauczenia się aby pisanie ich przebiegało pyłnniej i 
+	nie wymagało tyle prób. Z rzeczy na tą chwilę najbardziej rzucających mi 
+	się w oczy, muszę poszeżyć swoją wiedzę w zakresie strumieniowana, 
+	przekierowań, oraz użycia poleceń, których nie miałem okazji w pełni 
+	przećwiczyć, a który wydają się dość przydatne jak find.
