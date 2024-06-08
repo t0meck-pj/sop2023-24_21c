@@ -17,7 +17,7 @@ int main() {
     printf("PID programu: %d\n", getpid());
     signal(SIGUSR1, handler);
 
-    while(!triggered) {}
+    while(!triggered);
 
     return 0;
 }

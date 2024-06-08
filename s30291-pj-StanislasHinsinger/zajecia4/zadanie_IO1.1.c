@@ -17,6 +17,11 @@ int main(int argc, char **argv) {
 
     values = calloc(count, sizeof(int));
 
+    if(values == NULL) {
+        prinft("Blad z alokacja!");
+        exit(1);
+    }
+
     for(i = 0; i < count; i++) {
         fscanf(file, "%i", &values[i]);
         printf("%i\n", values[i]);
