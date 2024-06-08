@@ -1,6 +1,6 @@
 #!/bin/bash
 
-file_count=$(ls -l | grep "^-" | wc -l)
+file_count=$(ls -l | grep -c "^-")
 
 if [[ $file_count > 5 ]]; then
 	echo "W katalogu jest wiecej niz 5 plikow!"

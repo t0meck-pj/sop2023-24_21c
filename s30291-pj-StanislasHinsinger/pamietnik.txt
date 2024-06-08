@@ -113,12 +113,14 @@ Najważniejsze elementy z obu z nich:
 - . - dowolny znak
 - * - zero lub więcej wystąpeiń tego co było przed tym znakiem
 - + - poprzedni znak pojawia się 1 lub więcej razy
-- {n} - poprzedni znak pojawia się n lub więcej razy
+- {n} - poprzedni znak pojawia się dokładnie
+- {n,} - poprzedni znak od n do * razu
+- {,n} - poprzedni zank pojawia się od 0 do n razy
 - {n,m} - poprzedni znak pojawia się n do m razy
-- [...] - dopasowuje dowolny z wymienionych znaków (można podawać zakres [a - z])
+- [...] - dopasowuje dowolny z wymienionych znaków (można podawać zakres [A-Za-z0-9])
 - [^...] - znak nie jest jednym z wymienionych
 - () - pozwala na grupowanie
-- | - operacja OR
+- | - operacja XOR
 - \x - gdzie x jest dowolnym z powyzszych znakow
 
 Wykorzystanie wyrażeń regularnych:
@@ -340,7 +342,7 @@ Komenda WC (word counter):
 	=: l - (--lines) wypisuje ilość znaków nowego wiersza
 	=: w - (--words) wypisuje ilość wyrazów
 
-Komenda TR (trim):
+Komenda TR (trim/translate):
 - zamienia lub usuwa znaki
 - tr ':' '\n'
 
@@ -415,7 +417,7 @@ Komentarze w ANSI C:
 W ANSI C ZMIENNE MOŻNA USTAWIAĆ TYLKO NA POCZĄTKU BLOKU
 
 Wskaźnik na funkcje:
-- typzwracany (*nazwazmiennej)(argumenty);
+- typzwracany (*nazwaTypuWskaznikowegoPasujacyDoWzorcaFunkcji)(argumenty);
 
 IO:
 - printf, scanf, fsacnf, fprtinf, fopen, fclose, FILE
@@ -494,7 +496,7 @@ Funkcje programistyczne procesów:
 - execlp (tworzy proces potomny który wykonuje jakąs komende ale nie tworzy kopi procesu)
 - wait (oczekuje na zakończenie procesu potomnego)
 
-Procesy potomne otrzymują cześć zasobów rodzica!
+Procesy potomne otrzymują kopię pamięci, a w tym także i kopię zmiennych.
 
 Rodzaje procesów:
 - Proces niezależny - nie dzieli żadnych danych z innymi procesami
@@ -505,10 +507,10 @@ Komunikacja miedzyprocesorowa (IPC) - mechanizmy wymiany informacji między proc
 Funckje przydatne: 
 	=: popen("komenda", "tryb otwarcia") - otwiera strumien do shella
 	=: pclose(f) - zamkyka strumien shella
-	=: pid() : pid_t - zwraca pid tego procesu
-	=: ppid() : pid_t - zwraca pid procesu rodzica
+	=: getpid() : pid_t - zwraca pid tego procesu
+	=: getppid() : pid_t - zwraca pid procesu rodzica
 	=: fork() : pid_t - klonuje proces i zwraca jego PID (u rodzica), 
-	      a u dziecka (zwraca PID procesu rodzica)
+	      a u dziecka (zwraca 0)
 	=: wait(int *status) - czeka na zakonczenie jakiegokolwiek dziecka 
 	      i zapisuje stan do zmiennej status
 	=: waitpid(pid_t pid, int *status, int options) - czeka na zakonczenie 

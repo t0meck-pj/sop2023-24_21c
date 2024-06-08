@@ -43,6 +43,11 @@ int fileRead(char *path, struct Table *table) {
 
     table->values = calloc(table->size, sizeof(int)); /* alokacja pamieci; */
 
+    if (table->values == NULL) {
+        prinft("Blad z alokacja!");
+        exit(1);
+    }
+
     for (; i < table->size; i++) {
         fscanf(file, "%i", &table->values[i]); /* zapis wartosci; */
     }
@@ -57,6 +62,11 @@ void consoleRead(struct Table *table) {
     scanf("%i", &table->size); /* pobieranie ilosc elementow; */
 
     table->values = calloc(table->size, sizeof(int)); /* alokacja pamieci; */
+
+    if (table->values == NULL) {
+        prinft("Blad z alokacja!");
+        exit(1);
+    }
 
     for (; i < table->size; i++) {
         scanf("%i", &table->values[i]); /* zapis wartosci; */

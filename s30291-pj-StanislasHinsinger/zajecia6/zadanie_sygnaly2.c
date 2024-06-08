@@ -16,7 +16,8 @@ void init_signal();
 void create_lock();
 void read_lock(FILE *file) ;
 
-void signal_handler(int signalnum);
+void usr_signal_handler(int signalnum);
+void int_signal_handler(int signalnum);
 
 int main() {
     init_lock();
@@ -67,26 +68,30 @@ void read_lock(FILE *file) {
 }
 
 void init_signal() {
-    struct sigaction act;
-    act.sa_handler = signal_handler;
-    act.sa_flags = 0;
-    
-    sigemptyset(&act.sa_mask);
+    struct sigaction actInt, actUsr;
 
-    sigaction(SIGUSR1, &act, NULL);
-    sigaction(SIGINT, &act, NULL);
+    actUsr.sa_handler = usr_signal_handler;
+    actUsr.sa_flags = 0;
+
+    actInt.sa_handler = int_signal_handler;
+    actInt.sa_flags = 0;
+
+    sigemptyset(&actUsr.sa_mask);
+    sigemptyset(&actInt.sa_mask);
+
+    sigaction(SIGUSR1, &actUsr, NULL);
+    sigaction(SIGINT, &actInt, NULL);
 }
 
-void signal_handler(int signalnum) {
-    if(signalnum == SIGUSR1) {
-        printf("Wykryto probe uruchomienia drugiej instancji programu!\n");
-        fflush(stdout);
-    }
-    if(signalnum == SIGINT) {
-        printf("Rozpoczęto procedurę zamykania programu!\n");
-        fflush(stdout);
-        close_triggered = true; 
-    }
+void usr_signal_handler(int signum) {
+    printf("Wykryto probe uruchomienia drugiej instancji programu!\n");
+    fflush(stdout);
+}
+
+void int_signal_handler(int signalnum) {
+    printf("Rozpoczęto procedurę zamykania programu!\n");
+    fflush(stdout);
+    close_triggered = true; 
 } 
 
 
