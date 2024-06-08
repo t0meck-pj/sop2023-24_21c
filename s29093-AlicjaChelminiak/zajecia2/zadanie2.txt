@@ -1,0 +1,19 @@
+Co się stało? Czy potrafisz wyjaśnić?
+
+Odp: Każda powłoka ma swoje własne zmienne
+środowiskowe i lokalne, które nie są odbierane przez inne powłoki.
+Po wpisaniu "bash" cofamy się do innego procesu, w którym zmienna X nie jest
+przypisana / ma inną wartość (można sprawdzić, w którym procesie się znajdujemy
+za pomocą polecenia "pstree").
+Po uruchumieniu ponownie zmienna X nie jest już dostępna, więc próba jej
+wykonania, wyświetlenia zwraca pustą wartość.
+
+Co jest nie tak? jak to naprawić? Zobacz czy pomoże zastosowanie cudzysłowów i apostrofów
+
+Odp: Aby ta zmienna była dostępna w innych powłokach trzeba użyć
+polecenia "export".
+
+Jaka jest różnica między " a ' ?
+
+Odp: Pojedynczy cudzysłów odbiera wprowadzony tekst dosłownie, a podwójny
+umożliwia odczytanie znaków specjalnych.

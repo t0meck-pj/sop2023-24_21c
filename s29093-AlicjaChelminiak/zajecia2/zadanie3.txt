@@ -1,0 +1,37 @@
+PATH
+Po wpisaniu tej zmiennej zostanie ukazana ściężka, w której
+znajduje się nasz program.
+echo $PATH
+
+RANDOM
+Po wpisaniu tej zmiennej zostanie dodany losowy integer
+MIN=1
+MAX=1000
+LOSOWA_LICZBA=$((RANDOM % (MAX - MIN + 1) + MIN))
+echo "Losowa liczba z zakresu $MIN-$MAX: $LOSOWA_LICZBA"
+
+PWD
+Print Working Directory = wyświetlona zostanie ścieżka,
+w której dokładnie jesteśmy
+echo "Bieżący katalog: $PWD"
+
+PS1
+Prompt String 1 = generuje pop-up wyświetlany po wpisaniu komendy w
+terminalu. W moim przykładzie zostanie zdefiniowany pop-up wyświetlający
+aktualny katalog roboczy i nazwę hosta.
+PS1="\u@\h:\w\$ "
+
+USER
+wyświetli nam się nazwa aktualnie zalogowanego użytkownika
+echo "Witam, $USER!!"
+
+HOSTNAME
+analogicznie jak user wyświetla nazwę hosta
+echo "Zalogowany jest host: $HOST"
+
+OSTYPE
+determinuje, określa rodzaj systemu
+if [ "$OSTYPE" == "msys" ]; then
+    echo "Używany jest system Windows (MSYS)."
+fi
+
