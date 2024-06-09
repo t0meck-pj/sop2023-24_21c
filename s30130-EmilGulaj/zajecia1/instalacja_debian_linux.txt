@@ -1040,7 +1040,8 @@ po powrocie do prawdziwych GB posiadamy ich 10.24 a nie 10)
 		- "Mount options":
 
 			- "boot" musi byc to partycja podstawowa w ktorej 
-			znajduja sie dane bootujace musi miec ustawiona flage bootujaca.
+			znajduja sie dane bootujace musi oraz miec ustawiona flage bootujaca.
+			Dzięki tej partycji system włącza się prawidłowo.
 
 			- "home" nie musi byc podstawowa, zawiera wszystkie dane 
 			uzytkownikow.
@@ -1066,50 +1067,49 @@ po powrocie do prawdziwych GB posiadamy ich 10.24 a nie 10)
 
 		- Mount options:
 
-			- "discard" - 
+			- "discard" - Opcja która umożliwia usuwanie danych dla 
+			dyskow SSD, co poprawia ich wydajnosc oraz żywotność.
 
-			- "noatime" - nie aktualizuj dostepu inode(plik systemowy
-dla linuxa) z kazdym dostepem.
+			- "noatime" - Wyłącza aktualizowanie znacznika czasu dostepu
+			na plikach oraz katalogach przy każdym ich odczycie.
+			Dzięki zmniejszeniu ilości operacji poprawiona jest wydajność
+			oraz żywotność dysków SSD. 
 
-			- "nodiratime" - nie aktualizuj czasow dostepu inode
+			- "nodiratime" - Jak powyżej tylko jest to tylko wyłączone tylko
+			wyłącznie dla katalogów.
 
-			- "relatime" - aktualizuj inode 
+			- "relatime" - Aktualizuje znacznik czasu dostępu tylko w momencie
+			gdy jest staszy od czasu modyfikacji lub jeśli od ostatniej aktualizacji
+			minęła określona liczba godzin.
+			Poprawia to wydajność oraz żywotność ze względu na mniejszą ilość operacji.
 
-			- "nodev" -
+			- "nodev" - Nie mogą być tworzone device files na danej partycji
+			lub systemie plików.
+			Zwiększa to miedzyinnymi bezpieczeństwo przed potencjalnymi atakami.  
 
-			- "nosuid" - 
+			- "nosuid" - Opcja która blokuje tworzenie plików z bitem SUID oraz SGID.
+			Zwiększa to miedzyinnymi bezpieczenstwo przed potencjalnymi atakami.
 
-			- "noexec" - nie pozwala na uzywanie plikow binarnych
+			- "noexec" - Nie pozwala na wykonywanie plikow binarnych.
+			Zwiększa to miedzyinnymi bezpieczenstwo przed potencjalnymi atakami.
 
-			- "ro" - tylko do odczytu
+			- "ro" - Read-Only, pozwala tylko wyłącznie na czytanie plików.
+			Zwiększa to miedzyinnymi bezpieczenstwo przed potencjalnymi atakami.
 
-			- "sync" - wszystko jest synchronizowane
+			- "sync" - Operacja zapisu plików jest wykonywana synchronicznie.
+			Dzięki temu dane są przekazywane od razu na dysk zamiast pierw do pamięci.
+			Zwiększa to bezpieczeństwo danych na wypadek np. awarii prądu.
 
-			- "usrquota" - system limitowania pamieci dyskowej dla
-			uzytkownika.
+			- "usrquota" - System limitowania pamieci dyskowej dla uzytkownika.
+			Umożliwia to kontrolę ilości miejsca jakie może zużywać użytkownik.
 
-			- "grpquota" - system limitowania pamieci dyskowej dla 
-			grup.
+			- "grpquota" - System limitowania pamieci dyskowej dla grup.
+			Umożliwia to kontrolę ilości miejsca jakie może zużywać grupa użytkowników.
 
-			- "user_xattr" - wspiera rozszerzone atrybuty uzytkownika
-
-		- "Label" nazywanie partycji
-
-		- "Reserved blocks" ilosc blokow zarezerwowana dla roota 
-		(przydatne do naprawy systemu)
-
-		- "Typical usage"
-
-			- "standard" standard
-
-			- "news" czestmo zmieniajace sie dane
-
-			- "largefile" duze pliki
-
-			- "largefile4" duze pliki zapisane w 4 blokach
-
-		- "Bootable flag" musi byc ustawiona, poniewaz inaczej system sie
-		nie zabootuje.
+			- "user_xattr" - Wspiera rozszerzone atrybuty uzytkownika, Tzn.
+			można przechowywać informacje na temat pliku.
+			Zwiększa to możliwości oraz elastyczność związaną z przechowywaniem
+			informacji o plikach. 
 
  - W kolejnej sekcji jestem pytany o potwierdzenie, czy takie zmiany maja zostac 
 wpisne w dysk, klikam "Yes".
@@ -1128,7 +1128,11 @@ w polu "HTTP proxy information (blank for none):" nic nie wpisuje, i klikam
 "continue".
 
 - Jestem pytany czy chce uczestniczyc w anonimowej ankiecie zwiazanej z moimi 
-wyborami. Wybieram "No" bo dopiero sie ucze, i nie chce by byly wysylane
+wyborami. Jest to ankieta której zadaniem jest zbieranie informacji na temat
+instalowanych publicznie aplikacji. Informacje te pomagają dystrybutorowi
+ustalić jakie aplikacje powinny być dostarczane domyślnie wraz z systemem w
+późniejszych wydaniach (skoro jest na nie zapotrzebowanie).
+Wybieram "No" bo dopiero sie ucze, i nie chce by byly wysylane
 nieprawdziwe informacje spowodowane przez moj proces nauki.
 
 - W Sekcji Software selection
@@ -1164,17 +1168,19 @@ nieprawdziwe informacje spowodowane przez moj proces nauki.
 - klikam "continue"
 
 - W sekcji "Configuring grub-pc" jestem pytany gdzie nalezy zainstalowac boot 
-manager. Mozliwy do zainstalowania w dwoch miejsch.
+manager. Mozliwy do zainstalowania w dwoch miejscach.
 
-- master boot record - tylko jedna partycja ma master boot record ktory decyduje 
-jaka partycja zostanie uzyta do bootowania.
+	-- master boot record - tylko jedna partycja ma master boot record ktory decyduje 
+	jaka partycja zostanie uzyta do bootowania.
 
-- boot record - kazda partycja ma boot record.
+	-- boot record - kazda partycja ma boot record. Jeśli jest już jakiś boot manager
+	w master boot recordzie, to instaluje się on tutaj. 
 
 - W sekcji "Device for boot loader installation"
 
 	- "Enter device manually" - umozliwia wprowadzenie recznie partycji z 
 	boot loadem
+
 	- /dev/sda - wybiera domyslny boot loader
 
 - "Finish the installation" jestem pytany czy chce zakonczyc proces instalacji, 
