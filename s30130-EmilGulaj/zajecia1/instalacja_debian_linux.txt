@@ -1,7 +1,7 @@
 Tresc zadania:
 Instalacja systemu linux na maszynach wirtualnych
 
-Ponizej staralalem sie opisac caly proces tworzenia maszyny wirtualnej, wraz ze
+Ponizej staralem sie opisac caly proces tworzenia maszyny wirtualnej, wraz ze
 wszystkimi mozliwymi opcjami do wyboru (nawet gdy czegos nie wybieralem to 
 staralem sie opisac wszystkie mozliwe opcje, po co i dlaczego.) Staralem sie 
 rowniez pisac bez polskich znakow w razie gdyby jakis edytor tekstu ich nie 
@@ -39,11 +39,11 @@ https://www.debian.org/download).
 
 - Virtual box na tym momencie sam powinien uzupełnic pola "Typ" oraz "Wersja" 
 wybierajac "Linux" i "Debian (64-bit)". (Jeśli się to nie stało (ponieważ np. 
-została wpisana inna nazwa), są to pola które też bym wybrał. (W przypadku 
+została wpisana inna nazwa), są to pola które też bym wybrał.) (W przypadku 
 instalacji innego systemu trzeba by bylo dobrac inny "Typ" oraz "Wersje").
 
 	-  W polu "Typ" nie wybieram nic innego poza Linuxem poniewaz Debian jest 
-	systemem operacyjnym ktory jest oparty na linuxie a nie np. na Windowsie.
+	dystrybucją linuxa a nie np. na Windowsa.
 
 	- W polu Wersja wybieram "Debian (64-Bit)" poniewaz procesor w moim 
 	komputerze jest w stanie taką wersje obsluzyc (a nie tylko wersje 32bit),
@@ -52,17 +52,15 @@ instalacji innego systemu trzeba by bylo dobrac inny "Typ" oraz "Wersje").
 	sie takiego procesora)
 
 		- Dlaczego nie wybrac np. debian 11 lub debian 6 skoro i tak 
-		odbedzie sie instalacja z obrazu dysku? To moze prowadzic
- 		do ewentualnych	problemow w instalacji, lub na jakimkolwiek
-		pozniejszym procesie, i po prostu nie jest to zalecane tak
-		samo jak mozliwosci podczas doboru pamieci opisywany pozniej.
+		odbedzie sie instalacja z obrazu dysku? Po prostu nie jest to zalecane
+		tak samo jak mozliwosci podczas doboru pamieci opisywany pozniej.
 		(Jesli cos mozna, to nie znaczy ze warto)
 
-- Zaznaczam Kwadrat "Skip Unattended Installation", ponieważ chce przeprowadzić 
-całkowitą instalację "od A do Z". Jeśli ten kwadrat pozostawilbym pusty, Virtual 
+- Zaznaczam checkbox "Skip Unattended Installation", ponieważ chce przeprowadzić 
+instalacje samodzielnie "od A do Z". Jeśli ten Checkbox pozostawilbym pusty, Virtual 
 Box zrobilby duzo rzeczy za mnie w pozniejszych etapach, ale nie korzystam z tego
 bo wole to zrobic wszystko na wlasna reke. (Warto pozostawic ta opcje odznaczona
-w momencie gdy z jakiegos powodu trzeba zrobic maszyne jak najszybciej)
+w momencie gdy z chcemy korzystac z pomocy komputera).
 
 
 -- Sekcja Unattended Install
@@ -82,7 +80,7 @@ w polu "Password" oraz "Repeat Password". Jest to po prostu tworzenie glownego
 uzytkownika systemu. (Uzylem slowa 'warto', poniewaz nie jest to wymagane i 
 proces instalacji i tak sie otworzy.)
 
-- Można takze zaznaczyc kwadrat "Guest Additions" ktory pozwala na dodanie 
+- Można takze zaznaczyc Checkbox "Guest Additions" ktory pozwala na dodanie 
 swojego obrazu dysku z dodatkowym sterownikami lub aplikacjami ktore chcielibysmy
  miec zaimplementowane w maszynie.
 
@@ -102,7 +100,7 @@ zmienic).
 - W polu "Domain Name" ustawia sie nazwe domeny na ktora moga polaczyc sie np. 
 inne VM'y za pomoca np. DNS (Domain Name System).
 
-- Kwadrat "Install in Background" sluzy do tego by okno od instalacji VM'a bylo 
+- Checkbox "Install in Background" sluzy do tego by okno od instalacji VM'a bylo 
 schowane. Warto tego uzyc ze wzgledu na (dlugi) czas trwania instalacji warto 
 uzyc takiej opcji.
 
@@ -117,14 +115,15 @@ uzyc takiej opcji.
 - Jesli chodzi o RAM to wybieram dokladnie 2048MB, poniewaz:
 
 	- Uwazam ze taka ilosc jest optymalna dla maszyny ktora stworze,
-	(Calkiem szybko sie zainstaluje, i raczej nie bedzie potrzeby
-	zmieniania tej wartosci) ale jesli okaze sie, ze ta wartosc
-	jest za duza, lub za mala, zmienie ja juz po utworzeniu maszyny.
+	(Maszyna nie będzie nic robić, jedynie chcę by się calkiem szybko zainstalowała,
+	a zaraz po jej zainstalowaniu zmniejsze to do rekomendowanych ustawień które
+	można odnaleźć na stronie internetowej znajdującej się pod tym linkiem:
+	https://www.debian.org/releases/bullseye/amd64/ch03s04.en.html).
 
 		- Jest to nie bez powodu taka wartosc poniważ:
 
 			- Mozna podac np. 2047MB ale z racji tego jak komputer
-			przydziela pamiec (w oparciu o wielokrotnosc liczby dwa)
+			przydziela pamiec (opierając się na wielokrotnosciach liczby dwa)
 			jest to nie wskazane poniewaz w powyzszym przypadku ten
 			1MB ktory by musial zostac odejty do najblizszej liczby
 			podzielnej przez dwa zostal by po prostu nigdzie nie 
@@ -134,14 +133,14 @@ uzyc takiej opcji.
 			przez dwa, nie zaleca sie uzywania takiej wartosci,
 			poniewaz nie jest to optymalne dla przydzielania pamieci
 			przez system(przypomne - komputery dzialaja w
-			oparciu wielokrotnosci liczby dwa (2,4,16....1024, 2048, 4096...)
+			oparciu wielokrotnosci liczby dwa (2,4,16....1024, 2048, 4096...))
 
 - Wybieram dwie jednostki pod wykonawcze, (opisane jako Processors: 2) glownie na
 czas instalacji, po to by trwala ona chociaz nieco krocej, a potem jesli zajdzie 
 taka potrzeba, albo zwieksze ilosc procesorow, albo zmniejsze, zaleznie od 
 wymagan.
 
-- Zaznaczam Kwadrat "Enable EFI (special OSes only)" ponieważ chce by nowsza 
+- Zaznaczam Checkbox "Enable EFI (special OSes only)" ponieważ chce by nowsza 
 technologia od BIOSu była wykorzystywana w mojej maszynie, co przelozy sie na jej
 szybszy start.
 
@@ -150,16 +149,17 @@ szybszy start.
 
 
 - Wybieram opcje "Create a Virtual Hard Disk Now" poniewaz chce juz teraz 
-zagospodarowac dokladnie 20GB miejsca na dysku, uwazam ze jest to odpowiednia
-ilosc do zadan tej maszyny, ewentualnie taka wartosc jeszcze zwieksze 
-(zmniejszyc akurat w tym przypadku nie bede mogl) W celu ewentualnego zmienienia
-wartosci wystarczy uzyc dostepnego paska, lub recznie wpisania wartosci.
-Wybieram domyslna sciezke wybrana przez virtual boxa poniewaz mi odpowiada
-(Gdyby nie odpowiadala to trzeba kliknac zolta ikonke znajdujaca sie po prawej stronie
-i wybrac odpowiednia sciezke, lub wpisac ja recznie).
+zagospodarowac dokladnie 10GB miejsca na dysku, uwazam ze jest to odpowiednia
+ilosc do zadan tej maszyny, a z racji, że nic nie będzie robić
+to posiłkuję się podanymi wcześniej zaleceniami ewentualnie taka wartosc jeszcze
+zwieksze. W celu ewentualnego zmienienia wartosci wystarczy uzyc dostepnego
+paska, lub recznie wpisania wartosci. Wybieram domyslna sciezke wybrana 
+przez virtual boxa poniewaz mi odpowiada (Gdyby nie odpowiadala to 
+trzeba kliknac zolta ikonke znajdujaca sie po prawej stronie i wybrac
+odpowiednia sciezke, lub wpisac ja recznie).
 
 	- Nie wybieram "Use an Existing Virtual Hard Disk File" bo nie mam 
-	przygotowanego zadnego przygotowanego wirtualnego dysku ktorego moglbym i 
+	przygotowanego zadnego wirtualnego dysku ktorego moglbym i 
 	chcialbym uzyc. Jednakze gdyby zaszla taka potrzeba wystarczy wybrac ta opcje, 
 	kliknac zolta ikone na prawo, w celu wyboru dysku, i po tym jak pojawi sie nowe 
 	okno, w nim wybrac "Dodaj". W tym momencie trzeba wybrac plik obrazu dysku, ktory
@@ -169,6 +169,7 @@ i wybrac odpowiednia sciezke, lub wpisac ja recznie).
 
 	- Nie wybieram "Do Not Add a Virtual Hard Disk" bo chce zeby moja maszyna
  	wirtualna posiadala wirtualny dysk na ktorym znajda sie np. potencjalne aplikacje.
+	Przydatne 
 
 
 	--- Podsekcja Hard Disk File Type and Variant
@@ -176,8 +177,8 @@ i wybrac odpowiednia sciezke, lub wpisac ja recznie).
 
 - W podsekcji "Hard Disk File Type and Variant" 
 
-- Kwadrat "Pre-allocate Full Size" zaznaczam, poniewaz dzieki przypisaniu 
-wczesniej wybranych 20GB na czas instalacji, zdecydowanie ja przyspieszy, oraz 
+- Checkbox "Pre-allocate Full Size" zaznaczam, poniewaz dzieki przypisaniu 
+wczesniej wybranych 10GB na czas instalacji, zdecydowanie ja przyspieszy, oraz 
 zabezpieczy przed przypadkowym zabraknieciem miejsca na dysku. 
 
 - Wybieram VDI (VirtualBox Disk Image) poniewaz jest to standardowy obraz dysku
@@ -195,11 +196,12 @@ typu dysk.
 	zmieniac miedzy roznymi wirtualizatorami (co nie jest zalecane ze wzgledu na 
 	sterowniki).
 
-		- Jesli bym wybral to kwadrat "Split into 2GB parts" zrobilby sie
-		mozliwy do wybrania, i oznaczalo by to ze mozna podzielic VMa na pliki po 2GB, 
-		ktore moglyby by byc uzyteczne np. podczas kopiowania i transportowania danych.
+		- Jesli bym wybral to checkbox "Split into 2GB parts" zrobilby sie
+		mozliwy do wybrania, i oznaczalo by to ze mozna podzielic dyski VMa
+		na pliki po 2GB,  ktore moglyby by byc uzyteczne np. podczas
+		kopiowania i transportowania danych.
 
-	- Nie wybieram HDD bo wybrane wczesniej 20GB bedzie "wyciagniete" z 
+	- Nie wybieram HDD bo wybrane wczesniej 10GB bedzie "wyciagniete" z 
 	mojego dysku ktory nie jest czysty i pelny w 100%. Uzyteczne gdy ma sie 
 	specjalnie osobny dysk dla wirtualnej maszyny a oczekuje sie jak najwiekszej 
 	wydajnosci.
@@ -286,9 +288,9 @@ wiec to pole pozostawie puste.
 --- Podsekcja "Szyfrowanie Dysku"
 
 
-- Kwadrat "Wlacz szyfrowanie dysku" pozwala wlaczyc opcje szyfrowania danych. O
+- Checkbox "Wlacz szyfrowanie dysku" pozwala wlaczyc opcje szyfrowania danych. O
 ile bezpieczenstwo jest zawsze wazne, to jednak jest ono czasami niepotrzebne, 
-tak jak w mojej maszynie, dlatego zostawiam ten kwadrat odznaczony (Uzywam slowa
+tak jak w mojej maszynie, dlatego zostawiam ten checkbox odznaczony (Uzywam slowa
 "niepotrzebne" bo algorytmy szyfrujace musza zostac wykonane co jest kosztowne w
 procesach co powoduje dluzszy czas oczekiwania na zapis i odczyt danych). 
 Przydatne gdy jest np. polityka bezpieczenstwa w firmie ktora wymusza by 
@@ -313,12 +315,12 @@ powyzszym polu w celu jego potwierdzenia.
 podczas tworzenia maszyny. Ja tutaj nic nie zmieniam bo jeszcze nie zaczalem 
 instalowac VM'a.
 
-- W polu "Kolejnosc bootowania" znajduja sie wszysktie nosniki danych ktore 
-system bedzie po kolei sprawdzal w celu odnalezienia zapisanych danych. Ja 
-odznaczam w tym wypadku "dyskietka" bo takiej nie posiadam. Zostawilem "naped 
-optyczny" poniewaz to z pliku obrazu dysku bedzie instalowany system oraz "dysk
-twardy" poniewaz gdy bede chcial w przyszlosci po raz kolejny wlaczyc maszyne, 
-to wlasnie bedzie z tej opcji korzystac.
+- W polu "Kolejnosc bootowania" znajduje sie kolejnosc rozruchu po ktorej 
+system bedzie po kolei od gory do dolu probowal zaladowac system operacyjny.
+Zostawilem "naped  optyczny" poniewaz to z pliku obrazu dysku bedzie 
+poczatkowo instalowany system, dyskietke bo w niczym wlasciwie nie przeszkadza
+oraz "dysk twardy" poniewaz gdy bede chcial w przyszlosci po raz kolejny
+wlaczyc maszyne, to wlasnie bedzie z tej opcji korzystac.
 
 - W polu "Chipset" sa mozliwe do wyboru chipsety, ktore beda emulowane w 
 wirtualnej maszynie. Ja wybieram chipset PIIX3 poniewaz moim systemem operacyjnym
@@ -372,8 +374,10 @@ by bylo taka opcje dostosowac to:
 
 - Rozszerzone Wlasciwosci:
 
-	- "Wlacz I/O APIC" jest to nowsza wersja "PIC" ktora musi byc uzywana w
-	przypadku systemow 64 bitowych. Z tego powodu pozostawiam ta opcje zaznaczona.
+	- "Wlacz I/O APIC" zapewnia lepsze wsparcie dla nowszych systemow operacyjnych
+	orac funkcji sprzetowych ale w niektorych przypadkach moze byc nawet konieczne
+	jej wylaczenie, dla starszych systemow lub oprogramowania. Z racji ze ja korzystam
+	z dosyc nowoczesnego OS zostawiam ta opcje zaznaczona.
 
 	- "Enable Hardware Clock in UTC Time" umozliwia wyswietlanie czasu w 
 	wybranej przez hosta strefie czasowej. (Ja pozostawiam zaznaczone bo chce by taki
@@ -385,7 +389,7 @@ by bylo taka opcje dostosowac to:
 		- "Enable Secure Boot "z ang. pozwala na emulowanie bezpiecznego
 	wlaczania maszyny, jest wymagana do uzywania z nowszymi systemami windows 
 	(takich jak win 10 i win 11. Ja ta opcje pozostawiam odznaczona bo jej nie musze 
-	uzywac, i jej nie potrzebuje.
+	uzywac, i jej nie potrzebuje.)
 
 			- "Reset Keys to Default" sluzy do resetowania kluczy 
 			ktore sa potrzebne do "Enable Secure Boot".
@@ -405,7 +409,7 @@ mnie porocesory tyle z siebie dawaly.
 	- "Wlacz Pae/NX" przydatne jesli na systemie 32 bitowym chce sie uzyc 
 	wiecej niz 4gb pamieci RAM. Dodatkowo niektore systemy operacyjne potrzebuja tej
 	opcji w celu samego wlaczenia maszyny wirtualnej. Z racji ze to bedzie system 64
-	bitowy pozostawiam ta opcje odznaczona.
+	bitowy pozostawiam ta opcje wyłączoną.
 
 	- "Wlacz zagniezdzone VT-x/AMD-V" jest to zagniezdzona wirtualizacja 
 	ktora umozliwia tworzenie maszyny wirtualnej w maszynie wirtualnej. Przydatne w 
@@ -440,7 +444,7 @@ wykorzystywania ich w pamieci podstawowej.
 
 
 - "Pamiec wideo" jest to ile potrzebnej pamieci na wyswietlenie jednej klatki, 
-liczy sie to: rodziedzlczosc monitora * ilosc bitow.W moim przypadku jest to 1920
+liczy sie to: XY(z rozdzielczosci monitora) * glebia w bitach / 8.W moim przypadku jest to 1920
 * 1080 * 32 = 66,355,200bitow / 8 = 8,294,400 bajtow = ok. 8 MB wiec ja maszynie
 zostawiam tyle ile jest. 
 
@@ -466,7 +470,7 @@ bylo cos lepiej widoczne. Ja zostawiam tak jak jest.
 		zadnej grafiki. Moze byc przydatne kiedy wszystko jest juz zainstalowane, a 
 		dostep do maszyny jest przez siec.
 
-- Rozszerzone wlasciwosci: kwadrat wlacz akceleracje 3D pozostawiam nie 
+- Rozszerzone wlasciwosci: checkbox wlacz akceleracje 3D pozostawiam nie 
 zaznaczony bo nie bedzie mi potrzebna. Mogła by byc uzyteczna gdyby ktos np 
 chcial odpalic gre na maszynie wirtualnej.
 
@@ -474,7 +478,7 @@ chcial odpalic gre na maszynie wirtualnej.
 --- Podsekcja "Zdalny Pulpit"
 
 
-- Kwadrat "wlacz serwer" pozostawiam odznaczony poniewaz nie przewiduje uzywania
+- checkbox "wlacz serwer" pozostawiam odznaczony poniewaz nie przewiduje uzywania
 zdalnego pulpitu. Przydatne gdy ktos chce sie podlaczyc do maszyny przez
 np. menadzer pulpitu zdalnego
 
@@ -496,7 +500,7 @@ np. menadzer pulpitu zdalnego
 	- "Limit czasu uwierzytelnienia" jest to limit czasowy na 
 	uwierzytelnienie uzytkownika wyrazony w milisekundach
 
-	- Rozszerzone wlasciwosci: kwadrat "pozwol na wielokrotne polaczenia" 
+	- Rozszerzone wlasciwosci: checkbox "pozwol na wielokrotne polaczenia" 
 	oznacza ze moze zostac wykonanych wiele roznych polaczen do jednego serwera. 
 	Przydatne gdyby z opcji podlaczenia chcialo skorzystac kilka urzadzen.
 
@@ -504,7 +508,7 @@ np. menadzer pulpitu zdalnego
 --- Podsekcja "Nagrywanie"
 
 
-- kwadrat "wlacz nagrywanie" pozostawiam nie zaznaczony, poniewaz nie przwiduje 
+- checkbox "wlacz nagrywanie" pozostawiam nie zaznaczony, poniewaz nie przwiduje 
 bym chcial nagrywac to co sie dzieje w maszynie wirtualnej. Jest to przydatne gdy
 np. testuje sie roznego rodzaju wirusy i chce sie to pozniej np. przeanalizowac.
 
@@ -543,7 +547,7 @@ np. testuje sie roznego rodzaju wirusy i chce sie to pozniej np. przeanalizowac.
 wybralem odpowiedni obraz dysku. Przydatne gdyby ktos teraz tuz przed 
 zainstalowaniem systemu postanowil to zmienic. 
 
-- kwadrat Live CD/DVD pozostawiam nie zaznaczony poniewaz chce by obraz dysku 
+- checkbox Live CD/DVD pozostawiam nie zaznaczony poniewaz chce by obraz dysku 
 zostal usuniety z maszyny po zainstalowaniu juz systemu operacyjnego. 
 Pozostawienie go moze byc przydatne gdyby ktos chcial zrobic np. writualna 
 maszyne w maszynie wirtualnej uzywajac tego samego obrazu dysku.
@@ -554,7 +558,7 @@ maszyne w maszynie wirtualnej uzywajac tego samego obrazu dysku.
 - "Typ": Tutaj znajduja sie wszystkie dostepne typy kontrolerów mozliwe do 
 dodania.
 
-- kwadrat "uzyj buforowania wejscia/wyjscia gospodarza" pozostawiam nie 
+- checkbox "uzyj buforowania wejscia/wyjscia gospodarza" pozostawiam nie 
 zaznaczony, bo oznacza on ze dane wyjsciowe zadania do pamieci sa wysylane do 
 pamieci dyskowej a nie bezposrednio do urzadzenia wyjsciowego, co jest mi nie 
 potrzebne bo i tak nie bede uzywal urzadzen wyjscia.
@@ -564,17 +568,17 @@ potrzebne bo i tak nie bede uzywal urzadzen wyjscia.
 
 - Pole "Dysk twardy" mozliwy wybor portu SATA
 
-- kwadrat "Dysk SSD" zaznaczam poniewaz moj dysk jest dyskiem ssd 
+- checkbox "Dysk SSD" zaznaczam poniewaz moj dysk jest dyskiem ssd 
 
-- kwadrat "Hot-pluggable" zostawiam niezaznaczony poniewaz u mnie jest to dysk 
+- checkbox "Hot-pluggable" zostawiam niezaznaczony poniewaz u mnie jest to dysk 
 ktorego nie moge w kazdej chwili podlaczyc i odlaczyc.
 
 
 -- Sekcja Dźwięk
 
 
-- Kwadrat "wlacz dzwiek" odznaczam gdy moja maszyna nie bedzie potrzebowala 
-dzwieku uzywac dzwieku.
+- checkbox "wlacz dzwiek" odznaczam gdyz moja maszyna nie bedzie potrzebowala 
+uzywac dzwieku.
 
 	- Sterownik dzwieku gospodarza
 
@@ -593,11 +597,11 @@ dzwieku uzywac dzwieku.
 
 	- Rozszerzone wlasciwosci:
 
-		- kwadrat "wlacz wyjscie dzwieku" oznacza dzwiek wychodzacy z
+		- checkbox "wlacz wyjscie dzwieku" oznacza dzwiek wychodzacy z
 		maszyny wirtualnej, np. muzyka. Uzyteczne gdyby ktos chcial sluchac jakis
 		dzwiekow uzywajac do tego maszyny wirtualnej.
 
-		- kwadrat "wlacz wejscie dzwieku" oznacza ze dzwiek bedzie 
+		- checkbox "wlacz wejscie dzwieku" oznacza ze dzwiek bedzie 
 		przechwytywany do maszyny wirtualnej (np. poprzez mikrofon). Uzyteczne gdyby ktos
 		chcial uzywac maszyny wirtualnej do komunikacji glosowej.
 
@@ -605,7 +609,7 @@ dzwieku uzywac dzwieku.
 -- Sekcja Sieć
 
 
-- kwadrat "wlacz karte sieciowa" zostawiam zaznaczona, bo chce by moja maszyna 
+- checkbox "wlacz karte sieciowa" zostawiam zaznaczona, bo chce by moja maszyna 
 miala karte sieciowa.
 
 	- "Podlaczona do":
@@ -637,9 +641,16 @@ miala karte sieciowa.
 		wlasnego sterownika. Przydatne gdy zadna z powyzszych opcji się nie sprawdzi.
 
 			- "Rodzajowe wlasciwosci" jest tutaj miejsce na wpisanie
-			wlasciwosci wlasnego sterownika.
+			wlasciwosci wlasnego sterownika w celu dostosowania parametrów
+			specyficznych dla wybranego sterownika. Przdatne jesli posiada
+			się jakis sterownik w ktorym chcemy np. dostosowac predkosc
+			polaczenia lub tryb pracy co moze sie przydac do konkretnych
+			wymagan aplikacji lub środowiska.
 
-		- "Sieć NAT" pozwala na polaczenia wychodzace.
+		- "Sieć NAT" pozwala na polaczenia wychodzace. Przydatne w przypadku
+		testowania np. aplikacji webowych, ponieważ VM bedzie mial
+		dostep do internetu ale zaraze bedzie chroniony przed dostepem
+		z zewnatrz.
 
 		- "Cloud Network EXPERIMENTAL" pozwala na podlaczenie maszyny
 		wirtualnej do podadresu znajdujacego sie w usludze chmurowej (np. Azure). 
@@ -681,16 +692,16 @@ miala karte sieciowa.
 - Pole "Adres MAC" jest to losowo generowany adres MAC.(Pierwsze szesc bitow jest
  typowe dla virtualboxa pozostale szesc jest losowo generowane).
 
-- kwadrat "kabel podlaczony" "odlacza" i "podlacza" wrtualny kabel. To oznacza po
-prostu ze zaznaczony kwadrat "daje internet" a odznaczony go "nie daje". Jest to
+- checkbox "kabel podlaczony" "odlacza" i "podlacza" wrtualny kabel. To oznacza po
+prostu ze zaznaczony checkbox "daje internet" a odznaczony go "nie daje". Jest to
 uzyteczna opcja do "odlaczania internetu" bez odlaczania karty sieciowej. Ja 
-zostawiam ten kwadrat zaznaczony, bo chce by maszyna miala dostep do internetu.
+zostawiam ten checkbox zaznaczony, bo chce by maszyna miala dostep do internetu.
 
 
 -- Sekcja Porty Szeregowe
 
 
-- kwadrat "wlacz port szeregowy" odznaczam poniewaz sa mi one nie potrzebne.
+- checkbox "wlacz port szeregowy" odznaczam poniewaz sa mi one nie potrzebne.
 
 	- Numer portu 
 
@@ -717,7 +728,7 @@ zostawiam ten kwadrat zaznaczony, bo chce by maszyna miala dostep do internetu.
 		- "TCP" umozliwia uzywania portu jako server lub do podlaczania
 		sie do innych serwerow.
 
-	- kwadrat "Podlacz do istniejacego lacza komunikacyjnego/gniazda" podany 
+	- checkbox "Podlacz do istniejacego lacza komunikacyjnego/gniazda" podany 
 	adres lub sciezka sa uznawane za istniejace i jest proba podlaczenia sie. (nie 
 	przydtane gdy chce sie uzywac TCP jako serwer)
 
@@ -728,7 +739,7 @@ zostawiam ten kwadrat zaznaczony, bo chce by maszyna miala dostep do internetu.
 -- Sekcja USB
 
 
-- kwadrat "wlacz kontroler USB" zostawiam zaznaczony, poniewaz chce by VM widzial
+- checkbox "wlacz kontroler USB" zostawiam zaznaczony, poniewaz chce by VM widzial
 ze moja klawiatura jest podlaczona
 
 	- "Kontroler USB 1.1 (OHCI)" Przestarzala opcja. Uzyteczne gdy nie 
@@ -739,8 +750,10 @@ ze moja klawiatura jest podlaczona
 	klawiatura zostala obsluzona, ale nie musi byc to w duzych predkosciach oferowane
 	przez USB 3.0.
 
-	- "Kontroler USB 3.0 (xHCI)" Wsparcie dla USB 3.0. Przydatne jesli zalezy
-	na predkosci przesylu danych (np. podpiety dysk).
+	- "Kontroler USB 3.0 (xHCI)" Wsparcie dla USB 3.0. Co umozliwa rowniez korzystanie
+	z wielu urzadzen USB, oraz urzadzen ze starszymi standardami USB (USB 2.0).
+	Przydatne jesli zalezy na predkosci przesylu danych (np. podpiety dysk) lub
+	przewiduje sie korzystania z wiekszych ilosci urzadzen.
 
 	- Pole "Filtry urzadzen USB" daje mozliwosc by wyfiltorwac maszynie, 
 	jakich podpietych urzadzen nie odczytywala. Ja pozostawie ta sekcje pusta ale 
@@ -763,10 +776,10 @@ folderu.
 - "Visual State" Opcje ustawienia okna wirtualnej maszyny.
 
 - "Mini ToolBar"
-	- kwadrat "Wyświetl w trybie pelnego ekranu/Seamless" odznaczam bo nie 
+	- checkbox "Wyświetl w trybie pelnego ekranu/Seamless" odznaczam bo nie 
 bede tego potrzebowac do maszyny ktora tworze.
 
-		- kwadrat "Show at Top of Screen" powoduje ze pasek narzedzi 
+		- checkbox "Show at Top of Screen" powoduje ze pasek narzedzi 
 ktory jest zawsze w dolnej czesci ekranu, jest przesuniety do gory. Ja zostawiam 
 ta opcje odznaczona, bo wole miec pasek na dole.
 
@@ -775,7 +788,7 @@ Klikam "OK" znajdujace sie na dole strony zeby potwierdzic wprowadzone zmiany.
 Klikam Uruchom
 po tym jak pojawilo sie okno wirtualnej maszyny:
 
-- "Graphical Install"  Instalowanie z GUI. Przydatna dal osob ktore chca 
+- "Graphical Install"  Instalowanie z GUI. Przydatna dla osob ktore chca 
 popatrzec na proces instalacji, lub uzywac myszki do jej kontynuowania.
 
 - "Install" Instalowanie bez GUI (tekstowo). Przydatne przy maszynach ktore maja
@@ -785,6 +798,72 @@ maszyna nie musiala renderowac obrazu, dzieki czemu szybciej moze sie
 zainstalowac.
 
 - "Advanced Options" Opcje zaawansowane konfiguracji instalatora.
+
+-- Graphical expert install instalacja expercka z GUI. (Wytlumaczone ponizej)
+
+-- Graphical rescue mode rescue mode z GUI. (Wytlumaczone ponizej)
+
+-- Graphical automated install automatyczna instalacja z GUI. (Wytlumaczone ponizej)
+
+-- Expert install jest to bardziej zaawansowana wersja instalacji
+	OS. Różni się ona pod wzgledem stopnia kontroli, konfiguracji
+	i dostepu do opcji podczas instalacji. Ja tej opcji nie wybrałem
+	jednakże gdybym wybrał, to tak by wyglądał proces instalacji:
+
+--- choose language - wybor jezyka tak jak podczas zwyklej instalacji
+
+--- Access software for a blind person using a braille display - umozliwia
+	konfiguracje systemu dla osob niewidomych ktore posiadaja wyswietlacz brailla.
+
+--- Configure the keyboard - umozliwia konfiguracje klawiatury tak jak podczas
+	zwyklej instalacji.
+
+--- Detect and mount installation media - wyszukuje czy jest podlaczony jakis
+	nosnik z danymi ktory posiada plikuy instalacyjne lub paczke takich plikow.
+
+--- Load installer components from installation media - bezposrdnio laduje 
+	komponenty instalatora z nosnika danych.
+
+--- change debconf priority - opcja ta pozwala na ustawienie priorytetu
+	pytan debconf czyli systemu zarzadzania konfiguracja ktory pozwala
+	na konfiguracje pakietow podczas ich instalacji.
+	Dostepne sa 4 priorytety:
+
+	- critical - innymi slowy niezbedne minimum.
+	
+	- high - kilka opcjonalnych pytan ktore moga byc istotne ale dalej
+	pozostaja opcjonalne.
+
+	- medium - wiecej mniej waznych pytan.
+
+	- low - najwiecej malo istotnych pytan.
+
+--- check the integrity of installation media - sprawdza integralnosc nosnika
+	instalacyjnego.
+
+--- save debug logs - zapisuje wszystkie dokonane zmiany.
+
+--- Execute a shell - uruchamia proces instalacji ze wszystkimi zapisanymi zmianami.
+
+--- Abort the installation - anulowanie instalacji.
+
+-- Rescue mode pozwala na debuging systemu i naprawiania problemow z OS
+	gdy normalny tryb nie jest dostępny.
+
+-- Automated install pozwala na przeprowadzenie instalacji bez jakiej kolwiek
+	interakcji z uzytkownikiem. Przydatne jesli z jakiegos powodu jest potrzeba
+	z automatyzowania instalacji systemow.
+
+-- Speech-enabled advanced options
+
+--- expert speech install jest to mozliwosc experckiej instalacji
+	za pomocą mowy. Przydatna opcja dla osob z niepelnosprawnosciami.
+
+--- Rescue speech mode pozawala osobom z niepełnosprawnosciami na debuging I
+	naprawe systemu operacyjnego za pomoca mowy.
+
+--- Automated speech install pozwala na automatyczne wykonanie procesu instalacji
+	za pomocą mowy bez koniecznosci interakcji z komputerem.
 
 - "Accessible dark contrast installer menu" Opcja ciemniejszym kontrascie, dla 
 osob ktore maja problem ze wzrokiem.
@@ -805,11 +884,10 @@ to bylo w przypadku innych krajow/ kontynentow).
 
 - w "Configure locales" wybieram United States - en_US.UTF-8 poniewaz chce by 
 system operacyjny i aplikacje uzywaly formatu np. numeru, daty, czasu etc. 
-dostepnego dla stanow zjednoczonych i nie chce miec polskich znakow 
-diakretycznych.
+dostepnego dla stanow zjednoczonych zamiast.
 
-- Jako "Keymap" wybieram American English, poniewaz uzywam klawiatury na ktorej 
-nie ma przyciskow z polskimi znakami diakretycznymi.
+- Jako "Keymap" wybieram American English, poniewaz uzywam domyslnej
+klawiatury z ukladem QWERTY.
 
 - W "Configure the network" w polu "Hostname" wpisuje nazwe maszyny wirtualnej 
 "debian12" i klikam "continue" (za pomoca klawiatury).
@@ -821,7 +899,7 @@ posiadam wiec nic nie wpisuje, i klikam "continue".
 czyli administratora w systemach linux. Ja wpisuje nieskomplikowane haslo i 
 klikam "continue".
 
-	- kwadrat "Show Password in Clear" po zaznaczeniu pokaze wpisane haslo 
+	- checkbox "Show Password in Clear" po zaznaczeniu pokaze wpisane haslo 
 	zamiast gwiazdek.
 
 - Pole "Re-enter password to verify" jest w celu potwierdzenia wpisanego hasla w 
@@ -845,15 +923,21 @@ bezpieczenstwa). klikam "continue".
 	opcje, bo chce by moja maszyna powstala jak najszybciej.
 
 	- "Guided - use entire disk and set up LVM" jest to opcja podobna do 
-	poprzedniej, ale dodatkowo ustawia sie LVM (Linux Volume Manager), ktory moze byc
- 	bardzo uzyteczny.
+	poprzedniej, ale dodatkowo ustawia sie LVM (Linux Volume Manager, czyli
+	narzedzie do zarzadzania przestrzenia dyskowa poprzez tworzenie woluminow,
+	grup dyskow i partycji), ktory moze byc bardzo uzyteczny do zajmowania
+	sie przestrzenia dyskową w celu np. tworzenia kopii zapasowych.
 
 	- "Guided - use entire disk and set up encrypted LVM" Opcja podobna do 
-	poprzedniej, tylko ze LVM jest dodatkowo zaszyfrowany. 
+	poprzedniej, tylko ze LVM jest dodatkowo zaszyfrowany. Używany głównie
+	w celu ochrony danych przed nieautoryzowanym dostępem. Szyfrowane powinny
+	być przedewszystki np. katalogi domowe, osobiste pliki oraz dane uzytkownikow.
+	Rowniez warto chronic np klucze uwierzytelniajace lub API.
 
 	- Manual - Jest to opcja w ktorej wszystko robi sie calkowicie samemu.
 
-		- "Guided partitioning" umozliwia cofniecie sie do opcji "Guided".
+		- "Guided partitioning" umozliwia cofniecie sie do opcji "Guided" po dokonaniu
+		zmian manualnie.
 
 		- "Configure software RAID" umozliwa "laczenie" kilku fizycznych 
 		dyskow w jeden wirtualny dysk.
@@ -872,9 +956,9 @@ bezpieczenstwa). klikam "continue".
 
 - W sekcje "Partition disks" wybieram dostepny dysk. (SCSI3 oznacza Small 
 Computer System Interface 3, a zera oznaczaja kolejno: kontroler, dysk, partycje.
-Jest 21.5GB dlatego ze wczesniej wybrane przezemnie 20GB bylo zle oznaczone. 
+Jest 21.5GB dlatego ze wczesniej wybrane przeze mnie 10GB bylo zle oznaczone. 
 Prawdziwy 1GB to 1000MB, a wczesniej bylo podane ze 1GB to 1024MB. Tym sposobem 
-po powrocie do prawdziwych GB posiadamy ich 21.5 a nie 20)
+po powrocie do prawdziwych GB posiadamy ich 10.24 a nie 10)
 
 - W Podsekcji "Partitioning Scheme":
 
@@ -947,14 +1031,17 @@ po powrocie do prawdziwych GB posiadamy ich 21.5 a nie 20)
 
 			- "physical volume for RAID" partycje przydzielone dla 
 			RAID.
+
 			- "physical volume for LVM" partycja przydzielona dla 
 			LVM.
-			- "do not use the partition" Brak uzycia partycji
+
+			- "do not use the partition" Brak uzycia partycji.
 
 		- "Mount options":
 
 			- "boot" musi byc to partycja podstawowa w ktorej 
-			znajduja sie dane bootujace musi miec ustawiona flage bootujaca.
+			znajduja sie dane bootujace musi oraz miec ustawiona flage bootujaca.
+			Dzięki tej partycji system włącza się prawidłowo.
 
 			- "home" nie musi byc podstawowa, zawiera wszystkie dane 
 			uzytkownikow.
@@ -980,50 +1067,49 @@ po powrocie do prawdziwych GB posiadamy ich 21.5 a nie 20)
 
 		- Mount options:
 
-			- "discard" - 
+			- "discard" - Opcja która umożliwia usuwanie danych dla 
+			dyskow SSD, co poprawia ich wydajnosc oraz żywotność.
 
-			- "noatime" - nie aktualizuj dostepu inode(plik systemowy
-dla linuxa) z kazdym dostepem.
+			- "noatime" - Wyłącza aktualizowanie znacznika czasu dostepu
+			na plikach oraz katalogach przy każdym ich odczycie.
+			Dzięki zmniejszeniu ilości operacji poprawiona jest wydajność
+			oraz żywotność dysków SSD. 
 
-			- "nodiratime" - nie aktualizuj czasow dostepu inode
+			- "nodiratime" - Jak powyżej tylko jest to tylko wyłączone tylko
+			wyłącznie dla katalogów.
 
-			- "relatime" - aktualizuj inode 
+			- "relatime" - Aktualizuje znacznik czasu dostępu tylko w momencie
+			gdy jest staszy od czasu modyfikacji lub jeśli od ostatniej aktualizacji
+			minęła określona liczba godzin.
+			Poprawia to wydajność oraz żywotność ze względu na mniejszą ilość operacji.
 
-			- "nodev" -
+			- "nodev" - Nie mogą być tworzone device files na danej partycji
+			lub systemie plików.
+			Zwiększa to miedzyinnymi bezpieczeństwo przed potencjalnymi atakami.  
 
-			- "nosuid" - 
+			- "nosuid" - Opcja która blokuje tworzenie plików z bitem SUID oraz SGID.
+			Zwiększa to miedzyinnymi bezpieczenstwo przed potencjalnymi atakami.
 
-			- "noexec" - nie pozwala na uzywanie plikow binarnych
+			- "noexec" - Nie pozwala na wykonywanie plikow binarnych.
+			Zwiększa to miedzyinnymi bezpieczenstwo przed potencjalnymi atakami.
 
-			- "ro" - tylko do odczytu
+			- "ro" - Read-Only, pozwala tylko wyłącznie na czytanie plików.
+			Zwiększa to miedzyinnymi bezpieczenstwo przed potencjalnymi atakami.
 
-			- "sync" - wszystko jest synchronizowane
+			- "sync" - Operacja zapisu plików jest wykonywana synchronicznie.
+			Dzięki temu dane są przekazywane od razu na dysk zamiast pierw do pamięci.
+			Zwiększa to bezpieczeństwo danych na wypadek np. awarii prądu.
 
-			- "usrquota" - system limitowania pamieci dyskowej dla
-			uzytkownika.
+			- "usrquota" - System limitowania pamieci dyskowej dla uzytkownika.
+			Umożliwia to kontrolę ilości miejsca jakie może zużywać użytkownik.
 
-			- "grpquota" - system limitowania pamieci dyskowej dla 
-			grup.
+			- "grpquota" - System limitowania pamieci dyskowej dla grup.
+			Umożliwia to kontrolę ilości miejsca jakie może zużywać grupa użytkowników.
 
-			- "user_xattr" - wspiera rozszerzone atrybuty uzytkownika
-
-		- "Label" nazywanie partycji
-
-		- "Reserved blocks" ilosc blokow zarezerwowana dla roota 
-		(przydatne do naprawy systemu)
-
-		- "Typical usage"
-
-			- "standard" standard
-
-			- "news" czestmo zmieniajace sie dane
-
-			- "largefile" duze pliki
-
-			- "largefile4" duze pliki zapisane w 4 blokach
-
-		- "Bootable flag" musi byc ustawiona, poniewaz inaczej system sie
-		nie zabootuje.
+			- "user_xattr" - Wspiera rozszerzone atrybuty uzytkownika, Tzn.
+			można przechowywać informacje na temat pliku.
+			Zwiększa to możliwości oraz elastyczność związaną z przechowywaniem
+			informacji o plikach. 
 
  - W kolejnej sekcji jestem pytany o potwierdzenie, czy takie zmiany maja zostac 
 wpisne w dysk, klikam "Yes".
@@ -1042,7 +1128,11 @@ w polu "HTTP proxy information (blank for none):" nic nie wpisuje, i klikam
 "continue".
 
 - Jestem pytany czy chce uczestniczyc w anonimowej ankiecie zwiazanej z moimi 
-wyborami. Wybieram "No" bo dopiero sie ucze, i nie chce by byly wysylane
+wyborami. Jest to ankieta której zadaniem jest zbieranie informacji na temat
+instalowanych publicznie aplikacji. Informacje te pomagają dystrybutorowi
+ustalić jakie aplikacje powinny być dostarczane domyślnie wraz z systemem w
+późniejszych wydaniach (skoro jest na nie zapotrzebowanie).
+Wybieram "No" bo dopiero sie ucze, i nie chce by byly wysylane
 nieprawdziwe informacje spowodowane przez moj proces nauki.
 
 - W Sekcji Software selection
@@ -1078,17 +1168,19 @@ nieprawdziwe informacje spowodowane przez moj proces nauki.
 - klikam "continue"
 
 - W sekcji "Configuring grub-pc" jestem pytany gdzie nalezy zainstalowac boot 
-manager. Mozliwy do zainstalowania w dwoch miejsch.
+manager. Mozliwy do zainstalowania w dwoch miejscach.
 
-- master boot record - tylko jedna partycja ma master boot record ktory decyduje 
-jaka partycja zostanie uzyta do bootowania.
+	-- master boot record - tylko jedna partycja ma master boot record ktory decyduje 
+	jaka partycja zostanie uzyta do bootowania.
 
-- boot record - kazda partycja ma boot record.
+	-- boot record - kazda partycja ma boot record. Jeśli jest już jakiś boot manager
+	w master boot recordzie, to instaluje się on tutaj. 
 
 - W sekcji "Device for boot loader installation"
 
 	- "Enter device manually" - umozliwia wprowadzenie recznie partycji z 
 	boot loadem
+
 	- /dev/sda - wybiera domyslny boot loader
 
 - "Finish the installation" jestem pytany czy chce zakonczyc proces instalacji, 
