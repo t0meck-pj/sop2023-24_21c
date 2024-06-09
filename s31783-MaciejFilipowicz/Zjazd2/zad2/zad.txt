@@ -1,0 +1,40 @@
+Gdy wpiszemy te komendy:
+
+X=tekst
+echo $X
+
+Zostanie wypisane słowo "tekst", które zostało przypisane do zmiennej "X" i wywołane przez komendę 'echo $X'
+
+Następnie po wpisaniu komend 
+
+bash
+echo $X
+
+Nic nie zostanie wypisane, stworzy się nowa linijka tekstu bez żadnego znaku
+
+
+Gdy spróbujemy przypisać do X "Tekst dłuższy" konsola będzię uważać "dłuższy" za kolejną linijke komendy, zamiast za dalszą część tekstu
+Gdy dopiszemy ("") na początku i na końcu tekstu wysztko będzie działać jak powinno
+
+
+Różnice między ' a " polegają na tym że przy przypisywaniu tekstu do zmiennej przy pomocy ',
+wszystko co zostało wprowadzone bezpośrednio będzie przypisane do zmiennej.
+Natomiast przy " jeżeli zostaną wprowadzone zmienne mogą zostać wypisane wartości tych zmiennych.
+
+
+Gdy przypiszemy do zmiennej A słowo Ala
+po wpisaniu komendy
+
+echo $A ma kota, a kot ma ${A}ę
+
+pojawiło się "Ala ma kota, a kot ma Alaę"
+
+Aby sprawić by Skrypt wypluwał słowo "Alę" możemy dodać zmienną B
+
+Komenda będzie wyglądać następująco:
+
+A=Ala
+B="${A}ę"
+echo "$A ma kota, a kot ma $B"
+
+Wynik tej Komendy da nam: "Ala ma kota, a kot ma Alę"

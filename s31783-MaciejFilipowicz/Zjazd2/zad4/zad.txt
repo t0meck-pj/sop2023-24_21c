@@ -1,0 +1,14 @@
+Przypisująć do zmiennej X komendę ls -l
+
+X=$(ls -l)
+
+echo $X
+
+Komenda wyświetlni nam całą zawartość ścieżki w któej się znajdujemy ale w jednej linii.
+
+By to naprawić musimy wpisać apostorfy w echo
+
+echo "$X"
+
+Teraz dostaniemy przejrzysty wynik lecz nie będzie on miał kolorów jak przy uzyciu samego "ls -l"
+

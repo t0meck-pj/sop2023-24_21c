@@ -1,0 +1,27 @@
+Gdy wpiszemy komendy:
+
+echo $(wybrana_komenda)
+
+Dla każdej z następujących komend dostaniemy takie wyniki:
+
+PATH- /usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+Są to ścieżki przeszukiwań, są one niezbędne do korzystania z każdej komendy w bashu
+
+RANDOM- 4214, 12566, 8290...
+Gdy wpiszemy "echo $RANDOM" otrzymamy losową wartość.
+Każda która mi się trafiła była maksymalnie 5-cyfrowa. 
+
+PWD- /home/PJWSTK/s31783
+Pokazuje nam to ścieżkę w której się znajdujemy.
+
+PS1- \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$
+Gdy wpiszemy tą zmienną pokaże nam wszystko co jest wyświetlane przed polem wprowadzania poleceń.
+ 
+USER- s31783
+Wyświetla nam naszą nazwę użytkownika.
+
+HOSTNAME- szuflandia22
+Ta komenda wyświetli nam nazwę hosta
+
+OSTYPE- linux-gnu
+Wyświetli nam rodzaj systemu operacyjnego z którego obecnie korzystamy.
