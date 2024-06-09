@@ -1,0 +1,7 @@
+W konsoli tworzę plik o nazwie skrypt.bat w którym zapisuję:
+
+        #!/bin/bash
+
+        echo -e "Witamy w terminalu"
+
+Po wpisaniu w konsole './skrypt' skrypt uruchamia się wypisując "Witamy w terminalu"
