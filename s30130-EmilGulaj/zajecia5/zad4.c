@@ -4,16 +4,17 @@
 
 int main(){
     int i, nothing, p = 0;
-    for(i = 0; i < 10; i++){
-        if (p == 0){
-            fork();
-        }
-        else{
-            wait(NULL);
-        }
+    for(i = 0; i < 10 && p != 0; i++){
+        fork();
     }
 
-    scanf("%d", &nothing);
+    if (p != 0){
+        for(i = 0; i < processes; i++){
+            wait(NULL);
+        }
+
+        scanf("%d", &nothing);
+    }
 
     return 0;
 }

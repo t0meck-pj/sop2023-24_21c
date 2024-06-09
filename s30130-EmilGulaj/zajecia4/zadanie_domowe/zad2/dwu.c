@@ -10,6 +10,10 @@ typedef struct Node {
 void append(Node **head, int data){
     if (*head == NULL){
         *head = (Node*)malloc(sizeof(Node));
+        if (*head == NULL){
+            printf("Blad alokacji pamieci");
+            return -1;
+        }
         (*head) -> data = data;
         (*head) -> previous = NULL;
         (*head) -> next = NULL;
@@ -20,6 +24,10 @@ void append(Node **head, int data){
             current = current -> next;
         }
         current -> next = (Node*)malloc(sizeof(Node));
+        if (current == NULL){
+            printf("Blad alokacji pamieci");
+            return -1;
+        }
         current -> next -> data = data;
         current -> next -> previous = current;
         current -> next -> next = NULL;
@@ -29,6 +37,10 @@ void append(Node **head, int data){
 void push(Node **head, int data){
     if(*head == NULL){
         *head = (Node*)malloc(sizeof(Node));
+        if (*head == NULL){
+            printf("Blad alokacji pamieci");
+            return -1;
+        }
         (*head) -> data = data;
         (*head) -> previous = NULL;
         (*head) -> next = NULL;
@@ -36,6 +48,10 @@ void push(Node **head, int data){
     else{
         Node *current;
         current = (Node*)malloc(sizeof(Node));
+        if (current == NULL){
+            printf("Blad alokacji pamieci");
+            return -1;
+        }
         current -> data = data;
         current -> previous = NULL;
         current -> next = (*head);
@@ -113,6 +129,14 @@ int main(){
 
     pop_front(&head);
     show(head);
+
+    Node *current = head;
+    Node *next_node;
+    while (current != NULL) {
+        next_node = current->next;
+        free(current);
+        current = next_node;
+    }
 
     return 0;
 }

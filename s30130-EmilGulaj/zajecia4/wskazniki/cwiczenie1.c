@@ -23,7 +23,15 @@ int main(){
 
     scanf("%d", &elementCount);
 
+    if (elementCount <= 0)
+        return 0;
+
     nums = (int*)malloc(elementCount * sizeof(int));
+
+    if (nums == NULL){
+        printf("Blad alokacji pamieci");
+        return -1;
+    }
 
     for (i = 0; i < elementCount; i++){
         scanf("%d", &nums[i]);
@@ -34,6 +42,8 @@ int main(){
         v = f[functionId](v, nums[i]);
         printf("%d", v);
     }
+
+    free(nums);
 
     return 0;
 }

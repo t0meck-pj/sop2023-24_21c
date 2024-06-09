@@ -8,8 +8,7 @@ int main(){
     scanf("%d", &num);
 
     p = fork();
-    waitpid(p, &status, 0);
-    printf("\n");
+    
     
     if(p == 0){
         printf("Liczby: ");
@@ -20,7 +19,8 @@ int main(){
         }
     }
     else{
-        printf("Suma: ");
+        waitpid(p, &status, 0);
+        printf("\nSuma: ");
         for (i = 1; i <= num; i++){
             sum += i;
         }

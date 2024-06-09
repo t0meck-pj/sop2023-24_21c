@@ -21,7 +21,9 @@ void create_process_tree(int depth, int max_depth) {
 int main() {
     int nothing;
     create_process_tree(0, 1);
-    wait(NULL);
+    if (getpid() == getppid()){
+        wait(NULL);
+    }
     scanf("%d", &nothing);
     return 0;
 }

@@ -115,7 +115,7 @@ Twoje przemyslenia o calych zajeciach i zadaniach
 Moj kochany pamietniczku:
 
 Opis zajec
-	 Na zajęciach zajmowaliśmy się dalej programowaniem w C
+	Na zajęciach zajmowaliśmy się dalej programowaniem w C
 	tym razem były to procesy i głównie funkcja fork.
 
 Czego sie nauczyles
@@ -140,15 +140,26 @@ Twoje przemyslenia o calych zajeciach i zadaniach
 Moj kochany pamietniczku:
 
 Opis zajec
+	Na zajęciach mieliśmy sockety i sygnaly, a właściwie tworzenie
+	sieci serwer/klient, co było dosyć interesujące zobaczyć jak
+	coś takiego działa "od kuchni".
 	 
-
 Czego sie nauczyles
+	Nauczyłem się jak można zmieniać zadania wysyłanych sygnałów
+	(np. CTRL + C) oraz jak tworzyć serwer oraz klienta, tak żeby
+	w oógle to działało.
 	
-
 Co jest dla Ciebie jeszcze nie jasne i musisz poglebic temat
+	Poruszanie się po socketach jest jeszcze nieco trudne,
+	i połączenie wszystkich tych informacji z np. poprzedniego
+	zjazdu jest dosyć wymagające.
 	
 Co bylo zaskakujacego
-	
+	Sockety same w sobie były dla mnie zaskakujące, przed tymi
+	zajęciami nawet nie wiedziałem, że coś takiego istnieje
+	no i do zabawa sygnałami również była dla mnie zaskoczeniem.
 
 Twoje przemyslenia o calych zajeciach i zadaniach
-	
+	Zadania trudne na tyle, że aż po raz pierwszy nie udało
+	mi się skończyc na czas i spełnić deadlinu, ale czuję, że
+	to właśnie z takich wyciągnę najwięcej.
