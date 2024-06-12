@@ -45,3 +45,14 @@ można dostrzeć jak przydatna i prosta jest ona w użyciu.
 wcześniej nie miałem z nimi styczności.
 - Mały problem napotkałem podczas załączania debuggera do programu, ponieważ
 po wywołaniu fork() debugger nie rozróżniał dzieci od rodzica.
+
+2024-05-26
+Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem sie:
+- Jak działają sygnały systemowe oraz sockety i jak je obsługiwać w języku C.
+- Jaka jest różnica między signal() a sigaction(), ich zalety i wady.
+- Najwięcej wiedzy dało mi napisanie własnego serwera oraz klienta, dzięki czemu
+mogłem dogłębnie zrozumieć jak działa mechanizm socketów oraz utrwaliłem wiedzę
+na temat sygnałów i funkcji fork() do obsługi wielu klientów. 
+Nie było to proste zadanie, ale dało mi dużo satysfakcji oraz refleksji nad
+tym jak np. zabezpieczyć serwer oraz jak działają protokoły komunikacji.
+- Do napisania programów użyłem C99 ze względu na możliwość pisania bardziej czytelnego kodu.

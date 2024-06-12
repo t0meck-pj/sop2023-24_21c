@@ -13,7 +13,7 @@ void error_exit(const char* message) {
 }
 
 void write_to_chat_file() {
-  char buffer[BUFFER_SIZE];
+  char buffer[FILENAME_BUFFER_SIZE];
   FILE* file = NULL;
 
   file = fopen(CHAT_FILE, "w");
@@ -23,7 +23,7 @@ void write_to_chat_file() {
 
   while (1) {
     printf("You: ");
-    fgets(buffer, BUFFER_SIZE, stdin);
+    fgets(buffer, FILENAME_BUFFER_SIZE, stdin);
     if (fwrite(buffer, sizeof(char), strlen(buffer), file) < strlen(buffer)) {
       error_exit("fwrite");
     }
@@ -35,7 +35,7 @@ void write_to_chat_file() {
 }
 
 void read_from_chat_file() {
-  char buffer[BUFFER_SIZE];
+  char buffer[FILENAME_BUFFER_SIZE];
   FILE* file = NULL;
 
   file = fopen(CHAT_FILE, "r");
@@ -44,7 +44,7 @@ void read_from_chat_file() {
   }
 
   while (1) {
-    while (fgets(buffer, BUFFER_SIZE, file) != NULL) {
+    while (fgets(buffer, FILENAME_BUFFER_SIZE, file) != NULL) {
       printf("Friend: %s", buffer);
     }
     clearerr(file);
