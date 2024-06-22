@@ -1,0 +1,31 @@
+X=tekst
+echo $X
+bash
+echo $X
+
+Co się stało? Czy potrafisz wyjaśnić?
+
+Utworzona została zmienna "X", która przechowuje wartość "tekst". 
+Następnie wywołano nowy proces bash.
+Spróbowano wyświetlić zmienną X, ale nie udało się, ponieważ podpowłoka nie ma dostępu do zmiennej X z powłoki nadrzędnej.
+
+X=Tekst dłuższy
+echo $X
+
+Co jest nie tak? jak to naprawić? Zobacz czy pomoże zastosowanie cudzysłowów i apostrofów.
+
+Zmienna X przechowuje tylko wartość "Tekst".
+Aby przechowywać cały tekst należy umieścić go w cudzysłowach.
+
+X="Tekst 1"
+Y="tekst:$X"
+echo "$Y"
+Y='tekst:$X'
+echo "$Y"
+Y=tekst:$X
+echo "$Y"
+
+Jaka jest różnica między " a ' ?
+
+Tekst w cudzysłowach jest interpretowany, więc nazwy zmiennych są zastępowane ich wartościami.
+Tekst w apostrofach jest traktowany dosłownie, więc nazwy zmiennych nie są zastępowane ich wartościami.
