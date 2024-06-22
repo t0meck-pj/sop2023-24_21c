@@ -1,0 +1,70 @@
+Instalacja DEBIAN
+
+Potrzebne:
+Komputer/Laptop
+Maszyna wirtualna
+Obraz systemu Debian
+
+Krok 1: Pobranie obrazu ISO
+Przejdź na oficjalną stronę Debiana: Debian Download.
+Wybierz wersję stabilną (najczęściej polecaną) i pobierz obraz ISO 
+odpowiedni dla Twojej architektury sprzętowej (najczęściej amd64).
+
+Krok 2: Utworzenie nowej maszyny wirtualnej
+Do tego celu można użyć oprogramowania takiego jak VirtualBox lub VMware.
+Utworzenie nowej maszyny wirtualnej:
+Uruchom VirtualBox i kliknij przycisk "Nowa".
+Wpisz nazwę maszyny wirtualnej.
+Wybierz typ systemu operacyjnego jako "Linux" i wersję jako "Debian (64-bit)".
+Kliknij "Dalej".
+Konfiguracja pamięci RAM:
+Wybierz ilość pamięci RAM, którą chcesz przydzielić maszynie wirtualnej
+(zalecane minimum to 1024 MB, ale lepiej więcej, np. 2048 MB).
+Kliknij "Dalej".
+Utworzenie wirtualnego dysku twardego:
+
+Wybierz "Utwórz teraz wirtualny dysk twardy" i kliknij "Utwórz".
+Wybierz typ pliku dysku jako "VDI (VirtualBox Disk Image)" i kliknij "Dalej".
+Wybierz opcję "Dynamicznie alokowany" i kliknij "Dalej".
+Ustaw rozmiar dysku (zalecane minimum to 10 GB, ale lepiej więcej, np. 20 GB).
+Kliknij "Utwórz".
+
+Krok 3: Instalacja Debiana na maszynie wirtualnej
+Konfiguracja obrazu ISO:
+
+Zaznacz nowo utworzoną maszynę wirtualną na liście i kliknij "Ustawienia".
+Przejdź do zakładki "Pamięć".
+Kliknij ikonę dysku obok "Controller: IDE" i wybierz "Wybierz plik dysku".
+Wskaż pobrany obraz ISO Debiana i kliknij "OK".
+
+Uruchomienie maszyny wirtualnej:
+
+Kliknij "Start".
+Maszyna wirtualna powinna uruchomić się z obrazu ISO Debiana.
+Proces instalacji Debiana:
+
+Wybierz "Instalacja graficzna".
+Wybierz język instalacji "Polish".
+Wybierz lokalizację "Polska".
+Wybierz układ klawiatury "Polish".
+Skonfiguruj sieć
+(możesz pozostawić domyślne ustawienia, jeśli korzystasz z DHCP).
+Wprowadź nazwę hosta
+(np. debian).
+Ustal hasło dla użytkownika root.
+Utwórz nowego użytkownika i ustal dla niego hasło.
+Skonfiguruj partycjonowanie dysku:
+Wybierz "Przewodnik - użyj całego dysku" i kliknij "Kontynuuj".
+Wybierz dysk (będzie to wirtualny dysk, który utworzyliśmy wcześniej) i kliknij "Kontynuuj".
+Wybierz "Wszystkie pliki w jednej partycji" i kliknij "Kontynuuj".
+Potwierdź zmiany na dysku i kliknij "Kontynuuj".
+Skonfiguruj zarządzanie pakietami:
+Wybierz kraj dla serwera lustrzanego (np. Polska).
+Ustal, które oprogramowanie ma zostać zainstalowane
+(możesz zaznaczyć "Debian desktop environment" i wybrać preferowany pulpit, np. GNOME).
+Instalacja systemu rozpocznie się po jej zakończeniu uruchom ponownie maszynę wirtualną.
+
+Krok 4: Pierwsze uruchomienie
+Po ponownym uruchomieniu, maszyna wirtualna powinna załadować zainstalowany system Debian.
+Możesz teraz zalogować się za pomocą utworzonego wcześniej konta użytkownika i cieszyć się działającym systemem Debian.
+
