@@ -1,0 +1,55 @@
+Napisz skrypt, który będzie wypisywał liczby od 10 do 1 co 2
+
+for i in {10..1..2}
+do
+    echo $i
+done
+
+Napisz skrypt, który będzie wypisywał wszystkie argumenty wywołania skryptu (pamiętaj o tym, że argument może w sobie zawierać jakieś spacje) napisane w cudzysłowach.
+
+for i in "$@"
+do
+    echo $i
+done
+
+Napisz skrypt, który wypisze listę plików i katalogów bieżącego katalogu poprzedzając każdą nazwę pliku tekstem "Patrzcie Państwo, oto plik: ".
+
+for i in $(ls)
+do
+    echo "Patrzcie Państwo, oto plik: $i"
+done
+
+
+Napisz skrypt, który dla każdego pliku w bieżącym katalogu, który ma rozszerzenie .c wykona taką komendę:
+
+   cc (tu_nazwa_pliku) -o (tu_nazwa_pliku_bez_rozszerzenia)
+
+for file in $(ls | grep -E '\.c$'); do
+    cc $file -o $(echo "${file%.c}")
+done
+
+
+
+Napisz skrypt, który wczyta listę plików do wypisania z wiersza poleceń, a następnie wypisze ich zawartości raz w kolejności od początku do końca, a raz na odwrót. Podpowiedzi:
+
+indeksy ujemne tablicy mogą się przydać
+
+można wyliczać wartości wyrażeń arytmetycznych (i+1)
+
+przyda się for
+
+może się przydać: cat oraz tac ale postaraj się zrobić to bez używania tych poleceń (drukowanie znak po znaku od początku do końca i od końca do początku). 
+Pamiętaj, że nie tylko kolejność całych wierszy ma być odwrócona ale także kolejność znaków w wierszu.
+
+
+for i in $@
+do
+    echo "Plik: $i"
+    echo "Od początku:"
+    cat $i
+    echo
+
+    echo "Od końca:"
+    tac $i
+    echo
+done

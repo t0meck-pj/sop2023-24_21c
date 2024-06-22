@@ -1,0 +1,21 @@
+Wykonaj komendę ls -l w podpowłoce i przypisz ją do zmiennej X.
+
+Wyświetl zawartość tej zmiennej.
+
+Spraw, aby nie było różnicy (co najwyżej kolorki) między zwykłym wykonaniem komendy:
+
+ls -l
+
+a wypisaniem zawartości zmiennej X. Nie będzie dobrego rezultatu gdy zrobimy tak:
+
+echo $X
+
+Zastanów się dlaczego.
+
+
+X=$(ls -l)
+echo $X
+
+Zmienna "X" zawiera wynik działania polecenia "ls -l" ale bez znaków nowej linii, ponieważ
+komenda echo potraktuje znaki nowej linii jako osobne argumenty. 
+W celu zachowania formatowania wyniku polecenia "ls -l", należy użyć cudzysłowów.

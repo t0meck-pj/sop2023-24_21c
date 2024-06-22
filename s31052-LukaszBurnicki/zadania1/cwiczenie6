@@ -1,0 +1,3 @@
+Teraz postaraj się zrobić to zadanie z haczykiem i podmianą fragmentu zmiennej (Ala ma ...)
+
+echo $1 ma kota, a kot ma ${1:0:-1}ę

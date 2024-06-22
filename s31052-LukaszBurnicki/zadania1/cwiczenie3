@@ -1,0 +1,16 @@
+PATH - przechowuje ścieżki do katalogów, w których system operacyjny szuka programów do wykonania. 
+	Dzięki tej zmiennej można uruchamiać programy z dowolnego miejsca w systemie,
+	bez konieczności podawania pełnej ścieżki do pliku wykonywalnego.
+
+RANDOM - przechowuje losową liczbę całkowitą. Może być przydatna w skryptach, które wymagają generowania losowych wartości.
+
+PWD - przechowuje bieżący katalog roboczy. Może być przydatna w skryptach, które wymagają dostępu do plików w bieżącym katalogu.
+
+PS1 - przechowuje znak zachęty powłoki. Może być przydatna do dostosowania wyglądu powłoki, np. dodania kolorów lub informacji o bieżącym katalogu.
+
+USER - przechowuje nazwę użytkownika zalogowanego do systemu. Może być przydatna do personalizacji skryptów lub
+	dostosowania zachowania programów do konkretnego użytkownika.
+
+HOSTNAME - przechowuje nazwę hosta, na którym uruchomiona jest powłoka. Może być przydatna do identyfikacji maszyny, na której pracujemy.
+
+OSTYPE - przechowuje nazwę systemu operacyjnego. Może być przydatna do sprawdzenia, na jakim systemie operacyjnym uruchomiony jest skrypt.

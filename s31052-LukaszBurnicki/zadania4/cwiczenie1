@@ -1,0 +1,226 @@
+Napisz program, który 
+
+przedstawi swój numer PID, oraz PPID
+
+po wypisaniu, będzie czekał na standardowym wejściu na dane od użytkownika.
+
+Uruchom program - nic nie podawaj na wejściu (program powinien czekać w nieskończoność).
+Uruchom nowy terminal. W nim za pomocą komendy kill zamknij ten program korzystając z PID wypisanego przez niego na początku.
+
+#include <stdio.h>
+
+int main() {
+    printf("PID: %d\n", getpid());
+    printf("PPID: %d\n", getppid());
+    getchar();
+    
+    return 0;
+}
+
+
+Napisz program, który uruchomi podproces za pomocą komendy fork. Niech proces rodzica oczekuje na proces potomka. 
+Oba procesy powinny wypisać swój PID oraz PPID.
+
+#include <stdio.h>
+
+int main() {
+    int pid = fork();
+
+    if (pid == 0) {
+        printf("In child: PID: %d\n", getpid());
+        printf("In child: PPID: %d\n", getppid());
+    } else {
+        printf("In parent: PID: %d\n", getpid());
+        printf("In parent: PPID: %d\n", getppid());
+        wait(NULL);
+    }
+    
+    
+    
+    return 0;
+}
+
+
+Napisz program, który będzie pobierał jeden argument z wiersza poleceń  i będzie obliczał w 2 procesach:
+
+Proces rodzica: Wartość sumy liczb od 0 do wartości zadanej jako pierwszy argument wykonania programu.
+
+Proces potomny: Wypisujący liczby nieparzyste od 1 do wartości zadanej jako pierwszy argument wykonania programu.
+
+Program powinien wypisać wyniki w kolejności takiej, że najpierw wypisze wynik proces potomny, a następnie proces rodzica. 
+
+Nie korzystaj z komendy sleep.
+
+
+#include <stdio.h>
+
+int main(int argc, char *argv[]) {
+    if (argc != 2) {
+        printf("Usage: %s <n>\n", argv[0]);
+        
+        return 1;
+    }
+
+    int n = atoi(argv[1]);
+    int pid = fork();
+    int i;
+    
+    /* child */
+    if (pid == 0) {
+        for (i = 1; i <= n; i += 2) {
+            printf("%d ", i);
+        }
+        printf("\n");
+    } else {
+        int sum = 0;
+        for (i = 0; i <= n; i++) {
+            sum += i;
+        }
+        wait(NULL);
+        printf("Sum: %d\n", sum);
+    }
+    
+    return 0;
+}
+
+
+
+Napisz program, który uruchomi 100 procesów w taki sposób, że każdy kolejny potomek stworzy potomka.
+Niech każdy proces poczeka na zakończenie procesu potomka. Możesz korzystać z oczekiwania na wejście lub
+z komendy sleep i zobacz czy drzewko procesów jest takie jak się spodziewasz
+(możesz w tym celu ograniczyć liczbę procesów do 10). Zobacz podpowiedź na początku tej strony.
+
+Czyli drzewo procesów ma wynikowo wyglądać tak: główny -> potomek1 -> potomek2 -> ... -> potomek99 -> potomek100
+
+Przydatne przy sprawdzaniu: Drzewo procesów można wydrukować poleceniem pstree
+
+
+
+#include <stdio.h>
+
+void spawn(int n) {
+    if (n == 0) {
+        getchar();
+        return;
+    }
+
+    int pid = fork();
+    if (pid == 0) {
+        spawn(n - 1);
+        return;
+    }
+
+    wait(NULL);
+}
+
+int main()
+{
+    int n = 100;
+
+    spawn(n);
+
+    return 0;
+}
+
+
+
+Napisz program, który uruchomi 100 procesów potomnych w taki sposób, że będzie jeden rodzic i 100 potomków.
+Proces główny niech oczekuje na zakończenie wszystkich procesów potomnych.
+
+Przydatne funkcje: waitpid i wait
+
+
+#include <stdio.h>
+
+int main() {
+    int n = 100;
+    int i;
+
+    for (i = 0; i < n; i++) {
+        int pid = fork();
+        if (pid == 0) {
+            sleep(5);
+            return 0;
+        }
+    }
+
+    for (i = 0; i < n; i++) {
+        wait(NULL);
+    }
+
+    return 0;
+}
+
+
+Napisz prosty program chat-u, który będzie korzystał z pliku w katalogu /tmp do przekazywania wiadomości. Zastanów się jak to zrobić.
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+
+#define CHAT_FILE "/tmp/chat"
+#define BUFFER_SIZE 256
+
+void error_exit(const char* message) {
+  perror(message);
+
+  exit(EXIT_FAILURE);
+}
+
+void write_to_chat_file() {
+  char buffer[BUFFER_SIZE];
+  FILE* file = NULL;
+
+  file = fopen(CHAT_FILE, "w");
+  if (file == NULL) {
+    error_exit("fopen");
+  }
+
+  while (1) {
+    printf("You: ");
+    fgets(buffer, BUFFER_SIZE, stdin);
+    if (fwrite(buffer, sizeof(char), strlen(buffer), file) < strlen(buffer)) {
+      error_exit("fwrite");
+    }
+    fflush(file);
+    sleep(1);
+  }
+
+  fclose(file);
+}
+
+void read_from_chat_file() {
+  char buffer[BUFFER_SIZE];
+  FILE* file = NULL;
+
+  file = fopen(CHAT_FILE, "r");
+  if (file == NULL) {
+    error_exit("fopen");
+  }
+
+  while (1) {
+    while (fgets(buffer, BUFFER_SIZE, file) != NULL) {
+      printf("Friend: %s", buffer);
+    }
+    clearerr(file);
+  }
+
+  fclose(file);
+}
+
+int main() {
+  int pid = 0;
+  pid = fork();
+
+  if (pid < 0) {
+    error_exit("fork");
+  } else if (pid == 0) {
+    read_from_chat_file();
+  } else {
+    write_to_chat_file();
+  }
+
+  return 0;
+}
