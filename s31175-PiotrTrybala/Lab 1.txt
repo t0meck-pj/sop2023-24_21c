@@ -1,0 +1,177 @@
+Ćwiczenie 1
+Napisz skrypt wyświetlający na terminalu tekst "Witamy w terminalu".
+Skorzystaj z komendy echo oraz informacji podanych powyżej.
+Pamiętaj o atrybutach i o tym jak się wywołuje programy.
+
+
+
+#!/bin/bash
+echo "Witamy w terminalu"
+
+
+
+
+Ćwiczenie 2
+To zadanie należy wykonać wpisując polecenia w terminalu normalnie. Nie należy tworzyć skryptu z tymi poleceniami.
+
+ Zobacz taką serię poleceń:
+
+X=tekst
+echo $X
+bash
+echo $X
+
+Co się stało? Czy potrafisz wyjaśnić?
+
+
+
+Otworzyliśmy nową powłokę wewnątrz głównej. Nie odziedziczyła ona zmiennych,
+a zatem nie jest w stanie odczytać zmiennej z "zewnątrz"
+
+
+
+Zobacz:
+
+X=Tekst dłuższy
+echo $X
+
+Co jest nie tak? jak to naprawić? Zobacz czy pomoże zastosowanie cudzysłowów i apostrofów.
+
+
+
+Pomogło, kolejne słowo traktowane jest tutaj po prostu jako kolejny argument, którego w tej sytuacji bash nei przyjmuje.
+
+
+
+Zobacz:
+
+X="Tekst 1"
+Y="tekst:$X"
+echo "$Y"
+Y='tekst:$X'
+echo "$Y"
+Y=tekst:$X
+echo "$Y"
+
+Jaka jest różnica między " a ' ?
+
+
+
+Wewnątrz " bash widzi i wywołuje zmienne, ' traktuje tekst "dosłownie".
+
+
+
+A=Ala
+echo $A ma kota, a kot ma ${A}ę
+
+Tak, tu coś będzie nie tak, zaraz to naprawimy. Nie będziemy modyfikować wartości zmiennej A.
+
+
+Ćwiczenie 3
+Zobacz co przechowują zmienne i opisz jak rozumiesz uzyskany wynik. Do czego on jest i kiedy może się wg Ciebie przydać:
+
+PATH
+
+Przechowuje ścieżki do zainstalowanych w systemie programów. Jest ona używana za każdym razem, kiedy wykonujemy jakąkolwiek komendę.
+
+RANDOM
+
+Zwraca losową liczbę. 
+
+PWD
+
+Zawiera ścieżkę do katalogu, w którym aktualnie się znajdujemy. Możemy odnaleźć się gdzie jesteśmy w ścieżce, jeśli "zabłądzimy".
+
+PS1
+
+Zawiera tekst wyświetlany przed kursorem, zapisany jest on jednak w specjalnej formie, dlatego 
+
+USER
+HOSTNAME
+OSTYPE
+
+Ćwiczenie 4
+Wykonaj komendę ls -l w podpowłoce i przypisz ją do zmiennej X.
+
+X=$(ls -l)
+
+Wyświetl zawartość tej zmiennej.
+
+echo $X
+
+Spraw, aby nie było różnicy (co najwyżej kolorki) między zwykłym wykonaniem komendy:
+
+ls -l
+
+a wypisaniem zawartości zmiennej X. Nie będzie dobrego rezultatu gdy zrobimy tak:
+
+echo $X
+
+Zastanów się dlaczego.
+
+
+Bez nawiasów shell najpierw sam interpretuje i parsuje input, zanim przekaże go to "echo"
+echo "$X" wykonuje się w poprawny sposób
+
+wiczenie 5a
+Pamiętasz jedno z zadań poprzednich?
+
+A=Ala
+
+echo $A ma kota, a kot ma ${A}ę
+
+Przerób je tak, aby tekst wypisywał się poprawnie.
+
+Napisz skrypt, który będzie wypisywał taki tekst także dla imion męskich. Pomijamy zdrobnienia i imiona które się dziwnie odmieniają (na przykład Marek). Niech skrypt ten przyjmuje jeden argument - imię. Przykładowe wywołanie:
+
+$ ./pszetżkole Ala
+
+Ala ma kota, a kot ma Alę
+
+$ ./pszetżkole Justyna
+
+Justyna ma kota, a kot ma Justynę
+
+$ ./pszetżkole Stefan
+
+Stefan ma kota, a kot ma Stefana
+
+Czy jest to możliwe w czystym bash-u?
+
+#!/bin/bash
+if [ "${1: -1}" != "a" ] ; then
+        echo $1 ma kota, a kot ma $1a
+else
+        echo $1 ma kota, a kot ma ${1/a}ę
+fi
+
+Ćwiczenie 5b
+Napisz skrypt, który wczyta jako argument jakiś tekst. Skrypt ten wypisze kolejno:
+
+Pierwszy znak z argumentu
+
+Ostatni znak z argumentu
+
+Zamieni w argumencie każdy tekst SOP na tekst poniżej (zastosuj echo z przełącznikiem -e):
+
+\e[32mSOP\e[0m
+
+Przykładowy tekst testowy:
+SOP! SOP w imieniu prawa! SOP w imieniu prawa!
+
+Wynikowo ma to wyglądać tak:
+
+SOP! SOP w imieniu prawa! SOP w imieniu prawa!
+
+#%!/bin/bash
+echo "Pierwszy znak: ${1: 0 :1}"
+echo "Ostatni znak: ${1: -1}"
+echo -e ${1//SOP/"\e[32mSOP\e[0m"}
+
+Zadanie domowe
+
+Przygotuj skrypt, który odczyta plik (jego nazwa ma być argumentem skryptu) i wypisze go na terminalu tak, aby wszystkie wystąpienia Twojego imienia były podświetlone na czerwono. 
+
+#!/bin/bash
+plik=$(cat "$1")
+echo -e ${plik//Piotr/"\e[31mPiotr\e[0m"}
